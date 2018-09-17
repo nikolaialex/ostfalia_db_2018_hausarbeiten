@@ -1,1 +1,1 @@
-# ostfalia_db_2018_hausarbeiten
+# Gruppenarbeiten Datenbanktechnologien Ostfalia 2018

@@ -16,9 +16,6 @@ Das Akronym steht für Consistency, Availability und Partition-Tolerance.
 
 1. [Einleitung](1_Einleitung.md)
 2. [Definition: CAP-Theorem](2_Definition_CAP-Theorem.md)
-   1. [Consistency](2_1_Consistency.md)
-   2. [Availability](2_2_Availability.md)
-   3. [Partition-Tolerance](2_3_Partition-Tolerance.md)
 3. [ACID Begriffsdefinitionen und Unterschiede](3_Unterschiede_zu_ACID.md)
 4. [Implementierungen von CAP](4_Implementierungen_von_CAP.md)
    1. [Spanner](4_1_Spanner.md)

@@ -1,8 +1,8 @@
 # Gruppenarbeiten 2018
 
-Malte Westendorf, Aykut Özdimir und Klaus Landsdorf
+Malte Westendorf, Aykut Özdemir und Klaus Landsdorf
 
-## Thema: _Datenbank für Maschine Learning_
+## Thema: *Datenbank für Maschine Learning*
 
 ### Historie
 

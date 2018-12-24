@@ -5,6 +5,6 @@ Kurze Beschreibung des Inhaltes.
 
 | Name          | Matrikelnummer | Hochschule | E-Mail                     |
 |:--------------|:---------------|:-----------|:---------------------------|
-|Klaus Landsdorf | -      | HS Emden-Leer   | - |
-|Aykut Özdemir | -      | TH Lübeck   | - |
-|Malte Westendorf | -      | TH Lübeck   | - |
+|Klaus Landsdorf |-| HS Emden-Leer   | - |
+|Aykut Özdemir   |303095|TH Lübeck|aykut.oezdemir@stud.th-luebeck.de|
+|Malte Westendorf|-| TH Lübeck | - |

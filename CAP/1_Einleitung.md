@@ -12,8 +12,8 @@ Software-Systeme und ihre Datenbestände sollen daher bestimmte Eigenschaften er
 welche in dieser Arbeit erläutert und in Kontext gesetzt werden.
 Drei Eigenschaften solcher Systeme werden in der englischen Sprache mit den
 Begriffen *Consistency* (C), *Availability* (A) und *Partition-resilience* (P)
-beschrieben. Die dritte Eigenschaft wird heute meist
-mit *Partition-tolerance* bezeichnet.  
+beschrieben [1]. Die dritte Eigenschaft wird heute meist
+mit *Partition-tolerance* bezeichnet [3].  
 
 Nach der Definition des CAP-Theorems und der einzelnen Eigenschaften werden
 die Unterschiede in den Begriffsdefinitionen zum ACID-Modell dargestellt.  
@@ -22,11 +22,11 @@ Darauf folgen zwei moderne CAP-Implementierungsbeispiele:
 und [Amazon DynamoDB](https://aws.amazon.com/dynamodb/ "Amazon DynamoDB").
 Abschließend werden zwei Alternativen zu CAP aufgezeigt.
 
-## Kurze Geschichte des CAP-Theorems
-Im Jahr 1999 veröffentlichten Eric A. Brewer und Armando Fox ihre Arbeit
+Die kurz zusammengefasste Geschichte des CAP-Theorems beginnt
+im Jahr 1999. Eric A. Brewer und Armando Fox veröffentlichten ihre Arbeit
 *Harvest, Yield, and Scalable Tolerant Systems* [1]. Die Autoren zeigen zwei
-Strategien auf wie in Software-Systemen pragmatisch mit den drei Eigenschaften
-CAP umgegangen werden kann und vermuten das zu einem beliebigen Zeitpunkt nur
+Strategien auf wie in Software-Systemen pragmatisch mit den drei CAP Eigenschaften
+umgegangen werden kann und vermuten das zu einem beliebigen Zeitpunkt nur
 zwei der drei Eigenschaften erfüllt werden können. Zu
 diesem Zeitpunkt formulieren Brewer und Fox dies als *CAP Principle* [1].
 

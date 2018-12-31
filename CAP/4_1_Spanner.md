@@ -8,3 +8,10 @@ Heiser, P. Hochschild, W. Hsieh, S. Kanthak, E. Kogan, H. Li, A. Lloyd, S. Melni
 Nagle, S. Quinlan, R. Rao, L. Rolig, Y. Saito, M. Szymaniak, C. Taylor, R. Wang, and D. Woodford.
 Spanner: Google’s Globally-Distributed Database. Proceedings of OSDI ‘12: Tenth Symposium on
 Operating System Design and Implementation, Hollywood, CA, October, 2012
+
+
+***
+
+[Amazon DynamoDB >>](4_2_DynamoDB.md)
+
+***

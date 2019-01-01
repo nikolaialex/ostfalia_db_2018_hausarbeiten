@@ -2,7 +2,7 @@
 
 
 
-![Datenbank-Icon](.\images\database.png)
+![Datenbank-Icon](./images/database.png)
 
 
 

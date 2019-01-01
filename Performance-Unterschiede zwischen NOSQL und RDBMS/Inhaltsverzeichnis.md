@@ -9,11 +9,6 @@
    2. [Adaption](Adaption.md)
    3. [Laufzeit-Performance](Laufzeit-Performance.md)
 4. [Abschluss](Abschluss.md)
-   1. [Fazit](Fazit.md)
-   2. [Ausblick](Ausblick.md)
-5. [Quellen](Quellen.md)
-   1. [Abbildungsverzeichnis](Abbildungsverzeichnis.md)
-   2. [Literaturverzeichnis](Literaturverzeichnis.md)
 
 
 

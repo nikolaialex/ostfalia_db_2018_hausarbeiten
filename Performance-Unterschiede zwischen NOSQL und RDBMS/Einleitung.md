@@ -2,7 +2,7 @@
 
 Der Mensch ist bekanntlich ein Gewohnheitstier. Davor sind auch Software-Entwickler nicht gefeit. Über diverse Workshops, Prototypen und Projekte erarbeiten sie sich umfangreiches Fachwissen. Dieses möchten sie natürlich ungern aufgeben. Frei nach dem Motto
 
-> Wer als Werkzeug nur einen Hammer hat, sieht in jedem Problem einen Nagel. (Paul Watzlawick)
+> Wer als Werkzeug nur einen Hammer hat, sieht in jedem Problem einen Nagel. [1]
 
 versuchen Entwickler oft, neue Anforderungen mit Hilfe bekannter und etablierter Methoden zu erfüllen, obwohl sich für viele moderne Herausforderungen auch angepasste oder gänzlich neue Ansätze und Werkzeuge herauskristallisieren.
 
@@ -15,3 +15,14 @@ Im Folgenden sollen die beiden Konzepte relationaler und NoSQL-Datenbanksysteme 
 ***
 
 [<< Inhaltsverzeichnis](Inhaltsverzeichnis.md) | [Datenbank-Systeme >>](Datenbank-Systeme.md)
+
+***
+
+```
+Quellen
+
+[1] https://www.zitate-online.de/sprueche/allgemein/18383/wer-als-werkzeug-nur-einen-hammer-hat-sieht.html
+```
+
+***
+

@@ -14,7 +14,7 @@ Google hebt starke Konsistenz, SQL Unterstützung (ANSI 2011 mit Erweiterungen)
 und verwaltete Instanzen mit hoher Verfügbarkeit hervor [2]. Die Eigenschaften
 sind in Abbildung 1 tabellarisch gegenübergestellt.
 
-![Spanner Feature Comparison](/media/cloud-spanner-4vhuv.max-1000x1000.PNG)
+![Spanner Feature Comparison](/CAP/media/cloud-spanner-4vhuv.max-1000x1000.PNG)
 Abbildung 1: Vergleich von Eigenschaften zwischen Spanner, traditionell relationalen
 und traditionell nicht-relationalen Datenbanksystemen, übernommen von
 [Google (2017)](https://cloud.google.com/blog/products/gcp/introducing-cloud-spanner-a-global-database-service-for-mission-critical-applications).
@@ -32,7 +32,7 @@ Hundert bis mehreren Tausend *spanservers* [1]. Ein *zonemaster* weist den
 Die *location proxies* (pro Zone) dienen dem Client zum Aufinden von geeigneten
 *spanservers* [1].
 
-![Übersicht der High-Level Architektur von Google Spanner](/media/uebersicht-high-level-architektur-spanner.PNG)
+![Übersicht der High-Level Architektur von Google Spanner](/CAP/media/uebersicht-high-level-architektur-spanner.PNG)
 
 Abbildung 2: Übersicht der High-Level Architektur von Google Spanner,
 übernommen von Corbett et. al. (2012) [1].

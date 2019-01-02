@@ -1,19 +1,14 @@
 ## ML Modelle und Algorithmen
 
-Der [Towards Data Science][601] Artikel "Types of Machine Learning Algorithms You Should Know" 
-zeigt eine Übersicht der verschiedenen Machine Learning Typen auf.
+### Modelle und Modelldaten
 
-![ML Types](statics/MLTypes2017.png)
-
-
-### Modelldaten
 Vorlagen CSV, REST (API/Endpoint), Artifakte erzeugt aus Traingsdaten
 
 ### Algorithmen
 
+![ML Algos](statics/ml-algos.png)
 
-
-#### Supervised Learning
+#### Supervised Learning Algorithmen
     Nearest Neighbor
     Naive Bayes
     Decision Trees
@@ -21,16 +16,19 @@ Vorlagen CSV, REST (API/Endpoint), Artifakte erzeugt aus Traingsdaten
     Support Vector Machines (SVM)
     Neural Networks
 
-#### Unsupervised Learning
+#### Unsupervised Learning Algorithmen
     k-means clustering, Association Rules
 
-#### Semi-Supervised Learning
+#### Semi-Supervised Learning Algorithmen
     KNN
 
-#### Reinforcement Learning
+#### Reinforcement Learning Algorithmen
     Q-Learning
     Temporal Difference (TD)
     Deep Adversarial Networks
 
 
-[601]:https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861
+
+
+
+[602]:https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/

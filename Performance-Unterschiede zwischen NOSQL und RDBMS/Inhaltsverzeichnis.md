@@ -1,14 +1,12 @@
 # Inhaltsverzeichnis
 
 1. [Einleitung](Einleitung.md)
-2. [Datenbank-Systeme](Datenbank-Systeme.md)
-   1. [Relationale Datenbanken](Relationale_Datenbanken.md)
-   2. [NoSQL-Datenbanken](NoSQL-Datenbanken.md)
-3. [Unterschiede der Systeme](Unterschiede_der_Systeme.md)
-   1. [Skalierung](Skalierung.md)
-   2. [Adaption](Adaption.md)
-   3. [Laufzeit-Performance](Laufzeit-Performance.md)
-4. [Abschluss](Abschluss.md)
+2. [Relationale Datenbanken](Relationale_Datenbanken.md)
+3. [Document Stores](Document_Stores.md)
+4. [Key-Value-Stores](Key-Value-Stores.md)
+5. [Column Stores](Column_Stores.md)
+6. [Graphen-Datenbanken](Graphen-Datenbanken.md)
+7. [Abschluss](Abschluss.md)
 
 
 

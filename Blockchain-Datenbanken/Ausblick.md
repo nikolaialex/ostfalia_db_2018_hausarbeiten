@@ -11,6 +11,6 @@ Technologie braucht Zeit um sich zu entwickeln und durchzusetzen. Die Blockchain
 
 ***
 
-[<< Anwendungsbeispiele](Anwendungsbeispiele.md) 
+[<< Anwendungsbeispiele](Anwendungsbeispiele.md) | [Quellen >>](Quellen.md)
 
 ***

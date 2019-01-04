@@ -2,7 +2,7 @@
 
 ### Modelle und Modelldaten
 
-"Ein Modell ist eine Abstraktion der Wirklichkeit."
+_"Ein Modell ist eine Abstraktion der Wirklichkeit."_
 
 Beim Machine Learning erstellt der Algorithmus ein Modell, das Beispieldaten generalisiert. 
 Das Modell kann anschließend auf neue unbekannte Daten angewendet werden kann.
@@ -64,7 +64,7 @@ Das Modell kann anschließend auf neue unbekannte Daten angewendet werden kann.
     k-means clustering, Association Rules
 
 #### Semi-Supervised Learning Algorithmen
-    KNN
+    k-Nearest-Neighbor
 
 #### Reinforcement Learning Algorithmen
     Q-Learning

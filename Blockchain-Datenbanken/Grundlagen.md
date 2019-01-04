@@ -1,10 +1,10 @@
 ***
 
-[<< Inhaltverzeichnis](Readme.md) 
+[<< zurück](Einleitung.md) 
 
 ***
 
-## 1. Einleitung
+## 2. Grundlagen
 
 
 
@@ -12,7 +12,7 @@
 
 ***
 
-[<< Inhaltsverzeichnis](Readme.md) | [Grundlagen >>](Grundlagen.md)
+[<< Einleitung](Einleitung.md) | [Funktionsweise >>](Funktionsweise.md)
 
 ***
 

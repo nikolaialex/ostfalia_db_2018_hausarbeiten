@@ -36,6 +36,8 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 
 * 
 
+
+
 ------
 
 [< Document Stores](Document_Stores.md) | [Column Stores >](Column_Stores.md)

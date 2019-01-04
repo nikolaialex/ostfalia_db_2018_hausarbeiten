@@ -30,6 +30,8 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 
 * 
 
+
+
 ------
 
 [< Column Stores](Column_Stores.md) | [Abschluss >](Abschluss.md)

@@ -28,8 +28,6 @@ Die strukturellen Vorgaben einer Tabelle beziehen sich auf alle jeweils enthalte
 
 
 
-
-
 ***
 
 [<< Datenbank-Systeme](Datenbank-Systeme.md) | [Document Stores >>](Document_Stores.md)

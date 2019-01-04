@@ -19,8 +19,6 @@
 |         **Dozent** | **Nikolai Alex**             |
 |       **Semester** | **Wintersemester 2018/2019** |
 
-
-
 ***
 
 [Inhaltsverzeichnis >](Inhaltsverzeichnis.md)

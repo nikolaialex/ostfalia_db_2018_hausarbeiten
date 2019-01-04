@@ -30,6 +30,8 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 
 * 
 
+
+
 ------
 
 [< Key-Value-Stores](Key-Value-Stores.md) | [Graphen-Datenbanken >](Graphen-Datenbanken.md)

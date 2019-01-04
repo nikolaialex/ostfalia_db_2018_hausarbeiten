@@ -35,7 +35,8 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 
 
 * Das Lesen aus der Datenbank ist (wenn das Dokument dem anzuzeigenden Inhalt entspricht), je nach vergleichbarer relationaler Datenbank, erheblich schneller, da nur ein lesender Zugriff erfolgt
-* 
+
+
 
 ------
 

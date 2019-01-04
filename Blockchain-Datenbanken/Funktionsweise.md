@@ -1,7 +1,5 @@
 ***
-
-[<< zurück](Grundlagen.md) 
-
+[<< Inhaltsverzeichnis](README.md)
 ***
 
 ## 3. Funktionsweise

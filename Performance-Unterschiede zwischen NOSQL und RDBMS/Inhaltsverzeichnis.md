@@ -12,4 +12,4 @@
 
 ***
 
-[<< Deckblatt](Deckblatt.md) | [Einleitung >>](Einleitung.md)
+[< Deckblatt](Deckblatt.md) | [Einleitung >](Einleitung.md)

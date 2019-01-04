@@ -2,7 +2,17 @@
 
 ### Modelle und Modelldaten
 
-Vorlagen CSV, REST (API/Endpoint), Artifakte erzeugt aus Traingsdaten
+**Modelltypen**
+
+* Regeln
+* Programme
+* Funktionen
+
+**Modelldaten**
+
+* Vorlagen aus Dateiformaten (CSV,XML,Text)
+* REST (API/Endpoint)
+* Artifakte erzeugt aus Traingsdaten
 
 ### Algorithmen
 

@@ -1,6 +1,6 @@
 ***
 
-[<< Inhaltverzeichnis](Readme.md) 
+[<< Inhaltverzeichnis](README.md) 
 
 ***
 
@@ -12,7 +12,7 @@
 
 ***
 
-[<< Inhaltsverzeichnis](Readme.md) | [Grundlagen >>](Grundlagen.md)
+[<< Inhaltsverzeichnis](README.md) | [Grundlagen >>](Grundlagen.md)
 
 ***
 

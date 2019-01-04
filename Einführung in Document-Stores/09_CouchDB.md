@@ -130,11 +130,15 @@ Aus diesem Grund wird CouchDB besonders häufig in mobilen bzw. Office-Anwendung
 
 ------
 
-[1] Edlich, S. (2011). NoSQL. München: Hanser. <br>
-[2] Kurowski, O. (2012). NoSQL Einführung. Frankfurt am Main: entwickler.press.  <br>
-[3] Datenbanken Online Lexikon | Datenbanken / Apache CouchDB. (o.D.). Abgerufen 14. November, 2018, von http://wikis.gm.fh-koeln.de/wiki_db/index.php?n=Datenbanken.CouchDB <br>
-[4] CouchDB: The Definitive Guide. (o.D.). Abgerufen 15. November, 2018, von http://guide.couchdb.org/ <br>
-[5] Overview — Apache CouchDB 2.2 Documentation. (o.D.). Abgerufen 18. November, 2018, von http://docs.couchdb.org/en/stable/ <br>
+[1] Edlich, S. (2011). NoSQL. München: Hanser.
+
+[2] Kurowski, O. (2012). NoSQL Einführung. Frankfurt am Main: entwickler.press.
+
+[3] Datenbanken Online Lexikon | Datenbanken / Apache CouchDB. (o.D.). Abgerufen 14. November, 2018, von http://wikis.gm.fh-koeln.de/wiki_db/index.php?n=Datenbanken.CouchDB
+
+[4] CouchDB: The Definitive Guide. (o.D.). Abgerufen 15. November, 2018, von http://guide.couchdb.org/
+
+[5] Overview — Apache CouchDB 2.2 Documentation. (o.D.). Abgerufen 18. November, 2018, von http://docs.couchdb.org/en/stable/
 
 ------
 

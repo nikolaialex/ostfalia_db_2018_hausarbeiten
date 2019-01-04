@@ -1,7 +1,5 @@
 ***
-
-[<< zurück](Funktionsweise.md)
-
+[<< Inhaltsverzeichnis](README.md)
 ***
 
 ## 4. Anwendungsbeispiele

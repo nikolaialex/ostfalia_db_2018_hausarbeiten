@@ -49,11 +49,11 @@ Durch im Objekt oTutor hinterlegte Methoden wie z.B. getName, getFirstLecture, u
 `oTutor->getName() liefert: 'Hans Maier'`<br>
 `oTutor->getFirstLecture() liefert: 'Quantencomputer'`
 
-Bei einigen Anfragen haben objektorientierte Datenbanken einen Nachteil gegenüber den relationalen. Durch erhöhte Komplexität kann es zu Leistungsproblemen kommen. Dies lässt sich auf die Zugriffspfade, die durch unterschiedliche Pfadarten wie Assoziationen und Vererbung bei den Objekten entstehen, zurückführen. [2]
+Bei einigen Anfragen haben objektorientierte Datenbanken einen Nachteil gegenüber den relationalen. Durch erhöhte Komplexität kann es zu Leistungsproblemen kommen. Dies lässt sich auf die Zugriffspfade, die durch unterschiedliche Pfadarten wie Assoziationen und Vererbung bei den Objekten entstehen, zurückführen. [2, 4]
 
 ## 4.3 Dokuemtenorientierte Datenbanken
 
-Bei Document Stores werden die Daten nicht wie bei relationalen Datenbanken in Spalten und Tabellen abgespeichert, sondern wie bereits in vorherigen Abschnitten beschrieben, in Dokumenten. Ein Dokument stellt eine Ansammlung von Feldern und Werten dar. Jeder Eintrag wird in einem eigenen Dokument gespeichert und über eine eindeutige ID in der Datenbank identifiziert. Die Daten werden ohne eine vorgegebene Struktur für das jeweilige Dokument gespeichert, anders als bei einer Tabellenstruktur in den relationalen Datenbanken oder einer festgelegten Struktur für einen bestimmten Objekttyp in den objektorientierten Datenbanken. [6]
+Bei Document Stores werden die Daten nicht wie bei relationalen Datenbanken in Spalten und Tabellen abgespeichert, sondern wie bereits in vorherigen Abschnitten beschrieben, in Dokumenten. Ein Dokument stellt eine Ansammlung von Feldern und Werten dar. Jeder Eintrag wird in einem eigenen Dokument gespeichert und über eine eindeutige ID in der Datenbank identifiziert. Die Daten werden ohne eine vorgegebene Struktur für das jeweilige Dokument gespeichert, anders als bei einer Tabellenstruktur in den relationalen Datenbanken oder einer festgelegten Struktur für einen bestimmten Objekttyp in den objektorientierten Datenbanken. [5]
 
 Anhand des Dozenten/Vorlesungen Beispiels können zwei Dozenten-Dokumente unterschiedliche Strukturen aufweisen (JSON-Format):
 
@@ -72,14 +72,19 @@ Anhand des Dozenten/Vorlesungen Beispiels können zwei Dozenten-Dokumente unters
 }
 ```
 
-Ein Nachteil von dokumentorientierten Datenbanken ist, dass sie für komplexe Datenstrukturen mit hoher Beziehungstiefe eher ungeeignet sind. Ist es nötig, mit den in der Datenbank enthaltenen Dokumenten Operationen zu programmieren, so muss zunächst eine Struktur festgelegt werden. Häufig wird in diesem Zuge eine übergeordnete Strukturfestlegung vorgenommen, um den Programmieraufwand zu verringern. Dies führt dazu, dass die Formfreiheit nur noch eingeschränkt gilt. Funktionalitäten die bei relationalen oder objektorientierten Datenbanken standardmäßig zur Verfügung stehen, müssen bei dokumentorientierten Datenbanken individuell programmiert werden.[3]
+Ein Nachteil von dokumentorientierten Datenbanken ist, dass sie für komplexe Datenstrukturen mit hoher Beziehungstiefe eher ungeeignet sind. Ist es nötig, mit den in der Datenbank enthaltenen Dokumenten Operationen zu programmieren, so muss zunächst eine Struktur festgelegt werden. Häufig wird in diesem Zuge eine übergeordnete Strukturfestlegung vorgenommen, um den Programmieraufwand zu verringern. Dies führt dazu, dass die Formfreiheit nur noch eingeschränkt gilt. Funktionalitäten die bei relationalen oder objektorientierten Datenbanken standardmäßig zur Verfügung stehen, müssen bei dokumentorientierten Datenbanken individuell programmiert werden. [3]
 
 ---
-[1] Datenbankmodelle – Informatik. (o.D.). Abgerufen 15. November, 2018, von http://www.info-wsf.de/index.php/Datenbankmodelle <br>
-[2] Lapp, A. (2018, 14. November). Big Data – Mehr Durchblick im Datendschungel. Abgerufen 17. November, 2018, von https://blog.adacor.com/big-data-sql-nosql-richtig-einordnen_4308.html <br> 
-[3] Noth, O. (2013, 25. Februar). Unterschiede der Datenbankmodelle relationale, objektorientierte und dokumentenbasierte Datenbank. Abgerufen 17. November, 2018, von https://blog.secu-ring.de/software/unterschiede-der-datenbankmodelle-relationale-objektorientierte-und-doukumentenbasierte-datenbank/<br>
-[5] Vor- und Nachteile von Objektdatenbanken. (o.D.). Abgerufen 15. November, 2018, von https://www.eu-datenbank.de/fachartikel/vor-und-nachteile-von-objektdatenbanken/ <br>
-[6] Kurowski, O. (2012). NoSQL Einführung. Frankfurt am Main: entwickler.press.
+
+[1] Datenbankmodelle – Informatik. (o.D.). Abgerufen 15. November, 2018, von http://www.info-wsf.de/index.php/Datenbankmodelle
+
+[2] Lapp, A. (2018, 14. November). Big Data – Mehr Durchblick im Datendschungel. Abgerufen 17. November, 2018, von https://blog.adacor.com/big-data-sql-nosql-richtig-einordnen_4308.html
+
+[3] Noth, O. (2013, 25. Februar). Unterschiede der Datenbankmodelle relationale, objektorientierte und dokumentenbasierte Datenbank. Abgerufen 17. November, 2018, von https://blog.secu-ring.de/software/unterschiede-der-datenbankmodelle-relationale-objektorientierte-und-doukumentenbasierte-datenbank/
+
+[4] Vor- und Nachteile von Objektdatenbanken. (o.D.). Abgerufen 15. November, 2018, von https://www.eu-datenbank.de/fachartikel/vor-und-nachteile-von-objektdatenbanken/
+
+[5] Kurowski, O. (2012). NoSQL Einführung. Frankfurt am Main: entwickler.press.
 
 ------
 

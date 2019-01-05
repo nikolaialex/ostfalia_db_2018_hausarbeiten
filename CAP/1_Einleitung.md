@@ -19,27 +19,8 @@ Nach der Definition des CAP-Theorems und der einzelnen Eigenschaften werden
 die Unterschiede in den Begriffsdefinitionen zum ACID-Modell dargestellt.  
 Darauf folgen zwei moderne CAP-Implementierungsbeispiele:
 [Google Cloud Spanner](https://cloud.google.com/spanner/ "Google Cloud Spanner")
-und [Amazon DynamoDB](https://aws.amazon.com/dynamodb/ "Amazon DynamoDB").
+und Amazon Dynamo.
 Abschließend werden zwei Alternativen zu CAP aufgezeigt.
-
-Die kurz zusammengefasste Geschichte des CAP-Theorems beginnt
-im Jahr 1999. Eric A. Brewer und Armando Fox veröffentlichten ihre Arbeit
-*Harvest, Yield, and Scalable Tolerant Systems* [1]. Die Autoren zeigen zwei
-Strategien auf wie in Software-Systemen pragmatisch mit den drei CAP Eigenschaften
-umgegangen werden kann und vermuten das zu einem beliebigen Zeitpunkt nur
-zwei der drei Eigenschaften erfüllt werden können. Zu
-diesem Zeitpunkt formulieren Brewer und Fox dies als *CAP Principle* [1].
-
-Brewer formuliert das *CAP Principle* im Folgejahr (2000) als Hypothese [2]; also
-den Sachverhalt nur zwei von drei Eigenschaften zu erreichen. In 2002 beweisen
-Seth Gilbert und Nancy Lynch diese Hypothese in ihrer Arbeit
-*Brewer's Conjecture and the Feasibility of Consistent, Available,
-Partition-Tolerant Web Services* [3].
-
-Der Beweis dieser Hypothese führte zur verstärkten Erforschung von
-System-Architekturen, welche die CAP Eigenschaften bestmöglich erfüllen.
-Gilbert und Lynch formulierten dies als Systeme die Daten meistens vollständig
-die meiste Zeit zurückliefern [3].
 
 <br />
 

@@ -4,7 +4,7 @@ Seit 2011 wird Spanner im Produktivbetrieb als skalierbares, global-verteiltes D
 bei Google eingesetzt [1]. Die Entwicklung wurde in 2007 begonnen [4].
 Spanner kann verteilt auf Hunderten von Datenzentren mit Millionen
 von Maschinen ausgeführt werden [1]. Für weltweite Erreichbarkeit und
-geographische Lokalität wird Replikation eingesetzt, welche automatisch
+geografische Lokalität wird Replikation eingesetzt, welche automatisch
 Daten zwischen Maschinen und sogar zwischen Datenzentren migriert [1].
 
 Spanner hat sich von einem Bigtable-ähnlichen Datenbanksystem zu einem
@@ -22,9 +22,9 @@ und traditionell nicht-relationalen Datenbanksystemen, übernommen von
 ## 4.1.1 Architektur
 Corbett et. al. (2012) stellen nur eine High-Level Sicht zur Verfügung (s. Abbildung 2).
 Ganz oben finden sich die als Singleton implementierten *universemaster* und der
-*placement driver*, wobei der *universemaster* im wesentlichen eine Konsole mit
+*placement driver*, wobei der *universemaster* im Wesentlichen eine Konsole mit
 Statusinformationen für interaktives Debugging über alle Zonen bereitstellt [1].
-Der *placement driver* kommuniziert periodisch mit den *spanservers* um Daten zu
+Der *placement driver* kommuniziert periodisch mit den *spanservers*, um Daten zu
 finden, die migriert werden müssen durch neue Replikations-Beschränkungen oder
 zur Lastverteilung [1]. Eine Zone besteht aus einem *zonemaster* und zwischen
 Hundert bis mehreren Tausend *spanservers* [1]. Ein *zonemaster* weist den
@@ -176,7 +176,7 @@ Google Spanner bietet die folgenden simplen und komplexen Datentypen an:
  **[STRING](https://cloud.google.com/spanner/docs/data-types#string-type)**,
  **[STRUCT](https://cloud.google.com/spanner/docs/data-types#struct-type)** und
  **[TIMESTAMP](https://cloud.google.com/spanner/docs/data-types#timestamp-type)**.
- Für mehr Informationen zu einzelnen Datentypen,
+ Für mehr Informationen zu einzelnen Datentypen
  ist jeder einzelne Typ zur offiziellen Dokumentation verlinkt.  
 
  Besonders hervorzuheben ist der Typ **[TIMESTAMP](https://cloud.google.com/spanner/docs/data-types#timestamp-type)**,
@@ -193,10 +193,9 @@ Ungewissheit [1]. Dies zeigt sich ebenfalls in der Implementierung der TrueTime 
 ### Wie wird Zeit in einem Datenzentrum *präzise gehalten*?
 Damit jedes Datenzentrum eine möglichst präzise Zeit hat und halten kann, gibt es
 bis zu zwei Mechanismen vor Ort [1].  
-Ein GPS-Empfänger ist eine mögliche Zeit-
-quelle. Weil GPS verschiedenen Fehleranfälligkeiten unterliegen kann, wie (1)
+Ein GPS-Empfänger ist eine mögliche Zeitquelle. Weil GPS verschiedenen Fehleranfälligkeiten unterliegen kann, wie (1)
 Referenz-Quellen Schwächen beinhalten Antennen- und Empfänger-Fehler, (2) lokale
-Funkinterferenz, korrelierte Fehler (z.B. Design-Fehler, falsche Behandlung von
+Funkinterferenz, korrelierte Fehler (z. B. Design-Fehler, falsche Behandlung von
 Schaltsekunden) und (3) GPS-Systemausfällen [1].  
 Die zweite mögliche Zeitquelle für ein Datenzentrum ist eine lokale Atomuhr,
 welche unabhängig von GPS und anderen Atomuhren unpräzise werden kann [1].  
@@ -206,7 +205,7 @@ oder von Atomuhren beziehen (genannt: *Armageddon masters*) [1]. Master-Maschine
 vergleichen ihre Zeit untereinander. Hierbei vergleicht ein einzelner *time master*
 die Abweichung seiner lokalen Zeit mit der vom Referenz-Zeitgeber. Ist die Differenz zu
 groß, stellt er den Dienst als *time master* ein [1]. (**Anmerkung der Autoren**:
-Corbett et. al. erläutern nicht ob und wie ein *time master* zu einem späteren
+Corbett et. al. erläutern nicht, ob und wie ein *time master* zu einem späteren
 Zeitpunkt nach Dienstbeendigung gegebenenfalls wieder seinen Dienst aufnimmt.)  
 Des Weiteren gibt es pro Maschine einen *timeslave* Dienst, der zur
 Fehlervermeidung von mehreren *time master* Maschinen die Zeit abfragt [1].
@@ -218,13 +217,13 @@ In 2012 gibt Spanner als erstes System solche Garantien [1].
 
 ### Wozu dienen Zeitinvervalle bei hochpräzisen Uhren?
 Die Verwendung von Zeitintervallen bietet auch mit Hochpräzisions-Zeitquellen Vorteile.
-Unterschiedliche Faktoren tragen dazu bei das die gehaltene Zeit in einem
-Datenzentrum im Vergleich zu einem anderen ungewollt abweicht (s. vorheriger Abschnitt).
+Unterschiedliche Faktoren sorgen für eine ungewollte Abweichung der gehaltenen Zeit in einem
+Datenzentrum im Vergleich zu einem anderen (s. vorheriger Abschnitt).
 
 Alle 30 Sekunden fragt der *timeslave* Dienst die Zeit ab [1]. Bereits die
 Geschwindigkeit der Signalausbreitung und Signalverarbeitung erzeugen Latenzen.
 Der Dienst berechnet eine Ungewissheit Epsilon mit ein, die sich in einem
-Abfrageintervall zwischen 1 bis 7 ms bewegt [1]. Also im Durchschnitt meist 4 ms.
+Abfrageintervall zwischen 1 und 7 ms bewegt [1]. Also im Durchschnitt meist 4 ms.
 
 Die zwei vorgestellten Mechanismen sorgen für starke Konsistenz der Daten.
 

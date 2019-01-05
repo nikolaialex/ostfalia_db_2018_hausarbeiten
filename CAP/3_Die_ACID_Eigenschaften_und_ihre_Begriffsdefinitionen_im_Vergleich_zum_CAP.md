@@ -8,14 +8,14 @@ von ACID werden den Verwendungen im CAP-Theorem gegenübergestellt.
 
 Die ACID-Taxonomie nach Härder und Reuter definiert *Atomicity* als Eigenschaft
 einer Datenbank eine Transaktion von ihrem Anfang bis zu ihrem Ende anzuwenden;
- erfolgt zwischen Anfang und Ende ein Fehler so werden die bis dahin angewendeten
+ erfolgt zwischen Anfang und Ende ein Fehler, so werden die bis dahin angewendeten
  Teilaktionen der Transaktion rückgängig gemacht [1]. *Consistency* garantiert
  valide Zustände der Datenbank für alle bestehenden Verbindungen zu dieser
- Datenbank-Instanz (bei erfolgreichen Transaktionen) [1].  
+ Datenbankinstanz (bei erfolgreichen Transaktionen) [1].  
 Die Eigenschaft *Isolation* isoliert mehrere Transkationen voneinander, so dass
 "aus Sicht" einer einzelnen Transaktion weitere Transaktionen entweder vor ihr
 oder nach ihr angewendet werden [1]. *Durability* stellt sicher, dass eine
-abgeschlossene Transaktion gegen einen Fehlerfall einer Datenbank-Instanz
+abgeschlossene Transaktion gegen einen Fehlerfall einer Datenbankinstanz
 abgesichert ist, zum Beispiel durch ein *flush*-Kommando auf das unterliegende
 Speichersystem [1]. Ein anschauliches Beispiel ist die Sitzplatz Reservierung
 auf einem Flug. *Durability* stellt sicher, das der erfolgreich reservierte
@@ -23,8 +23,9 @@ Sitzplatz auch nach einem Fehlerfall als reserviert behandelt wird.
 
 Die Ideen von ACID und CAP zielen auf einen jeweils anderen Bezugsbereich ab.
 Insbesondere bei der Konsistenz unterscheiden sich die beiden Eigenschaftsmengen.  
-ACID bezieht sich bei der Konsistenz auf eine einheitliche Sicht auf die
-geänderten über alle bestehenden Datenbank Verbindungen.  
+In der Praxis bedeutet Konsistenz bei ACID, dass die Sicht auf die Daten
+einheitlich ueber alle Datenbank-Verbindungen ist. Also sehen zwei Client-Systeme
+nach einer Anfrage denselben Stand und nicht etwa unterschiedliche.
 CAP betrachtet hierbei die eventuelle Konsistenz der Daten über alle
 Knoten in einem Datenbank-Cluster.
 
@@ -32,12 +33,12 @@ Knoten in einem Datenbank-Cluster.
 
 |**Eigenschaft**|**ACID**|**CAP**|**Konflikt**|
 |--- |--- |--- |--- |
-|Durability|“Once a transaction completes successfully, its changes to the state survive failures.” [D2]|The word and the concept are not used.|Nein|
-|Consistenty|Integrity constraints on the data (data types, relations, …)|For CAP, Consistency is a shortcut for “Atomic Consistency”. The atomic consistency is a consistency model. More on this later.|Gleicher Begriff, verschiedene Konzepte|
-|Isolation|“Even though transactions execute concurrently, it appears to each Transaction, T, that others executed either before either after T”. [D2]|The word is not used in CAP but the word Isolation as defined in ACID is a consistency model in CAP vocabulary.|Unterschiedliche Begriffe aber gleiches Konzept|
-|Atomicity|All changes happen or none happen.|For CAP, Atomic is a consistency model, the one used in the CAP proof.|Gleicher Begriff, verschiedene Konzepte|
-|Availability|Concept not often used. If so, the definition can be different than in CAP, i.e. available may not require all the non-failing nodes to respond.|“every request received by a non-failing node in the system must result in a response” [C2]|Gleicher Begriff, gleiches Konzept, unterschiedliche Definitionen|
-|Partition(-tolerance)|Concept not often used. If so, the definition is the same as in CAP.|Two sets of nodes are partitioned when all messages between them are lost.|Nein|
+|Durability|“Ist eine Transaktion erfolgreich abgeschlossen, so bleibt der geaenderte Zustand auch im Fehlerfall erhalten.” [D2]|Wort und Konzept werden nicht benutzt.|Nein|
+|Consistenty|Integritaetsbeschraenkungen auf die Daten (Datentypen, Relationen, ...)|Fuer CAP ist Consistency ein Kuerzel fuer “Atomic Consistency”. Dabei ist atomic consistency ein Konsistenzmodell.|Gleicher Begriff, verschiedene Konzepte|
+|Isolation|“Obwohl Transaktionen gleichzeitig ausgefuehrt werden, ist es aus Sicht einer Transaktion T so, das andere Transaktionen entweder vor oder nach ihr ausgefuehrt werden.” [D2]|Wort wird nicht benutzt. Es tritt aber als Konsistenzmodell auf.|Unterschiedliche Begriffe aber gleiches Konzept|
+|Atomicity|Alle Aenderungen werden angewendet oder keine.|Fuer CAP bedeutet Atomic ein Konsistenzmodell, welches im Beweis genutzt wird.|Gleicher Begriff, verschiedene Konzepte|
+|Availability|Das Konzept wird nicht of genutzt. Wenn, dann kann die Definition zu CAP verschieden sein, z. B. ist es nicht zwingend erforderlich das alle fehlerfreien Knoten antworten.|“Jede Anfrage, die von einem fehlerfreien Knoten im Gesamtsystem angenommen wird, muss zu einer Antwort fuehren.” [C2]|Gleicher Begriff, gleiches Konzept, unterschiedliche Definitionen|
+|Partition(-tolerance)|Das Konzept wird so nicht oft genutzt. Wenn, dann ist die Definition gleich zu CAP.|Zwei Mengen von Knoten sind dann partitioniert, wenn alle Nachrichten zwischen diesen Knoten verloren gehen.|Nein|
 
 Tabelle 1: Übersicht der unterschiedlichen Begriffsbezüge bei ACID und CAP
 (aus dem Englischen in Anlehnung an Liochon 2015, [2])

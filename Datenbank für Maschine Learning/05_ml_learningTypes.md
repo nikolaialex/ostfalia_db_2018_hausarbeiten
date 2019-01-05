@@ -1,3 +1,5 @@
+***
+
 ## ML Einteilung der ML-Lerntypen
 
 ### Typeinteilung
@@ -82,6 +84,11 @@ _"Bei einer Klassifikation steht dagegen schon im Vorfeld fest, in welche Gruppe
 jekt eingeordnet werden kann. Hier geht es darum, die Merkmale herauszufinden, die für 
 die Zuordnung am signifikantesten sind. Im Fall der Emails unterscheiden sich Spam und 
 wichtige Emails zum Beispiel in den Absendern und den verwendeten Wörtern."_
+
+
+------
+
+[< Einführung](04_ml.md)	|	[Modelle und Algorithmen >](06_ml_modelsAlgo.md)
 
 
 [601]:https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861

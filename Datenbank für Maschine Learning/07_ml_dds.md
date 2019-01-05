@@ -1,3 +1,5 @@
+***
+
 ## Abgrenzungen
 
 Eine Abgrenzung ist in dem gegeben Thema undablässlich, da der Rahmen mehrere Dimensionen als auch einen großen
@@ -16,3 +18,8 @@ des Themas geführt, sodass allein in dem Themengebiet der Datenbanken für ML e
 
 Deep Learning ist ein Teilbereich und zeitgleich die dynamische Weiterentwicklung des Machine Learnings.
 Das klassische Machine Learning basiert auf festen Modellen ...
+
+
+------
+
+[< Modelle und Algorithmen](06_ml_modelsAlgo.md)	|	[Datenbanken für ML >](08_dbml.md)

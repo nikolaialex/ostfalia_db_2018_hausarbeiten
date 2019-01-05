@@ -1,3 +1,5 @@
+***
+
 ## Anforderungen an ein DBMS für ML
 
 ### Prozess und Komponenten für ML abbilden
@@ -21,3 +23,6 @@
     8) SQL Schnittstelle
     9) Batchbetrieb
 
+----
+
+[< Datenbanken für ML](08_dbml.md)	|	[Vergleich von Datenbanken >](10_dbml_comparsion.md)

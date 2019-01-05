@@ -1,4 +1,4 @@
-# 5. Alternativen zu CAP
+# 5. Alternativen des CAP-Theorems
 
 
 ## 5.1. PACELC

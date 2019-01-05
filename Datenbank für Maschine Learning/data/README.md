@@ -29,13 +29,13 @@ Auswertung Hausarbeiten 2016/2017
 
 Welche Datenbanken werden in ML verwendet bzw. haben sich bisher bewährt?
 
-[![Azure](statics/azuredbml.png)](https://blogs.msdn.microsoft.com/azureedu/2017/03/18/how-can-i-get-started-with-azure-machine-learning/)
+[![Azure](../statics/azuredbml.png)](https://blogs.msdn.microsoft.com/azureedu/2017/03/18/how-can-i-get-started-with-azure-machine-learning/)
 
 ### Machine Learning und Daten
 
 #### BigData / Data Lake
 
-[![datalake](statics/datalake.png)](https://aws.amazon.com/de/big-data/datalakes-and-analytics/what-is-a-data-lake/)
+[![datalake](../statics/datalake.png)](https://aws.amazon.com/de/big-data/datalakes-and-analytics/what-is-a-data-lake/)
 
 #### Datasets
 

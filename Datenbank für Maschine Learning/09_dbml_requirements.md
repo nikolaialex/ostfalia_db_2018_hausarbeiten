@@ -11,17 +11,34 @@
 5) Die Scoring-Funktion ist auch über eine SQL-Abfrage zugänglich.
 6) Ein Batch-Scoring-Verfahren verwendet SQL, um die Scoring-Funktion auf einen unbewerteten Datensatz im Batch anzuwenden und einen Scored Datensatz zu erzeugen.
 
-#### Grob-Anforderungen
+#### Anforderungen Data Mining
 
-1) Datei Import
-    2) Dataset
-3) ML Algorithmus anwenden
-    4) Prozeduren
-5) Modell sichern
-6) Funktionen
-    7) REST Schnittstelle
-    8) SQL Schnittstelle
-    9) Batchbetrieb
+1) Verarbeitung unterschiedlichster Daten
+2) Effizienz und Skalierbarkeit
+3) Nützlichkeit, Sicherheit und Ausdruckskraft der Ergebnissen
+4) Interaktives Mining in verschiedenen Abstraktionsebenen
+
+#### Anforderungen ML-DB
+
+1) Import
+     2) Aufruf via Schnittstellen (REST,QL)
+     3) Dataset (CSV,Erstellung,Vorlagen)
+     4) Klassische Bearbeitung (Filter,Rules)
+5) ML Algorithmus anwenden
+     6) Performance
+     7) Aufruf via Schnittstellen (REST,QL)
+     8) Prozeduren
+     9) Auto-Verallgemeinerung
+    10) Auto-Zusammenfassung
+    11) Auto-Charakterisierung
+12) Modell (Ändern,Sichern)
+13) Funktionen
+    14) Aufruf via Schnittstellen (REST,QL)
+    15) Batchbetrieb
+16) Export (REST,QL)
+
+
+
 
 ----
 

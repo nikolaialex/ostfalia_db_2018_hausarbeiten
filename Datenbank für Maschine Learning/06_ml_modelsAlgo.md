@@ -1,3 +1,5 @@
+***
+
 ## ML Modelle und Algorithmen
 
 ### Modelle und Modelldaten
@@ -71,6 +73,9 @@ Das Modell kann anschließend auf neue unbekannte Daten angewendet werden kann.
     Temporal Difference (TD)
     Deep Adversarial Networks
 
+------
+
+[< Einteilung der ML-Lerntypen](05_ml_learningTypes.md)	|	[Abgrenzungen >](07_ml_dds.md)
 
 
 [610]:https://www.quora.com/What-are-different-models-in-machine-learning

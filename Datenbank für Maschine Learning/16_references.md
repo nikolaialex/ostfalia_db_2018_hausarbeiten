@@ -1,6 +1,6 @@
 ***
 
-## Quellenverzeichnis
+## Literaturverzeichnis
 
 
 <!-- ## Tabellen -->

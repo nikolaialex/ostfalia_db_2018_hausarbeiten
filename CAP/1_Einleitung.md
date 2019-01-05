@@ -55,6 +55,6 @@ die meiste Zeit zurückliefern [3].
 
 ***
 
-[Entstehung und Definition des CAP-Theorems >>](2_0_Entstehung_und_Definition_des_CAP-Theorems.md)
+[Entstehung und Definition des CAP-Theorems >>](2_Entstehung_und_Definition_des_CAP-Theorems.md)
 
 ***

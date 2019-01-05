@@ -28,8 +28,10 @@ Sie kommen häufig dann zum Einsatz, wenn Objekte sich in mehrere Objekte schach
 
 ------
 
-[1] Oliver, A. C. (2013, 31. Oktober). 10 common tasks for MongoDB. Abgerufen 16. November, 2018, von https://www.infoworld.com/article/2612785/application-development/10-common-tasks-for-mongodb.html <br>
-[2] Berthelsen, E. (2014, April). Why NoSQL DWhy NoSQL Databases for the Internet of Things: Machina Researchatabases for the Internet of Things: Machina Research. Abgerufen 17. November, 2018, von https://www.mongodb.com/collateral/why-nosql-databases-internet-things-machina-research <br>
+[1] Oliver, A. C. (2013, 31. Oktober). 10 common tasks for MongoDB. Abgerufen 16. November, 2018, von https://www.infoworld.com/article/2612785/application-development/10-common-tasks-for-mongodb.html
+
+[2] Berthelsen, E. (2014, April). Why NoSQL DWhy NoSQL Databases for the Internet of Things: Machina Researchatabases for the Internet of Things: Machina Research. Abgerufen 17. November, 2018, von https://www.mongodb.com/collateral/why-nosql-databases-internet-things-machina-research
+
 [3] Edlich, S. (2011). NoSQL. München: Hanser. 
 
 ------

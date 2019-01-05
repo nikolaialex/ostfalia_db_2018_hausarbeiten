@@ -1,4 +1,4 @@
-# 2. Relationale Datenbanken
+# Relationale Datenbanken
 
 In relationalen Datenbanken werden sämtliche Daten in einzelnen Tabellen gespeichert, die in Beziehung (Relation) zueinander stehen. Bekannte Branchengrößen wie PostgreSQL, MySQL und Oracle sind relationale Datenbank-Systeme.
 
@@ -6,27 +6,25 @@ Die Tabellen der Datenbank haben durch Namen identifizierte Spalten. Jede Tabell
 
 
 
-**Constraints**
+## Foreign Key
 
 Über Indizes und Fremdschlüssel werden die Beziehungen definiert. Hierüber ist es dem DBMS möglich, die Konsistenz der Daten zu überwachen. Fehlen beim Erstellen eines neuen Datensatzes referenzierte Daten, wird das Persistieren der Daten verhindert. Gleichwohl wird das Löschen vorhandener Datensätze unterbunden, wenn dadurch die Integrität der restlichen Daten zerstört wird.
 
 
 
-**Daten-Änderungen**
+## Daten-Änderungen
 
 Durch die Vorgabe der Datentypen und der jeweiligen Länge weiß das DBMS, welchen Speicherplatz es auf der Festplatte für einen Datensatz (unabhängig vom tatsächlichen Inhalt) reservieren muss. Für die Änderung vorhandener Daten muss durch das DBMS auf dem Laufwerk lediglich der Bereich des entsprechenden Datensatzes ermittelt und überschrieben werden. Sind mehrere Tabellen von einer Änderung betroffen, müssen entsprechend auch mehrere Abschnitte auf der Festplatte modifiziert werden. Der Vorteil besteht hierbei darin, dass je strenger nach der Normalisierung gearbeitet wurde, desto weniger Tabellen bzw. Datensätze müssen tatsächlich verändert werden.
 
 
 
-**Strukturelle Änderungen**
+## Strukturelle Änderungen
 
 Die strukturellen Vorgaben einer Tabelle beziehen sich auf alle jeweils enthaltenen Datensätze. Soll etwa der Datentyp einer Spalte verändert werden, erfolgt die Konvertierung (bzw. der Versuch) für alle enthaltenen Datensätze. Ebenso müssen beim Hinzufügen von Constraints sämtliche Referenzen überprüft werden. Es handelt sich bei Migrationen also um entsprechend teure Aufrufe.
 
 
 
-**Skalierung**
-
-
+## Skalierung
 
 
 

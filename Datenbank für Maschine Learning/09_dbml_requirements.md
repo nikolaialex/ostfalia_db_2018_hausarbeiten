@@ -38,7 +38,7 @@
 16) Export (REST,QL)
 
 
-
+[901]: Russell Jurney, 2017 - Agile Data Science 2.0
 
 ----
 

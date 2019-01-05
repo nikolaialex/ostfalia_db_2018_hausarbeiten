@@ -96,10 +96,15 @@ Dies ist auch durchaus darauf zurückzuführen, dass MongoDB auf der bewährten 
 Sollte man bei der Nutzung von MongoDB auf Schwierigkeiten stoßen, bietet eine große Community ausreichend Möglichkeiten, um eine Lösung des Problem zu finden.
 
 ---
-[1] Edlich, S. (2011). NoSQL. München: Hanser. <br>
-[2] Datenbanken Online Lexikon | Datenbanken / MongoDB. (o.D.). Abgerufen 16. November, 2018, von http://wikis.gm.fh-koeln.de/wiki_db/index.php?n=Datenbanken.MongoDB <br>
-[3] What Is MongoDB? (o.D.). Abgerufen 18. November, 2018, von https://www.mongodb.com/de/what-is-mongodb <br>
-[4] Kurowski, O. (2012). NoSQL Einführung. Frankfurt am Main: entwickler.press. <br>
+
+[1] Edlich, S. (2011). NoSQL. München: Hanser.
+
+[2] Datenbanken Online Lexikon | Datenbanken / MongoDB. (o.D.). Abgerufen 16. November, 2018, von http://wikis.gm.fh-koeln.de/wiki_db/index.php?n=Datenbanken.MongoDB
+
+[3] What Is MongoDB? (o.D.). Abgerufen 18. November, 2018, von https://www.mongodb.com/de/what-is-mongodb
+
+[4] Kurowski, O. (2012). NoSQL Einführung. Frankfurt am Main: entwickler.press.
+
 [5] Replication — MongoDB Manual. (o.D.). Abgerufen 17. November, 2018, von https://docs.mongodb.com/manual/replication/
 
 ---

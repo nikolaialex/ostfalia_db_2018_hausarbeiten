@@ -1,18 +1,16 @@
 ***
+[<< Inhaltsverzeichnis](README.md)
+***
 
-[<< Inhaltverzeichnis](README.md) 
+## 2. Grundlagen
+
+
+
+
 
 ***
 
-## 1. Einleitung
-
-
-
-
-
-***
-
-[<< Inhaltsverzeichnis](README.md) | [Grundlagen >>](Grundlagen.md)
+[<< Einleitung](Einleitung.md) | [Funktionsweise >>](Funktionsweise.md)
 
 ***
 

@@ -1,3 +1,4 @@
+
 # 5. Alternativen des CAP-Theorems
 
 Das CAP-Theorem ist heute kein geeignetes Modell mehr für die Überlegungen von verteilten Rechensystemen, da es keine klare und unmissverständliche Definition gibt. Die bereits erwähnten Mehrdeutigkeit aus [Abschnitt 2](2_Entstehung_und_Definition_des_CAP-Theorems.md), veranlasste die Erwägung neuer Frameworks, dessen Definition einfach zu verstehen, formal und korrekt ist. [1]
@@ -22,6 +23,7 @@ Punkt zwei stellt den Ausgangspunkt des PACELC-Theorems dar. Abadi argumentiert,
 > operations.“ [4]
 
 ![PACELC](media/pacelc.jpg)
+
 **Abbildung 1:** PACELC-Modell [3]
 
 Im CAP-Theorem wurde bereits erläutert, dass wenn es in einem System eine *Partition \(P\)* gibt, dann folgt ein Konflikt zwischen *Konsistenz \(C\)* und *Verfügbarkeit (A)*. Das PACELC-Theorem erweitert nun diese Definition um das *„else“ (E)*, denn wenn *Partition \(P\)* nicht verwendet wird, gibt es einen Konflikt zwischen *Latenz (L)* und *Konsistenz \(C\)*. Somit gibt es vier Alternativen für jedes mögliche System: *P+A  mit E+L/E+C und P+C mit E+L/E+C*. [2]
@@ -43,6 +45,7 @@ Im CAP-Theorem wurde bereits erläutert, dass wenn es in einem System eine *Part
 |Voldemort| |Y| |Y|
 |Megastore|  |Y| |Y|
 |PNUTS| |Y|Y| |
+
 **Tabelle 1:** Beispiele für den Einsatz von PACELC [3]
 
 ## 5.2. BASE
@@ -61,9 +64,13 @@ Die Daten sind in einem konstanten Fließzustand. Während eine Antwort gegeben 
 Die Konsistenz wird ihr untergeordnet und als Übergangsprozess betrachtet, der nicht dauerhaft gegeben ist [5].
 
 Die eventuelle Konsistenz kann außerdem in 4 verschiedenen Fällen auftreten:
+
 **Causal Consistency:** Sie ist gegeben, wenn ein neu geschriebener Datensatz kausal abhängig von einem vorherig eingetragenen Datensatz ist und danach immer der aktuellste Wert ausgelesen wird und keine ältere Version des Datenelements [5].
+
 **Read-your-write Consistency:** Dabei handelt es sich um einen Speziallfall der Causal Consistency. Man erhält immer seinen geschriebenen Wert und keine ältere Version des Datenelements [5].
+
 **Session Consistency:** Solange eine Session existiert, herrscht Read-your-write Consistency. Wenn diese beendet wurde, muss zunächst eine neue Session erstellt werden [5].
+
 **Monotonic Read Consistency:** Wenn ein Datenelement bei einer Leseoperation zurückgegeben wird, kann bei einer späteren Leseoperation kein älteres Datenelement zurückgegeben werden [5].
 
 

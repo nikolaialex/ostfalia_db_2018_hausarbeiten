@@ -1,6 +1,6 @@
 # Einleitung
 ***
-[1. Einleitung](1_Einleitung.md) - [2. Was ist NoSQL?](2_NoSql.md) - [3. Key Value Stores im Detail](3_KV_Detail.md) - [4. Key Value Store Datenbanken](4_KV_Datenbanken.md) - [5. Funktionsweise von KV-Stores](5_KV_Abfragen.md) - [6. Fazit](6_Fazit.md)
+[Einleitung](1_Einleitung.md) - [Was ist NoSQL?](2_NoSql.md) - [Key Value Stores im Detail](3_KV_Detail.md) - [Key Value Store Datenbanken](4_KV_Datenbanken.md) - [Funktionsweise von KV-Stores](5_KV_Abfragen.md) - [Fazit](6_Fazit.md)
 ***
 
 

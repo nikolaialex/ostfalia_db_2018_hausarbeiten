@@ -7,7 +7,7 @@
 -- content
 
 ***
-[<< Einleitung](../1_Einleitung.md) - [Key Value Stores im Detail >>](../3_KV_Detail.md)
+[<< Einleitung](1_Einleitung.md) - [Key Value Stores im Detail >>](3_KV_Detail.md)
 
 #### Quellenangaben
 ```

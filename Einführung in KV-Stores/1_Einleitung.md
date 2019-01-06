@@ -7,7 +7,7 @@
 -- content
 
 ***
-[<< Inhaltverzeichnis](../README.md) - [Was ist NoSQL? >>](../2_NoSql.md)
+[<< Inhaltverzeichnis](README.md) - [Was ist NoSQL? >>](2_NoSql.md)
 
 #### Quellenangaben
 ```

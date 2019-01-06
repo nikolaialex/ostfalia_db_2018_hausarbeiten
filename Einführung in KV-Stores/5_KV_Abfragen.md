@@ -7,7 +7,7 @@
 -- content
 
 ***
-[<< Key Value Store Datenbanken](../4_KV_Datenbanken Stores im Detail.md) - [Fazit >>](../6_Fazit.md)
+[<< Key Value Store Datenbanken](4_KV_Datenbanken Stores im Detail.md) - [Fazit >>](6_Fazit.md)
 
 #### Quellenangaben
 ```

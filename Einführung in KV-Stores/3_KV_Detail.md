@@ -7,7 +7,7 @@
 -- content
 
 ***
-[<< Was ist NoSQL?](../2_NoSql.md) - [Key Value Store Datenbanken >>](../4_KV_Datenbanken.md)
+[<< Was ist NoSQL?](2_NoSql.md) - [Key Value Store Datenbanken >>](4_KV_Datenbanken.md)
 
 #### Quellenangaben
 ```

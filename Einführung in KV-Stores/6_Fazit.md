@@ -7,7 +7,7 @@
 -- content
 
 ***
-[<< Funktionsweise von KV-Stores](../5_KV_Abfragen.md)
+[<< Funktionsweise von KV-Stores](5_KV_Abfragen.md)
 
 #### Quellenangaben
 ```

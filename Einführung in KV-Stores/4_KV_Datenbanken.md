@@ -7,7 +7,7 @@
 -- content
 
 ***
-[<< Key Value Stores im Detail](../3_KV_Detail.md) - [Funktionsweise von KV-Stores >>](../5_KV_Abfragen.md)
+[<< Key Value Stores im Detail](3_KV_Detail.md) - [Funktionsweise von KV-Stores >>](5_KV_Abfragen.md)
 
 #### Quellenangaben
 ```

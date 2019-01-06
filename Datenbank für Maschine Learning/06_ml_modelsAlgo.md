@@ -6,12 +6,12 @@
 
 _"Ein Modell ist eine Abstraktion der Wirklichkeit."_
 
-Beim Machine Learning erstellt der Algorithmus ein Modell, das Beispieldaten generalisiert. 
-Das Modell kann anschließend auf neue unbekannte Daten angewendet werden kann.
+Beim Machine Learning erstellt oder befüllt der Algorithmus ein Modell, das Beispieldaten generalisiert. 
+Das Modell kann anschließend auf neue unbekannte Daten angewendet werden.
 
 **Klassische Modelle**
 
-* Regeln
+* Regeln / Filter
 * Programme
 * Funktionen
 

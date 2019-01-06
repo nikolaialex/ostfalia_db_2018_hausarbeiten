@@ -27,6 +27,12 @@ Das Modell kann anschließend auf neue unbekannte Daten angewendet werden kann.
 * REST (API/Endpoint)
 * Artifakte erzeugt aus Traingsdaten
 
+**Modellformen und Datenstrukturen**
+
+* Tabelle
+* Baum
+* Graphen
+
 **Probleme**
 
 * überangepasst (overfit)

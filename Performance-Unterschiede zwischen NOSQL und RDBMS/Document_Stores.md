@@ -24,7 +24,7 @@ Ein Document Store ist, wie bereits erläutert, eine einfache Ablage für ein zu
 
 ## Skalierung
 
-
+In Document Stores werden Dokumente als Ganzes abgelegt. Solange das DBMS die Übersicht behält, welches Dokument auf welchem Rechner abgespeichert ist, können quasi beliebig viele Systeme als Storage verwendet werden. Document Stores skalieren also horizontal sehr gut. Da sie nur auf einfachen Datenstrukturen basieren, erhöht sich die Performance nicht durch den Einsatz von besserer Hardware - sie skalieren vertikal nur schlecht. [1]
 
 
 
@@ -34,10 +34,24 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 
 
 
-* Das Lesen aus der Datenbank ist (wenn das Dokument dem anzuzeigenden Inhalt entspricht), je nach vergleichbarer relationaler Datenbank, erheblich schneller, da nur ein lesender Zugriff erfolgt
+* Das Lesen aus der Datenbank ist (wenn das Dokument dem anzuzeigenden Inhalt entspricht), je nach vergleichbarer relationaler Datenbank, erheblich schneller, da die Daten an einer Stelle abgelegt sind
+* Das Schreiben eines neuen Dokuments ist schneller, da nur an einer Stelle an die Datenbank angehangen wird
+* Das Verändern eines Dokuments ist deutlich langsamer, da beim Speichern das gesamte Dokument neu geschrieben werden muss
+* Vertikales Skalieren ist nicht unendlich weit möglich. Während relationale Datenbanken also irgendwann technisch limitiert sind, können prinzipiell unendlich viele Knoten zum Verbund des Document Stores hinzugefügt werden
 
 
 
 ------
 
 [< Relationale Datenbanken](Relationale_Datenbanken.md) | [Key-Value-Stores >](Key-Value-Stores.md)
+
+***
+
+```
+Quellen
+
+[1]: https://database.guide/what-is-a-document-store-database/
+```
+
+***
+

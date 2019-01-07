@@ -27,7 +27,7 @@ Statusinformationen für interaktives Debugging über alle Zonen bereitstellt [1
 Der *placement driver* kommuniziert periodisch mit den *spanservers*, um Daten zu
 finden, die migriert werden müssen durch neue Replikations-Beschränkungen oder
 zur Lastverteilung [1]. Eine Zone besteht aus einem *zonemaster* und zwischen
-Hundert bis mehreren Tausend *spanservers* [1]. Ein *zonemaster* weist den
+hundert bis mehreren tausend *spanservers* [1]. Ein *zonemaster* weist den
 *spanservers* Daten zu und diese wiederum stellen die Daten den Clients bereit [1].
 Die *location proxies* (pro Zone) dienen dem Client zum Aufinden von geeigneten
 *spanservers* [1].
@@ -165,7 +165,7 @@ CREATE TABLE Albums {
 Listing 1: Schema für Foto-Metadaten in Spanner und die verschränkten Tabellen
 (durch INTERLEAVE IN). Angepasst nach Corbett (2012) [1].
 
-## 4.1.3 Daten-Typen
+## 4.1.3 Datentypen
 Google Spanner bietet die folgenden simplen und komplexen Datentypen an:
  **[ARRAY](https://cloud.google.com/spanner/docs/data-types#array-type)**,
  **[BOOL](https://cloud.google.com/spanner/docs/data-types#boolean-type)**,
@@ -194,16 +194,16 @@ Ungewissheit [1]. Dies zeigt sich ebenfalls in der Implementierung der TrueTime 
 Damit jedes Datenzentrum eine möglichst präzise Zeit hat und halten kann, gibt es
 bis zu zwei Mechanismen vor Ort [1].  
 Ein GPS-Empfänger ist eine mögliche Zeitquelle. Weil GPS verschiedenen Fehleranfälligkeiten unterliegen kann, wie (1)
-Referenz-Quellen Schwächen beinhalten Antennen- und Empfänger-Fehler, (2) lokale
+Referenzquellen Schwächen beinhalten Antennen- und Empfängerfehler, (2) lokale
 Funkinterferenz, korrelierte Fehler (z. B. Design-Fehler, falsche Behandlung von
 Schaltsekunden) und (3) GPS-Systemausfällen [1].  
 Die zweite mögliche Zeitquelle für ein Datenzentrum ist eine lokale Atomuhr,
 welche unabhängig von GPS und anderen Atomuhren unpräzise werden kann [1].  
 TrueTime wurde so implementiert das es pro Datenzentrum mehrere *time master*
 Maschinen gibt, die ihre Zeit entweder von entkoppelten GPS-Empfängern
-oder von Atomuhren beziehen (genannt: *Armageddon masters*) [1]. Master-Maschinen wiederum
+oder von Atomuhren beziehen (genannt: *Armageddon masters*) [1]. Master Maschinen wiederum
 vergleichen ihre Zeit untereinander. Hierbei vergleicht ein einzelner *time master*
-die Abweichung seiner lokalen Zeit mit der vom Referenz-Zeitgeber. Ist die Differenz zu
+die Abweichung seiner lokalen Zeit mit der vom Referenzzeitgeber. Ist die Differenz zu
 groß, stellt er den Dienst als *time master* ein [1]. (**Anmerkung der Autoren**:
 Corbett et. al. erläutern nicht, ob und wie ein *time master* zu einem späteren
 Zeitpunkt nach Dienstbeendigung gegebenenfalls wieder seinen Dienst aufnimmt.)  
@@ -213,7 +213,7 @@ Fehlervermeidung von mehreren *time master* Maschinen die Zeit abfragt [1].
 Wenn eine Transaktion T<sub>1</sub> angewendet bevor eine Transaktion T<sub>2</sub>
 beginnt, dann ist der Zeitstempel von T<sub>1</sub> kleiner als von T<sub>2</sub> [1].
 
-In 2012 gibt Spanner als erstes System solche Garantien [1].
+Im Jahr 2012 war Spanner das erste System, welches solche Garantien gab [1].
 
 ### Wozu dienen Zeitinvervalle bei hochpräzisen Uhren?
 Die Verwendung von Zeitintervallen bietet auch mit Hochpräzisions-Zeitquellen Vorteile.
@@ -231,17 +231,17 @@ Die zwei vorgestellten Mechanismen sorgen für starke Konsistenz der Daten.
 Penkava (2018) vergleicht Spanner als Drop-In für MySQL Varianten (unter anderem) [3].
 Hierbei nennt Penkava folgende Verbesserungspotenziale: (1) Die Google JDBC-API
 stellt keine Data Manipulation Language (DML) und Data Definition Language (DDL)
-Befehle bereit und es muss auf Dritt-APIs zurückgegriffen werden,
+Befehle bereit und es muss auf Dritt-APIs zurückgegriffen werden,  
 (2) Spanner unterstützt keine Views, welche oft als logische Abstraktionsschicht
-und oder als Sicherheitsschicht verwendet werden,
-(3) keine Möglichkeit für eine firmen-lokale Bereitstellung,
-(4) eingeschränkte Möglichkeiten für Richtlinien und Sicherheitsberechtigungen
-und beides nur auf hoher Ebene mit *Google’s Identity & Access Management* Werkzeug,
+und oder als Sicherheitsschicht verwendet werden,  
+(3) keine Möglichkeit für eine firmen-lokale Bereitstellung,  
+(4) eingeschränkte Möglichkeiten für Richtlinien und Sicherheitsberechtigungen  
+und beides nur auf hoher Ebene mit *Google’s Identity & Access Management* Werkzeug,  
 und (5) es gibt keine Backup Funktion.  
 
-Die Google JDBC-API unterstützt seit 2017-11-03 DDL-Statements und seit
-2018-10-11 auch DML-Statements und JDBC-Transaktionen [5].  
-Seit 2018-07-17 ist es möglich in *Apache Avro*-Dateien [7] zu exportieren beziehungsweise
+Die Google JDBC-API unterstützt seit 3.11.2017 DDL-Statements und seit
+11.10.2018 auch DML-Statements und JDBC-Transaktionen [5].  
+Seit 17.7.2018 ist es möglich in *Apache Avro*-Dateien [7] zu exportieren beziehungsweise
 importieren [6].
 
 <br />

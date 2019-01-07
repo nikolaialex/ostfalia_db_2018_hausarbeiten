@@ -1,22 +1,19 @@
 
-# 5. Alternativen des CAP-Theorems
+# 5 Alternativen des CAP-Theorems
 
-Das CAP-Theorem ist heute kein geeignetes Modell mehr für die Überlegungen von verteilten Rechensystemen, da es keine klare und unmissverständliche Definition gibt. Die bereits erwähnten Mehrdeutigkeit aus [Abschnitt 2](2_Entstehung_und_Definition_des_CAP-Theorems.md), veranlasste die Erwägung neuer Frameworks, dessen Definition einfach zu verstehen, formal und korrekt ist. [1]
+Aufgrund der missverständlichen Definition ist das CAP-Theorem heute kein geeignetes Modell mehr für die Überlegungen von verteilten Rechensystemen. Die bereits erwähnten Mehrdeutigkeit aus [Abschnitt 2](2_Entstehung_und_Definition_des_CAP-Theorems.md), veranlasste die Erwägung neuer Frameworks, dessen Definition einfach zu verstehen, formal und korrekt ist. [1]
 
 In diesem Abschnitt werden die Modelle PACELC und BASE vorgestellt, die auf dem CAP-Theorem aufbauen und dieses erweitern. 
 
-## 5.1. PACELC
+## 5.1 PACELC
 
-2010 schlug Daniel J. Abadi „PACELC“ (gesprochen: *„passelk“*) als Erweiterung des CAP-Theorems in seinem Blog vor [2]. Diesen Vorschlag formulierte er 2012 erneut in seinem Artikel *„Consistency Tradeoffs in Modern Distributed Database System Design“* und erweiterte das CAP-Theorem damit um zwei technische Punkte:
+2010 schlug Daniel J. Abadi „PACELC“ (gesprochen: *„passelk“*) als Erweiterung des CAP-Theorems vor [2]. Diesen Vorschlag formulierte er 2012 erneut in seinem Artikel *„Consistency Tradeoffs in Modern Distributed Database System Design“* und erweiterte das CAP-Theorem damit um zwei technische Punkte:
 
-1. Im CAP-Theorem ist kein Kompromiss notwendig, wenn das Netzwerk
-zuverlässig ist. Sowohl in AP-Systemen und CP-Systemen können
-Konsistenz und Verfügbarkeit die meiste Zeit parallel vorkommen [3].
+1. Im CAP-Theorem ist kein Kompromiss notwendig, wenn das Netzwerk zuverlässig ist. Sowohl in AP-Systemen und CP-Systemen können Konsistenz und Verfügbarkeit die meiste Zeit parallel vorkommen [3].
 
-2. Viele verteilten Rechensystemen opfern die Konsistenz um Latenz
-(Wartezeiten) zu verringern [3].
+2. Viele verteilte Rechensysteme opfern die Konsistenz um Latenz (Wartezeiten) zu verringern [3].
 
-Punkt zwei stellt den Ausgangspunkt des PACELC-Theorems dar. Abadi argumentiert, dass es einen Konflikt zwischen Konsistenz und Latenz gibt. Viele Netzwerke garantieren keine begrenzte Verzögerung, wodurch die gesendeten Pakete willkürlich verzögert werden können und somit die Konsistenz bewahrt wird, aber die Latenz darunter leidet [1]. Zudem kommt der Konflikt nur bei Systemen mit replizierten Daten vor [4]. 
+Punkt zwei stellt den Ausgangspunkt des PACELC-Theorems dar. Abadi argumentiert, dass es einen Konflikt zwischen Konsistenz und Latenz gibt. Viele Netzwerke können keine Beschränkung der Wartezeiten garantieren Somit können die gesendeten Pakete willkürlichen Verzögerungen unterworfen sein, wodurch zwar die Konsistenz bewahrt wird, aber die Latenz leidet [1]. Zudem kommt der Konflikt nur bei Systemen mit replizierten Daten vor [4]. 
 
 > „Ignoring the consistency/latency tradeoff of replicated systems is a
 > major oversight, as it is present at all times during system
@@ -24,11 +21,11 @@ Punkt zwei stellt den Ausgangspunkt des PACELC-Theorems dar. Abadi argumentiert,
 
 ![PACELC](media/pacelc.jpg)
 
-**Abbildung 1:** PACELC-Modell [3]
+**Abbildung 1:** PACELC-Modell, übernommen von Patinge et. al. (2016) [2]
 
 Im CAP-Theorem wurde bereits erläutert, dass wenn es in einem System eine *Partition \(P\)* gibt, dann folgt ein Konflikt zwischen *Konsistenz \(C\)* und *Verfügbarkeit (A)*. Das PACELC-Theorem erweitert nun diese Definition um das *„else“ (E)*, denn wenn *Partition \(P\)* nicht verwendet wird, gibt es einen Konflikt zwischen *Latenz (L)* und *Konsistenz \(C\)*. Somit gibt es vier Alternativen für jedes mögliche System: *P+A  mit E+L/E+C und P+C mit E+L/E+C*. [2]
 
-**PA/EL-Systeme:** Wenn *Partitionierung \(P\)* erfolgt, wird *Verfügbarkeit (A)* über Konsistenz gestellt. Wenn die Partitionierung fehlt *(E)*, wird *Latenz (L)* über Konsistenz gestellt. Bei diesen Systemen wird das Design simpler, da beide Konsistenzen aufgegeben werden. Umgesetzt wird dieses System zum Beispiel in den verteilten Datenbanksystemen *Dynamo* und *Cassandra*. [4]
+**PA/EL-Systeme:** Wenn eine *Partitionierung \(P\)* erfolgt, wird die *Verfügbarkeit (A)* über die Konsistenz gestellt. Wenn die Partitionierung fehlt *(E)*, wird *Latenz (L)* über Konsistenz gestellt. Bei diesen Systemen wird das Design simpler, da beide Konsistenzen aufgegeben werden. Umgesetzt wird dieses System zum Beispiel in den verteilten Datenbanksystemen *Dynamo* und *Cassandra*. [4]
 
 **PA/EC-Systeme:** Bei einer *Partitionierung \(P\)* wird die *Verfügbarkeit (A)* über die Konsistenz gestellt, ansonsten *(E)* wird die *Konsistenz \(C\)* über die Latenz gestellt. Dieses System wird zum Beispiel bei *MangoDB* umgesetzt. [4]
 
@@ -46,26 +43,23 @@ Im CAP-Theorem wurde bereits erläutert, dass wenn es in einem System eine *Part
 |Megastore|  |Y| |Y|
 |PNUTS| |Y|Y| |
 
-**Tabelle 1:** Beispiele für den Einsatz von PACELC [3]
+**Tabelle 1:** Beispiele für den Einsatz von PACELC, angepasst nach Patinge et. al. [2]
 
-## 5.2. BASE
+## 5.2 BASE
 
-Als Erfinder von BASE gilt, ebenso wie für das CAP-Theorem, Eric A. Brewer, der die Probleme bei ACID durch das CAP-Theorem erläuterte und dann mit dem BASE-Modell löste [5]. ACID und BASE werden als Gegenstücke betrachtet, da ACID häufiger in relationalen Datenbankmodellen zum Einsatz kommt und BASE speziell für NoSQL-Modelle entwickelt wurde [6]. In verteilten Datenbanken kommt es zu Problemen, wenn alle ACID-Eigenschaften erfüllt werden sollen und gleichzeitig eine hohe Verfügbarkeit erreicht werden soll [6]. BASE sollte dafür die Lösung liefern.
+Eric A. Brewer gilt als Erfinder von BASE, der die Probleme bei ACID durch das CAP-Theorem erläuterte und dann mit dem BASE-Modell löste [5]. ACID und BASE werden als Gegenstücke betrachtet, da ACID häufiger in relationalen Datenbankmodellen zum Einsatz kommt und BASE speziell für NoSQL-Modelle entwickelt wurde [6]. In verteilten Datenbanken kommt es zu Problemen, wenn alle ACID-Eigenschaften erfüllt werden sollen und gleichzeitig eine hohe Verfügbarkeit erreicht werden soll [6]. BASE sollte dafür die Lösung liefern.
 
-**BASE** steht für
+**BASE** steht für:
 
-**B**asically **A**vailable: 
-Die Verfügbarkeit steht im Fokus und wird vom System garantiert, auch im Hinblick auf Fehler bei Knoten (node failures). Die Daten können veraltet sein, aber es wird immer eine Antwort erwartet [6].
+- **B**asically **A**vailable: Die Verfügbarkeit steht im Fokus und wird vom System garantiert, auch im Hinblick auf Fehler bei Knoten (node failures). Die Daten können veraltet sein, aber es wird immer eine Antwort erwartet [6].
 
-**S**oft State:  
-Die Daten sind in einem konstanten Fließzustand. Während eine Antwort gegeben wird, ist die Aktualität und Konsistenz der Daten nicht garantiert [6]. 
+- **S**oft State: Die Daten sind in einem konstanten Fließzustand. Während eine Antwort gegeben wird, ist die Aktualität und Konsistenz der Daten nicht garantiert [6]. 
 
-**E**ventual Consistency: 
-Die Konsistenz wird ihr untergeordnet und als Übergangsprozess betrachtet, der nicht dauerhaft gegeben ist [5].
+- **E**ventual Consistency: Die Konsistenz wird der Verfügbarkeit untergeordnet und als Übergangsprozess betrachtet, der nicht dauerhaft gegeben ist [5].
 
 Die eventuelle Konsistenz kann außerdem in 4 verschiedenen Fällen auftreten:
 
-**Causal Consistency:** Sie ist gegeben, wenn ein neu geschriebener Datensatz kausal abhängig von einem vorherig eingetragenen Datensatz ist und danach immer der aktuellste Wert ausgelesen wird und keine ältere Version des Datenelements [5].
+**Causal Consistency:** Sie ist gegeben, wenn ein neu geschriebener Datensatz kausal abhängig von einem vorherig eingetragenen Datensatz ist und danach immer der aktuelle Wert ausgelesen wird und keine ältere Version des Datenelements [5].
 
 **Read-your-write Consistency:** Dabei handelt es sich um einen Speziallfall der Causal Consistency. Man erhält immer seinen geschriebenen Wert und keine ältere Version des Datenelements [5].
 

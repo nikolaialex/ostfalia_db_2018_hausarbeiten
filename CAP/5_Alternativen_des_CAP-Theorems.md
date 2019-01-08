@@ -57,7 +57,7 @@ Eric A. Brewer gilt als Erfinder von BASE, der die Probleme bei ACID durch das C
 
 - **E**ventual Consistency: Die Konsistenz wird der Verfügbarkeit untergeordnet und als Übergangsprozess betrachtet, der nicht dauerhaft gegeben ist [5].
 
-Die eventuelle Konsistenz kann außerdem in 4 verschiedenen Fällen auftreten:
+Die eventuelle Konsistenz kann außerdem in 5 verschiedenen Fällen auftreten:
 
 **Causal Consistency:** Sie ist gegeben, wenn ein neu geschriebener Datensatz kausal abhängig von einem vorherig eingetragenen Datensatz ist und danach immer der aktuelle Wert ausgelesen wird und keine ältere Version des Datenelements [5].
 
@@ -66,6 +66,10 @@ Die eventuelle Konsistenz kann außerdem in 4 verschiedenen Fällen auftreten:
 **Session Consistency:** Solange eine Session existiert, herrscht Read-your-write Consistency. Wenn diese beendet wurde, muss zunächst eine neue Session erstellt werden [5].
 
 **Monotonic Read Consistency:** Wenn ein Datenelement bei einer Leseoperation zurückgegeben wird, kann bei einer späteren Leseoperation kein älteres Datenelement zurückgegeben werden [5].
+
+**Monotonic Write Consistency:** Die Schreiboperationen werden garantiert nacheinander in der Reihenfolge, wie sie angestoßen wurden, ausgeführt. Die Programmierung der Systeme würde sonst schwer möglich sein. [5]
+
+Diese 5 Fälle der Konsistenz lassen sich kombinieren. So ist es zum Beispiel möglich Monotonic Read Consistency mit Session Consistency zu vereinen. Die eventuelle Konsistenz (Eventual Consistency) ist nicht bei jedem System sinnvoll. Bei sich schnell verändernden Daten ist es nicht immer von Vorteil, dass eine Anfrage die eigene Eingabe zurückliefert. Eine neuere Eingabe könnte bereits erfolgt sein und es werden somit veraltete Daten zurück gegeben. [5]
 
 
 ***
@@ -82,6 +86,6 @@ Die eventuelle Konsistenz kann außerdem in 4 verschiedenen Fällen auftreten:
 [6] Machado, K. M., Kank, R. K., Sonawane, J. S., & Maitra, S. M. (2017). A Comparative Study of ACID and BASE in Database Transaction Processing. *International Journal of Scientific & Engineering Research, 8(5)*, 116–119.
 ***
 
-[<< 4.2. Amazon DynamoDB](4_2_Amazon_DynamoDB.md) | [6. Zusammenfassung >>](6_Zusammenfassung.md)
+[<< 4.2 Amazon DynamoDB](4_2_Amazon_DynamoDB.md) | [6 Zusammenfassung >>](6_Zusammenfassung.md)
 
 ***

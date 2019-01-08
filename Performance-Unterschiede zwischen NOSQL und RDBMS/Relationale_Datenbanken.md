@@ -26,8 +26,21 @@ Die strukturellen Vorgaben einer Tabelle beziehen sich auf alle jeweils enthalte
 
 ## Skalierung
 
+Manche Relationale Datenbanken unterstützen das replizieren ihrer Daten auf andere Server. Dies hat jedoch nur Einfluss auf die Lese-Leistung. Es kann nicht als horizontale Skalierung angesehen werden. Relationale Datenbanken lassen sich lediglich vertikal skalieren. Da sich Hardware nicht endlos skalieren lässt, ist die Skalierung natürlich nur endlich möglich. [1]
+
 
 
 ***
 
 [<< Datenbank-Systeme](Datenbank-Systeme.md) | [Document Stores >>](Document_Stores.md)
+
+***
+
+```
+Quellen
+
+[1]: https://www.thomas-krenn.com/de/wiki/MySQL_Replikation
+```
+
+***
+

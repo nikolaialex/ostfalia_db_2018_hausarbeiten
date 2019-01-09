@@ -14,7 +14,7 @@ Bei den hier eingeführten Begriffen handelt es sich um Grundlagen der Kryptogra
 
 Hashing oder Hashfunktionen haben mehrer Anwendungsgebiete. Allgemein erzeugt eine Hashfunktion aus einem Input beliebiger Länge ein Resultat fixer und kleinerer Länge. [01, 02]
 
-Bei diesem Prozess treten sogenannte Kollisionen. Dies bedeutet, dass zwei unterschiedliche Werte nach dem hashing den gleichen Wert liefern : 
+Bei diesem Prozess treten sogenannte __Kollisionen__. Dies bedeutet, dass zwei unterschiedliche Werte nach dem hashing den gleichen Wert liefern : 
 H(M) = H(M’) bei M != M’
 Dies tritt auf, da die Menge des Inputs größer ist als die der Ergebnisse. Somit muss es mehrere Werte geben die gehasht den gleichen Hashwert liefern. Hashfunktion im Allgemeinen aber vor allem kryptographische Hashfunktionen sollte möglichst resistent gegen Kollisionen sein. Dazu mehr im Abschnitt “Anforderungen”. [03]
 
@@ -22,13 +22,13 @@ Dies tritt auf, da die Menge des Inputs größer ist als die der Ergebnisse. Som
 
 Je nachdem ob eine Hashfunktion für die Kryptographie genutzt werden soll oder nicht existieren unterschiedliche Anforderungen an diese. Die ersten drei Anforderungen gelten im Allgemeinen für Hashfunktionen. 
 
-Als erstes sollte eine Hashfunktion effizient zu berechnen sein, auch für große Eingaben. Daraus lässt sich ableiten, für die Eingabe M ist es einfach den Hashwert h zu berechnen mit h = H (M).
+Als erstes sollte eine Hashfunktion __effizient__ zu berechnen sein, auch für große Eingaben. Daraus lässt sich ableiten, für die Eingabe M ist es einfach den Hashwert h zu berechnen mit h = H (M).
 
-Des weiteren muss eine Hashfunktion deterministisch sein. Dies bedeutet das identische Eingabewerte auch identische Ausgabewerte liefern. [04]
-Als nächste Anforderung sollte eine Hashfunktion für zwei ähnliche Eingabewerte sehr unterschiedliche Resultate liefern. Man spricht hier von Pseudozufälligkeit. Aus dem Eingabewert darf es nicht möglich sein den erzeugten Hashwert vorherzusagen. [02], [04, 05]  
+Des weiteren muss eine Hashfunktion __deterministisch__ sein. Dies bedeutet das identische Eingabewerte auch identische Ausgabewerte liefern. [04]
+Als nächste Anforderung sollte eine Hashfunktion für zwei ähnliche Eingabewerte sehr unterschiedliche Resultate liefern. Man spricht hier von __Pseudozufälligkeit__. Aus dem Eingabewert darf es nicht möglich sein den erzeugten Hashwert vorherzusagen. [02], [04, 05]  
 
 Für kryptographische Hashfunktionen gelten die bereits beschriebenen Anforderungen sowie die Folgenden. 
-Kryptographische Hashfunktionen müssen Einwegfunktionen (eng. one-way) sein. Dies bedeutet, dass es nicht möglich sein sollte die Nachricht effizient aus einem gegebenen Hashwert zu berechnen. Daraus folgt die Nachricht M ist aus einem gegebenen Hashwert h nicht effizient zu berechnen : h = H(M). [02, 05]
+Kryptographische Hashfunktionen müssen __Einwegfunktionen__ (eng. one-way) sein. Dies bedeutet, dass es nicht möglich sein sollte die Nachricht effizient aus einem gegebenen Hashwert zu berechnen. Daraus folgt die Nachricht M ist aus einem gegebenen Hashwert h nicht effizient zu berechnen : h = H(M). [02, 05]
 
 Zusätzlich darf es nicht effizient möglich sein Kollisionen zu finden. Wie bereits beschrieben führen Hashfunktionen immer zu Kollisionen, diese dürfen sich jedoch nicht einfach berechnen lassen. Dies lässt sich in zwei weitere Anforderungen aufteilen. [02, 05]
 
@@ -36,7 +36,7 @@ Zum einen bedeutet dies, dass für eine gegebene Nachricht M es sehr aufwändig 
 
 #### 3.1.2.1 Anwendungen
 
-Eine wichtige Anwendung von Hashfunktionen sind Hashtabellen. Hier werden Hashfunktionen genutzt um effektiven Zugriff auf Große Datenmengen zu gewährleisten. Dazu wird an jedes neue Element ein Schlüssel vergeben und dieser gehashed. Der daraus gewonnene Hashwert referenziert den Ort der gesuchten Daten in der Hashtabelle. [06, 07]
+Eine wichtige Anwendung von Hashfunktionen sind __Hashtabellen__. Hier werden Hashfunktionen genutzt um effektiven Zugriff auf Große Datenmengen zu gewährleisten. Dazu wird an jedes neue Element ein Schlüssel vergeben und dieser gehashed. Der daraus gewonnene Hashwert referenziert den Ort der gesuchten Daten in der Hashtabelle. [06, 07]
 Um das Konzept von Blockchain-Datenbanken zu verstehen ist jedoch vor allem die kryptographische Nutzung von Hashverfahren interessant. In diesem Bereich werden Hashfunktionen auf verschiedene Arten genutzt.
 
 ##### Prüfsummen
@@ -75,17 +75,17 @@ In Fachliteratur finden sich unterschiedliche Definitionen für den Begriff Bloc
  
 In dieser Arbeit werden die Merkmale nach Sultan, Karim et. al. verwendet. [24]
 
-Eine Blockchain ist dezentralisiert. Dies bedeutet, dass keine zentrale Instanz die Blockchain verwaltet oder Prozesse validiert. Die Daten sind nicht an einem Ort gespeichert sondern können von allen Teilnehmern eingesehen und kopiert werden. Dadurch werden die Daten über das gesamte Netzwerk verteilt. Es existieren auch nicht dezentralisierte Blockchains. Darauf wird im Abschnitt “Offenheit” genauer eingegangen. [26]  
+Eine Blockchain ist __dezentralisiert__. Dies bedeutet, dass keine zentrale Instanz die Blockchain verwaltet oder Prozesse validiert. Die Daten sind nicht an einem Ort gespeichert sondern können von allen Teilnehmern eingesehen und kopiert werden. Dadurch werden die Daten über das gesamte Netzwerk verteilt. Es existieren auch nicht dezentralisierte Blockchains. Darauf wird im Abschnitt “Offenheit” genauer eingegangen. [26]  
 
-Die Daten einer Blockchain sind permanent gespeichert. Sie können nachträglich nicht entfernt oder manipuliert werden. Diese Unveränderlichkeit ist ein weiteres Merkmal. Zur Validierung von Blöcken verwendet eine Blockchain Konsensus Modelle. Darauf wird im Abschnitt “Publishing” näher eingegangen. Eine Blockchain ist außerdem transparent. Jeder Nutzer kann die gesamte Transaktionshistorie einsehen, nachverfolgen und prüfen. Oftmals wird in Fachliteratur auch Anonymität als Merkmal einer Blockchain angeführt. Nutzer haben eine Adresse und interagieren durch diese mit dem Blockchainnetzwerk. Die Adresse bietet keinen Rückschluss auf die Identität der Person. [26, 27] 
+Die Daten einer Blockchain sind permanent gespeichert. Sie können nachträglich nicht entfernt oder manipuliert werden. Diese __Unveränderlichkeit__ ist ein weiteres Merkmal. Zur Validierung von Blöcken verwendet eine Blockchain __Konsensus Modelle__. Darauf wird im Abschnitt “Publishing” näher eingegangen. Eine Blockchain ist außerdem __transparent__. Jeder Nutzer kann die gesamte Transaktionshistorie einsehen, nachverfolgen und prüfen. Oftmals wird in Fachliteratur auch __Anonymität__ als Merkmal einer Blockchain angeführt. Nutzer haben eine Adresse und interagieren durch diese mit dem Blockchainnetzwerk. Die Adresse bietet keinen Rückschluss auf die Identität der Person. [26, 27] 
 
 #### Offenheit
 
-Es gibt drei unterschiedliche Arten von Blockchains bezüglich ihrer Offenheit. Zum einen gibt es die öffentlichen Blockchains. Hier kann jeder Teilnehmer auf die Blockchain zugreifen, diese lokal auf seinem Computer speichern und erweitern. Bitcoin gilt als die erste offene Blockchain und startete 2009. [21, 23, 26, 27]
+Es gibt drei unterschiedliche Arten von Blockchains bezüglich ihrer Offenheit. Zum einen gibt es die __öffentlichen__ Blockchains. Hier kann jeder Teilnehmer auf die Blockchain zugreifen, diese lokal auf seinem Computer speichern und erweitern. Bitcoin gilt als die erste offene Blockchain und startete 2009. [21, 23, 26, 27]
 
-Die nächste Kategorie sind hybride Blockchains. Prinzipiell hat jeder Zugriff auf die Blockchain jedoch nicht zu allen Blöcken. Nutzer haben verschiedene Zugriffsrechte. Die Blockchain ist somit teilweise dezentralisiert. Ein Beispiel ist R3 Corda oder b3i. [23, 28, 29] 
+Die nächste Kategorie sind __hybride__ Blockchains. Prinzipiell hat jeder Zugriff auf die Blockchain jedoch nicht zu allen Blöcken. Nutzer haben verschiedene Zugriffsrechte. Die Blockchain ist somit teilweise dezentralisiert. Ein Beispiel ist R3 Corda oder b3i. [23, 28, 29] 
 
-Die letzte Kategorie stellen die privaten Blockchain-Netzwerke dar. Hier bestimmt eine zentrale Entität die Rechte für den Zugriff und die Bearbeitung. Die Blockchain ist zentralisiert aber immer noch kryptographisch gesichert. Aufgrund der mangelnden Dezentralität ist es im allgemeinen strittig ob es sich bei dieser Variante noch um eine Blockchain handelt.
+Die letzte Kategorie stellen die __privaten__ Blockchain-Netzwerke dar. Hier bestimmt eine zentrale Entität die Rechte für den Zugriff und die Bearbeitung. Die Blockchain ist zentralisiert aber immer noch kryptographisch gesichert. Aufgrund der mangelnden Dezentralität ist es im allgemeinen strittig ob es sich bei dieser Variante noch um eine Blockchain handelt.
 Diese Art wird vor allem von Unternehmen eingesetzt um den Zugriff auf interne Informationen zu sicher und regulieren. Beispiele für diesen Typ sind die Blockchains Hyperledger und Ripple. [23, 30] 
 
 #### Blöcke
@@ -142,9 +142,9 @@ Beide Blöcke werden über das Netzwerk verbreitet und andere Teilnehmer arbeite
 #### Forks
 
 Neben den bereits auftretenden Konflikten kann es auch zu sogenannten Forks kommen. Diese treten auf wenn die der Blockchain zugrunde liegende Implementierung oder deren Regeln geändert werden. Es handelt sich somit um Methoden zur Aktualisierungen der Blockchain. [25]
-Es werden zwei Typen von Forks unterschieden, hard forks und soft forks. Bei einem hard fork ersetzen die neuen Regeln die Ursprünglichen, welche somit ungültig werden. In einem großen verteilten Netzwerk wollen oder können nicht alle Teilnehmer die Aktualisierung durchführen. Dadurch verwenden diese weiterhin die Blockchain mit den ursprünglichen Vorgaben, dadurch entsteht eine Verzweigung der Blockchain. [25, 27]
+Es werden zwei Typen von Forks unterschieden, hard forks und soft forks. Bei einem __hard fork__ ersetzen die neuen Regeln die Ursprünglichen, welche somit ungültig werden. In einem großen verteilten Netzwerk wollen oder können nicht alle Teilnehmer die Aktualisierung durchführen. Dadurch verwenden diese weiterhin die Blockchain mit den ursprünglichen Vorgaben, dadurch entsteht eine Verzweigung der Blockchain. [25, 27]
 
-Ein soft fork ist eine Erweiterung der existierenden Regeln. Die bisherigen Vorgaben bleiben bestehen und sind weiterhin gültig. Es müssen nicht alle Knoten aktualisiert werden sondern lediglich jene welche am Konsensusmodell teilnehmen. [25]
+Ein __soft fork__ ist eine Erweiterung der existierenden Regeln. Die bisherigen Vorgaben bleiben bestehen und sind weiterhin gültig. Es müssen nicht alle Knoten aktualisiert werden sondern lediglich jene welche am Konsensusmodell teilnehmen. [25]
 
 
 ***

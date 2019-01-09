@@ -6,7 +6,7 @@ Bei der Verwendung von relationale Datenbanken werden viele und verhältnismäß
 
 ## Foreign Key
 
-Das DBMS speichert sämtliche Keys ohne Zusammenhang. Es erfolgt keine Überprüfung auf das Vorhandensein bestimmter Werte. Hierfür ist einzig und allein die zugreifende Anwendung zuständig.
+Das DBMS speichert sämtliche Keys ohne Zusammenhang. Es erfolgt keine Überprüfung auf das Vorhandensein bestimmter Werte. Hierfür ist einzig und allein die zugreifende Anwendung zuständig. 
 
 
 

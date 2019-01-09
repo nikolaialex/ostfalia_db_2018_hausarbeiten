@@ -18,29 +18,41 @@ Alle MLDB-Funktionen sind automatisch als REST-Endpunkte (_eng. "REST Endpoints"
 
 [![Abhängigkeiten einer Prozedur in MLDB](./statics/11_mldb/Procedures.png)](https://docs.mldb.ai/doc/builtin/img/Procedures.svg)
 
-Prozeduren sind benannte, wiederverwendbare Programme, die verwendet werden, um lange laufende Stapeloperationen ohne Rückgabewerte zu implementieren. Prozeduren laufen im Allgemeinen über Datensätze und können über SQL-Ausdrücke konfiguriert werden. Die Ausgaben einer Prozedur können Datensätze und Dateien enthalten. Prozeduren werden verwendet um:
+Prozeduren (_eng. "procedures"_) sind benannte, wiederverwendbare Programme, die verwendet werden, um lange laufende Batch-Operationen ohne Rückgabewerte zu implementieren. Prozeduren laufen im Allgemeinen über Datensätze und können über SQL-Ausdrücke konfiguriert werden. Die Ausgaben einer Prozedur können Datensätze und Dateien enthalten. Prozeduren werden verwendet um:
 
-- Daten zu transformieren oder zu reinigen.
+- Daten zu transformieren oder zu bereinigen.
 
 - ML-Modelle zu trainieren.
 
 - ML-Modelle im Batch-Modus anzuwenden.
 
-MLDB stellt eine Reihe von integrierten Prozedurtypen für verschiedene Anwendungsfälle zur Verfügung.<sup>[11](#11)</sup>
+MLDB stellt eine Reihe von integrierten Prozedurtypen für verschiedene Anwendungsfälle zur Verfügung.<sup>[11](#11)</sup> Beispielsweise können Prozeduren der integrierten Art `classifier.train` erzeugt werden, um einen überwachten Klassifikator (_eng. "supervised classifier"_) zu trainieren.<sup>[11](#11)</sup>.
 
 ### Datensätze
 
 [![Abhängigkeiten eines Datensatzes in MLDB](./statics/11_mldb/Datasets.png)](https://docs.mldb.ai/doc/builtin/img/Datasets.svg)
 
-Datensätze sind benannte Mengen von Datenpunkten, die aus Tupeln (Zeile, Spalte, Zeitstempel, Wert) bestehen. Datensätze können Millionen benannter Spalten und Zeilen enthalten, und Datenpunkte können mehrere Zeitstempelwerte annehmen, bei denen es sich um Zahlen oder Strings handeln kann.
+Datensätze (_eng. "datasets"_) verkörpern schemalose, nur anhängende (_eng. "append-only"_) benannte Mengen von Datenpunkten, wobei jeder Datenpunkt als Tupel (Zeile, Spalte, Zeitstempel, Wert) dargestellt werden kann.<sup>[11](#11)</sup> Datensätze können Milliarden von Datenpunkten enthalten, die in Millionen von Zeilen mit Millionen von Spalten angeordnet sind. Datensätze können aus Dateien geladen oder in Dateien persistiert werden. Zusätzlich können Datensätze als Eingabeparameter für Prozeduren dienen und von diesen erstellt werden. Ferner ist die Abfrage von Datensätzen über SQL-Abfragen möglich.<sup>[11](#11)</sup> Datensätze können als dreidimensionale Matrizen betrachtet werden, wobei die Zeile, die Spalte und der Zeitstempel die Dimensionen verkörpern. Folglich wird pro Zeitstempel eine bestimmte Version der Daten persistiert. Die folgende Abbildung zeigt wie Datensätze innerhalb von MLDB strukturiert sind:<sup>[11](#11)</sup>
+
+[![Struktur von Datensätzen innerhalb von MLDB](./statics/11_mldb/SlicedDataset.png)](https://docs.mldb.ai/doc/builtin/img/SlicedDataset.svg)
+
+---
 
 <a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
 
-<a name="11"><sup>11</sup></a>Ebd.
+<a name="11"><sup>11</sup></a> Ebd.
 
 <a name="11"><sup>11</sup></a> _Intro to Functions_ (2019). URL: [https://docs.mldb.ai/doc/builtin/functions/Functions.md.html](https://docs.mldb.ai/doc/builtin/functions/Functions.md.html) (besucht am 16.12.2018).
 
 <a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+
+<a name="11"><sup>11</sup></a> _Intro to Procedures_ (2019). URL: [https://docs.mldb.ai/doc/builtin/procedures/Procedures.md.html](https://docs.mldb.ai/doc/builtin/procedures/Procedures.md.html) (besucht am 16.12.2018).
+
+<a name="11"><sup>11</sup></a> _Intro to Datasets_ (2019). URL: [https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+
+<a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+
+<a name="11"><sup>11</sup></a> _Intro to Datasets_ (2019). URL: [https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
 
 ---
 

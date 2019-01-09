@@ -1,5 +1,7 @@
 ## MLDB Merkmale
 
+[![Grundlegender Machine Learning-Fluss](./statics/11_mldb/BasicMLFlow.png)](https://docs.mldb.ai/doc/builtin/img/BasicMLFlow.svg)
+
 In MLDB werden ML-Modelle mithilfe von Funktionen angewendet, die durch die Ausgabe von Prozeduren, die über Datensätze mit Trainingsdaten laufen, parametrisiert werden. Interessant ist, dass Funktionen auch für SQL-Abfragen und als REST-Endpunkte zur Verfügung stehen.<sup>[11](#11)</sup>
 
 ### Funktionen

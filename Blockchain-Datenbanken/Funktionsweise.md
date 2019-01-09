@@ -10,7 +10,7 @@ In diesem Kapitel wird die Funktionsweise von Blockchain Datenbanken erläutert.
 
 Bei den hier eingeführten Begriffen handelt es sich um Grundlagen der Kryptographie auf denen die Funktionsweise der Blockchain Datenbank aufbaut. Dieses Kapitel eignet sich zum Nachschlagen von Fachbegriffen.
 
-### 3.1.2 Hashfunktion
+#### 3.1.2 Hashfunktion
 
 Hashing oder Hashfunktionen haben mehrer Anwendungsgebiete. Allgemein erzeugt eine Hashfunktion aus einem Input beliebiger Länge ein Resultat fixer und kleinerer Länge. [01, 02]
 
@@ -18,14 +18,14 @@ Bei diesem Prozess treten sogenannte __Kollisionen__. Dies bedeutet, dass zwei u
 H(M) = H(M’) bei M != M’
 Dies tritt auf, da die Menge des Inputs größer ist als die der Ergebnisse. Somit muss es mehrere Werte geben die gehasht den gleichen Hashwert liefern. Hashfunktion im Allgemeinen aber vor allem kryptographische Hashfunktionen sollte möglichst resistent gegen Kollisionen sein. Dazu mehr im Abschnitt “Anforderungen”. [03]
 
-#### 3.1.2.2 Anforderungen
+##### 3.1.2.2 Anforderungen
 
 Je nachdem ob eine Hashfunktion für die Kryptographie genutzt werden soll oder nicht existieren unterschiedliche Anforderungen an diese. Die ersten drei Anforderungen gelten im Allgemeinen für Hashfunktionen. 
 
 Als erstes sollte eine Hashfunktion __effizient__ zu berechnen sein, auch für große Eingaben. Daraus lässt sich ableiten, für die Eingabe M ist es einfach den Hashwert h zu berechnen mit h = H (M).
 
 Des weiteren muss eine Hashfunktion __deterministisch__ sein. Dies bedeutet das identische Eingabewerte auch identische Ausgabewerte liefern. [04]
-Als nächste Anforderung sollte eine Hashfunktion für zwei ähnliche Eingabewerte sehr unterschiedliche Resultate liefern. Man spricht hier von __Pseudozufälligkeit__. Aus dem Eingabewert darf es nicht möglich sein den erzeugten Hashwert vorherzusagen. [02], [04, 05]  
+Als nächste Anforderung sollte eine Hashfunktion für zwei ähnliche Eingabewerte sehr unterschiedliche Resultate liefern. Man spricht hier von __Pseudozufälligkeit__. Aus dem Eingabewert darf es nicht möglich sein den erzeugten Hashwert vorherzusagen. [02, 04, 05]  
 
 Für kryptographische Hashfunktionen gelten die bereits beschriebenen Anforderungen sowie die Folgenden. 
 Kryptographische Hashfunktionen müssen __Einwegfunktionen__ (eng. one-way) sein. Dies bedeutet, dass es nicht möglich sein sollte die Nachricht effizient aus einem gegebenen Hashwert zu berechnen. Daraus folgt die Nachricht M ist aus einem gegebenen Hashwert h nicht effizient zu berechnen : h = H(M). [02, 05]
@@ -34,12 +34,12 @@ Zusätzlich darf es nicht effizient möglich sein Kollisionen zu finden. Wie ber
 
 Zum einen bedeutet dies, dass für eine gegebene Nachricht M es sehr aufwändig ist ein M’ zu finden für welches H(M) = H(M’) gilt. Zum anderen muss es aufwändig sein zwei beliebige M zu finden welche den gleichen Hashwert liefern. [02, 05]
 
-#### 3.1.2.1 Anwendungen
+##### 3.1.2.1 Anwendungen
 
 Eine wichtige Anwendung von Hashfunktionen sind __Hashtabellen__. Hier werden Hashfunktionen genutzt um effektiven Zugriff auf Große Datenmengen zu gewährleisten. Dazu wird an jedes neue Element ein Schlüssel vergeben und dieser gehashed. Der daraus gewonnene Hashwert referenziert den Ort der gesuchten Daten in der Hashtabelle. [06, 07]
 Um das Konzept von Blockchain-Datenbanken zu verstehen ist jedoch vor allem die kryptographische Nutzung von Hashverfahren interessant. In diesem Bereich werden Hashfunktionen auf verschiedene Arten genutzt.
 
-##### Prüfsummen
+###### **Prüfsummen**
 
 Spezielle Hashfunktionen können genutzt werden um Prüfsummen zu erzeugen. Diese wiederum dienen dazu die Integrität von Daten zu prüfen. [06]
 
@@ -49,7 +49,7 @@ Wie bereits angesprochen treten bei geeigneten Hashfunktionen selten Kollisionen
 
 Damit sich eine Hashfunktion zur Generierung von Prüfsummen eignet sollte sie vor allem schnell zu berechnen sein, ähnliche Inputs sollten sehr unterschiedliche Hashwerte liefern und sie sollte möglichst kollisionsresistent sein. [08]
 
-##### Asymmetrische Verschlüsselung
+###### **Asymmetrische Verschlüsselung**
 
 Bei symmetrischer Verschlüsselung teilen sich Sender und Empfänger einen Schlüssel, welchen nur die beiden Kommunikationspartner wissen dürfen. Dieser muss zuvor über einen anderen Kommunikationsweg vereinbart bzw. ausgetauscht worden sein. 
 Zusätzlich bedeutet dies, dass ein Nutzer für die Kommunikation mit fünf anderen Nutzern fünf Schlüssel speichern müsste. [10, 11]
@@ -67,7 +67,7 @@ Die asymmetrische Verschlüsselung kann auch zur Authentifizierung des Senders v
 
 Grundsätzlich dient die Blockchaintechnologie dazu Transaktionsdaten dezentral, ohne eine zentrale Autorität zu speichern und gegen Manipulation zu sichern. Damit erlaubt es die sichere verteilte Speicherung von Daten in einem nicht vertrauenswürdigen Netzwerk. [20, 21, 22, 23]
 
-#### Merkmale 
+#### 3.2.1 Merkmale 
 
 An dieser Stelle werden die Merkmale einer Blockchain definiert. Im weiteren Verlauf wird auf den Aufbau und die Funktionsweise eingegangen und dabei Rückschluss auf die Merkmale gezogen. 
 
@@ -79,7 +79,7 @@ Eine Blockchain ist __dezentralisiert__. Dies bedeutet, dass keine zentrale Inst
 
 Die Daten einer Blockchain sind permanent gespeichert. Sie können nachträglich nicht entfernt oder manipuliert werden. Diese __Unveränderlichkeit__ ist ein weiteres Merkmal. Zur Validierung von Blöcken verwendet eine Blockchain __Konsensus Modelle__. Darauf wird im Abschnitt “Publishing” näher eingegangen. Eine Blockchain ist außerdem __transparent__. Jeder Nutzer kann die gesamte Transaktionshistorie einsehen, nachverfolgen und prüfen. Oftmals wird in Fachliteratur auch __Anonymität__ als Merkmal einer Blockchain angeführt. Nutzer haben eine Adresse und interagieren durch diese mit dem Blockchainnetzwerk. Die Adresse bietet keinen Rückschluss auf die Identität der Person. [26, 27] 
 
-#### Offenheit
+#### 3.2.2 Offenheit
 
 Es gibt drei unterschiedliche Arten von Blockchains bezüglich ihrer Offenheit. Zum einen gibt es die __öffentlichen__ Blockchains. Hier kann jeder Teilnehmer auf die Blockchain zugreifen, diese lokal auf seinem Computer speichern und erweitern. Bitcoin gilt als die erste offene Blockchain und startete 2009. [21, 23, 26, 27]
 
@@ -88,7 +88,7 @@ Die nächste Kategorie sind __hybride__ Blockchains. Prinzipiell hat jeder Zugri
 Die letzte Kategorie stellen die __privaten__ Blockchain-Netzwerke dar. Hier bestimmt eine zentrale Entität die Rechte für den Zugriff und die Bearbeitung. Die Blockchain ist zentralisiert aber immer noch kryptographisch gesichert. Aufgrund der mangelnden Dezentralität ist es im allgemeinen strittig ob es sich bei dieser Variante noch um eine Blockchain handelt.
 Diese Art wird vor allem von Unternehmen eingesetzt um den Zugriff auf interne Informationen zu sicher und regulieren. Beispiele für diesen Typ sind die Blockchains Hyperledger und Ripple. [23, 30] 
 
-#### Blöcke
+#### 3.2.3 Blöcke
 
 Eine Blockchain besteht aus einer Reihe von miteinander verknüpften Blöcken. Die Blöcke halten die zu speichernden Daten.
 Sollen neue Daten zu einer Blockchain hinzugefügt werden werden diese zunächst zu einem Knoten des Blockchain-Netzwerkes geschickt. Von dort werden die Informationen an anderen Knote im Netzwerk verteilt. Damit ein neuer Block zur Blockchain hinzugefügt wird muss er von einem Knoten veröffentlicht werden. Dieser Prozess wird im Abschnitt “Publishing” näher erläutert. Abhängig von der Implementierung der Blockchain werden die Blocks in eine Warteliste eingereiht und nach einem Zeitintervall publiziert. Dadurch werden sie fester Teil der Blockchain. [20]
@@ -99,18 +99,18 @@ Ein Block besteht hierbei aus zwei Teilen, einem Header und einem Body. Der Body
 
 Die grundsätzliche Idee ist, dass ein Header eine Repräsentation der Daten beinhaltet welche im Körper gespeichert sind. Der nächste Block beinhaltet die Repräsentation des Headers des vorherigen Blocks und somit auch indirekt seiner Daten. Es kommt also zu einer Verknüpfung der Daten mit dem Header und zwischen den Headern aufeinander folgender Blöcke. [24]
 
-#### Verknüpfung
+#### 3.2.4 Verknüpfung
 
 Der Begriff “Blockchain” kommt von der Verknüpfung mehrerer Blöcke zu einer Kette. [21] Diese Verknüpfung geschieht logisch durch den Aufbau der Blöcke. Wie im Abschnitt “Blöcke” beschrieben, beinhaltet jeder Header einen Hash des Headers des vorherigen Blocks sowie eine Nummerierung. Dadurch entsteht aus einer Reihe einzelner Datenblöcken eine logische Kette. [25]
 Diese Verknüpfung ist entscheidend für den Schutz vor Manipulation an der Blockchain. Ein Block innerhalb der Kette kann nicht nach belieben geändert werden. Eine Veränderung an den Daten des Blockes hat einen anderen Hashwert zur Folge. Dadurch würde der Block praktisch aus der Kette fallen, da der darauffolgende Block den originalen Hashwert beinhaltet. Ein Vergleich der beiden Hashwerte würde die Manipulation aufdecken. Auch das einfügen eines zusätzlichen Blocks in die Blockchain wird dadurch verhindert. Der neue Block kann zwar den Hashwert seines Vorgängers beinhalten, der nächste Block verweist jedoch über den gespeicherten Hashwert auf den eigentlichen Vorgänger. Die Blockchain ist somit unveränderbar. [21, 24, 26]
 
-#### Publishing
+#### 3.2.5 Publishing
 
 Das sogenannte publishing bezeichnet das Hinzufügen eines neuen Blocks zur Blockchain.  Dies ist vor allem in öffentlichen Blockchains ein kritischer Prozess, da verschiedene Knoten in der Lage sind Blöcke zu publishen und es keine zentrale Instanz gibt welche diese Aufgabe kontrolliert. Desweiteren können die Teilnehmer im Allgemeinen nicht als vertrauenswürdig betrachtet werden. Hier stellt sich die Frage welcher Nutzer den nächsten Block hinzufügt. [20]
 
 Es existieren unterschiedliche “consensus models” welche den Prozess des publishing regeln. Sie legen fest welcher Nutzer den nächsten Block veröffentlicht und wie möglicherweise auftretende Konflikte zu lösen sind. [20]
 
-#### Proof of Work (PoW)
+##### 3.2.5.1 Proof of Work (PoW)
 
 Beim Proof of Work (PoW) Modell lösen Teilnehmer ein mathematisches Problem, dessen Lösung einen hohen Rechenaufwand erfordert. Der erste Nutzer welcher die Lösung findet darf den nächsten Block publizieren. Die Rätsel sind so konstruiert, dass die Lösung schwer zu finden aber leicht zu überprüfen ist. Dadurch können alle anderen Nutzer des Blockchain-Netzwerkes die Lösung schnell verifizieren. [20, 31]
 
@@ -126,7 +126,7 @@ Durch Änderungen an den Vorgaben für die Lösung des Problems kanns die Schwie
 
 Ein PoW Modell verbraucht sehr viel Energy. Viele Teilnehmer versuchen gleichzeitig das gleiche aufwändige Problem zu lösen. [33, 34, 35] 
 
-#### Proof of Stake (PoS)
+##### 3.2.5.2 Proof of Stake (PoS)
 
 Bei Proof of Stake erfolgt die Auswahl des Nutzers, welcher den nächsten Block publiziert basierend auf seinem Anteil und einem Zufallsverfahren. Nutzer welche einen hohen Anteil besitzen und diesen werden priorisiert, dies ersetzt das Lösen des mathematischen Problems bei PoW. Das Konzept von PoS basiert auf der Annahme, dass ein Nutzer mit einem hohen Anteil an dem Netzwerk an dessen fortbestand interessiert ist. [26]
 
@@ -134,12 +134,12 @@ Eine beispielhafte Umsetzung bei Kryptowährungen wäre, dass Nutzer mit einem T
 
 Zwei weiter verbreitete Modelle sind Delegate Proof of Stake (DPoS) und Delegate Byzantine Fault Tolerance (dBFT). Das Delegate Proof of Stake ist eine sehr effektive Variante des PoS. Teilnehmer stimmen kontinuierlich darüber ab wer Blöcke publiziert. Jeder Teilnehmer kann sich selber zur Wahl stellen und anschließend eine Anzahl an Blöcken abhängig vom Anteil der erhaltenen Stimmen publizieren. Es existieren weitere Konsensus Modelle. Einige Beispiele sind Proof of Activity, Proof of Burn, Ripple und Tendermint. [26, 31, 34, 36]
 
-#### Konflikte
+##### 3.2.5.3 Konflikte
 
 In einem dezentralisierten System kann es trotz den bereits beschriebenen Konsensus Modellen zu Konflikten kommen vor allem bei sehr großen Netzwerken. Es ist zum Beispiel vorstellbar, dass zwei Teilnehmer eine Aufgabe bei Proof of Work zum gleichen Zeitpunkt lösen. Beide sind somit berechtigt einen neuen Block hinzuzufügen. In diesem Beispiel erstellen beide Teilnehmer aus ihren jeweiligen gesammelten Transaktionen einen neuen Block und fügen diesen an den letzten veröffentlichten Block an. Da beide Teilnehmer unterschiedliche Transaktionen in dem Block verpacken entsteht ein Konflikt. Es existieren zwei verschiedene Stränge der Blockchain. [25]
 Beide Blöcke werden über das Netzwerk verbreitet und andere Teilnehmer arbeiten beliebig mit einem der beiden Blöcke. Sobald ein neuer Block an eine der beiden Stränge angehängt wird löst sich der Konflikt auf. Der Strang an welchem zuerst ein weiterer Block angehängt wird ist Teil der Blockchain der andere Strang fällt raus und wird als “orphan” bezeichnet. Dies passiert dadurch, dass Teilnehmer mit der aktuellsten Version der Blockchain arbeiten. Sobald der neu angefügte Block über das Netzwerk verbreitet wird nutzen alle Teilnehmer die neueren Daten. Der verwaiste Strang fällt somit aus dem Netzwerk. [25, 27]
 
-#### Forks
+##### 3.2.5.4 Forks
 
 Neben den bereits auftretenden Konflikten kann es auch zu sogenannten Forks kommen. Diese treten auf wenn die der Blockchain zugrunde liegende Implementierung oder deren Regeln geändert werden. Es handelt sich somit um Methoden zur Aktualisierungen der Blockchain. [25]
 Es werden zwei Typen von Forks unterschieden, hard forks und soft forks. Bei einem __hard fork__ ersetzen die neuen Regeln die Ursprünglichen, welche somit ungültig werden. In einem großen verteilten Netzwerk wollen oder können nicht alle Teilnehmer die Aktualisierung durchführen. Dadurch verwenden diese weiterhin die Blockchain mit den ursprünglichen Vorgaben, dadurch entsteht eine Verzweigung der Blockchain. [25, 27]

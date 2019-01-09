@@ -1,5 +1,5 @@
 ***
-[<< Inhaltsverzeichnis](README.md)
+[<<< Inhaltsverzeichnis](README.md)
 ***
 
 ## 4. Anwendungsbeispiele
@@ -46,12 +46,12 @@ Auch der Handels- und Geschäftsbereich bietet viele Möglichkeiten die Blockcha
 [04]
 
 Ein weiteres Beispiel für den sinnvollen Einsatz der Blockchain-Technologie ist der Markt fälschungsanfälliger Produkte. Ein großes Problem sind gefälschte Medikamente. Bei Produkten dieser Art muss sichergestellt werden, dass die Herkunft zweifelsfrei nachgewiesen werden kann. Außerdem muss sichergestellt werden, dass die Produkte während dem Transport nicht verändert oder gar ausgetauscht wurden. Weiterhin müssen Lieferbedingungen wie Temperatur, Feuchtigkeit, Lichteinfall oder Luftdruck während des Transports eingehalten werden. All diese Dinge können durch die Blockchain-Technologie einfach prüfbar gemacht werden. Mit Hilfe der Datenhaltung in der Blockchain kann das Supply-Chain-Management transparent gestaltet werden. Wie auch in den vorherigen beispielen wird durch die Konsistenz ein Gewinn an Sicherheit produziert. Herkunftsnachweise spielen auch an anderen Stellen im Supply-Chain-Management eine wichtige Rolle. Dazu gehören überwachungspflichtige Transporte wie der Gefahrguttransport. Für solche Transporte sind verschiedene Papiere (umfangreiche Dokumentationen von Transportbehältern, Fahrzeugeigenschaften, Schulungen, etc.) mitzuführen. Mit Hilfe von Smart Contracts kann die Überwachung der Einhaltung der Vertragsregeln automatisch gestaltet werden. Solche Papiere werden digital gepflegt, sodass sie für verschiedene Stakeholder einsehbar sind. Bei Verwendung der Blockchain-Technologie können die von den Aufsichtsbehörde geforderten Regularien eingehalten werden und zusätzlich eine Sicherheitsebene und eine Vereinfachung des Prozesses herbeigeführt werden.
-[05], [03] 
+[03, 05]
 
 ### 4.6. Medienindustrie
 
 In der Medienbranche können verschiedene Prozesse durch die Blockchain-Technologie beeinflusst werden. Dazu gehören die oben beschriebenen Finanzierungs- und Vertragsmöglichkeiten im Bereich der Lizenzierung, die zum Beispiel der Wissens-TV-Produzent Welt der Wunder nutzt, indem er seine Video-Inhalte aus einer Blockchain heraus zur Verfügung stellt. Daneben gibt es auch den Handel mit Werbung, der viel transparenter gestaltet werden kann, den Vertrieb verschiedener Medien und sogar die Medien selbst. Es handelt sich vielmehr um eine vollständige Digitalisierung. In den USA gibt es erste Plattformen, die die Medien zwischen Journalisten und Endverbraucher regeln. Der Endverbraucher kann somit aus den Inhalten eines Verlages direkt die gewünschten Medien beziehen, ohne dass ein Zwischenhändler zwischengeschaltet ist. 
-[06], [07]
+[06, 07]
 
 ### 4.7. Öffentlicher Sektor
 
@@ -61,12 +61,12 @@ Im Bereich der Verwaltung ist das Vertrauen in ein manipulations- und ausfallsic
 
 Kommunalen Kernanwendungen wie Einwohnerverfahren, Standesamtsregister, KFZ-Verzeichnisse, Führerscheinverfahren und Gewerbeanmeldungen, aber auch Nachweise wie Gewerberegisterauskünfte, Führerschein-, Grundstücks- oder Standesamt-Nachweise, bis hin zur Absicherung elektronischer Wahlen könnten also auch in Deutschland schon bald in einer Blockchain digitalisiert werden. Es bedarf aber einen wegweisenden ersten Schritt auf Bundesebene. Im Juni 2017 hat der Bundestag bereits das nationale Nutzerkonto beschlossen. Die Verbindung zwischen diesem als eineindeutige Adresse und der Blockchain-Technologie kann die Grundlage sein, um im digitalen Geschäftsverkehr Transaktionen von Nutzer zu Nutzer durchzuführen und aufzuzeichnen. Die Möglichkeit, Urkunden, Zeugnisse und Zertifikate in einer Blockchain zu sichern würde weitreichende Folgen haben. Ein Beispiel ist die Vereinfachung von Bewerbungsverfahren. Sowohl auf Bewerber, als auch auf Unternehmensseite kann dadurch profitiert werden, dass die Dokumente fälschungssicher, transparent aber geschützt und nur nach Legitimation von überall abrufbar sind. Außerdem könnten Spendenorganisationen garantieren, dass zu jeder Zeit rückverfolgbar ist, für welche Projekte gespendete Gelder verwendet wurden und somit das verbreitete Image veruntreuter Gelder gegen ein vertrauenswürdiges Image eintauschen. 
 Was in Deutschland noch größtenteils konzeptionell betrachtet und in Pilotprojekten erprobt wird, ist in anderen Ländern teilweise bereits Praxis: Das us-amerikanische Standesamt ist bereits in einer Blockchain realisiert. Die Legitimierung erfolgt durch das Einscannen eines QR-Codes. Dazu müssen die Hochzeitspartner nicht an einem Ort versammelt sein, sondern können sich in unterschiedlichen Standesämtern befinden. Weitere Beispiele für den Einsatz solcher Technologien sind bereits in Estland zu finden. Dort werden seit mehreren Jahren die Integrität medizinischer Dokumente oder aber auch ein Notardienst mit Hilfe von Blockchain- Technologie oder aber ähnlichen Technologien umgesetzt.
-[08], [03]
+[03, 08]
 
 ### 4.8. Sonstige Einsatzbereiche
 
 Es gibt viele weitere Einsatzbereiche für die Blockchain-Technologie. Allgemein betrachtet können die Daten verschiedenster Datenhaltungen in allen möglichen Bereichen durch die Verschlüsselung der Blockchain-Technologie geschützt werden. Duplikate und Fehleinträge sind dabei identifizierbar. Die Daten sind optimal geschützt. Im juristischen Bereich sind neue Wege der Rechtsprechung denkbar. Shareholder-Votings in Business-Systemen wie Aktiengesellschaften können einfacher, übersichtlicher und sicherer gestaltet werden. Die Cybersecurity kann durch die Verschlüsselung der Daten und die ausfallsichere Infrastruktur, die durch das dezentrale Netzwerk geboten wird, die Sicherheit für die Nutzer erhöhen. Menschen können mobiler werden, weil Car- oder Bike-Sharing durch Blockchain-Technologien leichter zugänglich und mittels Smart Contracts einfach abzuwickeln sind. Auch Datenmengen aus dem Big Data Bereich sind durch die dezentrale Gestaltung unproblematisch. 
-[09], [03]
+[03, 09]
 
 
 ***
@@ -96,5 +96,9 @@ Medienverweise:
 02 - Einsatztfelder im Bereich des öffentlichen Sektors (Quelle: siehe [03])
 
 ```
+
+***
+
+[Quellen >>>](Quellen.md)
 
 ***

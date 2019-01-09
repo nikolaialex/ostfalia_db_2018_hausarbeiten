@@ -8,7 +8,7 @@
 |:--------------------|:--------------|:-----------------|:----------------------------------------|
 | Claudia Brötzmann   | 277749        | TH Lübeck        | claudia.broetzmann@th-luebeck.de        |
 | Iven Köthke         |               | TH Brandenburg   | koethke@th-brandenburg.de               |
-| Vasileios Roumoglou |               | TH Brandenburg   | vasileios.roumoglou@th-brandenburg.de   |
+| Vasileios Roumoglou | 20204416      | TH Brandenburg   | vasileios.roumoglou@th-brandenburg.de   |
 
 ***
 

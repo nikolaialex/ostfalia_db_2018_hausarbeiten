@@ -157,42 +157,42 @@ Ein __soft fork__ ist eine Erweiterung der existierenden Regeln. Die bisherigen 
 
 Quellenangabe:
 
-[01] - Vgl. Blockgeeks, 2018
-[02] - Vgl. C. Eilers, 2016
-[03] - Vgl. C. Stachniss, Unbekannt
-[04] - Vgl. D. Drescher, 2017
-[05] - Vgl. K. Pommerening, M. Sergl, 2007
-[06] - Vgl. Ryte, 2018
-[07] - Vgl. M. Teschner, 2012  
-[08] - Vgl. C. Hoffmann, 2018
-[09] - Vgl. T. Fischer, 2018
-[10] - Vgl. Unbekannt, 2018a
-[11] - Vgl. SSL2BUY, 2018
-[12] - Vgl. M. Rouse, 2016
-[13] - Vgl. R. Almeida, 2016
-[14] - Vgl. Elektronik-Kompendium, Unbekannt
-[15] - Vgl. Unbekannt, 2010
-[16] - Vgl. Kryptowissen, 2018
-[17] - Vgl. Dr. R. Wobst, 2003
-[18] - Vgl. Unbekannt, 2018b
-[19] - Vgl. M. Rouse, 2007
-[20] - Vgl. W. Ross, 2018
-[21] - Vgl. M. Gupta, 2018
-[22] - Vgl. M. Andreessen, Unbekannt
-[23] - Vgl. P. Adam-Kalfon, S. El Moutaouakil, 2017 
-[24] - Vgl. K. Sultan, U. Ruhi, R. Lakhani, 2018
-[25] - Vgl. L. Severeijns, 2017
-[26] - Vgl. Z. Zigin, X. Shaon, D. Hong-Ning, C. Xiangping, 2017
-[27] - Vgl. A. Shanti Bruyn, 2017
-[28] - Vgl. B3i, 2018
-[29] - Vgl. K. Schiller, 2018
-[30] - Vgl. K. Schiller, 2018a
-[31] - Vgl. Blockgeeks, 2018a
-[32] - Vgl. B. Asolo, 2018
-[33] - Vgl. W. Li, S. Andreina, J. Bohli, G. Karame, Unbekannt
-[34] - Vgl. Unbekannt, 2015
-[35] - Vgl. M. Thake, 2018
-[36] - Vgl. A. Castor, 2017
+[01] - Blockgeeks, 2018
+[02] - C. Eilers, 2016
+[03] - C. Stachniss, Unbekannt
+[04] - D. Drescher, 2017
+[05] - K. Pommerening, M. Sergl, 2007
+[06] - Ryte, 2018
+[07] - M. Teschner, 2012  
+[08] - C. Hoffmann, 2018
+[09] - T. Fischer, 2018
+[10] - Unbekannt, 2018a
+[11] - SSL2BUY, 2018
+[12] - M. Rouse, 2016
+[13] - R. Almeida, 2016
+[14] - Elektronik-Kompendium, Unbekannt
+[15] - Unbekannt, 2010
+[16] - Kryptowissen, 2018
+[17] - Dr. R. Wobst, 2003
+[18] - Unbekannt, 2018b
+[19] - M. Rouse, 2007
+[20] - W. Ross, 2018
+[21] - M. Gupta, 2018
+[22] - M. Andreessen, Unbekannt
+[23] - P. Adam-Kalfon, S. El Moutaouakil, 2017 
+[24] - K. Sultan, U. Ruhi, R. Lakhani, 2018
+[25] - L. Severeijns, 2017
+[26] - Z. Zigin, X. Shaon, D. Hong-Ning, C. Xiangping, 2017
+[27] - A. Shanti Bruyn, 2017
+[28] - B3i, 2018
+[29] - K. Schiller, 2018
+[30] - K. Schiller, 2018a
+[31] - Blockgeeks, 2018a
+[32] - B. Asolo, 2018
+[33] - W. Li, S. Andreina, J. Bohli, G. Karame, Unbekannt
+[34] - Unbekannt, 2015
+[35] - M. Thake, 2018
+[36] - A. Castor, 2017
 
 ```
 

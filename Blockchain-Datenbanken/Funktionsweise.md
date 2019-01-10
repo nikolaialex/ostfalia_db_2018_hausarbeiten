@@ -159,7 +159,7 @@ Quellenangabe:
 
 [01] - Blockgeeks, 2018
 [02] - C. Eilers, 2016
-[03] - C. Stachniss, Unbekannt
+[03] - C. Stachniss, o.A.
 [04] - D. Drescher, 2017
 [05] - K. Pommerening, M. Sergl, 2007
 [06] - Ryte, 2018
@@ -170,7 +170,7 @@ Quellenangabe:
 [11] - SSL2BUY, 2018
 [12] - M. Rouse, 2016
 [13] - R. Almeida, 2016
-[14] - Elektronik-Kompendium, Unbekannt
+[14] - Elektronik-Kompendium, o.A.
 [15] - Unbekannt, 2010
 [16] - Kryptowissen, 2018
 [17] - Dr. R. Wobst, 2003
@@ -178,7 +178,7 @@ Quellenangabe:
 [19] - M. Rouse, 2007
 [20] - W. Ross, 2018
 [21] - M. Gupta, 2018
-[22] - M. Andreessen, Unbekannt
+[22] - M. Andreessen, o.A.
 [23] - P. Adam-Kalfon, S. El Moutaouakil, 2017 
 [24] - K. Sultan, U. Ruhi, R. Lakhani, 2018
 [25] - L. Severeijns, 2017
@@ -189,7 +189,7 @@ Quellenangabe:
 [30] - K. Schiller, 2018a
 [31] - Blockgeeks, 2018a
 [32] - B. Asolo, 2018
-[33] - W. Li, S. Andreina, J. Bohli, G. Karame, Unbekannt
+[33] - W. Li, S. Andreina, J. Bohli, G. Karame, o.A.
 [34] - Unbekannt, 2015
 [35] - M. Thake, 2018
 [36] - A. Castor, 2017

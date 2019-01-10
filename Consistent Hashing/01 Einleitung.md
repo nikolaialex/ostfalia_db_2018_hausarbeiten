@@ -1,6 +1,6 @@
 # Consistent Hashing
-----  
 
+## Gruppenmitglieder:  
 TH-Lübeck / Viktor Weber / 247928  
 TH-Lübeck / Jafar Usman Ahmad / Matrikel Nr.
 

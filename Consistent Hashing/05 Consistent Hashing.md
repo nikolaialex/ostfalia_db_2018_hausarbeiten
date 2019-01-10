@@ -17,13 +17,13 @@ In der Tabelle 1.1 werden den drei Servern A, B, und C die Schlüssel zugewiesen
 |  "john"   | 1633428562 |     1      |
 |  "bill"   | 7594634739 |     0      |
 |  "jane"   | 5000799124 |     1      |
-|  "kate"   | 3421657994 |     2      |
+|  "kate"   | 3421657994 |     2      |  
 Tabelle 1.1  
 
 | Server A | Server B | Server C |
 | :------: | :------: | :------: |
 |  "bill"  |  "john"  |  "kate"  |
-|          |  "jane"  |          |
+|          |  "jane"  |          |  
 Tabelle 1.2  
 
 ## Problem des Verfahrens  
@@ -39,14 +39,14 @@ Im Beispiel wird der Server C entfernt, somit sind nur die zwei Server A und B e
 |  "john"   | 1633428562 |     0      |
 |  "bill"   | 7594634739 |     1      |
 |  "jane"   | 5000799124 |     0      |
-|  "kate"   | 3421657994 |     0      |
+|  "kate"   | 3421657994 |     0      |  
 Tabelle 1.3  
 
 | Server A | Server B |
 | :------: | :------: |
 |  "john"  |  "bill"  |
 |  "jane"  |          |
-|  "kate"  |          |
+|  "kate"  |          |  
 Tabelle 1.4  
 
 ## Prinzip des Consistent Hashing  
@@ -66,7 +66,7 @@ Um das Verfahren zu veranschaulichen, ist in der Abb. 1.1 ein schematischer Krei
 |  "kate"   |     A5     |   A    |
 |  "jane"   |     C7     |   C    |
 |  "bill"   |     A4     |   A    |
-|  "steve"  |     C6     |   C    |
+|  "steve"  |     C6     |   C    |  
 Tabelle 1.5 zu Abb. 2 Verteilung Schlüssel und Server.  
 
 Im nachfolgenden Beispiel wird der Server C entfernt. Sie Schlüssel des Servers C werden auf die naheliegenden Hashregionen der Server A und B verteilt. Die Schlüssel von den Servern A und B bleiben unverändert, siehe Tabelle 1.6.  
@@ -77,7 +77,7 @@ Im nachfolgenden Beispiel wird der Server C entfernt. Sie Schlüssel des Servers
 |  "kate"   |     A5     |   A    |
 |  "jane"   |     B1     |   B    |
 |  "bill"   |     A4     |   A    |
-|  "steve"  |     A1     |   A    |
+|  "steve"  |     A1     |   A    |  
 Tabelle 1.6 zu Abb. 2 Server C wurde entfernt, Umverteilung der Schlüssel.  
 
 Wenn ein Server hinzugefügt wird, z.B. der Server D, werden ungefähr ein drittel der Schlüssel (von Server A und B) auf dem Server D verteilt. Die restlichen Schlüssel bleiben davon unberührt, siehe Tabelle 1.7.  
@@ -88,7 +88,7 @@ Wenn ein Server hinzugefügt wird, z.B. der Server D, werden ungefähr ein dritt
 |  "kate"   |     A5     |   A    |
 |  "jane"   |     B1     |   B    |
 |  "bill"   |     A4     |   A    |
-|  "steve"  |     D2     |   D    |
+|  "steve"  |     D2     |   D    |  
 Tabelle 1.7 zu Abb. 2 Server D wird hinzugefügt, Umverteilung der Schlüssel.  
 
 ## Verwendung in Firmen  

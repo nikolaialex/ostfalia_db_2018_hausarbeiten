@@ -1,5 +1,5 @@
 ***
-[<< Inhaltsverzeichnis](README.md)
+[<<< Inhaltsverzeichnis](README.md)
 ***
 
 ## 4. Anwendungsbeispiele
@@ -98,6 +98,5 @@ Medienverweise:
 ```
 
 ***
-
 [Quellen >>>](Quellen.md)
 ***

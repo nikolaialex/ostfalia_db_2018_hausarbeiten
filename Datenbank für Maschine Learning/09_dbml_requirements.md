@@ -24,22 +24,22 @@ Diese Funktionen ermöglichen Anpassungen, die Elemente einer ML-Pipeline schnel
 
 #### Anforderungen ML-DB
 
-1) Import
-     2) Aufruf via Schnittstellen (REST,QL)
-     3) Dataset (CSV,Erstellung,Vorlagen)
-     4) Klassische Bearbeitung (Filter,Rules)
-5) ML Algorithmus anwenden
-     6) Performance
-     7) Aufruf via Schnittstellen (REST,QL)
-     8) Prozeduren
-     9) Auto-Verallgemeinerung
-    10) Auto-Zusammenfassung
-    11) Auto-Charakterisierung
-12) Modell (Ändern,Sichern)
-13) Funktionen
-    14) Aufruf via Schnittstellen (REST,QL)
-    15) Batchbetrieb
-16) Export (REST,QL)
+1. Import
+   2. Aufruf via Schnittstellen (REST,QL)
+   3. Dataset (CSV,Erstellung,Vorlagen)
+   4. Klassische Bearbeitung (Filter,Rules)
+5. ML Algorithmus anwenden
+   6. Performance
+   7. Aufruf via Schnittstellen (REST,QL)
+   8. Prozeduren
+   9. Auto-Verallgemeinerung
+   10. Auto-Zusammenfassung
+   11. Auto-Charakterisierung
+12. Modell (Ändern,Sichern)
+13. Funktionen
+   14. Aufruf via Schnittstellen (REST,QL)
+   15. Batchbetrieb
+16. Export (REST,QL)
 
 
 [901] : Russell Jurney, 2017 - Agile Data Science 2.0

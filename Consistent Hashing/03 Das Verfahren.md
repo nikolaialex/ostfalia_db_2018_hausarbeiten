@@ -1,4 +1,4 @@
-# Das Verfahren
+# Das Verfahren von Hashing
 
 Bevor jedoch mit dem Verfahren um _Consistent Hashing_ begonnen wird, wollen wir zunächst erklären, was _Hashing_ bzw. _Hashfunktion_ überhaupt ist. Eine Hashfunktion ist eine Abbildung von der Eingabe einer beliebigen Menge, auf eine kleinere Zielmenge, auch _Hashwert_ genannt. _Speziell in der Informatik verwendet man auch den Begriff Hash-Algorithmus (englisch hash algorithm), da Hashfunktionen oftmals in Form eines Algorithmus statt einer mathematischen Funktion spezifiziert werden._<sup>1</sup> Es ist erwünscht, dass bei unterschiedlichen Eingaben, auch unterschiedliche Ausgaben bzw. _Hashwerte_ entstehen, sonst kann es zu einer _Kollision_ kommen. Kollisionen treten dann auf, wenn durch *unterschiedliche* Eingaben, *gleiche* _Hashwerte_ entstehen. Jedoch für bekannte und beschränkte Eingabemöglichkeiten können perfekte bzw. Kollisionsfreie Hashfunktionen gefunden werden.  
 

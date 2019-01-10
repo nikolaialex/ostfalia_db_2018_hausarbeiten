@@ -18,14 +18,14 @@ Das Ergebnis einer Hashfunktion bzw. Hash-Algorithmus ist der Hashwert. Dabei ka
 
 Eine Hashfunktion sollte die folgenden Eigenschaften haben:  
 
-⋅⋅⋅Einwegfunktion:  
-⋅⋅⋅Es ist wichtig, dass die Hashfunktion immer den gleichen Hashwert liefert, es jedoch nicht möglich sein soll, aus dem Hashwert die Ursprungsangabe auszurechnen.  
+Einwegfunktion:  
+:  Es ist wichtig, dass die Hashfunktion immer den gleichen Hashwert liefert, es jedoch nicht möglich sein soll, aus dem Hashwert die Ursprungsangabe auszurechnen.  
 
-⋅⋅⋅Kollisionssicherheit:  
-⋅⋅⋅Wie in unserem Beispiel zu sehen, ergeben die Passwörter “Catwoman” und “Robocop” den gleichen Hashwert. In den meisten Fällen ist dieses Verhalten nicht erwünscht. Falls eine Hashfunktion nicht den gleichen Hashwert für unterschiedliche Eingaben liefert, wird diese Hashfunktion als eine kryptografische Hashfunktion genannt und damit die Kollisionssicherheit garantiert.  
+Kollisionssicherheit:  
+:  Wie in unserem Beispiel zu sehen, ergeben die Passwörter “Catwoman” und “Robocop” den gleichen Hashwert. In den meisten Fällen ist dieses Verhalten nicht erwünscht. Falls eine Hashfunktion nicht den gleichen Hashwert für unterschiedliche Eingaben liefert, wird diese Hashfunktion als eine kryptografische Hashfunktion genannt und damit die Kollisionssicherheit garantiert.  
 
-⋅⋅⋅Schnelligkeit:  
-⋅⋅⋅Die Berechnung des Hashwerts soll so schnell wie möglich erfolgen.
+Schnelligkeit:  
+:  Die Berechnung des Hashwerts soll so schnell wie möglich erfolgen.
 
 ____
 <sup>1</sup>https://de.wikipedia.org/wiki/Hashfunktion

@@ -2,6 +2,10 @@
 
 ## Anforderungen an ein DBMS für ML
 
+Die wichtigste Voraussetzung nach [902] für ML in einer Datenbank ist die Erweiterbarkeit,
+Die Nutzung von Stored Procedures (PLSQL), benutzerdefinierten Funktionen und Aggregationen.
+Diese Funktionen ermöglichen Anpassungen, die Elemente einer ML-Pipeline schnell und einfach ausführen zu können.
+
 ### Prozess und Komponenten für ML abbilden
 
 1) Wir beginnen mit einer Datei voller Trainingsdaten, die in einen Trainingsdatensatz geladen wird.
@@ -38,7 +42,9 @@
 16. Export (REST,QL)
 
 
-[901]: Russell Jurney, 2017 - Agile Data Science 2.0
+[901] : Russell Jurney, 2017 - Agile Data Science 2.0
+
+[902] : https://www.memsql.com/blog/matching-modern-databases-with-ml-and-ai/
 
 ----
 

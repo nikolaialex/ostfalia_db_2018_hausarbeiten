@@ -4,7 +4,7 @@
 
 ## 3. Funktionsweise
 
-In diesem Kapitel wird die Funktionsweise von Blockchain Datenbanken erläutert. Dazu werden zunächst einige grundlegende kryptographische Begriffe eingeführt und kurz erklärt. Diese werden im restlichen Kapitel für die Erklärung der Funktionsweise der Blockchain Datenbank genutzt. 
+In diesem Kapitel wird die Funktionsweise von Blockchain Datenbanken erläutert. Dazu werden zunächst einige grundlegende kryptographische Begriffe eingeführt und kurz erklärt. Diese werden im restlichen Kapitel für die Erklärung der Funktionsweise der Blockchain Datenbank genutzt.
 
 ### 3.1 Kryptographische Grundlagen
 
@@ -14,25 +14,33 @@ Bei den hier eingeführten Begriffen handelt es sich um Grundlagen der Kryptogra
 
 Hashing oder Hashfunktionen haben mehrer Anwendungsgebiete. Allgemein erzeugt eine Hashfunktion aus einem Input beliebiger Länge ein Resultat fixer und kleinerer Länge. [01, 02]
 
-Bei diesem Prozess treten sogenannte __Kollisionen__. Dies bedeutet, dass zwei unterschiedliche Werte nach dem hashing den gleichen Wert liefern : 
+Bei diesem Prozess treten sogenannte __Kollisionen__. Dies bedeutet, dass zwei unterschiedliche Werte nach dem hashing den gleichen Wert liefern.
+```
 H(M) = H(M’) bei M != M’
+```
 Dies tritt auf, da die Menge des Inputs größer ist als die der Ergebnisse. Somit muss es mehrere Werte geben die gehasht den gleichen Hashwert liefern. Hashfunktion im Allgemeinen aber vor allem kryptographische Hashfunktionen sollte möglichst resistent gegen Kollisionen sein. Dazu mehr im Abschnitt “Anforderungen”. [03]
 
 ##### 3.1.2.2 Anforderungen
 
-Je nachdem ob eine Hashfunktion für die Kryptographie genutzt werden soll oder nicht existieren unterschiedliche Anforderungen an diese. Die ersten drei Anforderungen gelten im Allgemeinen für Hashfunktionen. 
+Je nachdem ob eine Hashfunktion für die Kryptographie genutzt werden soll oder nicht existieren unterschiedliche Anforderungen an diese. Die ersten drei Anforderungen gelten im Allgemeinen für Hashfunktionen.
 
-Als erstes sollte eine Hashfunktion __effizient__ zu berechnen sein, auch für große Eingaben. Daraus lässt sich ableiten, für die Eingabe M ist es einfach den Hashwert h zu berechnen mit h = H (M).
-
+Als erstes sollte eine Hashfunktion __effizient__ zu berechnen sein, auch für große Eingaben. Daraus lässt sich ableiten, für die Eingabe M ist es einfach den Hashwert h zu berechnen.
+```
+h = H (M)
+```
 Des weiteren muss eine Hashfunktion __deterministisch__ sein. Dies bedeutet das identische Eingabewerte auch identische Ausgabewerte liefern. [04]
 Als nächste Anforderung sollte eine Hashfunktion für zwei ähnliche Eingabewerte sehr unterschiedliche Resultate liefern. Man spricht hier von __Pseudozufälligkeit__. Aus dem Eingabewert darf es nicht möglich sein den erzeugten Hashwert vorherzusagen. [02, 04, 05]  
 
-Für kryptographische Hashfunktionen gelten die bereits beschriebenen Anforderungen sowie die Folgenden. 
-Kryptographische Hashfunktionen müssen __Einwegfunktionen__ (eng. one-way) sein. Dies bedeutet, dass es nicht möglich sein sollte die Nachricht effizient aus einem gegebenen Hashwert zu berechnen. Daraus folgt die Nachricht M ist aus einem gegebenen Hashwert h nicht effizient zu berechnen : h = H(M). [02, 05]
+Für kryptographische Hashfunktionen gelten die bereits beschriebenen Anforderungen sowie die Folgenden.
+Kryptographische Hashfunktionen müssen __Einwegfunktionen__ (eng. one-way) sein. Dies bedeutet, dass es nicht möglich sein sollte die Nachricht effizient aus einem gegebenen Hashwert zu berechnen. Daraus folgt, dass die Nachricht M aus einem gegebenen Hashwert h nicht effizient zu berechnen. [02, 05]
 
 Zusätzlich darf es nicht effizient möglich sein Kollisionen zu finden. Wie bereits beschrieben führen Hashfunktionen immer zu Kollisionen, diese dürfen sich jedoch nicht einfach berechnen lassen. Dies lässt sich in zwei weitere Anforderungen aufteilen. [02, 05]
 
-Zum einen bedeutet dies, dass für eine gegebene Nachricht M es sehr aufwändig ist ein M’ zu finden für welches H(M) = H(M’) gilt. Zum anderen muss es aufwändig sein zwei beliebige M zu finden welche den gleichen Hashwert liefern. [02, 05]
+Zum einen bedeutet dies, dass für eine gegebene Nachricht M es sehr aufwändig ist ein andere Nachricht M’ zu finden, welche den gleichen Hashwert liefert.
+```
+H(M) = H(M’)
+```
+Zum anderen muss es aufwändig sein zwei beliebige M zu finden welche den gleichen Hashwert liefern. [02, 05]
 
 ##### 3.1.2.1 Anwendungen
 
@@ -41,23 +49,16 @@ Um das Konzept von Blockchain-Datenbanken zu verstehen ist jedoch vor allem die 
 
 ###### **Prüfsummen**
 
-Spezielle Hashfunktionen können genutzt werden um Prüfsummen zu erzeugen. Diese wiederum dienen dazu die Integrität von Daten zu prüfen. [06]
-
-Dazu erzeugt die Hashfunktion aus den Daten ursprünglichen Daten einen Hashwert. Soll später die Integrität überprüft werden, werden die zu überprüfenden Daten gehasht und der neue Hashwert mit dem alten verglichen. Sind die Daten unverändert gleichen sich die Hashwerte. Sind die Daten verändert erzeugt die Hashfunktion einen anderen Hashwert, vorausgesetzt es tritt keine Kollision auf. [08, 09]
-
-Wie bereits angesprochen treten bei geeigneten Hashfunktionen selten Kollisionen auf und diese sind schwierig herbeizuführen. 
-
-Damit sich eine Hashfunktion zur Generierung von Prüfsummen eignet sollte sie vor allem schnell zu berechnen sein, ähnliche Inputs sollten sehr unterschiedliche Hashwerte liefern und sie sollte möglichst kollisionsresistent sein. [08]
+Spezielle Hashfunktionen können genutzt werden um Prüfsummen zu erzeugen. Diese wiederum dienen dazu die Integrität von Daten zu prüfen. Dazu erzeugt die Hashfunktion aus den Daten ursprünglichen Daten einen Hashwert. Soll später die Integrität überprüft werden, werden die zu überprüfenden Daten gehasht und der neue Hashwert mit dem alten verglichen. Sind die Daten unverändert gleichen sich die Hashwerte. Sind die Daten verändert erzeugt die Hashfunktion einen anderen Hashwert, vorausgesetzt es tritt keine Kollision auf. Wie bereits angesprochen treten bei geeigneten Hashfunktionen selten Kollisionen auf und diese sind schwierig herbeizuführen. Damit sich eine Hashfunktion zur Generierung von Prüfsummen eignet sollte sie vor allem schnell zu berechnen sein, ähnliche Inputs sollten sehr unterschiedliche Hashwerte liefern und sie sollte möglichst kollisionsresistent sein. [06, 08, 09]
 
 ###### **Asymmetrische Verschlüsselung**
 
-Bei symmetrischer Verschlüsselung teilen sich Sender und Empfänger einen Schlüssel, welchen nur die beiden Kommunikationspartner wissen dürfen. Dieser muss zuvor über einen anderen Kommunikationsweg vereinbart bzw. ausgetauscht worden sein. 
-Zusätzlich bedeutet dies, dass ein Nutzer für die Kommunikation mit fünf anderen Nutzern fünf Schlüssel speichern müsste. [10, 11]
+Bei symmetrischer Verschlüsselung teilen sich Sender und Empfänger einen Schlüssel, welchen nur die beiden Kommunikationspartner wissen dürfen. Der Sender nutzt diesen um die Nachricht zu verschlüsseln, der Empfänger zum anschließenden entschlüsseln. Der Schlüssel muss zuvor über einen anderen Kommunikationsweg vereinbart bzw. ausgetauscht worden sein. Der Schlüsselaustausch ist eine große Schwierigkeit für symmetrische Verfahren. Eine unsichere Übertragung des Schlüssel kompromittiert die Sicherheit der anschließend Übertragung. Ein Angreifer welcher den Schlüssel erlangt kann die anschließend Übertragung genauso entschlüsseln wie der Empfänger. Somit muss eine sicherer Kommunikationsweg für den Schlüsselaustausch gefunden werden. Im Falle zweier Personen können diese sich vorher treffen und einen Schlüssel austauschen. Dies ist jedoch bei der Kommunikation mit vielen unterschiedlichen Personen oder Instanzen nicht praktikabel. Mit jedem Kommunikationspartner müsste ein Treffen arrangiert werden und ein Schlüssel ausgetauscht werden. Zusätzlich zu dem sehr hohen Aufwand die Schlüssel zu vereinbaren, müsste jeder Nutzer einen extra Schlüssel für jede Kommunikation speichern. Betrachtet man als Beispiel einen Teilnehmer welcher mit fünf Partner sicher kommunizieren möchte. Dafür braucht er fünf verschiedenen Schlüssel. Wollen die Teilnehmer nun untereinander kommunizieren, müsste jeder von Ihnen fünf Schlüssel speichern. Insgesamt werden also 25 Schlüssel benötigt. In einem großen Netzwerk würde dies zu einem sehr hohen Speicher- und Verwaltungsaufwand führen. [10, 11, 37]
 
-Asymmetrische Verschlüsselung löst diese Schwierigkeiten. Es werden Schlüsselpaare bestehend aus zwei Schlüsseln generiert. Nachrichten welche mit einem der beiden Schlüssel verschlüsselt wurden können anschließend nur noch effizient mit dem entsprechenden anderen entschlüsselt werden. Gleichzeitig lässt sich der aus einem der beiden Schlüssel der andere nicht effizient berechnen. [12, 13]
+Asymmetrische Verschlüsselung löst diese Schwierigkeiten. Es werden Schlüsselpaare bestehend aus zwei Schlüsseln generiert. Nachrichten welche mit einem der beiden Schlüssel verschlüsselt wurden können anschließend nur noch effizient mit dem entsprechenden anderen entschlüsselt werden. Gleichzeitig lässt sich aus einem der beiden Schlüssel der andere nicht effizient berechnen. [12, 13]
 
-Beim Public-Key Verfahren hat jeder Kommunikationspartner ein solches Schlüsselpaar. Ein Schlüssel wird zum verschlüsseln benutzt und ist öffentlich für jeden einsehbar. Er wird als public key bezeichnet. Der andere muss geheim gehalten werden und wird als private key bezeichnet. 
-Um eine Kommunikation zu verschlüsseln muss der Sender lediglich die Nachricht mit dem öffentlichen Schlüssel des Empfängers verschlüsseln und an diesen senden. Anschließend kann die Nachricht nur effizient vom Besitzer des entsprechenden privaten Schlüssels entschlüsselt werden. [14, 15, 16]
+Beim Public-Key Verfahren hat jeder Kommunikationspartner ein solches Schlüsselpaar. Ein Schlüssel wird zum verschlüsseln benutzt und ist öffentlich für jeden einsehbar. Er wird als public key bezeichnet. Der andere muss geheim gehalten werden und wird als private key bezeichnet.
+Um eine Kommunikation zu verschlüsseln muss der Sender lediglich die Nachricht mit dem öffentlichen Schlüssel des Empfängers verschlüsseln und an diesen senden. Anschließend kann die Nachricht nur effizient vom Besitzer des entsprechenden privaten Schlüssels entschlüsselt werden. Wird er private key geheim gehalten, hat ein Angreifer nur Zugang zu den beiden öffentlichen Schlüssel der Kommunikationspartner. Mit diesem kann er die Kommunikation jedoch nicht entschlüsseln. Es kommt zu keinem unsicheren Austausch des private keys. [14, 15, 16]
 
 Asymmetrische Verschlüsselungsverfahren bringen viele Vorteile mit sich, sind jedoch bedeutend langsamer als symmetrische Verfahren. Beide Ansätze können miteinander kombiniert werden. Dabei dient das asymmetrische Verfahren dazu den Schlüssel für die symmetrische Verschlüsselung auszutauschen. Dies erlaubt eine effizientere Kommunikation und bietet weiterhin die Vorteile der asymmetrischen Verschlüsselung. Ein Verfahren für den dazu notwendigen Schlüsselaustausch wurde 1976 von Diffie und Hellman beschrieben. [17, 18, 19]
 
@@ -67,26 +68,22 @@ Die asymmetrische Verschlüsselung kann auch zur Authentifizierung des Senders v
 
 Grundsätzlich dient die Blockchaintechnologie dazu Transaktionsdaten dezentral, ohne eine zentrale Autorität zu speichern und gegen Manipulation zu sichern. Damit erlaubt es die sichere verteilte Speicherung von Daten in einem nicht vertrauenswürdigen Netzwerk. [20, 21, 22, 23]
 
-#### 3.2.1 Merkmale 
+#### 3.2.1 Merkmale
 
-An dieser Stelle werden die Merkmale einer Blockchain definiert. Im weiteren Verlauf wird auf den Aufbau und die Funktionsweise eingegangen und dabei Rückschluss auf die Merkmale gezogen. 
+An dieser Stelle werden die Merkmale einer Blockchain definiert. Im weiteren Verlauf wird auf den Aufbau und die Funktionsweise eingegangen und dabei Rückschluss auf die Merkmale gezogen. In Fachliteratur finden sich unterschiedliche Definitionen für den Begriff Blockchain welche unterschiedlichen Merkmalen anführen. In diesem Abschnitt werden die Merkmale nach Sultan, Karim et. al. verwendet. [24, 20, 25]
 
-In Fachliteratur finden sich unterschiedliche Definitionen für den Begriff Blockchain welche unterschiedlichen Merkmalen anführen. [24, 20, 25]
- 
-In dieser Arbeit werden die Merkmale nach Sultan, Karim et. al. verwendet. [24]
+Eine Blockchain ist __dezentralisiert__. Dies bedeutet, dass keine zentrale Instanz die Blockchain verwaltet oder Prozesse validiert. Die Daten sind nicht an einem Ort gespeichert sondern können von allen Teilnehmern eingesehen und kopiert werden. Dadurch werden die Daten über das gesamte Netzwerk verteilt. Es existieren auch nicht dezentralisierte Blockchains. Darauf wird im Abschnitt “Offenheit” genauer eingegangen. Das Konzept von Dezentralität wird auch im Abschnitt "Zentrale, Dezentrale und Verteilte Netzwerkstrukturen" behandelt. [26]  
 
-Eine Blockchain ist __dezentralisiert__. Dies bedeutet, dass keine zentrale Instanz die Blockchain verwaltet oder Prozesse validiert. Die Daten sind nicht an einem Ort gespeichert sondern können von allen Teilnehmern eingesehen und kopiert werden. Dadurch werden die Daten über das gesamte Netzwerk verteilt. Es existieren auch nicht dezentralisierte Blockchains. Darauf wird im Abschnitt “Offenheit” genauer eingegangen. [26]  
-
-Die Daten einer Blockchain sind permanent gespeichert. Sie können nachträglich nicht entfernt oder manipuliert werden. Diese __Unveränderlichkeit__ ist ein weiteres Merkmal. Zur Validierung von Blöcken verwendet eine Blockchain __Konsensus Modelle__. Darauf wird im Abschnitt “Publishing” näher eingegangen. Eine Blockchain ist außerdem __transparent__. Jeder Nutzer kann die gesamte Transaktionshistorie einsehen, nachverfolgen und prüfen. Oftmals wird in Fachliteratur auch __Anonymität__ als Merkmal einer Blockchain angeführt. Nutzer haben eine Adresse und interagieren durch diese mit dem Blockchainnetzwerk. Die Adresse bietet keinen Rückschluss auf die Identität der Person. [26, 27] 
+Die Daten einer Blockchain sind permanent gespeichert. Sie können nachträglich nicht entfernt oder manipuliert werden. Diese __Unveränderlichkeit__ ist ein weiteres wichtiges Merkmal. Zur Validierung von Blöcken verwendet eine Blockchain __Konsensus Modelle__. Darauf wird im Abschnitt “Publishing” näher eingegangen. Eine Blockchain ist außerdem __transparent__. Jeder Nutzer kann die gesamte Transaktionshistorie einsehen, nachverfolgen und prüfen. Oftmals wird in Fachliteratur auch __Anonymität__ als Merkmal einer Blockchain angeführt. Nutzer haben eine Adresse und interagieren durch diese mit dem Blockchainnetzwerk. Die Adresse bietet keinen Rückschluss auf die Identität der Person. [26, 27]
 
 #### 3.2.2 Offenheit
 
 Es gibt drei unterschiedliche Arten von Blockchains bezüglich ihrer Offenheit. Zum einen gibt es die __öffentlichen__ Blockchains. Hier kann jeder Teilnehmer auf die Blockchain zugreifen, diese lokal auf seinem Computer speichern und erweitern. Bitcoin gilt als die erste offene Blockchain und startete 2009. [21, 23, 26, 27]
 
-Die nächste Kategorie sind __hybride__ Blockchains. Prinzipiell hat jeder Zugriff auf die Blockchain jedoch nicht zu allen Blöcken. Nutzer haben verschiedene Zugriffsrechte. Die Blockchain ist somit teilweise dezentralisiert. Ein Beispiel ist R3 Corda oder b3i. [23, 28, 29] 
+Die nächste Kategorie sind __hybride__ Blockchains. Prinzipiell hat jeder Zugriff auf die Blockchain jedoch nicht zu allen Blöcken. Nutzer haben verschiedene Zugriffsrechte. Die Blockchain ist somit teilweise dezentralisiert. Ein Beispiel ist R3 Corda oder b3i. [23, 28, 29]
 
 Die letzte Kategorie stellen die __privaten__ Blockchain-Netzwerke dar. Hier bestimmt eine zentrale Entität die Rechte für den Zugriff und die Bearbeitung. Die Blockchain ist zentralisiert aber immer noch kryptographisch gesichert. Aufgrund der mangelnden Dezentralität ist es im allgemeinen strittig ob es sich bei dieser Variante noch um eine Blockchain handelt.
-Diese Art wird vor allem von Unternehmen eingesetzt um den Zugriff auf interne Informationen zu sicher und regulieren. Beispiele für diesen Typ sind die Blockchains Hyperledger und Ripple. [23, 30] 
+Diese Art wird vor allem von Unternehmen eingesetzt um den Zugriff auf interne Informationen zu sicher und regulieren. Beispiele für diesen Typ sind die Blockchains Hyperledger und Ripple. [23, 30]
 
 #### 3.2.3 Blöcke
 
@@ -115,7 +112,7 @@ Es existieren unterschiedliche “consensus models” welche den Prozess des pub
 Beim Proof of Work (PoW) Modell lösen Teilnehmer ein mathematisches Problem, dessen Lösung einen hohen Rechenaufwand erfordert. Der erste Nutzer welcher die Lösung findet darf den nächsten Block publizieren. Die Rätsel sind so konstruiert, dass die Lösung schwer zu finden aber leicht zu überprüfen ist. Dadurch können alle anderen Nutzer des Blockchain-Netzwerkes die Lösung schnell verifizieren. [20, 31]
 
 So muss zum Beispiel der Hashwert welcher aus dem Header des zu publizierenden Blocks gewonnen wird unter einem vorgegebenen Wert liegen.
-Um dies erreichen zu können kann ein Nutzer kleine Änderungen an dem Header an dafür vorgesehen Stellen vornehmen. Der Aufbau eines Blocks wurde im Kapitel “Blöcke” beschrieben. Das dort genannte nonce value kann zum Beispiel je nach Implementierung der Blockchain für diesen Zweck verwendet werden. Dies bedeutet, der Nutzer kann dieses Feld nach belieben verändern um das gewünschte Resultat zu erreichen. (Vgl. W. Ross, 2018; Vgl. Blockgeeks, 2018a) 
+Um dies erreichen zu können kann ein Nutzer kleine Änderungen an dem Header an dafür vorgesehen Stellen vornehmen. Der Aufbau eines Blocks wurde im Kapitel “Blöcke” beschrieben. Das dort genannte nonce value kann zum Beispiel je nach Implementierung der Blockchain für diesen Zweck verwendet werden. Dies bedeutet, der Nutzer kann dieses Feld nach belieben verändern um das gewünschte Resultat zu erreichen. (Vgl. W. Ross, 2018; Vgl. Blockgeeks, 2018a)
 
 Wie im Kapitel “Hashfunktionen” beschrieben wurde ist es nicht effizient möglich aus einem Hash den ursprünglichen Wert zu berechnen. Aus diesem Grund kann ein Nutzer nicht einfach einen gewünschten Hashwert berechnen welcher den Anforderungen entspricht.
 Stattdessen muss er den Header verändern und anschließend den Hashwert des Headers berechnen. Entspricht der Wert nicht den Vorgaben muss das Verfahren wiederholt werden. Das häufige berechnen des Hashwertes ist mit hohem Rechnaufwand verbunden. [20]
@@ -124,7 +121,7 @@ Ein wichtiger Aspekt für das PoW Modell ist, dass eine Hashfunktion aus zwei ä
 
 Durch Änderungen an den Vorgaben für die Lösung des Problems kanns die Schwierigkeit und damit die Geschwindigkeit in welcher neue Blocks publiziert werden geregelt werden. Ein Beispiel für die Anwendung eines PoW Modells liefert Bitcoin. Das Verfahren wird hier als Mining bezeichnet und die Nutzer als Miner. [31, 32]
 
-Ein PoW Modell verbraucht sehr viel Energy. Viele Teilnehmer versuchen gleichzeitig das gleiche aufwändige Problem zu lösen. [33, 34, 35] 
+Ein PoW Modell verbraucht sehr viel Energy. Viele Teilnehmer versuchen gleichzeitig das gleiche aufwändige Problem zu lösen. [33, 34, 35]
 
 ##### 3.2.5.2 Proof of Stake (PoS)
 
@@ -179,7 +176,7 @@ Quellenangabe:
 [20] - W. Ross, 2018
 [21] - M. Gupta, 2018
 [22] - M. Andreessen, o.A.
-[23] - P. Adam-Kalfon, S. El Moutaouakil, 2017 
+[23] - P. Adam-Kalfon, S. El Moutaouakil, 2017
 [24] - K. Sultan, U. Ruhi, R. Lakhani, 2018
 [25] - L. Severeijns, 2017
 [26] - Z. Zigin, X. Shaon, D. Hong-Ning, C. Xiangping, 2017
@@ -193,7 +190,7 @@ Quellenangabe:
 [34] - Unbekannt, 2015
 [35] - M. Thake, 2018
 [36] - A. Castor, 2017
-
+[37] - A. Czernik, 2015
 ```
 
 ***

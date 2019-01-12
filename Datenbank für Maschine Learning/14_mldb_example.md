@@ -44,7 +44,55 @@ mldb.query("SELECT * FROM iris LIMIT 5")
 
 #### Datenaufruf via Schnittstellen (REST, QL)
 
+MLDB implementiert eine Abfragesprache basierend auf der SQL-Auswahlsyntax. Dies wird sowohl zur effizienten Auswertung von Ausdrücken als auch zur Angabe von Abfragen verwendet.<sup>[11](#11)</sup> Wie schon im vorigen Beispiel beschrieben, kann die Funktion `query()`, die in der `pymldb`-Bibliothek implementiert ist, verwendet werden, um Abfragen auszuführen und Datensätze abzurufen. Zu beachten ist, dass dieselbe Abfrage auch nativ über HTTP ausgeführt werden kann. Aus diesem Grund sind Interaktionen mit MLDB mithilfe anderer Programmiersprachen denkbar. Das folgende Beispiel zeigt den Vergleich zwischen den Arten SQL-Abfragen zu definieren:
+
+```python
+// In Python mittels pymldb-Bibliothek und query()-Funktion
+mldb.query("SELECT * FROM iris LIMIT 5")
+
+// In Python mittels pymldb-Bibliothek und HTTP get()-Funktion
+mldb.get('/v1/query', q="SELECT * FROM iris LIMIT 5", format="table")
+
+// Native HTTP-Anfrage
+GET http://localhost/v1/query?q=SELECT+%2A+FROM+iris+LIMIT+5&format=table
+```
+
 #### Dataset (CSV, Erstellung, Vorlagen)
+
+MLDB arbeitet mit Daten über Datensätze, die auf drei verschiedene Arten erstellt und aufgefüllt werden können<sup>[11](#11)</sup>:
+
+1. Erstellung eines veränderbaren Datensatzes und zeilenweises Einfügen von Daten über REST.
+2. Erstellung eines Datensatzes mittels einer vorhandenen Datei.
+3. Erstellung eines Datensatzes mittels einer Prozedur.
+
+Da die letzten beiden Möglichkeiten schon im Abschnitt ["Import"](#import) beschrieben sind, konzentriert sich das folgende Beispiel auf die selbstständige Erstellung eines Datensatzes. Hierfür wird zu Beginn ein leerer veränderbarer Datensatz mit dem Namen `example` erzeugt (siehe Zeile 1). Die Eigenschaft, dass der Datensatz veränderbar ist, bestimmt der mitgegebene Typ `sparse.mutable`. MLDB stellt einige Typen von Datensätzen zur Verfügung, die [hier](https://docs.mldb.ai/doc/#builtin/datasets/Datasets.md.html) nachlesbar sind. Als nächstes wird eine neue Zeile in den Datensatz hinzugefügt, der aus zwei neuen Spalten besteht. Wie schon im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, weisen Datensätze in MLDB kein Schema auf. Aus diesem Grund können dynamisch neue Reihen und Spalten hinzugefügt werden (siehe Zeile 9-20). Bevor der Datensatz ausgespielt werden kann (siehe Zeile 22), müssen alle vorigen Änderungen bestätigt werden (siehe Zeile 21).
+
+```python
+mldb.put('/v1/datasets/example', { "type":"sparse.mutable" })
+mldb.post('/v1/datasets/example/rows', {
+    "rowName": "first row",
+    "columns": [
+        ["first column", 1, 0],
+        ["second column", 2, 0]
+    ]
+})
+mldb.post('/v1/datasets/example/rows', {
+    "rowName": "first row",
+    "columns": [
+        ["third column", 3, 0]
+    ]
+})
+mldb.post('/v1/datasets/example/rows', {
+    "rowName": "second row",
+    "columns": [
+        ["forth column", 4, 0]
+    ]
+})
+mldb.post("/v1/datasets/example/commit")
+mldb.query("SELECT * FROM example")
+```
+
+![Inhalt eines selbst erzeugten Datensatzes](./statics/11_mldb/examples/selfCreate.png)
 
 #### Klassische Bearbeitung (Filter, Rules)
 
@@ -62,7 +110,7 @@ mldb.query("SELECT * FROM iris LIMIT 5")
 
 #### Auto-Charakterisierung
 
-### Modell (Ändern,Sichern)
+### Modell (Ändern, Sichern)
 
 ### Funktionen
 
@@ -91,6 +139,12 @@ mldb.query("SELECT * FROM iris LIMIT 5")
 <a name="11"><sup>11</sup></a> _Importing Text_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/procedures/importtextprocedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/importtextprocedure.md.html) (besucht am 12.01.2019).
 
 <a name="11"><sup>11</sup></a> _Word2Vec importer procedure_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/procedures/Word2VecImporter.md.html](https://docs.mldb.ai/doc/#builtin/procedures/Word2VecImporter.md.html) (besucht am 12.01.2019).
+
+<a name="11"><sup>11</sup></a> _SQL implementation in MLDB_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/sql/Sql.md.html](https://docs.mldb.ai/doc/#builtin/sql/Sql.md.html) (besucht am 12.01.2019).
+
+<a name="11"><sup>11</sup></a> _Loading Data Tutorial_ (2019). URL: [https://docs.mldb.ai/ipy/notebooks/_tutorials/_latest/Loading%20Data%20Tutorial.html](https://docs.mldb.ai/ipy/notebooks/_tutorials/_latest/Loading%20Data%20Tutorial.html) (besucht am 12.01.2019).
+
+<a name="11"><sup>11</sup></a> _Mutable Sparse Matrix Dataset_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/datasets/MutableSparseMatrixDataset.md.html](https://docs.mldb.ai/doc/#builtin/datasets/MutableSparseMatrixDataset.md.html) (besucht am 12.01.2019).
 
 ---
 

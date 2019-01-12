@@ -49,13 +49,6 @@ Die folgende Tabelle beschreibt die Zuordnung von SQL-Kommandos zu HTTP-Methoden
 | INSERT           | POST             |
 | SELECT           | GET              |
 
-TODO: Hier beispiel für ein konkretes mapping:
-
-```SQL
-SELECT product_recommendation() FROM user_purchases
-GET /v1/functions/product_recommendation/application?input={user}
-```
-
 ---
 
 <a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 09.01.2018).

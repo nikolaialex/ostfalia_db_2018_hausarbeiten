@@ -18,14 +18,16 @@
 
 ### 3.2 Azure Cosmos DB mit MongoDB-API
 
-## 4. Entityframework
+## 4. LINQ
 
-### 4.1 Einführung in das Entityframework
+## 5. Entityframework
 
-### 4.2 Code-First
+### 5.1 Einführung in das Entityframework
 
-#### 4.2.1 Hands-On
+### 5.2 Code-First
 
-### 4.3 Database-First
+#### 5.2.1 Hands-On
 
-### 4.4 Ausblick
+### 5.3 Database-First
+
+### 5.4 Ausblick

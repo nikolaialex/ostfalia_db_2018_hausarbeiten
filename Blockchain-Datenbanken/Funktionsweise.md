@@ -10,7 +10,7 @@ In diesem Kapitel wird die Funktionsweise von Blockchain Datenbanken erläutert.
 
 Bei den hier eingeführten Begriffen handelt es sich um Grundlagen der Kryptographie auf denen die Funktionsweise der Blockchain Datenbank aufbaut. Dieses Kapitel eignet sich zum Nachschlagen von Fachbegriffen.
 
-#### 3.1.2 Hashfunktion
+#### 3.1.1 Hashfunktion
 
 Hashing oder Hashfunktionen haben mehrer Anwendungsgebiete. Allgemein erzeugt eine Hashfunktion aus einem Input beliebiger Länge ein Resultat fixer und kleinerer Länge. [01, 02]
 
@@ -20,7 +20,7 @@ H(M) = H(M’) bei M != M’
 ```
 Dies tritt auf, da die Menge des Inputs größer ist als die der Ergebnisse. Somit muss es mehrere Werte geben die gehasht den gleichen Hashwert liefern. Hashfunktion im Allgemeinen aber vor allem kryptographische Hashfunktionen sollte möglichst resistent gegen Kollisionen sein. Dazu mehr im Abschnitt Anforderungen. [03]
 
-##### 3.1.2.2 Anforderungen
+##### 3.1.1.1 Anforderungen
 
 Je nachdem ob eine Hashfunktion für die Kryptographie genutzt werden soll oder nicht existieren unterschiedliche Anforderungen an diese. Die ersten drei Anforderungen gelten im Allgemeinen für Hashfunktionen.
 
@@ -42,16 +42,16 @@ H(M) = H(M’)
 ```
 Zum anderen muss es aufwändig sein zwei beliebige M zu finden welche den gleichen Hashwert liefern. [02, 05]
 
-##### 3.1.2.1 Anwendungen
+##### 3.1.1.2 Anwendungen
 
 Eine wichtige Anwendung von Hashfunktionen sind __Hashtabellen__. Hier werden Hashfunktionen genutzt um effektiven Zugriff auf Große Datenmengen zu gewährleisten. Dazu wird an jedes neue Element ein Schlüssel vergeben und dieser gehashed. Der daraus gewonnene Hashwert referenziert den Ort der gesuchten Daten in der Hashtabelle. [06, 07]
 Um das Konzept von Blockchain-Datenbanken zu verstehen ist jedoch vor allem die kryptographische Nutzung von Hashverfahren interessant. In diesem Bereich werden Hashfunktionen auf verschiedene Arten genutzt.
 
-###### **Prüfsummen**
+###### 3.1.1.2.1 Prüfsummen
 
 Spezielle Hashfunktionen können genutzt werden um Prüfsummen zu erzeugen. Diese wiederum dienen dazu die Integrität von Daten zu prüfen. Dazu erzeugt die Hashfunktion aus den Daten ursprünglichen Daten einen Hashwert. Soll später die Integrität überprüft werden, werden die zu überprüfenden Daten gehasht und der neue Hashwert mit dem alten verglichen. Sind die Daten unverändert gleichen sich die Hashwerte. Sind die Daten verändert erzeugt die Hashfunktion einen anderen Hashwert, vorausgesetzt es tritt keine Kollision auf. Wie bereits angesprochen treten bei geeigneten Hashfunktionen selten Kollisionen auf und diese sind schwierig herbeizuführen. Damit sich eine Hashfunktion zur Generierung von Prüfsummen eignet sollte sie vor allem schnell zu berechnen sein, ähnliche Inputs sollten sehr unterschiedliche Hashwerte liefern und sie sollte möglichst kollisionsresistent sein. [06, 08, 09]
 
-###### **Asymmetrische Verschlüsselung**
+###### 3.1.1.2.2 Asymmetrische Verschlüsselung
 
 Bei symmetrischer Verschlüsselung teilen sich Sender und Empfänger einen Schlüssel, welchen nur die beiden Kommunikationspartner wissen dürfen. Der Sender nutzt diesen um die Nachricht zu verschlüsseln, der Empfänger zum anschließenden entschlüsseln. Der Schlüssel muss zuvor über einen anderen Kommunikationsweg vereinbart bzw. ausgetauscht worden sein. Der Schlüsselaustausch ist eine große Schwierigkeit für symmetrische Verfahren. Eine unsichere Übertragung des Schlüssel kompromittiert die Sicherheit der anschließend Übertragung. Ein Angreifer welcher den Schlüssel erlangt kann die anschließend Übertragung genauso entschlüsseln wie der Empfänger. Somit muss eine sicherer Kommunikationsweg für den Schlüsselaustausch gefunden werden. Im Falle zweier Personen können diese sich vorher treffen und einen Schlüssel austauschen. Dies ist jedoch bei der Kommunikation mit vielen unterschiedlichen Personen oder Instanzen nicht praktikabel. Mit jedem Kommunikationspartner müsste ein Treffen arrangiert werden und ein Schlüssel ausgetauscht werden. Zusätzlich zu dem sehr hohen Aufwand die Schlüssel zu vereinbaren, müsste jeder Nutzer einen extra Schlüssel für jede Kommunikation speichern. Betrachtet man als Beispiel einen Teilnehmer welcher mit fünf Partner sicher kommunizieren möchte. Dafür braucht er fünf verschiedenen Schlüssel. Wollen die Teilnehmer nun untereinander kommunizieren, müsste jeder von Ihnen fünf Schlüssel speichern. Insgesamt werden also 25 Schlüssel benötigt. In einem großen Netzwerk würde dies zu einem sehr hohen Speicher- und Verwaltungsaufwand führen. [10, 11, 37]
 
@@ -134,6 +134,9 @@ Es werden zwei Typen von Forks unterschieden, hard forks und soft forks. Bei ein
 
 Ein __soft fork__ ist eine Erweiterung der existierenden Regeln. Die bisherigen Vorgaben bleiben bestehen und sind weiterhin gültig. Es müssen nicht alle Knoten aktualisiert werden sondern lediglich jene welche am Konsensmodell teilnehmen. [25]
 
+### 3.2.8 Double Spending Problem
+
+Der Begriff des Double Spending Problems wurde bereits in dem gleichnamigen Kapitel eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne eine zentrale Instanz. Essentiell dafür ist die stetige Aktualisierung der Blockchain. Alle Teilnehmer erhalten beständig die neue Version der Blockchain über das Netzwerk. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den Zeitstempel wird auch deutlich welche die ursprüngliche Transaktion war und alle nachfolgenden Versuche das digitale Geldstück erneut zu transferieren scheitern. [38, 39]
 
 ***
 
@@ -182,6 +185,8 @@ Quellenangabe:
 [35] - M. Thake, 2018
 [36] - A. Castor, 2017
 [37] - A. Czernik, 2015
+[38] - Team InnerQuest Online, 2018
+[39] - N. Reiff, 2018
 ```
 
 ***

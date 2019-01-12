@@ -55,6 +55,6 @@ letzter Aufruf: 2018-12-11
 
 ***
 
-[Zwei verteilte Datenbanken setzen CAP praxisorientiert um >>](4_0_Zwei_verteilte_Datenbanken_setzen_CAP_praxisorientiert_um.md)
+[Alternativen des CAP-Theorems >>](4_Alternativen_des_CAP-Theorems.md)
 
 ***

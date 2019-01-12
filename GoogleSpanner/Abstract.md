@@ -12,6 +12,7 @@ Google sichert für Cloud Spanner in ihrem SLA (Service-Level-Agreement) eine Ve
 
 In dieser Arbeit wird beschrieben, wie Spanner strukturiert ist, der Funktionsumfang, die verschiedenen Entwurfsentscheidungen zugrunde liegenden Gründe und eine Spanners neuartige Time-API, die Zeitunterschiede ausgleicht. Diese API und ihre Implementation sind wichtig um die Konsistenz der Datenbank zu wahren. Eine Reihe von Features unterstützt das: Non-Blocking-Reads, Lock-Free Read-Only-Transaktionen und Atomic-Schema-Änderungen.<sup>4</sup>    
 
+***
 
 Quellen:
 
@@ -23,6 +24,6 @@ Quellen:
   
   <sup>4</sup> Google: Cloud Spanner. Der erste horizontal skalierbare relationale Datenbankdienst mit Strong Consistency
 
-***
+
 
 

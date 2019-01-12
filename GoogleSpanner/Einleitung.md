@@ -1,6 +1,6 @@
 [<<1. Abstract](Abstract.md)
 
-[>>3. Implentierung](Implementierung.md)
+[>>3. Implementierung](Implementierung.md)
 
 ***
 

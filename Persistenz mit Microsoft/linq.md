@@ -4,4 +4,3 @@ Linq steht für Language Integrated Query und ist ein Verfahren für den Zugriff
 
 Ein weitere Vorteil besteht in der Validierung der Abfrage zur Designzeit. Der Compiler MIL?? kann schon vor dem Compilieren und somit auch schon vor dem konkreten Zugriff Fehler in der Abfrage festellen.
 
-

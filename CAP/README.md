@@ -21,9 +21,9 @@ Das Akronym steht für Consistency, Availability und Partition-Tolerance.
    3. Das P in CAP - Partition-tolerance
    4. Konflikte und Kompromisse
 3. [Die ACID Eigenschaften und ihre Begriffsdefinitionen im Vergleich zum CAP](3_Die_ACID_Eigenschaften_und_ihre_Begriffsdefinitionen_im_Vergleich_zum_CAP.md)
-4. [Alternativen des CAP-Theorems](5_Alternativen_des_CAP-Theorems.md)
-   1. [PACELC](5_1_PACELC.md)
-   2. [BASE](5_2_BASE.md)
+4. [Alternativen des CAP-Theorems](4_Alternativen_des_CAP-Theorems.md)
+   1. PACELC
+   2. BASE
 5. [Zwei verteilte Datenbanken setzen CAP praxisorientiert um](5_0_Zwei_verteilte_Datenbanken_setzen_CAP_praxisorientiert_um.md)
    1. [Google Spanner](5_1_Spanner.md)
    2. [Amazon DynamoDB](5_2_Dynamo.md)

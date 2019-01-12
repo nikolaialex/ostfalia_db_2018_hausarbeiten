@@ -6,7 +6,7 @@
 
 ## 2. Azure Persistenzlösungen
 
-### 2.1 Überblick der Dienste unf Funktionen
+### 2.1 Überblick der Dienste und Funktionen
 
 ### 2.2 Database-as-a-Service
 
@@ -14,7 +14,7 @@
 
 ## 3. Azure Cosmos DB
 
-### 3.1 Grundlegende Technik
+### 3.1 Funktionsweise
 
 ### 3.2 Azure Cosmos DB mit MongoDB-API
 

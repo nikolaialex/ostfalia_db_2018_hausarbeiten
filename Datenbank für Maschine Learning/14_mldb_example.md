@@ -182,7 +182,7 @@ response = mldb.put('/v1/procedures/iris_test_classifier', {
 pd.DataFrame(response.json()["status"]["firstRun"]["status"]).pivot_table(index="actual", columns="predicted", fill_value=0)
 ```
 
-![Inhalt eines selbst erzeugten Datensatzes](./statics/11_mldb/examples/classifier_test.png)
+![Konfusionsmatrix als Testergebnis](./statics/11_mldb/examples/classifier_test.png)
 
 ### Funktionen
 

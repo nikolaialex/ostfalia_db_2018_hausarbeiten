@@ -57,6 +57,8 @@ mldb.get('/v1/query', q="SELECT * FROM iris LIMIT 5", format="table")
 GET http://localhost/v1/query?q=SELECT+%2A+FROM+iris+LIMIT+5&format=table
 ```
 
+TODO auch sql clauses
+
 #### Dataset (CSV, Erstellung, Vorlagen)
 
 MLDB arbeitet mit Daten über Datensätze, die auf drei verschiedene Arten erstellt und aufgefüllt werden können<sup>[11](#11)</sup>:
@@ -100,6 +102,10 @@ mldb.query("SELECT * FROM example")
 
 #### Performance
 
+Das GitHub-Projekt [benchm-ml](https://github.com/szilard/benchm-ml) vom Nutzer [szilard](https://github.com/szilard) versucht einen minimalen Benchmark für Skalierbarkeit, Geschwindigkeit und Genauigkeit von häufig verwendeten Implementierungen einiger maschineller Lernalgorithmen darzustellen. Unter den getesteten Tools findet man auch MLDB wiede (siehe [hier](https://github.com/szilard/benchm-ml/blob/master/z-other-tools/9a-datacratic.py)). Im Rahmen des Benchmarks wird die benötigte Zeit und resultierende Genauigkeit der Tools bei der Ausführung eines Random Forests mit einem Datensatz von einer Million Zeilen auf einem Knoten vergleichen. Die Tests wurden auf einer Amazon EC2 c3.8xlarge-Instanz (32 Kerne, 60 GB RAM) durchgeführt<sup>[11](#11)</sup>. MLDB konnte im Rahmen des Tests eine Genauigkeit von ca. 74% in 18 Sekunden erreichen. Wie die folgende Abbildung zeigt, schneidet MLDB vergleichen zu anderen getesteten Tools besser ab.<sup>[11](#11)</sup>
+
+![Vergleich von unterschiedlichen ML-Tools bei einem Random Forests mit Datensatz von einer Million Zeilen](./statics/11_mldb/examples/performance.png)
+
 #### Aufruf via Schnittstellen (REST, QL)
 
 #### Prozeduren
@@ -119,6 +125,8 @@ mldb.query("SELECT * FROM example")
 #### Batchbetrieb
 
 ### Export (REST, QL)
+
+
 
 ## Fazit
 
@@ -144,7 +152,15 @@ mldb.query("SELECT * FROM example")
 
 <a name="11"><sup>11</sup></a> _Loading Data Tutorial_ (2019). URL: [https://docs.mldb.ai/ipy/notebooks/_tutorials/_latest/Loading%20Data%20Tutorial.html](https://docs.mldb.ai/ipy/notebooks/_tutorials/_latest/Loading%20Data%20Tutorial.html) (besucht am 12.01.2019).
 
+<a name="11"><sup>11</sup></a> _SQL implementation in MLDB_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/sql/Sql.md.html](https://docs.mldb.ai/doc/#builtin/sql/Sql.md.html) (besucht am 12.01.2019).
+
 <a name="11"><sup>11</sup></a> _Mutable Sparse Matrix Dataset_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/datasets/MutableSparseMatrixDataset.md.html](https://docs.mldb.ai/doc/#builtin/datasets/MutableSparseMatrixDataset.md.html) (besucht am 12.01.2019).
+
+...
+
+<a name="11"><sup>11</sup></a> _Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification_ (2019). URL: [https://github.com/szilard/benchm-ml](https://github.com/szilard/benchm-ml) (besucht am 12.01.2019).
+
+<a name="11"><sup>11</sup></a> _BIG 2016: The Machine Learning Database_ (2019). URL: [https://www.youtube.com/watch?v=D2qWqBgsqIU&t=1230](https://www.youtube.com/watch?v=D2qWqBgsqIU&t=1230) (besucht am 12.01.2019).
 
 ---
 

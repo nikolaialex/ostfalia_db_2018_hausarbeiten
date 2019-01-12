@@ -38,23 +38,36 @@ Datensätze (_eng. "datasets"_) verkörpern schemalose, nur anhängende (_eng. "
 
 [![Struktur von Datensätzen innerhalb von MLDB](./statics/11_mldb/SlicedDataset.png)](https://docs.mldb.ai/doc/builtin/img/SlicedDataset.svg)
 
+### Zuordnung von SQL zu HTTP
+
+Die folgende Tabelle beschreibt die Zuordnung von SQL-Kommandos zu HTTP-Methoden, die im Rahmen von MLDB eine Rolle spielen:<sup>[11](#11)</sup>
+
+| **SQL-Kommando** | **HTTP-Methode** |
+| ---------------- | ---------------- |
+| CREATE           | PUT              |
+| DROP             | DELETE           |
+| INSERT           | POST             |
+| SELECT           | GET              |
+
 ---
 
-<a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+<a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 09.01.2018).
 
 <a name="11"><sup>11</sup></a> Ebd.
 
-<a name="11"><sup>11</sup></a> _Intro to Functions_ (2019). URL: [https://docs.mldb.ai/doc/builtin/functions/Functions.md.html](https://docs.mldb.ai/doc/builtin/functions/Functions.md.html) (besucht am 16.12.2018).
+<a name="11"><sup>11</sup></a> _Intro to Functions_ (2019). URL: [https://docs.mldb.ai/doc/builtin/functions/Functions.md.html](https://docs.mldb.ai/doc/builtin/functions/Functions.md.html) (besucht am 09.01.2018).
 
-<a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+<a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 09.01.2018).
 
-<a name="11"><sup>11</sup></a> _Intro to Procedures_ (2019). URL: [https://docs.mldb.ai/doc/builtin/procedures/Procedures.md.html](https://docs.mldb.ai/doc/builtin/procedures/Procedures.md.html) (besucht am 16.12.2018).
+<a name="11"><sup>11</sup></a> _Intro to Procedures_ (2019). URL: [https://docs.mldb.ai/doc/builtin/procedures/Procedures.md.html](https://docs.mldb.ai/doc/builtin/procedures/Procedures.md.html) (besucht am 09.01.2018).
 
-<a name="11"><sup>11</sup></a> _Intro to Datasets_ (2019). URL: [https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+<a name="11"><sup>11</sup></a> _Intro to Datasets_ (2019). URL: [https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 09.01.2018).
 
-<a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+<a name="11"><sup>11</sup></a> _MLDB Overview_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 09.01.2018).
 
-<a name="11"><sup>11</sup></a> _Intro to Datasets_ (2019). URL: [https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 16.12.2018).
+<a name="11"><sup>11</sup></a> _Intro to Datasets_ (2019). URL: [https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (besucht am 09.01.2018).
+
+<a name="11"><sup>11</sup></a> _IBIG 2016: The Machine Learning Database_ (2019). URL: [https://www.youtube.com/watch?v=D2qWqBgsqIU](https://www.youtube.com/watch?v=D2qWqBgsqIU) (besucht am 09.01.2018).
 
 ---
 

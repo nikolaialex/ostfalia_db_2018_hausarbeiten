@@ -11,11 +11,21 @@ Das Modell kann anschließend auf neue unbekannte Daten angewendet werden.
 
 **Klassische Modelle**
 
+Im klassischen Modell können lediglich korrekte Abbilder der Vorgaben erkannt werden.
+Sobald es Abweichungen zur Vorgabe gibt werden die Zugehörigkeiten zum gegeben Modell nicht mehr erkannt.
+
+Bsp: SPAM E-Mail, es werden nur E-Mails erkannt, die genau passen zum Filter oder der Regel.
+
 * Regeln / Filter
 * Programme
 * Funktionen
 
 **Basis-ML-Modelltypen**
+
+Im Basis-ML-Modell können bereits abweichende Abbilder der konkreten Vorgaben erkannt werden.
+Sobald es zu starke Abweichungen zur Vorgabe gibt werden die Zugehörigkeiten zum gegeben Modell nicht mehr erkannt.
+
+Bsp: SPAM E-Mail, es werden E-Mails erkannt, die hohe Ähnlichkeiten in Anwendung des Modells aufweisen.
 
 * Binäres Klassifizierungsmodell
 * Mehrklassen-Klassifizierungsmodell

@@ -23,7 +23,7 @@ Bsp: SPAM E-Mail, es werden nur E-Mails erkannt, die genau passen zum Filter ode
 **Basis-ML-Modelltypen**
 
 Im Basis-ML-Modell können bereits abweichende Abbilder der konkreten Vorgaben erkannt werden.
-Sobald es zu starke Abweichungen zur Vorgabe gibt werden die Zugehörigkeiten zum gegeben Modell nicht mehr erkannt.
+Sobald es zu deutlichen Abweichungen der Vorgabe kommt, werden die Zugehörigkeiten zum gegeben Modell nicht mehr erkannt.
 
 Bsp: SPAM E-Mail, es werden E-Mails erkannt, die hohe Ähnlichkeiten in Anwendung des Modells aufweisen.
 

@@ -9,7 +9,5 @@ Amazon Dynamo. Abschließend werden die beiden Eingangsfragen betrachtet.
 
 
 ***
-
-[5.1 Google Spanner >>](5_1_Spanner.md)
-
+[<< 4 Neue Modelle für verteilte Datenbanksysteme](4_Neue_Modelle_fuer_verteilte_Datenbanksysteme.md) | [5.1 Google Spanner >>](5_1_Spanner.md)
 ***

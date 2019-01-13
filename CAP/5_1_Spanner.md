@@ -274,7 +274,6 @@ URL: https://avro.apache.org/docs/current/.
 (letzter Aufruf: 01.01.2019).
 
 ***
-
-[Amazon DynamoDB >>](5_2_DynamoDB.md)
+[<< 5 Zwei verteilte Datenbanken setzen CAP praxisorientiert um](5_0_Zwei_verteilte_Datenbanken_setzen_CAP_praxisorientiert_um.md) | [5.2 Amazon DynamoDB >>](5_2_DynamoDB.md)
 
 ***

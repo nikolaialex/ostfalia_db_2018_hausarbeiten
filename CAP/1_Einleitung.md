@@ -36,6 +36,6 @@ Abschließend werden zwei Alternativen zu CAP aufgezeigt.
 
 ***
 
-[Entstehung und Definition des CAP-Theorems >>](2_Entstehung_und_Definition_des_CAP-Theorems.md)
+[<< Inhaltsverzeichnis](README.md) | [2 Entstehung und Definition des CAP-Theorems >>](2_Entstehung_und_Definition_des_CAP-Theorems.md) 
 
 ***

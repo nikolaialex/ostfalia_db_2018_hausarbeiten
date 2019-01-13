@@ -47,7 +47,7 @@ Es können immer nur zwei Eigenschaften in einem Rechensystem erfüllt werden, a
 
 ![Das CAP-Theorem](media/cap-diagram.png)
 
-**Abbildung 1:** Die drei Eigenschaften des CAP-Theorems als Venn-Diagramm (Eigene Darstellung).
+Abbildung 1: Die drei Eigenschaften des CAP-Theorems als Venn-Diagramm (Eigene Darstellung).
 
 Der Konflikt zwischen Consistency, Availability und Partition-tolerance ist ein Beispiel des allgemeinen Konflikts zwischen “Safety”-Eigenschaften und “Liveness”-Eigenschaften in einem unzuverlässigen System. Eine “Safety”-Eigenschaft sagt aus, dass nichts schlechtes passieren kann. Wenn ein Algorithmus zum Beispiel vorgibt konsistent zu sein, ist jede Ausführung und jede Antwort korrekt. Eine „Liveness“-Eigenschaft sagt aus, dass schlussendlich etwas Gutes passiert. Wenn eine Ausführung lang genug andauert, dann passiert etwas wünschenswertes. [4]
 

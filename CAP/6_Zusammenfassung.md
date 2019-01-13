@@ -10,6 +10,6 @@ Abschließend wurden zwei Datenbanksysteme vorgestellt, die die Grundlagen von C
 
 ***
 
-[<< 5.3 Ein Vergleich zwischen Google Spanner und Amazon DynamoDB](5_3_Ein_Vergleich_zwischen_Google_Spanner_und_Amazon_DynamoDB.md) | [7 Ausblick >>](7_Ausblick.md)
+[<< 5.3 Ein Vergleich zwischen Google Spanner und Amazon DynamoDB](5_3_Ein_Vergleich_zwischen_Google_Spanner_und_Amazon_DynamoDB.md) | [7 Quellenverzeichnis >>](7_Quellenverzeichnis.md)
 
 ***

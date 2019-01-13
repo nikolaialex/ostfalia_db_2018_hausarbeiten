@@ -1,9 +1,9 @@
 
 # 5.3 Ein Vergleich zwischen Google Spanner und Amazon DynamoDB
 
-Die Datenbanksysteme Google Spanner und Amazon DynamoDB wurden annähernd zum gleichen Zeitpunkt entwickelt. Spanner wurde 2011 in den Produktivbetrieb genommen und DynamoDB wurde 2012 von Amazon vorgestellt. Somit kann davon ausgegangen werden, dass kein System auf dem anderen aufbaut.
+Die Datenbanksysteme Google Spanner und Amazon DynamoDB wurden annähernd zum gleichen Zeitpunkt entwickelt. Während die Entwicklung von Spanner 2007 begonnen wurde und der Produktivbetrieb 2011 erfolgte, stellte Amazon Dynamo 2007 und den Nachfolger DynamoDB 2012 vor.
 
-Es gibt einige Gemeinsamkeiten der Systeme: es handelt sich um vollständig gemanagte Systeme, mit Hash-basiertem Sharding und Skalierbarkeit auf Knopfdruck, Rollen-basierte Rechtevergabe durch IAM (Identity and Access Management) und Monitoring und Metriken über die Konsole. [1]
+Es gibt einige Gemeinsamkeiten zwischen Spanner und DynamoDB: es handelt sich um vollständig gemanagte Systeme, mit Hash-basiertem Sharding und Skalierbarkeit auf Knopfdruck, Rollen-basierte Rechtevergabe durch IAM (Identity and Access Management) und Monitoring und Metriken über die Konsole. [1]
 
 DynamoDB führt auf der Webseite folgende Vorteile des Systems auf [2]:
 
@@ -50,6 +50,6 @@ Beide Systeme bieten ähnliche Konzepte und teilen die gleichen Grundlagen. Zude
 
 ***
 
-[<< 5.2 Amazon DynamoDB](5_2_DynamoDB.md) | [6 Zusammenfassung >>](6_Zusammenfassung.md)
+[<< 5.2 Amazon Dynamo(DB)](5_2_Dynamo.md) | [6 Zusammenfassung >>](6_Zusammenfassung.md)
 
 ***

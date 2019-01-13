@@ -55,6 +55,6 @@ letzter Aufruf: 2018-12-11
 
 ***
 
-[Alternativen des CAP-Theorems >>](4_Alternativen_des_CAP-Theorems.md)
+[<< 2 Entstehung und Definition des CAP-Theorems](2_Entstehung_und_Definition_des_CAP-Theorems.md) | [4 Neue Modelle für verteilte Datenbanksysteme >>](4_Neue_Modelle_fuer_verteilte_Datenbanksysteme.md)
 
 ***

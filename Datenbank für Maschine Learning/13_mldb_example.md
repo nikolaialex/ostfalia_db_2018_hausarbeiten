@@ -215,11 +215,7 @@ sepal length,sepal width,petal length,petal width,class
 ...
 ```
 
-## Fazit
-
-TODO
-
----
+------
 
 <a name="11"><sup>11</sup></a> _Building and running the MLDB Community Edition Docker image_ (2019). URL: [https://github.com/mldbai/mldb/blob/master/Building.md](https://github.com/mldbai/mldb/blob/master/Building.md) (besucht am 11.01.2019).
 
@@ -257,6 +253,6 @@ TODO
 
 <a name="11"><sup>11</sup></a> _CSV Export Procedure_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html) (besucht am 12.01.2019).
 
----
+------
 
 [< MLDB Merkmale](12_mldb_features.md) | [Conclusion >](14_conclusion.md)

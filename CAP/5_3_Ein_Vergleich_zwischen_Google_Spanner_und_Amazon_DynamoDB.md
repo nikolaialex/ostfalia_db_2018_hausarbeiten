@@ -1,10 +1,7 @@
 
 # 5.3 Ein Vergleich zwischen Google Spanner und Amazon DynamoDB
 
-Die zwei Datenbanksysteme Google Spanner und Amazon DynamoDB werden im Folgenden
-miteinander verglichen. Abschließend werden die Systeme hinsichtlich der beiden
-Eingangsfragen *Wie gehen diese Systeme mit Consistency, Availability und Partition-tolerance um?
-Lösen sie die fundamentalen Probleme?*, untersucht.
+Die zwei Datenbanksysteme Google Spanner und Amazon DynamoDB werden im Folgenden miteinander verglichen. Abschließend werden die Systeme hinsichtlich der beiden Eingangsfragen *Wie gehen diese Systeme mit Consistency, Availability und Partition-tolerance um? Lösen sie die fundamentalen Probleme?*, untersucht.
 
 Die beiden Datenbanksysteme wurden annähernd zum gleichen Zeitpunkt entwickelt. Während die Entwicklung von Spanner 2007 begonnen wurde und der Produktivbetrieb 2011 erfolgte, stellte Amazon Dynamo 2007 und den Nachfolger DynamoDB 2012 vor.
 
@@ -19,7 +16,7 @@ Es wird kein Server bereitgestellt, der verwaltet werden muss. Tabellen werden a
 - **Enterprise-fähig:**  
 ACID-Transaktionen werden unterstützt, alle Daten werden verschlüsselt und vollständige Backups können erstellt werden.
 
-DynamoDB verwendet ein Key-Value-Interface und repliziert nur innerhalb einer Region. Spanner hingegen stellt ein semi-relationales Datenbankmodell bereit und eine ähnliche Schemasprache. [3]
+DynamoDB verwendet ein Key-Value-Interface und repliziert Daten über mehrere Datencenter innerhalb einer Region (Availability Zones). Spanner hingegen stellt ein semi-relationales Datenbankmodell bereit und eine ähnliche Schemasprache. [3]
 
 Folgende Vorteile führt Spanner auf der offiziellen Webseite auf [4]:
 
@@ -43,19 +40,12 @@ Beide Systeme bieten ähnliche Konzepte und teilen die gleichen Grundlagen. Zude
 
 
 ## Lösen sie die fundamentalen Probleme? Wie gehen diese Systeme mit Consistency, Availability und Partition-tolerance um?
-Wird die erste Frage streng formal anhand des CAP-Theorems beantwortet, ist die Antwort *nein*, da es
-schließlich bewiesen wurde, das alle drei Eigenschaften nicht gleichzeitig zu 100 Prozent erfüllt
-sein können.  
 
-Es kann angenommen werden, das die beiden Megakonzerne Google und Amazon ihre Systeme jeweils
-aus Eigenbedarf heraus entwickelt haben, ultimativ um ihren Kunden verfügbarere
-Services anzubieten und mehr Umsatz zu generieren.  
-Beide Konzerne sind bestrebt die Konsistenz, Verfügbarkeit und Partitions-Toleranz ihrer
-Datenbanksysteme zu jedem Zeitpunkt zu einem möglichst hohen Prozentsatz zu erfüllen.
-Mit ihren Umsetzungen erreichen sie meist eine Erfüllung der Eigenschaften mit einem
-Prozentsatz von 99,99 Prozent und mehr.
-Aus einer pragmatsichen Perspektive kann die Einfangsfrage also mit einem *ja*
-beantwortet werden.
+Wird die erste Frage streng formal anhand des CAP-Theorems beantwortet, ist die Antwort *nein*, da schließlich aufgezeigt wurde, dass alle drei Eigenschaften nicht gleichzeitig zu 100 Prozent erfüllt sein können.  
+
+Es kann angenommen werden, dass die beiden Megakonzerne Google und Amazon ihre Systeme jeweils aus Eigenbedarf heraus entwickelt haben, ultimativ um ihren Kunden verfügbare Services anzubieten und mehr Umsatz zu generieren.
+
+Beide Konzerne sind bestrebt die Konsistenz, Verfügbarkeit und Partitions-Toleranz ihrer Datenbanksysteme zu jedem Zeitpunkt zu einem möglichst hohen Prozentsatz zu erfüllen. Mit ihren Umsetzungen erreichen sie meist eine Erfüllung der Eigenschaften mit einem Prozentsatz von 99,99 Prozent und mehr. Aus einer pragmatsichen Perspektive kann die Anfangsfrage also mit einem *ja* beantwortet werden.
 
 ***
 [1] Hwang, J. (2017, September 12). Scaling Costs with DynamoDB. Retrieved January 12, 2019, from https://blog.polymail.io/post/scaling-costs-with-dynamodb

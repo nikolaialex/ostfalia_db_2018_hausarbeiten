@@ -1,4 +1,4 @@
-# 5.2 Amazon Dynamo
+# 5.2 Amazon Dynamo(DB)
 
 Das Wachstum der Firma Amazon und die hierdurch verbundene gestiegene Anzahl von
 (gleichzeitigen) Besuchern der Dienste-Webseiten, führen zu notwendigen
@@ -11,9 +11,10 @@ Es hat im Vergleich zu (voll)relationalen Datenbanksystemen weniger
 Performance-Overhead und bietet eine sehr einfache Schnittstelle durch die zwei
 Methoden *put* und *get* [1].
 
-**Anmerkung**: Dynamo ist nicht zu verwechseln mit DynamoDB [3]. Letzteres hat
-Amazon in 2012 vorgestellt und baut auf Dynamo auf [3]. Im Folgenden wird das ältere
-Dynamo vorgestellt.
+**Anmerkung**: Im Jahr 2012 stellt Amazon den Dynamo Nachfolger DynamoDB vor.
+DynamoDB baut in seinen Kerntechniken auf Dynamo auf [3]. Im Folgenden werden
+daher die Kerntechniken von Dynamo vorgestellt, die ausführlich in einer
+Veröffentlichung von Amazon vorgestellt werden [1].
 
 ## 5.2.1 Architektur
 Die eingesetzten Kerntechniken werden in Amazons Veröffentlichung beschrieben,
@@ -111,36 +112,9 @@ ein Vorgänger von <code>C<sub>2</sub></code> und <code>C<sub>1</sub></code> kan
 ignoriert werden [1].
 
 ## Kritik
+DynamoDB hat kein öffentliches Service Level Agreement, worunter die Kontrollmöglichkeit für den Nutzer leidet. Zudem besitzt es zwar ein flexibles Schema und arbeitet mit komplexen Datentypen wie JSON-Dokumenten, aber SQL wird als Abfragesprache nicht unterstützt. Zwar sind die JSON-Anfragen nicht nennenswert umfangreicher als die SQL-Anfragen, aber die Lesbarkeit und die Qualität der Anfrage ist bei SQL höher. Außerdem unterstützt DynamoDB keine Gruppierung (GROUP BY), Aggregationsfunktionen oder Verbindungen (JOIN). [5]
 
-
-## Und was ist mit CAP?
-Reliability is one
-of the most important requirements because even the slightest
-outage has significant financial consequences and impacts
-customer trust. In addition, to support continuous growth, the
-platform needs to be highly scalable.
-
-There are many services on Amazon’s platform that only need
-primary-key access to a data store. For many services, such as
-those that provide best seller lists, shopping carts, customer
-preferences, session management, sales rank, and product catalog,
-the common pattern of using a relational database would lead to
-inefficiencies and limit scale and availability. Dynamo provides a
-simple primary-key only interface to meet the requirements of
-these applications.
-
-Dynamo uses a synthesis of well known techniques to achieve
-scalability and availability: Data is partitioned and replicated
-using consistent hashing [10], and consistency is facilitated by
-object versioning [12]. The consistency among replicas during
-updates is maintained by a quorum-like technique and a
-decentralized replica synchronization protocol. Dynamo employs
-a gossip based distributed failure detection and membership
-protocol. Dynamo is a completely decentralized system with
-minimal need for manual administration. Storage nodes can be
-added and removed from Dynamo without requiring any manual
-partitioning or redistribution.
-
+DynamoDB repliziert die Daten über drei Standorte in einer Region, um eine hohe Verfügbarkeit zu gewähren. Im Falle einer grenzübergreifenden Replikation bietet DynamoDB allerdings keine Lösung an. Es wird hingegen eine Replikationsbibliothek und ein Kommandozeilenprogramm angeboten, die mit zusätzlichen Kosten verbunden sind. [5]
 
 <br />
 
@@ -163,6 +137,8 @@ URL: https://www.allthingsdistributed.com/2012/01/amazon-dynamodb.html.
 [4] Lamport, L. (1978). Time, clocks, and the ordering of events in a
 distributed system. ACM Communications, 21(7), pp. 558-
 565.
+
+[5] Chaves, W. (2017, November 27). Current State of the NewSQL/NoSQL Cloud Arena. Retrieved January 12, 2019, from https://www.red-gate.com/simple-talk/cloud/cloud-data/current-state-newsqlnosql-cloud-arena/
 
 ***
 

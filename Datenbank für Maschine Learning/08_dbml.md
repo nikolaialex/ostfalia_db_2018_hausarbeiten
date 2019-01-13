@@ -35,9 +35,6 @@ PostgreSQL
 - RapidMiner
 
 MongoDB
-- ist keine ML Engine
-- nur als Datenspeicher
-- um ML Models zu bauen
 - scikit learn
 --- software bibliothekt zum maschinellen lernen für python.
 
@@ -52,6 +49,7 @@ Flink
 
 SAP HANA
 - https://www.prowesscorp.com/machine-learning-on-sap-hana/
+
 Spark
 - https://data-science-blog.com/blog/2016/08/03/was-ist-eigentlich-apache-spark/
 - https://spark.apache.org/

@@ -19,7 +19,7 @@ Consistency \(C\) bezieht sich auf die Konsistenz der gespeicherten Daten. Die E
 Bei Consistency handelt es sich um eine „Safety“-Eigenschaft
  (Sicherheitseigenschaft) [6]. Sie ist besonders dann wichtig, wenn es sich um Rechensysteme mit einem hohen Sicherheitsgrad handelt, wie zum Beispiel in einer Bank.
 
-Zudem unterscheidet sich Consistency in CAP stark vom Consistency in [ACID](3_Unterschiede_zu_ACID.md). Dies wird im Abschnitt 3 näher erläutert.
+Zudem unterscheidet sich Consistency in CAP stark vom Consistency in [ACID](3_Die_ACID_Eigenschaften_und_ihre_Begriffsdefinitionen_im_Vergleich_zum_CAP.md). Dies wird im Abschnitt 3 näher erläutert.
 
 ## 2.2 Das A in CAP - Availability
 

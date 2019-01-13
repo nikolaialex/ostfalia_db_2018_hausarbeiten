@@ -48,7 +48,6 @@ Beide Systeme bieten ähnliche Konzepte und teilen die gleichen Grundlagen. Zude
 
 [5] Chaves, W. (2017, November 27). Current State of the NewSQL/NoSQL Cloud Arena. Retrieved January 12, 2019, from https://www.red-gate.com/simple-talk/cloud/cloud-data/current-state-newsqlnosql-cloud-arena/ 
 
-[6] Machado, K. M., Kank, R. K., Sonawane, J. S., & Maitra, S. M. (2017). A Comparative Study of ACID and BASE in Database Transaction Processing. *International Journal of Scientific & Engineering Research, 8(5)*, 116–119.
 ***
 
 [<< 5.2 Amazon DynamoDB](5_2_Amazon_DynamoDB.md) | [6 Zusammenfassung >>](6_Zusammenfassung.md)

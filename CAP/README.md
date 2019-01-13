@@ -5,10 +5,10 @@ Das Akronym steht für Consistency, Availability und Partition-Tolerance.
 
 ## Autoren
 
-| Name          | Matrikelnummer | Hochschule | E-Mail                            |
-|:--------------|:---------------|:-----------|:----------------------------------|
-|Natascha Bolte | 70456174       | HS Ostfalia| na.bolte@ostfalia.de              |
-|Marek Anderson | 166368         | TH Lübeck  | marek.anderson@stud.th-luebeck.de |
+| Name          | Matrikelnummer | Hochschule | GitHub      | E-Mail                            |
+|:--------------|:---------------|:-----------|:------------|:----------------------------------|
+|Natascha Bolte | 70456174       | HS Ostfalia| nbolte      | na.bolte@ostfalia.de              |
+|Marek Anderson | 166368         | TH Lübeck  | chefkoch666 | marek.anderson@stud.th-luebeck.de |
 
 -------
 

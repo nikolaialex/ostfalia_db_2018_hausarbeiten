@@ -244,8 +244,7 @@ Die Google JDBC-API unterstützt seit 3.11.2017 DDL-Statements und seit
 Seit 17.7.2018 ist es möglich in *Apache Avro*-Dateien [7] zu exportieren beziehungsweise
 importieren [6].
 
-<br />
-
+***
 [1] J. Corbett, J. Dean, M. Epstein, et. al.
 Spanner: Google’s Globally-Distributed Database. Proceedings of OSDI ‘12: Tenth Symposium on
 Operating System Design and Implementation, Hollywood, CA, October, 2012

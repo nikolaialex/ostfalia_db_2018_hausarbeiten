@@ -1,7 +1,7 @@
 # 5.2 Amazon Dynamo(DB)
 
 Das Wachstum der Firma Amazon und die hierdurch verbundene gestiegene Anzahl von
-(gleichzeitigen) Besuchern der Dienste-Webseiten, führen zu notwendigen
+(gleichzeitigen) Besuchern der Service-Webseiten, führen zu notwendigen
 Schranken in denen andere Services und Datenbanksysteme eine Antwort auf eine
 Anfrage liefern müssen [1]. Im Jahr 2007 stellt Amazon für diese Zwecke das
 *key-value* basierte Datenbanksystem Dynamo vor. Dynamo bietet
@@ -38,7 +38,7 @@ Die folgende Tabelle 1 bietet eine Übersicht dieser Techniken.
 </tr>
 <tr>
 <td>Hohe Verfügbarkeit für Schreibvorgänge</td>
-<td>Vektor-Uhren mit Ausgleich beim Lesen</td>
+<td>Vektor Uhren mit Ausgleich beim Lesen</td>
 <td>Die Versionsnummer ist von der Aktualisierungsrate entkoppelt.</td>
 </tr>
 <td>Behandlung von temporären Fehlern</td>
@@ -78,10 +78,10 @@ Verteilung der Daten und Last [1]. Um diese beliebige Verteilung zu verhindern,
 implementiert Amazon das Konzept "virtueller Knoten", welche Zuordnungen
 von Knoten zu mehreren Punkten auf dem Ring zulassen [1].  
 
-Amazon sieht hierin drei wesentliche Vorteile [1]:
+Amazon sieht hierdrin drei wesentliche Vorteile [1]:
 - Ist ein Knoten im Fehlerfall oder zur Wartung unerreichbar, so verteilt sich
   die Last des ausgefallenen Knotens gleichmäßig auf die verbleibenden
-  verfügbaren Knoten
+  verfügbaren Knoten.
 - Wird ein Knoten wieder verfügbar oder ein zusätzlicher Knoten wir dem System
   hinzugefügt (Kernanforderung), dann erhält der neue Knoten eine in etwa
   gleiches Maß an Last von den anderen verfügbaren Knoten.
@@ -119,8 +119,7 @@ DynamoDB hat kein öffentliches Service Level Agreement, worunter die Kontrollm�
 
 DynamoDB repliziert die Daten über drei Standorte in einer Region, um eine hohe Verfügbarkeit zu gewähren. Im Falle einer grenzübergreifenden Replikation bietet DynamoDB allerdings keine Lösung an. Es wird hingegen eine Replikationsbibliothek und ein Kommandozeilenprogramm angeboten, die mit zusätzlichen Kosten verbunden sind. [5]
 
-<br />
-
+***
 [1] Giuseppe DeCandia, Deniz Hastorun, Madan Jampani, Gunavardhan Kakulapati,
 Avinash Lakshman, Alex Pilchin, Swaminathan Sivasubramanian, Peter Vosshall
 and Werner Vogels (2007). Dynamo: Amazon’s Highly Available Key-value Store.

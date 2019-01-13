@@ -22,8 +22,7 @@ Darauf folgen zwei moderne CAP-Implementierungsbeispiele:
 und Amazon Dynamo.
 Abschließend werden zwei Alternativen zu CAP aufgezeigt.
 
-<br />
-
+***
 [1] Fox, A., & Brewer, E. A. (1999). Harvest, yield, and scalable tolerant systems. In
 *Hot Topics in Operating Systems, 1999*.
 *Proceedings of the Seventh Workshop on* (pp. 174-178). IEEE.

@@ -43,8 +43,7 @@ Knoten in einem Datenbank-Cluster.
 Tabelle 1: Übersicht der unterschiedlichen Begriffsbezüge bei ACID und CAP
 (aus dem Englischen in Anlehnung an Liochon 2015, [2])
 
-<br />
-
+***
 [1] Haerder, T., & Reuter, A. (1983). Principles of transaction-oriented
   database recovery. *ACM Computing Surveys, 15*(4), 287-317. doi:10.1145/289.291
 

@@ -10,14 +10,14 @@ Der Beweis dieser Hypothese führte zur verstärkten Erforschung von System-Arch
 
 CAP steht für **Consistency** (Konsistenz), **Availability** (Verfügbarkeit) und **Partition-tolerance** (Partitionstoleranz). Brewer präsentierte das CAP-Theorem in Bezug auf Webservices [4], weshalb einige folgende Beispiele sich auf Server und Client wie auch Request und Response beziehen. Das Theorem ist nicht präzise definiert und weist dadurch eine Mehrdeutigkeit auf [5].
 
-Zudem besagt das CAP-Theorem, dass es unmöglich ist alle drei Eigenschaften des Theorems mit einem verteilten Rechensystem zu erreichen. [5]
+Zudem besagt das CAP-Theorem, dass es unmöglich ist alle drei Eigenschaften des Theorems mit einem verteilten Datenbanksystem zu erreichen. [5]
 
 ## 2.1 Das C in CAP - Consistency
 
 Consistency \(C\) bezieht sich auf die Konsistenz der gespeicherten Daten. Die Eigenschaft beschreibt eine einheitliche Betrachtung der Daten auf allen Knoten des verteilten Systems [5]. Vereinfacht gesagt, bedeutet es, dass jeder Server die richtige Antwort auf jede Anfrage liefert. Die Bedeutung von C kann allerdings je nach Service variieren [4].
 
 Bei Consistency handelt es sich um eine „Safety“-Eigenschaft
- (Sicherheitseigenschaft) [6]. Sie ist besonders dann wichtig, wenn es sich um Rechensysteme mit einem hohen Sicherheitsgrad handelt, wie zum Beispiel in einer Bank.
+ (Sicherheitseigenschaft) [6]. Sie ist besonders dann wichtig, wenn es sich um Datenbanksysteme mit einem hohen Sicherheitsgrad handelt, wie zum Beispiel in einer Bank.
 
 Zudem unterscheidet sich Consistency in CAP stark vom Consistency in [ACID](3_Die_ACID_Eigenschaften_und_ihre_Begriffsdefinitionen_im_Vergleich_zum_CAP.md). Dies wird im Abschnitt 3 näher erläutert.
 
@@ -27,7 +27,7 @@ Availability (A) besagt, dass jede Anfrage beantwortet wird, auch wenn Fehler au
 
 Die Verfügbarkeit ist eine “Liveness”-Eigenschaft. In den meisten Systemen ist ein Response, der zu spät kommt, gleichbedeutend mit einem Response, der gar nicht ankommt [4]. Allerdings gilt nach der Definition von Brewer, dass eine bislang nicht angekommene Antwort zu einem späteren Zeitpunkt noch eintreffen könnte, weil es keine limitierte Wartezeit gibt. Es benötigt allerdings nur eine versagte Antwort und die Verfügbarkeit wird nicht erfüllt. [5]
 
-Heutige verteilte Rechensysteme stellen eine hohe Verfügbarkeit mit einem fehlertoleranten System. Die Algorithmen sind so entwickelt, dass das System verfügbar ist, wenn auch nicht zu 100 Prozent, aber dafür Fehlertoleranzen aufweisen. [6]
+Heutige verteilte Datenbanksysteme stellen eine hohe Verfügbarkeit mit einem fehlertoleranten System. Die Algorithmen sind so entwickelt, dass das System verfügbar ist, wenn auch nicht zu 100 Prozent, aber dafür Fehlertoleranzen aufweisen. [6]
 
 ## 2.3 Das P in CAP - Partition-tolerance
 
@@ -43,7 +43,7 @@ Ein verteiltes Datenbanksystem kann nicht kontinuierlich verfügbar, fortlaufend
 
 > “consistency, availability, partition tolerance: pick any two” [6]
 
-Es können immer nur zwei Eigenschaften in einem Rechensystem erfüllt werden, also können jederzeit zwischen zwei Eigenschaften Konflikte auftreten.
+Es können immer nur zwei Eigenschaften in einem Datenbanksystem erfüllt werden, also können jederzeit zwischen zwei Eigenschaften Konflikte auftreten.
 
 ![Das CAP-Theorem](media/cap-diagram.png)
 

@@ -1,6 +1,6 @@
 # 4 Neue Modelle für verteilte Datenbanksysteme
 
-Aufgrund der missverständlichen Definition ist das CAP-Theorem heute kein geeignetes Modell mehr für die Überlegungen von verteilten Rechensystemen. Die bereits erwähnten Mehrdeutigkeit aus [Abschnitt 2](2_Entstehung_und_Definition_des_CAP-Theorems.md), veranlasste die Erwägung neuer Frameworks, dessen Definition einfach zu verstehen, formal und korrekt ist. [1]
+Aufgrund der missverständlichen Definition ist das CAP-Theorem heute kein geeignetes Modell mehr für die Überlegungen von verteilten Datenbanksystemen. Die bereits erwähnten Mehrdeutigkeit aus [Abschnitt 2](2_Entstehung_und_Definition_des_CAP-Theorems.md), veranlasste die Erwägung neuer Frameworks, dessen Definition einfach zu verstehen, formal und korrekt ist. [1]
 
 In diesem Abschnitt werden die Modelle PACELC und BASE vorgestellt, die auf dem CAP-Theorem aufbauen und dieses erweitern. 
 
@@ -10,7 +10,7 @@ In diesem Abschnitt werden die Modelle PACELC und BASE vorgestellt, die auf dem 
 
 1. Im CAP-Theorem ist kein Kompromiss notwendig, wenn das Netzwerk zuverlässig ist. Sowohl in AP-Systemen und CP-Systemen können Konsistenz und Verfügbarkeit die meiste Zeit parallel vorkommen [3].
 
-2. Viele verteilte Rechensysteme opfern die Konsistenz um Latenz (Wartezeiten) zu verringern [3].
+2. Viele verteilte Datenbanksysteme opfern die Konsistenz, um die Latenz (Wartezeiten) zu verringern [3].
 
 Punkt zwei stellt den Ausgangspunkt des PACELC-Theorems dar. Abadi argumentiert, dass es einen Konflikt zwischen Konsistenz und Latenz gibt. Viele Netzwerke können keine Beschränkung der Wartezeiten garantieren Somit können die gesendeten Pakete willkürlichen Verzögerungen unterworfen sein, wodurch zwar die Konsistenz bewahrt wird, aber die Latenz leidet [1]. Zudem kommt der Konflikt nur bei Systemen mit replizierten Daten vor [4]. 
 
@@ -20,7 +20,7 @@ Punkt zwei stellt den Ausgangspunkt des PACELC-Theorems dar. Abadi argumentiert,
 
 ![PACELC](media/pacelc.jpg)
 
-Abbildung 1: PACELC-Modell, übernommen von Patinge et. al. (2016) [2]
+Abbildung 1: PACELC-Modell, in Anlehnung an Patinge et. al. (2016) [2]
 
 Im CAP-Theorem wurde bereits erläutert, dass wenn es in einem System eine *Partition \(P\)* gibt, dann folgt ein Konflikt zwischen *Konsistenz \(C\)* und *Verfügbarkeit (A)*. Das PACELC-Theorem erweitert nun diese Definition um das *„else“ (E)*, denn wenn *Partition \(P\)* nicht verwendet wird, gibt es einen Konflikt zwischen *Latenz (L)* und *Konsistenz \(C\)*. Somit gibt es vier Alternativen für jedes mögliche System: *P+A  mit E+L/E+C und P+C mit E+L/E+C*. [2]
 

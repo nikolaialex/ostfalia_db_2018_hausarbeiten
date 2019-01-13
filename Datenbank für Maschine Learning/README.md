@@ -14,6 +14,6 @@
 
 ----
 
-[Inhalt >](02_toc.md) | [Literaturverzeichnis >](16_references.md) 
+[Inhalt >](02_toc.md) | [Literaturverzeichnis >](15_references.md)
 
 ***

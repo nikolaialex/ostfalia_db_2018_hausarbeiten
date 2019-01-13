@@ -20,7 +20,7 @@ Werden nur die Spalten Matrikelnummer und Credit Points benötigt, muss trotzdem
 123456789,234567890,345678901,Max Mustermann,Erika Musterfrau,Peter Lustig,30,60,120
 ```
 
-Das DBMS kennt hierbei die Startadressen der Zeilen. Anhang der Spaltenangaben sind die Bereiche klar, die gesucht sind. Da die Spalten potenziell die gleichen Daten enthalten, lassen sich die Spalten wesentlich besser komprimieren. Der entscheidende Vorteil ergibt sich hier bei Aggregat-Funktionen, da die betroffenen Daten am Stück gelesen und verarbeitet werden können. Auf der Kehrseite steht jedoch, dass sich Column Stores nicht für das Auslesen einzelner Zeilen eignen. Hierzu müsste nämlich jede Spalte gelesen und eine Zeile konstruiert werden. [1]
+Das DBMS speichert jede Spalte als eine Seite im Speicher. Anhand der Spaltenangaben sind die Bereiche klar, die gesucht sind. Da die Spalten potenziell die gleichen Daten enthalten, lassen sich die Spalten wesentlich besser komprimieren. Der entscheidende Vorteil ergibt sich hier bei Aggregat-Funktionen, da die betroffenen Daten am Stück gelesen und verarbeitet werden können. Auf der Kehrseite steht jedoch, dass sich Column Stores nicht für das Auslesen einzelner Zeilen eignen. Hierzu müsste nämlich jede Spalte gelesen und eine Zeile konstruiert werden. [1]
 
 
 
@@ -28,17 +28,23 @@ Das DBMS kennt hierbei die Startadressen der Zeilen. Anhang der Spaltenangaben s
 
 
 
+
+
 ## Daten-Änderungen
+
+Das Ändern von Daten kann bei Column Stores ein teures Unterfangen werden. Bei neuen Datensätzen muss jede Spalte um einen Eintrag ergänzt werden. Analog dazu bedeutet das Löschen eines Datensatzes den Zugriff auf alle Spalten.
 
 
 
 ## Strukturelle Änderungen
 
+Eine der großen Stärken von Column Stores besteht in der Änderungsgeschwindigkeit der Datenstruktur. Soll eine neue Spalte hinzugefügt oder eine vorhandene Spalte entfernt werden, muss lediglich die Spalte auf dem Medium gelöscht werden, ohne dass andere Spalten gelesen oder geschrieben werden. In relationalen Datenbanken müsste hier jeder Datensatz gelesen und ohne die gelöschte (bzw. mit hinzugefügter) Spalte erneut geschrieben werden.
+
 
 
 ## Skalierung
 
-
+Column Stores folgen der NoSQL-Grundidee der verteilten Datenhaltung, indem (abhängig von der konkreten Implementierung) Hashing-Algorithmen den Zielknoten bestimmen, auf dem die Daten abgelegt werden sollen. [2] Durch die horizontale Skalierung kann das DBMS quasi beliebig skalieren. Auch bei riesigen Datenmengen und aggregierenden Lesezugriffen wird eine sehr hohe Performance geboten. [3]
 
 
 
@@ -48,7 +54,9 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 
 
 
-* 
+* Gegenüber zeilenbasierten, relationalen Datenbanken liefern sie eine deutlich schlechtere Schreibgeschwindigkeit
+* Auf der anderen Seite bieten Column Stores, vor allem beim Aggregieren von Spaltendaten, eine deutlich bessere Performance beim Lesen von Daten
+* Durch die getrennte Speicherung der einzelnen Spalten lassen sich Spalten sehr schnell hinzufügen und entfernen, ohne dass benachbarte Spalten verarbeitet werden müssen
 
 
 
@@ -62,6 +70,8 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 Quellen
 
 [1]: https://www.youtube.com/watch?v=4bfX96C5644
+[2]: https://www.youtube.com/watch?v=oawc4doC76U
+[3]: https://aws.amazon.com/de/nosql/columnar/
 ```
 
 ***

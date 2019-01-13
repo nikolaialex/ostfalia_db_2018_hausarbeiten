@@ -1,6 +1,6 @@
 # Graphen-Datenbanken
 
-
+Graphen-Datenbanken verfolgen einen anderen Ansatz als die bisher vorgestellten NoSQL-Systeme. 
 
 
 

@@ -20,7 +20,9 @@ Atome beschereiben primitive Datentypen wie Strings, Zahlen oder boolsche Werte 
 
 ### 3.1.2 Indexierung
 
-Azure Cosmos DB indiziert alle Daten, ohne das dafür ein genaues Schema erstellt werden muss. Dabei stellt Azure Cosmos DB jedes Item  [5]
+Azure Cosmos DB indiziert alle Daten, ohne das dafür zuvor ein Schema definiert werden muss. Die Datenbank projiziert jedes Item als JSON Dokument und überführt dieses in eine dynamisch codierte Pfadstruktur. Jedes vollständige Wertepaar wird als ein Knoten des Baumes dargestellt, wobei die Blätter die tatsächlichen Daten enthalten und die Zwischenknoten die Schemainformationen. So wird in der Dokumentenhirachie hinaufgegangen und mit jedem Element aus dem Dokument verfahren. Befindet sich in dem Dokument ein Array mit Elementen, so wird für jedes einzelne Elemente ein übergeordneter Knoten erzeugt, und numerisch mit dem Index benannt.[5]
+
+Darüber hinnaus können die Indexpfade an individuelle Berdüfnisse angepasst werden. So kann der Speicherbedarf gesenkt und die Schreibleistung verbessert werden.[7]
 
 ### 3.1.3 Datenzugriff
 
@@ -28,7 +30,23 @@ Azure Cosmos DB indiziert alle Daten, ohne das dafür ein genaues Schema erstell
 
 ### 3.1.4 API-Schnittstellen
 
-Gremlin-API etc.
+Azure Cosmos DB bietet die Verwendung unterschiedlicher API-Schnittstellen an. An diese API-Schnittstelle wird das zugrundeliegnde Datenmodel, wie kurz zuvor in diesem Kaptiel erklärt, angepasst. Auch wenn alle Datenmodell mit dem ASR Verfahren abgelegt werden, so ist ein nachträglicher Wechsel der API-Schnittstelle noch nicht möglich. Das bedeutet, dass ein für Azure Table Storage angelegter Container nicht mit der MongoDB-API abgefragt werden kann. Eventuell wird diese Funktion in einer zukünftigen Version verfügbar sein.
+
+#### 3.1.4.1 MongoDB-API
+
+MongoDB ist eine dokumentenbasierte Datenbank, die Daten in JSON-ähnlichen Dokumenten ablegt. Besonderes Augenmekr und eine seiner stärken ist die Hochverfügbarkeit durch verteilte Datenbanken.[8]
+
+Bei Verwendung der MongoDB-API wird keine MongoDB innerhalb der Azure Cosmos DB angelegt. Dennoch ist ein Zugriff auf Azure Cosmos DB mit MongoDB-API mit nativen MongoDB Client-SDKs möglich, da Azure Cosmos DB das Wire Protocol nativ implementiert.
+
+So kann die Azure Cosmos DB genutzt werden, ohne das eine Umstellung auf Client-Seite nötig wird.
+
+#### 3.1.4.2 SQL-API
+
+#### 3.1.4.3 Germlin-API
+
+#### 3.1.4.4 Cassandra-API
+
+#### 3.1.4.5 Tabelle-API
 
 ### 3.1.5 Skalierung und Replikation
 
@@ -46,3 +64,9 @@ Global by Design.
 [4]: Microsoft : Working with Azure Cosmos databases, containers and items. Abgerufen 12.01.2019, von https://docs.microsoft.com/en-us/azure/cosmos-db/databases-containers-items
 
 [5]: Microsoft : Indexing in Azure Cosmos DB. Abgerufen 08.01.2019  https://docs.microsoft.com/en-us/azure/cosmos-db/index-overview
+
+[6]: Microsoft: Indexing policy in Azure Cosmos DB. Abgerufen 08.01.2019, von https://docs.microsoft.com/en-us/azure/cosmos-db/index-policy
+
+[7]: Microsoft : Index paths in Azure Cosmos DB. Abgerufen 08.01.2019, von https://docs.microsoft.com/en-us/azure/cosmos-db/index-paths
+
+[8]: MongoDB: What is MongoDBB. Abgerufen 13.01.2019, von https://www.mongodb.com/what-is-mongodb

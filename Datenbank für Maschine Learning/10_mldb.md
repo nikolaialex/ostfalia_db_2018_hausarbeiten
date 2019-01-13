@@ -18,4 +18,4 @@ Biblatex' citation style [authoryear](https://de.overleaf.com/learn/latex/Biblat
 
 ---
 
-[< Vergleich von Datenbanken](10_dbml_comparsion.md) | [MLDB Einführung >](12_mldb_intro.md)
+[< Vergleich von Datenbanken](09_dbml_requirements.md) | [MLDB Einführung >](11_mldb_intro.md)

@@ -71,4 +71,4 @@ Die folgende Tabelle beschreibt die Zuordnung von SQL-Kommandos zu HTTP-Methoden
 
 ---
 
-[< MLDB Einführung](12_mldb_intro.md) | [MLDB Praktisches Beispiel >](14_mldb_example.md)
+[< MLDB Einführung](11_mldb_intro.md) | [MLDB Praktisches Beispiel >](13_mldb_example.md)

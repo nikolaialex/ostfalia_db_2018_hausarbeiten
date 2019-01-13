@@ -48,4 +48,4 @@ Diese Funktionen ermöglichen Anpassungen, die Elemente einer ML-Pipeline schnel
 
 ----
 
-[< Datenbanken für ML](08_dbml.md)	|	[Vergleich von Datenbanken >](10_dbml_comparsion.md)
+[< Datenbanken für ML](08_dbml.md)	|	[MLDB >](10_mldb.md)

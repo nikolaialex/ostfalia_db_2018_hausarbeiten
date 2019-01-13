@@ -24,6 +24,10 @@
 
 [2] Liochon, N. (2015). The confusing CAP and ACID wording. URL: http://blog.thislongrun.com/2015/03/the-confusing-cap-and-acid-wording.html, letzter Aufruf: 2018-12-11
 
+[3] Gilbert, S., & Lynch, N. (2002). Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services. Acm Sigact News, 33(2), 51-59.
+
+[4] J. Gray und A. Reuter (1993), Transaction Processing: Concepts and Techniques. Morgan Kaufmann.
+
 ## Alternativen des CAP-Theorems
 [1] Kleppmann, M. (2015, September). A Critique of the CAP Theorem - University of Cambridge. Retrieved December 14, 2018, from https://www.cl.cam.ac.uk/research/dtg/www/files/publications/public/mk428/cap-critique.pdf
 

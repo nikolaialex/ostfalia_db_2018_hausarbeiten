@@ -8,7 +8,7 @@
 |:--------------------|:--------------|:-----------------|:----------------------------------------|
 | Claudia Brötzmann   | 277749        | TH Lübeck        | claudia.broetzmann@th-luebeck.de        |
 | Iven Köthke         |               | TH Brandenburg   | koethke@th-brandenburg.de               |
-| Vasileios Roumoglou |               | TH Brandenburg   | vasileios.roumoglou@th-brandenburg.de   |
+| Vasileios Roumoglou | 20204416      | TH Brandenburg   | vasileios.roumoglou@th-brandenburg.de   |
 
 ***
 
@@ -18,7 +18,9 @@
 2. [Grundlagen](Grundlagen.md) 
 3. [Funktionsweise](Funktionsweise.md) 
 4. [Anwendungsbeispiele](Anwendungsbeispiele.md)  
-5. [Ausblick](Ausblick.md) 
+5. [Ausblick](Ausblick.md)
+
+***
 
 [Quellen](Quellen.md) 
 

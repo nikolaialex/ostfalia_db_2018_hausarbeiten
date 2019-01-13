@@ -63,6 +63,7 @@ Um das Verfahren zu veranschaulichen, ist in der Abb. 1.1 ein schematischer Krei
 
 
 ![schematischer Kreis](images/circle.png "Abb. 2 Schematischer Kreis")  
+Abb. 2 Schematischer Kreis  
 
 | Schlüssel | Hashregion | Server |
 | :-------: | :--------: | :----: |

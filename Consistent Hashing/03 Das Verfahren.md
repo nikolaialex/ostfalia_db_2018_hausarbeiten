@@ -4,7 +4,8 @@ Bevor jedoch mit dem Verfahren um _Consistent Hashing_ begonnen wird, wollen wir
 
 Mit dem folgenden Beispiel wollen wir es deutlicher beschreiben.  
 
-![Hashfunktion](images/hashfunktion.png *Abb. 1 Hashfunktion*)  
+![Hashfunktion](images/hashfunktion.png "Abb. 1 Hashfunktion")  
+Abb. 1 Hashfunktion
 
 Auf dem Bild auf der linken Seite sind vier verschiedene Passwörter angegeben. Diese durchlaufen eine _Hashfunktion_, und werden in diesem Fall dadurch auf eine feste Länge von drei Zeichen von Zahlen reduziert, zB. "Superman" wird als "123" gespeichert. Bei zwei verschiedenen Passwörtern, können wir auch eine Kollision sehen. Dabei bedeutet es, dass nach der Hashfunktion, beide Passwörter die gleiche Zeichenfolge aufweisen.  
 

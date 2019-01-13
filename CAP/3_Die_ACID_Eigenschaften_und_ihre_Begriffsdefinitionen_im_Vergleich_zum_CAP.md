@@ -33,11 +33,11 @@ Knoten in einem Datenbank-Cluster.
 
 |**Eigenschaft**|**ACID**|**CAP**|**Konflikt**|
 |--- |--- |--- |--- |
-|Durability|“Ist eine Transaktion erfolgreich abgeschlossen, so bleibt der geänderte Zustand auch im Fehlerfall erhalten.” [D2]|Wort und Konzept werden nicht benutzt.|Nein|
+|Durability|“Ist eine Transaktion erfolgreich abgeschlossen, so bleibt der geänderte Zustand auch im Fehlerfall erhalten.” [4]|Wort und Konzept werden nicht benutzt.|Nein|
 |Consistenty|Integritaetsbeschränkungen auf die Daten (Datentypen, Relationen, ...)|Für CAP ist Consistency ein Kürzel für “Atomic Consistency”. Dabei ist atomic consistency ein Konsistenzmodell.|Gleicher Begriff, verschiedene Konzepte|
-|Isolation|“Obwohl Transaktionen gleichzeitig ausgeführt werden, ist es aus Sicht einer Transaktion T so, das andere Transaktionen entweder vor oder nach ihr ausgeführt werden.” [D2]|Wort wird nicht benutzt. Es tritt aber als Konsistenzmodell auf.|Unterschiedliche Begriffe aber gleiches Konzept|
+|Isolation|“Obwohl Transaktionen gleichzeitig ausgeführt werden, ist es aus Sicht einer Transaktion T so, das andere Transaktionen entweder vor oder nach ihr ausgeführt werden.” [4]|Wort wird nicht benutzt. Es tritt aber als Konsistenzmodell auf.|Unterschiedliche Begriffe aber gleiches Konzept|
 |Atomicity|Alle Änderungen werden angewendet oder keine.|Für CAP bedeutet Atomic ein Konsistenzmodell, welches im Beweis genutzt wird.|Gleicher Begriff, verschiedene Konzepte|
-|Availability|Das Konzept wird nicht oft genutzt. Wenn, dann kann die Definition zu CAP verschieden sein, z. B. ist es nicht zwingend erforderlich das alle fehlerfreien Knoten antworten.|“Jede Anfrage, die von einem fehlerfreien Knoten im Gesamtsystem angenommen wird, muss zu einer Antwort führen.” [C2]|Gleicher Begriff, gleiches Konzept, unterschiedliche Definitionen|
+|Availability|Das Konzept wird nicht oft genutzt. Wenn, dann kann die Definition zu CAP verschieden sein, z. B. ist es nicht zwingend erforderlich das alle fehlerfreien Knoten antworten.|“Jede Anfrage, die von einem fehlerfreien Knoten im Gesamtsystem angenommen wird, muss zu einer Antwort führen.” [3]|Gleicher Begriff, gleiches Konzept, unterschiedliche Definitionen|
 |Partition(-tolerance)|Das Konzept wird so nicht oft genutzt. Wenn, dann ist die Definition gleich zu CAP.|Zwei Mengen von Knoten sind dann partitioniert, wenn alle Nachrichten zwischen diesen Knoten verloren gehen.|Nein|
 
 Tabelle 1: Übersicht der unterschiedlichen Begriffsbezüge bei ACID und CAP
@@ -51,6 +51,9 @@ Tabelle 1: Übersicht der unterschiedlichen Begriffsbezüge bei ACID und CAP
 URL: http://blog.thislongrun.com/2015/03/the-confusing-cap-and-acid-wording.html,
 letzter Aufruf: 2018-12-11
 
+[3] Gilbert, S., & Lynch, N. (2002). Brewer's conjecture and the feasibility of consistent, available, partition-tolerant web services. Acm Sigact News, 33(2), 51-59.
+
+[4] J. Gray und A. Reuter (1993), Transaction Processing: Concepts and Techniques. Morgan Kaufmann.
 
 ***
 

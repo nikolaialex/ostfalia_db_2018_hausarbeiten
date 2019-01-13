@@ -33,25 +33,42 @@ Bsp: SPAM E-Mail, es werden E-Mails erkannt, die hohe Ähnlichkeiten in Anwendun
 
 **Modelldaten**
 
-* Dateiformate (CSV,XML,Text)
-* REST (API/Endpoint)
-* Artifakte erzeugt aus Traingsdaten
+Modelldaten werden in den folgenden Formen angeboten:
+
+* Dateiformate (CSV,XML,Text,JSON)
+* REST (API/Endpoint,JSON)
+* Datenbanken (SQL,NoSQL,REST)
 
 **Modellformen und Datenstrukturen**
 
+Modelle werden in den folgenden grundlegenden Datenstrukturen abgelegt und verwaltet:
+
 * Tabelle
 * Baum
-* Graphen
+* Graph
+* Mischformen
 
 **Probleme**
+
+Als Problemstellungen werden Folgende im Zusammenhang mit ML genannt:
 
 * überangepasst (overfit)
 * zu wenig angepasst (underfit)
 * Diskriminierung
 
+
 ### Algorithmen
 
+Der Algorithmus ist der Kern im Kontext ML, wenn es um die Gewinnung der
+Erkenntnisse und Informationen aus den Daten geht. Der Algorithmus ist der Teil
+im ML, in dem es vor allem um die Performance geht. Dabei stehen
+Performance, Zeit und Kosten in einer sogennanten "magischen Dreiecksbeziehung".
+[603] gibt hier einen Überblick zum aktuellen ML-Stand.
+
 **Agorithmentypen**
+
+Die folgenden Algorithmen werden
+in der Häufigkeit ihrer Verwendung laut [603] genannt:
 
 * Logistische Regression
 * Rekurrente Neuronale Netze (RNN)
@@ -91,9 +108,12 @@ Bsp: SPAM E-Mail, es werden E-Mails erkannt, die hohe Ähnlichkeiten in Anwendun
 
 ------
 
+[601] Thamilalagan, Vishakha, 2017, Blog https://www.quora.com/What-are-different-models-in-machine-learning (letzer Abruf 2018-01-12 14:05)
+
+[602] Brownlee, Jason, 2013, Blog https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/ (letzer Abruf 2018-01-12 14:07)
+
+[603] Frauenhofer Gesellschaft, 2018, Bericht https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf (letzter Abruf: 2019-01-13 14:08 Uhr)
+
+------
+
 [< Einteilung der ML-Lerntypen](05_ml_learningTypes.md)	|	[Abgrenzungen >](07_ml_dds.md)
-
-
-[610]:https://www.quora.com/What-are-different-models-in-machine-learning
-[612]:https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/
-[613]:https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf

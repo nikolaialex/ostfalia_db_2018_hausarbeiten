@@ -38,9 +38,9 @@ Medienverweise:
 
 -----
 
-[301] Witten et. al. (2016). Data Mining: Practical machine learning tools and techniques 4th
+[301] Witten et. al. (2016)
 
-[302] DBMS Popularität pro Datenbankmodell. (o.D.). Abgerufen 05. Januar, 2019, von https://db-engines.com/de/ranking_categories
+[302] DBMS Popularität pro Datenbankmodell. (o.D.). Abgerufen 05. Januar, 2019
 
 ------
 

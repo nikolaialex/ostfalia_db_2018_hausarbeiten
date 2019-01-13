@@ -90,11 +90,11 @@ wichtige Emails zum Beispiel in den Absendern und den verwendeten Wörtern."_
 
 ------
 
-[501] Fumo, David 2017, Blog https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861 (letzter Abruf: 2019-01-13 14:03 Uhr)
+[501] Fumo, David 2017
 
-[502] Li, Hui,  SAS Blog https://www.sas.com/de_de/insights/analytics/machine-learning.html (letzter Abruf: 2019-01-13 14:05 Uhr)
+[502] Li, Hui
 
-[503] Frauenhofer Gesellschaft, 2018, Bericht https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf (letzter Abruf: 2019-01-13 14:08 Uhr)
+[503] Frauenhofer Gesellschaft, 2018
 
 ------
 

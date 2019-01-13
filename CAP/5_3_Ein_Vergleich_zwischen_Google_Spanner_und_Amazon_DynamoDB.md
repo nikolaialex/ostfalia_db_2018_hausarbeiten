@@ -50,6 +50,6 @@ Beide Systeme bieten ähnliche Konzepte und teilen die gleichen Grundlagen. Zude
 
 ***
 
-[<< 5.2 Amazon DynamoDB](5_2_Amazon_DynamoDB.md) | [6 Zusammenfassung >>](6_Zusammenfassung.md)
+[<< 5.2 Amazon DynamoDB](5_2_DynamoDB.md) | [6 Zusammenfassung >>](6_Zusammenfassung.md)
 
 ***

@@ -2,7 +2,7 @@
 
 # Inhaltsverzeichnis
 
-+ [Abstract](README.md)
++ [Autoren](README.md)
 + [Einleitung (tbd)](03_introduction.md)
 + [Einführung in ML (M)](04_ml.md)
     + [Einteilung der ML-Lerntypen (KM)](05_ml_learningTypes.md)

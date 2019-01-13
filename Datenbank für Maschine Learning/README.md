@@ -2,12 +2,6 @@
 
 # Datenbank für Maschine Learning
 
-## Abstract
-
-DE
-
-EN?
-
 ## Autoren
 
 | Name           |  Matrikelnummer | Hochschule    | E-Mail                                |

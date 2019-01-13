@@ -1,6 +1,6 @@
 ***
 
-[<< zurück](Ausblick.md)
+[<< Inhalltsverzeichnis](README.md)
 
 ***
 

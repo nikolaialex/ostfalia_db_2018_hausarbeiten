@@ -1,5 +1,5 @@
 ***
-[<< Inhaltsverzeichnis](README.md)
+[<<< Inhaltsverzeichnis](README.md)
 ***
 
 ## 5. Ausblick

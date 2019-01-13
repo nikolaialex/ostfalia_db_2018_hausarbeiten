@@ -78,11 +78,11 @@ Die Daten einer Blockchain sind permanent gespeichert. Sie können nachträglich
 
 #### 3.2.2 Offenheit
 
-Es gibt drei unterschiedliche Arten von Blockchains bezüglich ihrer Offenheit. Zum einen gibt es die __öffentlichen__ Blockchains. Hier kann jeder Teilnehmer auf die Blockchain zugreifen, diese lokal auf seinem Computer speichern und erweitern. Bitcoin gilt als die erste offene Blockchain und startete 2009. [21, 23, 26, 27]
+Es gibt drei unterschiedliche Arten von Blockchains bezüglich ihrer Offenheit und Dezentralität. Zum einen gibt es die __öffentlichen__ Blockchains. Hier kann jeder Teilnehmer auf die Blockchain zugreifen, diese lokal auf seinem Computer speichern und erweitern. Es existiert keine übergeordnete Instanz zur Kontrolle, dadurch ist diese Variante die am stärksten dezentralisiert. Die Verteilung aller Informationen über das Netzwerk und die verteilte Validierung führen zu geringerer Effizienz. Bitcoin gilt als die erste offene Blockchain und startete 2009. [21, 23, 26, 27]
 
 Die nächste Kategorie sind __hybride__ Blockchains. Prinzipiell hat jeder Zugriff auf die Blockchain jedoch nicht zu allen Blöcken. Nutzer haben verschiedene Zugriffsrechte. Die Blockchain ist somit teilweise dezentralisiert. Ein Beispiel ist R3 Corda oder b3i. [23, 28, 29]
 
-Die letzte Kategorie stellen die __privaten__ Blockchain-Netzwerke dar. Hier bestimmt eine zentrale Entität die Rechte für den Zugriff und die Bearbeitung. Die Blockchain ist zentralisiert aber immer noch kryptographisch gesichert. Aufgrund der mangelnden Dezentralität ist es im allgemeinen strittig ob es sich bei dieser Variante noch um eine Blockchain handelt.
+Die letzte Kategorie stellen die __privaten__ Blockchain-Netzwerke dar. Hier bestimmt eine zentrale Entität die Rechte für den Zugriff und die Bearbeitung. Die Blockchain ist zentralisiert aber immer noch kryptographisch gesichert. Die zentralisierte Validierung führt zu einer höheren Effizienz als bei den dezentralisierten Variationen. Aufgrund der mangelnden Dezentralität ist es im allgemeinen strittig ob es sich bei dieser Variante noch um eine Blockchain handelt.
 Diese Art wird vor allem von Unternehmen eingesetzt um den Zugriff auf interne Informationen zu sicher und regulieren. Beispiele für diesen Typ sind die Blockchains Hyperledger und Ripple. [23, 30]
 
 #### 3.2.3 Blöcke

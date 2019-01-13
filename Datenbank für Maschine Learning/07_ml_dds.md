@@ -17,30 +17,28 @@ Folgende Teilgebiete wurden betrachtet:
 
 ### Abgrenzung in Data-Driven-Science
 
-Data-Driven-Science (DDS) befasst sich mit einer Reihe von Problemen. So sind Daten meist fragmentiert, nicht eindeutig integrierbar und befinden sich oftmals in großen Silos. Diese weisen außerdem Fehler auf und müssen bereinigt werden. Für diese Probleme gibt es in der DDS mehrere Lösungsansätze. Im folgenden werden verschiedene Begrifflichkeiten aus der DDS unterschieden und im Kurzen erläutert.
+Data-Driven-Science (DDS) befasst sich mit einer Reihe von Problemen. So sind Daten meist fragmentiert, nicht eindeutig integrierbar und befinden sich oftmals in großen Silos. Diese weisen außerdem Fehler auf und müssen bereinigt werden. Für solche Probleme gibt es in der DDS mehrere Lösungsansätze. Im folgenden werden verschiedene Begrifflichkeiten aus der DDS unterschieden und im Kurzen erläutert.
 
-**Artifical Intelligence**
+**Künstliche Intelligenz**
 
-Künstliche Intelligenz (KI) versucht die menschliche Intelligenz zu simulieren. Darüber hinaus verwendet KI Modelle, die von ML und anderen Methoden entwickelt wurden, um ein intelligentes Verhalten hervorzurufen. Die KI versucht vorherzusagen wie Aktionen sich auf ein Modell auswirken und die Aktion zu wählen, die ein Zuel am besten erreicht.
+Künstliche Intelligenz (KI) ist ein Teilgebiet der Informatik, mit dem Ziel Computer zu befähigen, bestimmte Aufgaben intelligent auszuführen. In dem Gebiet der KI wird versucht vorherzusagen wie sicht bestimmte Aktionen auf eine Aufgabe auswirken um daraufhin die Aktion zu wählen, die ein Ziel am besten erreicht. KI und ML werden im wirtschaftlichen Kontext fälschlicher Weise oftmals als Synonym verwendet. Dabei handelt es sich bei KI jedoch um einen Oberbegriff und ML um ein Anwendungsgebiet davon. <a href="">[1]</a>
 
 **Data Mining**
 
-Beim Data Mining (DM) geht es darum, sowohl Statistik als auch Programmiermethoden zu verwenden, um in riesigen Datensätzen nützliche Informationen oder Erkenntnisse zu finden, so dass ein auftretendes Phänomen erklärt werden kann. ML verwendet DM-Techniken und weitere Lernalgorithmen, um Modelle zu erstellen und zukünftige Ergebnisse vorhersagen zu können.
+Beim Data Mining (DM) geht es darum, sowohl Statistik als auch Programmiermethoden zu verwenden, um in riesigen Datensätzen nützliche Informationen oder Erkenntnisse zu finden, so dass ein auftretendes Phänomen erklärt werden kann. ML verwendet DM-Techniken und weitere Lernalgorithmen, um Modelle zu erstellen und zukünftige Ergebnisse vorhersagen zu können. <a href="">[2]</a> Beim DM wird geschätzt, dass 50 bis 70 Prozent des Arbeitsaufwands in die Datenvorverarbeitung fließt. Dieser Aufwand beinhaltet neben einer Säuberung der Daten auch Verfahren Werte zu abstrahieren, transformieren und normieren <a href="">[1]</a>.
 
 **Deep Learning**
 
-Deep Learning (DL) ist eine Art des maschinellen Lernens, mit dem Zusatz, dass die Lerntechnik versucht Neuronen des menschlichen Gehirns nachzuahmnen. Genauer - Es wird versucht menschliche Entscheidungsfähigkeiten nachzuahmen. In ML kennt die Software im Voraus die Merkmale von Trainingsdaten, aber in DL identifiziert der Algorithmus selbst die relevanten Merkmale bzw. Attribute von den Trainingsdaten.
-
-**Neural Networks**
-
-Neuronale Netze (NN) ist eine Menge von Algorithmen, die für ML verwendet werden, die Daten mit Hilfe von Graphen künstlicher Neuronen modelliert. Diese Neuronen sind mathematische Modelle, die versuchen das Verhalten von menschlichen Gehirnen nachzuahmen. Daraus folgt, dass NN Konzepte von ML und DL verwendet.
+Deep Learning (DL) ist eine Art des maschinellen Lernens, mit dem Zusatz, dass die Lerntechnik versucht Neuronen des menschlichen Gehirns nachzuahmnen. Genauer - Es wird versucht menschliche Entscheidungsfähigkeiten nachzuahmen. In ML kennt die Software im Voraus die Merkmale von Trainingsdaten, aber in DL identifiziert der Algorithmus selbst die relevanten Merkmale bzw. Attribute von den Trainingsdaten. <a href="">[2]</a> 
 
 
 [Quellen] (müssen nur noch zugeordnet werden, und überhaupt geeignet?)
 
-- https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining
+- [1] https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf
 
-- https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/
+- [2] https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining
+
+- [3] https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/
 
 ------
 

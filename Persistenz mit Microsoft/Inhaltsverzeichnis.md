@@ -16,6 +16,10 @@
 
 ### 3.1 Funktionsweise
 
+#### 3.1.1 Atom Record Sequence (ARS)
+
+#### 3.1.2 Skalierung und Replikation
+
 ### 3.2 Azure Cosmos DB mit MongoDB-API
 
 ## 4. LINQ

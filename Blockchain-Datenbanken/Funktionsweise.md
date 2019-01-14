@@ -162,7 +162,7 @@ Quellenangabe:
 [12] - M. Rouse, 2016
 [13] - R. Almeida, 2016
 [14] - Elektronik-Kompendium, o.A.
-[15] - o.A., 2010
+[15] - Unbekannt, 2010
 [16] - C. Stobitzer, 2018
 [17] - Dr. R. Wobst, 2003
 [18] - Pyler, 2018
@@ -187,7 +187,7 @@ Quellenangabe:
 [37] - A. Czernik, 2015
 [38] - Team InnerQuest Online, 2018
 [39] - N. Reiff, 2018
-[40] - P. Schnabel, o.J.
+[40] - Elektronik-Kompendium, o.A.a
 ```
 
 ***

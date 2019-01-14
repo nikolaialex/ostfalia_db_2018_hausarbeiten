@@ -58,7 +58,7 @@ __Hosp, Julian (2018):__ Kryptowährungen. Bitcoin, Ethereum, Blockchain, ICO's 
 
 __Iliev, Lana (2018):__ In Kryptowährungen investieren: Alles was Sie wissen müssen. Online verfügbar unter: https://de.bergfuerst.com/ratgeber/kryptowaehrungen. Letzter Zugriff am: 28.12.2018.
 
-__Kryptowissen (2018):__ Asymmetrische Verschlüsselung. Online verfügbar unter: https://www.kryptowissen.de/asymmetrische-verschluesselung.html. Letzter Zugriff am: 08.01.2019.
+__C. Stobitzer (2018):__ Asymmetrische Verschlüsselung. Online verfügbar unter: https://www.kryptowissen.de/asymmetrische-verschluesselung.html. Letzter Zugriff am: 08.01.2019.
 
 __Li, Wenting; Andreina, S’ebastien; Bohli, Jens-Matthias; Karame, Ghassan (o.A.):__ Securing Proof-of-Stake Blockchain Protocols. Online verfügbar unter: https://pdfs.semanticscholar.org/ebfb/57843cdf23ce6fe7007c0f1ea233eca4b71e.pdf. Letzter Zugriff am: 08.01.2019.
 

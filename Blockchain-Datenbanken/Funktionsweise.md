@@ -171,16 +171,16 @@ Quellenangabe:
 [21] - M. Gupta, 2018
 [22] - M. Andreessen, o.A.
 [23] - P. Adam-Kalfon, S. El Moutaouakil, 2017
-[24] - K. Sultan, U. Ruhi, R. Lakhani, 2018
+[24] - K. Sultan et al., 2018
 [25] - L. Severeijns, 2017
-[26] - Z. Zigin, X. Shaon, D. Hong-Ning, C. Xiangping, 2017
+[26] - Z. Zigin et al., 2017
 [27] - A. Shanti Bruyn, 2017
 [28] - B3i, 2018
 [29] - K. Schiller, 2018
 [30] - K. Schiller, 2018a
 [31] - Blockgeeks, 2018a
 [32] - B. Asolo, 2018
-[33] - W. Li, S. Andreina, J. Bohli, G. Karame, o.A.
+[33] - W. Li et al., o.A.
 [34] - Unbekannt, 2015
 [35] - M. Thake, 2018
 [36] - A. Castor, 2017

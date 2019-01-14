@@ -48,7 +48,7 @@ __Elektronik-Kompendium (o. A. a):__ Kryptografische Hash-Funktionen. Online ver
 
 __Fischer, Tim (2018):__ What Is A Checksum?. Online verfügbar unter: https://www.lifewire.com/what-does-checksum-mean-2625825. Letzter Zugriff am: 08.01.2019.
 
-__Gupta, Manav (2018):__ Blockchain for Dummies. Online verfügbar unter: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=XIM12354USEN, S.3 ff. Letzter Zugriff am: 08.01.2019.
+__Gupta, Manav (2018):__ Blockchain for Dummies. Online verfügbar unter: https://www-01.ibm.com/common/ssi/cgi-bin/ssialias?htmlfid=XIM12354USEN, S. 3 ff. Letzter Zugriff am: 08.01.2019.
 
 __Hoffmann, Chris (2018):__ What is a Checksum and why should I care?. Online verfügbar unter: https://www.howtogeek.com/363735/what-is-a-checksum-and-why-should-you-care/. Letzter Zugriff am: 08.01.2019.
 

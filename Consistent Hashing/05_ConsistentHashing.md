@@ -19,14 +19,14 @@ In der Tabelle 1.1 werden den drei Servern A, B, und C die Schlüssel zugewiesen
 |  "jane"   | 5000799124 |     1      |
 |  "kate"   | 3421657994 |     2      |  
 
-Tabelle 1.1  
+Tabelle 1.1 Schlüssel und deren Hashwerte mit mod 3  
 
 | Server A | Server B | Server C |
 | :------: | :------: | :------: |
 |  "bill"  |  "john"  |  "kate"  |
 |          |  "jane"  |          |  
 
-Tabelle 1.2  
+Tabelle 1.2  Schlüsselverteilung auf die Server  
 
 ## Problem des Verfahrens  
 
@@ -43,7 +43,7 @@ Im Beispiel wird der Server C entfernt, somit sind nur die zwei Server A und B e
 |  "jane"   | 5000799124 |     0      |
 |  "kate"   | 3421657994 |     0      |  
 
-Tabelle 1.3  
+Tabelle 1.3  Schlüssel und deren Hashwerte mit mod 2  
 
 | Server A | Server B |
 | :------: | :------: |
@@ -51,7 +51,7 @@ Tabelle 1.3
 |  "jane"  |          |
 |  "kate"  |          |  
 
-Tabelle 1.4  
+Tabelle 1.4  Schlüsselverteilung auf die Server  
 
 ## Prinzip des Consistent Hashing  
 
@@ -59,7 +59,7 @@ Das konsistente Hashverfahren erlaubt es beliebig viele Server in das verteilte 
 
 “Eine konsistente Hashfunktion ist eine Hashfunktion, die die Anzahl der Neuzuordnungen minimiert. Bei dem Gebrauch einer inkonsistenten Hashfunktion werden alle Schlüssel neu auf die verfügbaren Behälter verteilt. Konsistente Hashfunktionen haben folgende Eigenschaften: Einwegberechenbarkeit, Kollisionsresistenz, Gleichverteiltheit und effiziente Berechenbarkeit” <sup>1</sup>.  Durch die Verwendung einer guten Hashfunktion entfällt die sonst notwendige Lastverteilung durch den Administrator <sup>2</sup>.
 
-Um das Verfahren zu veranschaulichen, ist in der Abb. 2 ein schematischer Kreis dargestellt, in der die Schlüssel und Server markiert sind. Jeder dieser Server kriegt eine Hashregion zugeteilt und die Schlüssel werden mittels einer Hashfunktion auf die Server verteilt, siehe Tabelle 1.5.  
+Um das Verfahren zu veranschaulichen, ist in der Abb. 2 ein schematischer Kreis dargestellt, in der die Schlüssel und Server markiert sind. Jeder dieser Server kriegt eine oder mehrere  Hashregionen zugeteilt, um die Daten noch gleichmäßiger verteilen zu können und die Schlüssel werden mittels einer Hashfunktion auf die Server verteilt, siehe Tabelle 1.5.  
 
 
 ![schematischer Kreis](images/circleSmaller.png "Abb. 2 Schematischer Kreis")  

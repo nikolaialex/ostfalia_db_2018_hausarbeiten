@@ -72,6 +72,8 @@ __Pommerening, Klaus;  Sergl, Marita (2007):__ Kryptographische Basistechniken. 
 
 __Prinz, Wolfgang; Schulte,  Axel T. (2017):__ BLOCKCHAIN UND SMART CONTRACTS. Technologien, Forschungsfragen und Anwendungen. Online verfügbar unter: https://www.sit.fraunhofer.de/fileadmin/dokumente/studien_und_technical_reports/Fraunhofer-Positionspapier_Blockchain-und-Smart-Contracts.pdf?_ =1516641660. Letzter Zugriff am: 30.12.2018.
 
+Pyler (2018): Algorithms Explained: Diffie-Hellman. Online verfügbar unter: https://hackernoon.com/algorithms-explained-diffie-hellman-1034210d5100. Letzter Zugriff am: 04.01.2019.
+
 __PwC (2016):__ Kennen Sie den Begriff "Blockchain"?. In: Statista - Das Statistik-Portal. https://de-statista-com/statistik/daten/studie/654948/umfrage/umfrage-zum-kenntnisstand-zur-blockchain-technologie-in-deutschland/. Letzter Zugriff am: 08.01.2019
 
 __Rehfeld, Dieter (2017):__ Blockchain in der Verwaltung. Online verfügbar unter: https://kommunal.de/blockchain-der-verwaltung. Letzter Zugriff am: 01.01.2019.

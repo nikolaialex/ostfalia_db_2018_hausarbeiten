@@ -136,7 +136,7 @@ Ein __soft fork__ ist eine Erweiterung der existierenden Regeln. Die bisherigen 
 
 #### 3.2.8 Double Spending Problem
 
-Der Begriff des Double Spending Problems wurde bereits im gleichnamigen Kapitel bei den Grundlagen eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentralen Instanz. Essentiell dafür ist die __stetige Aktualisierung__ der Blockchain. Alle Teilnehmer erhalten über das Netzwerk beständig die neue Version. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den __Zeitstempel__ wird auch deutlich, welche die ursprüngliche Transaktion war, und alle nachfolgenden Versuche, das digitale Geldstück erneut zu transferieren, scheitern. [14, 37]
+Der Begriff des Double Spending Problems wurde bereits im gleichnamigen Kapitel bei den Grundlagen eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentralen Instanz. Essentiell dafür ist die __stetige Aktualisierung__ der Blockchain. Alle Teilnehmer erhalten über das Netzwerk beständig die neue Version. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den __Zeitstempel__ wird auch deutlich, welche die ursprüngliche Transaktion war, und alle nachfolgenden Versuche, das digitale Geldstück erneut zu transferieren, scheitern. [14, 36]
 
 ***
 
@@ -183,8 +183,7 @@ Quellenangabe:
 [33] - Unbekannt, 2015
 [34] - M. Thake, 2018
 [35] - A. Castor, 2017
-[36] - A. Czernik, 2015
-[37] - Team InnerQuest Online, 2018
+[36] - Team InnerQuest Online, 2018
 
 ```
 

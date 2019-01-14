@@ -40,7 +40,7 @@ mldb.put("/v1/procedures/import_iris", {
 mldb.query("SELECT * FROM iris LIMIT 5")
 ```
 
-![Die ersten fünf Einträge des Iris-Datensatzes](./statics/11_mldb/examples/import.png)
+![Die ersten fünf Einträge des Iris-Datensatzes](./statics/10_mldb/examples/import.png)
 
 #### Datenaufruf via Schnittstellen
 
@@ -92,7 +92,7 @@ mldb.post("/v1/datasets/example/commit")
 mldb.query("SELECT * FROM example")
 ```
 
-![Inhalt eines selbst erzeugten Datensatzes](./statics/11_mldb/examples/selfCreate.png)
+![Inhalt eines selbst erzeugten Datensatzes](./statics/10_mldb/examples/selfCreate.png)
 
 #### Klassische Bearbeitung
 
@@ -117,7 +117,7 @@ In MLDB werden ML-Algorithmen in Form von Prozeduren angewendet. So kann bespiel
 
 Das GitHub-Projekt [benchm-ml](https://github.com/szilard/benchm-ml) vom Nutzer [szilard](https://github.com/szilard) versucht einen minimalen Benchmark für Skalierbarkeit, Geschwindigkeit und Genauigkeit von häufig verwendeten Implementierungen einiger maschineller Lernalgorithmen darzustellen. Unter den getesteten Tools findet man auch MLDB wiede (siehe [hier](https://github.com/szilard/benchm-ml/blob/master/z-other-tools/9a-datacratic.py)). Im Rahmen des Benchmarks wird die benötigte Zeit und resultierende Genauigkeit der Tools bei der Ausführung eines Random Forests mit einem Datensatz von einer Million Zeilen auf einem Knoten vergleichen. Die Tests wurden auf einer Amazon EC2 c3.8xlarge-Instanz (32 Kerne, 60 GB RAM) durchgeführt[1311]. MLDB konnte im Rahmen des Tests eine Genauigkeit von ca. 74 Prozent in 18 Sekunden erreichen. Wie die folgende Abbildung zeigt, schneidet MLDB vergleichen zu anderen getesteten Tools besser ab.[1201]
 
-![Vergleich von unterschiedlichen ML-Tools bei einem Random Forests mit Datensatz von einer Million Zeilen](./statics/11_mldb/examples/performance.png)
+![Vergleich von unterschiedlichen ML-Tools bei einem Random Forests mit Datensatz von einer Million Zeilen](./statics/10_mldb/examples/performance.png)
 
 #### Aufruf via Schnittstellen
 
@@ -183,7 +183,7 @@ pd.DataFrame(response.json()["status"]["firstRun"]["status"])
   .pivot_table(index="actual", columns="predicted", fill_value=0)
 ```
 
-![Konfusionsmatrix als Testergebnis](./statics/11_mldb/examples/classifier_test.png)
+![Konfusionsmatrix als Testergebnis](./statics/10_mldb/examples/classifier_test.png)
 
 ### Funktionen
 
@@ -206,7 +206,7 @@ import pandas as pd
 pd.DataFrame(response.json()["output"]["scores"], [0, 1, 2], ["class", "scores"])
 ```
 
-![Ergebnis der Klassifizierungsfunktion](./statics/11_mldb/examples/function_classifier.png)
+![Ergebnis der Klassifizierungsfunktion](./statics/10_mldb/examples/function_classifier.png)
 
 #### Batchbetrieb
 

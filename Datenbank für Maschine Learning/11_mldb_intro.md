@@ -1,6 +1,6 @@
 ## MLDB Einführung
 
-[![Logo von MLDB](./statics/11_mldb/mldbai_logo.png)](https://mldb.ai/html/mldbai_eai_logo_200_2.png)
+[![Logo von MLDB](./statics/10_mldb/mldbai_logo.png)](./statics/10_mldb/mldbai_logo.png)
 
 MLDB ist eine Open-Source-Datenbank, die von Element AI für ML entwickelt wurde. Die Datenbank ermöglicht dem Nutzer, Befehle über eine REST-API zu senden, um Daten zu speichern, sie mithilfe von SQL zu untersuchen, ML-Modelle zu trainieren und sie als APIs bereitzustellen.[1101] Allgemein weist MLDB folgende Eigenschaften auf:
 

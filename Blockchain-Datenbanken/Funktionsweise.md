@@ -149,40 +149,40 @@ Der Begriff des Double Spending Problems wurde bereits im gleichnamigen Kapitel 
 Quellenangabe:
 
 [01] - Blockgeeks, 2018
-[02] - C. Eilers, 2016
-[03] - C. Stachniss, o. A.
-[04] - D. Drescher, 2017
-[05] - K. Pommerening, M. Sergl, 2007
+[02] - Carsten Eilers, 2016
+[03] - Cyrill Stachniss, o. A.
+[04] - Daniel Drescher, 2017
+[05] - Klaus Pommerening, M. Sergl, 2007
 [06] - Ryte, 2018
-[07] - M. Teschner, 2012  
-[08] - C. Hoffmann, 2018
-[09] - T. Fischer, 2018
-[10] - T. Whitaker, 2018a
+[07] - Matthias Teschner, 2012  
+[08] - Chris Hoffmann, 2018
+[09] - Tim Fischer, 2018
+[10] - Ted Whitaker, 2018
 [11] - SSL2BUY, 2018
-[12] - M. Rouse, 2016
-[13] - R. Almeida, 2016
+[12] - Margaret Rouse, 2016
+[13] - Rafael Almeida, 2016
 [14] - Elektronik-Kompendium, o. A.
 [15] - Unbekannt, 2010
 [16] - C. Stobitzer, 2018
-[17] - Dr. R. Wobst, 2003
+[17] - Dr. Reinhrdt Wobst, 2003
 [18] - Pyler, 2018
-[19] - M. Rouse, 2007
-[20] - W. Ross, 2018
-[21] - M. Gupta, 2018
-[22] - M. Andreessen, o. A.
-[23] - P. Adam-Kalfon, S. El Moutaouakil, 2017
-[24] - K. Sultan et al., 2018
-[25] - L. Severeijns, 2017
-[26] - Z. Zigin et al., 2017
+[19] - Margaret Rouse, 2007
+[20] - Wibur Ross, 2018
+[21] - Manav Gupta, 2018
+[22] - Marc Andreessen, o. A.
+[23] - Paula Adam-Kalfon, Selsabila El Moutaouakil, 2017
+[24] - Karim Sultan, Umar Ruhi, Rubina Lakhani, 2018
+[25] - Luc Severeijns, 2017
+[26] - Zheng Zibin, Shaoan Xie, Hong-Ning Dai, Xianping Chen, 2017
 [27] - A. Shanti Bruyn, 2017
 [28] - B3i, 2018
-[29] - K. Schiller, 2018
+[29] - Kai Schiller, 2018
 [30] - Blockgeeks, 2018a
-[31] - B. Asolo, 2018
-[32] - W. Li et al., o. A.
+[31] - Bisade Asolo, 2018
+[32] - Wenting Li, S’ebastien Andreina, Jens-Matthias Bohli, Ghassan Karame, o. A.
 [33] - Unbekannt, 2015
-[34] - M. Thake, 2018
-[35] - A. Castor, 2017
+[34] - Max Thake, 2018
+[35] - Amy Castor, 2017
 [36] - Team InnerQuest Online, 2018
 [37] - Elektronik-Kompendium, o. A. a
 

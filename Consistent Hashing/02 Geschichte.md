@@ -3,4 +3,7 @@ Der Begriff _Consistent Hashing_ wurde zum ersten Mal in einem akademischen Pape
 
 Heute wird das Verfahren in vielen Systemen eingesetzt, zB.: Akamai CDN, Amazon’s Speicher System Dynamo, Couchbase, Openstack, Discord und viele Andere.
 
-Der Bedarf nach einem Verfahren wie _Consistent Hashing_ wurde immer wichtiger, als immer mehr Daten an unterschiedlichen Orten gespeichert wurden, und es immer schwerer wurde die Daten dynamisch zu synchronisieren, falls neue Server hinzugefügt bzw. entfernt wurden, da jedes mal der gesamte Cache synchronisiert werden musste. Durch _Consistent Hashing_ kann die Last in jeder Situation dynamisch verteilt werden, und dadurch die Skalierbarkeit des gesamten Systems verbessert werden kann.
+Der Bedarf nach einem Verfahren wie _Consistent Hashing_ wurde immer wichtiger, als immer mehr Daten an unterschiedlichen Orten gespeichert wurden, und es immer schwerer wurde die Daten dynamisch zu synchronisieren, falls neue Server hinzugefügt bzw. entfernt wurden, da jedes mal der gesamte Cache synchronisiert werden musste. Durch _Consistent Hashing_ kann die Last in jeder Situation dynamisch verteilt werden, und dadurch die Skalierbarkeit des gesamten Systems verbessert werden kann.  
+
+____
+[Zurück](README.md) | [Weiter](DasVerfahren.md)  

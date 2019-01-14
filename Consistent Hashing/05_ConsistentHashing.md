@@ -62,7 +62,7 @@ Das konsistente Hashverfahren erlaubt es beliebig viele Server in das verteilte 
 Um das Verfahren zu veranschaulichen, ist in der Abb. 2 ein schematischer Kreis dargestellt, in der die Schlüssel und Server markiert sind. Jeder dieser Server kriegt eine Hashregion zugeteilt und die Schlüssel werden mittels einer Hashfunktion auf die Server verteilt, siehe Tabelle 1.5.  
 
 
-![schematischer Kreis](images/circle.png "Abb. 2 Schematischer Kreis")  
+![schematischer Kreis](images/circleSmaller.png "Abb. 2 Schematischer Kreis")  
 Abb. 2 Schematischer Kreis  
 
 | Schlüssel | Hashregion | Server |

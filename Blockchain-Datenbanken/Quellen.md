@@ -72,8 +72,7 @@ __Pommerening, Klaus;  Sergl, Marita (2007):__ Kryptographische Basistechniken. 
 
 __Ploom, Tarmo (2016):__ Blockchains-wichtige Fragen aus IT-Sicht. Blockchain Technology (S. 123-147). Berlin, Deutschland: De Gruyter Oldenburg. Online Verfügbar unter http://mehrwert-fuer-alle.at/wp-content/uploads/participants-database/9783110488951_-_blockchain_technology_blockchains_-_wichtige_fragen_aus_it-sicht_2.pdf Letzter Zugriff am 03.01.2019
 
-__Prinz, Wolfgang; Schulte,  Axel T. (2017):__ BLOCKCHAIN UND SMART CONTRACTS.
-Technologien, Forschungsfragen und Anwendungen. Online verfügbar unter: https://www.sit.fraunhofer.de/fileadmin/dokumente/studien_und_technical_reports/Fraunhofer-Positionspapier_Blockchain-und-Smart-Contracts.pdf?_=1516641660. Letzter Zugriff am: 30.12.2018.
+__Prinz, Wolfgang; Schulte,  Axel T. (2017):__ BLOCKCHAIN UND SMART CONTRACTS. Technologien, Forschungsfragen und Anwendungen. Online verfügbar unter: https://www.sit.fraunhofer.de/fileadmin/dokumente/studien_und_technical_reports/Fraunhofer-Positionspapier_Blockchain-und-Smart-Contracts.pdf?_=1516641660. Letzter Zugriff am: 30.12.2018.
 
 __PwC (2016):__ Kennen Sie den Begriff "Blockchain"?. In: Statista - Das Statistik-Portal. https://de-statista-com/statistik/daten/studie/654948/umfrage/umfrage-zum-kenntnisstand-zur-blockchain-technologie-in-deutschland/. Letzter Zugriff am 08.01.2019
 

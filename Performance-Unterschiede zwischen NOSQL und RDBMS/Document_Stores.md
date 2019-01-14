@@ -1,6 +1,43 @@
 # Document Stores
 
-Document Stores sind einfache Datenstrukturen, die über UUIDs identifizierte Dokumente enthalten. Dokument meint dabei aber nicht zwangsläufig einen Text. Stattdessen ist ein geeignetes Beispiel ein Blog-Post, der wiederum diverse Kommentare enthält. Diese Daten werden zusammenhängend als ein Dokument gespeichert, sodass etwa eine Web-Anwendung, die einen Blog-Post samt Kommentaren anzeigen soll, keine Daten über verschiedene Tabellen ermitteln muss, sondern durch einen einzigen Abruf bedient wird. Redundantes Speichern (z. B. Namen der Kommentatoren) ist somit nicht nur gewollt, sondern Kernelement des Ansatzes. Da es keine einzelnen Spalten oder Tabellen gibt, liegt die Überwachung der Korrektheit der inhaltlichen Daten beim Entwickler der zugreifenden Anwendung. Die Datenbank gewährleistet lediglich den Zugriff auf das hinter einer UUID hinterlegte Dokument.
+Document Stores sind einfache Datenstrukturen, die über UUIDs identifizierte Dokumente enthalten. Dokument meint dabei aber nicht zwangsläufig einen Text. Stattdessen ist ein geeignetes Beispiel ein Blog-Post, der wiederum diverse Kommentare enthält. Diese Daten werden zusammenhängend als ein Dokument gespeichert, sodass etwa eine Web-Anwendung, die einen Blog-Post samt Kommentaren anzeigen soll, keine Daten über verschiedene Tabellen ermitteln muss, sondern durch einen einzigen Abruf bedient wird. Redundantes Speichern (z. B. Namen der Kommentatoren) ist somit nicht nur gewollt, sondern Kernelement des Ansatzes. Da es keine einzelnen Spalten oder Tabellen gibt, liegt die Überwachung der Korrektheit der inhaltlichen Daten beim Entwickler der zugreifenden Anwendung. Die Datenbank gewährleistet lediglich den Zugriff auf das hinter einer UUID hinterlegte Dokument. [1]
+
+Eine Beispiel-Struktur in einer relationalen Datenbank (mit Fremdschlüsseln über Matrikelnummer und Fach-ID) könnte wie folgt aussehen:
+
+| Matrikelnummer | Name           | Credit Points |
+| -------------- | -------------- | ------------- |
+| 123456789      | Max Mustermann | 10            |
+
+| Matrikelnummer | Fach |
+| -------------- | ---- |
+| 123456789      | 1    |
+| 123456789      | 2    |
+
+| Fach | Name                       | Credit Points |
+| ---- | -------------------------- | ------------- |
+| 1    | Datenbanktechnologien      | 5             |
+| 2    | Wissenschaftliches Seminar | 5             |
+
+In einer dokumentenbasierten Datenbank würde ein Datensatz stattdessen so abgebildet werden:
+
+```json
+{
+    '_id' : '60e8c8e7-7079-404f-9740-5c267a8bda13',
+    'Matrikelnummer' : 123456789,
+    'Name' : 'Max Mustermann',
+    'Credit Points' : 10,
+    'Faecher' : [
+        {
+            'Name' : 'Datenbanktechnologien',
+            'Credit Points' : 5
+        },
+        {
+            'Name' : 'Wissenschaftliches Seminar',
+            'Credit Points' : 5
+        }
+    ]
+}
+```
 
 
 
@@ -50,7 +87,8 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 ```
 Quellen
 
-[1]: https://database.guide/what-is-a-document-store-database/
+[1]: https://www.pro-linux.de/artikel/2/1455/3,dokumentenorientierte-datenbanken.html
+[2]: https://database.guide/what-is-a-document-store-database/
 ```
 
 ***

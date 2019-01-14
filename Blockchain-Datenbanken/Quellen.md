@@ -66,11 +66,11 @@ __Meier, Andreas (2018):__ Blockchain. In: HMD 55 (6), S. 1133–1134. Springer 
 
 __Mohanty, Debajani (2018):__ Blockchain für Manager : So nutzen Sie die revolutionäre Technik für Ihr Business. Seite 12. Haar: Franzis Verlag.
 
-__Ploom, Tarmo (2016):__ Blockchains-wichtige Fragen aus IT-Sicht. Blockchain Technology (S. 123-147). Berlin, Deutschland: De Gruyter Oldenburg. Online Verfügbar unter http://mehrwert-fuer-alle.at/wp-content/uploads/participants-database/9783110488951_-_ blockchain_technology_blockchains_-_ wichtige_fragen_aus_it-sicht_2.pdf. Seite 160. Letzter Zugriff am: 03.01.2019
+__Ploom, Tarmo (2016):__ Blockchains-wichtige Fragen aus IT-Sicht. Blockchain Technology (S. 123-147). Berlin, Deutschland: De Gruyter Oldenburg. Online Verfügbar unter http://mehrwert-fuer-alle.at/wp-content/uploads/participants-database/9783110488951_-_ blockchain_technology_blockchains_-_wichtige_fragen_aus_it-sicht_2.pdf. Seite 160. Letzter Zugriff am: 03.01.2019
 
 __Pommerening, Klaus;  Sergl, Marita (2007):__ Kryptographische Basistechniken. Online verfügbar unter: https://www.staff.uni-mainz.de/pommeren/DSVorlesung/KryptoBasis/Hash.html. Letzter Zugriff am: 08.09.2019.
 
-__Prinz, Wolfgang; Schulte,  Axel T. (2017):__ BLOCKCHAIN UND SMART CONTRACTS. Technologien, Forschungsfragen und Anwendungen. Online verfügbar unter: https://www.sit.fraunhofer.de/fileadmin/dokumente/studien_und_technical_reports/Fraunhofer-Positionspapier_Blockchain-und-Smart-Contracts.pdf?_ =1516641660. Letzter Zugriff am: 30.12.2018.
+__Prinz, Wolfgang; Schulte,  Axel T. (2017):__ BLOCKCHAIN UND SMART CONTRACTS. Technologien, Forschungsfragen und Anwendungen. Online verfügbar unter: https://www.sit.fraunhofer.de/fileadmin/dokumente/studien_und_technical_reports/Fraunhofer-Positionspapier_Blockchain-und-Smart-Contracts.pdf?_=1516641660. Letzter Zugriff am: 30.12.2018.
 
 Pyler (2018): Algorithms Explained: Diffie-Hellman. Online verfügbar unter: https://hackernoon.com/algorithms-explained-diffie-hellman-1034210d5100. Letzter Zugriff am: 04.01.2019.
 
@@ -130,7 +130,7 @@ __Unbekannt (2018b):__ Algorithms explained: Diffie-Hellmann. Online verfügbar 
 
 __Unbekannt (2018c):__ What is Consensus Algorithm In Blockchain & Different Types Of Consensus Models. Online verfügbar unter: https://medium.com/@BangBitTech/what-is-consensus-algorithm-in-blockchain-different-types-of-consensus-models-12cce443fc77. Letzter Zugriff am: 08.01.2019.
 
-__Wenzel, Christian; Eckert, Klaus-Peter; Kirstein, Fabian (2017):__ Mythos Blockchain. Herausforderung für den öffentlichen Sektor. 1. Auflage März 2017.  Berlin: Kompetenzzentrum Öffentliche IT. Online verfügbar unter: https://www.researchgate.net/profile/Christian_Welzel/publication/316081964_Mythos_Blockchain_-_ Herausforderung_fur_den_Offentlichen_Sektor/links/58ef4662aca2724f0a2926d3/Mythos-Blockchain-Herausforderung-fuer-den-Oeffentlichen-Sektor.pdf. Seite 5. Letzter Zugriff am: 08.01.2019.
+__Wenzel, Christian; Eckert, Klaus-Peter; Kirstein, Fabian (2017):__ Mythos Blockchain. Herausforderung für den öffentlichen Sektor. 1. Auflage März 2017.  Berlin: Kompetenzzentrum Öffentliche IT. Online verfügbar unter: https://www.researchgate.net/profile/Christian_Welzel/publication/316081964_Mythos_Blockchain_-_Herausforderung_fur_den_Offentlichen_Sektor/links/58ef4662aca2724f0a2926d3/Mythos-Blockchain-Herausforderung-fuer-den-Oeffentlichen-Sektor.pdf. Seite 5. Letzter Zugriff am: 08.01.2019.
 
 __Whitaker, Tad (2018a):__ Describe the difference between synchronous and asynchronous encryption. Online verfügbar unter: https://medium.com/@theporkskewer/describe-the-difference-between-synchronous-and-asynchronous-encryption-9602153421d3. Letzter Zugriff am: 08.01.2019.
 

@@ -6,7 +6,7 @@
 Für ein besseres Verständnis der Blockchain Technologie, ist es notwendig zunächst einige Begriffe zu erläutern, die bei der Definition der Blockchain auftauchen und von Bedeutung sind.
 
 ### 2.1.1 Zentrale, Dezentrale und Verteilte Netzwerkstrukturen
-Blockchain basiert auf dezentralen verteilten Netzwerken. Um einen Überblick darüber zu schaffen, ist in Abbildung 1 eine Abgrenzung der zentralen, dezentralen und verteilten Netzwerkstrukturen dargestellt.
+Blockchain basiert auf dezentralen verteilten Netzwerken. Um einen Überblick darüber zu schaffen, ist in Abbildung 01 eine Abgrenzung der zentralen, dezentralen und verteilten Netzwerkstrukturen dargestellt.
 
 | ![Abbildung 01: zentrale, dezentrale und verteilte Netzwerkstrukturen](files/zentral-dezentral-verteilt.PNG) | 
 |:--:| 

@@ -117,7 +117,9 @@ ____
 [Zurück](04_Anwendungsfelder.md) | [Weiter](06_Quellen.md)  
 
 ____
-<sup>1</sup>Vergleich und Evaluation zwischen modernen und traditionellen Datenbankkonzepten unter den Gesichtspunkten Skalierung, Abfragemöglichkeit und Konsistenz, Nils Petersohn, Diplomica Verlag 2011  
-<sup>2</sup>Datenbanktechnologie, Skript, J. S. Lie, 2011  
-<sup>3</sup>https://en.wikipedia.org/wiki/Consistent_hashing  
-<sup>4</sup>https://aws.amazon.com/de/dynamodb/  
+```
+1. Vergleich und Evaluation zwischen modernen und traditionellen Datenbankkonzepten unter den Gesichtspunkten Skalierung, Abfragemöglichkeit und Konsistenz, Nils Petersohn, Diplomica Verlag 2011  
+2. Datenbanktechnologie, Skript, J. S. Lie, 2011  
+3. https://en.wikipedia.org/wiki/Consistent_hashing  
+4. https://aws.amazon.com/de/dynamodb/  
+```

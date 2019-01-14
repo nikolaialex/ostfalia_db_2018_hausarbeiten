@@ -32,5 +32,5 @@ ____
 
 ____
 ```
-<sup>1</sup>https://de.wikipedia.org/wiki/Hashfunktion
+1. https://de.wikipedia.org/wiki/Hashfunktion
 ```

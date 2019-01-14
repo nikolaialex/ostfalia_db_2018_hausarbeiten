@@ -115,7 +115,7 @@ Wie zu sehen, setzen die Schüssel-Wert Datenbanken Voldemort, Redis und Membase
 
 
 ____
-<sup>1</sup>Vergleich und Evaluation zwischen modernen und traditionellen Datenbankkonzepten unter den Gesichtspunkten Skalierung, Abfragemöglichkeit und Konsistenz, Nils Petersohn, Diplomica Verlag 2011
-<sup>2</sup>Datenbanktechnologie, Skript, J. S. Lie, 2011
-<sup>3</sup>https://en.wikipedia.org/wiki/Consistent_hashing
-<sup>4</sup>https://aws.amazon.com/de/dynamodb/
+<sup>1</sup>Vergleich und Evaluation zwischen modernen und traditionellen Datenbankkonzepten unter den Gesichtspunkten Skalierung, Abfragemöglichkeit und Konsistenz, Nils Petersohn, Diplomica Verlag 2011  
+<sup>2</sup>Datenbanktechnologie, Skript, J. S. Lie, 2011  
+<sup>3</sup>https://en.wikipedia.org/wiki/Consistent_hashing  
+<sup>4</sup>https://aws.amazon.com/de/dynamodb/  

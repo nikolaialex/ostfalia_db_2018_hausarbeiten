@@ -111,7 +111,7 @@ Alle in der MLDB-Datenbank verfügbaren Datensätze können über SQL-Klauseln a
 
 ### ML Algorithmus anwenden
 
-In MLDB werden ML-Algorithmen in Form von Prozeduren angewendet. So kann bespielsweise im Rahmen der Prozedurart `classifier.train` definiert werden, welcher Algorithmus für das Training eines Klassifikators verwendet werden soll. Welche Arten von Algorithmen MLDB insgesamt anbietet kann [hier](https://docs.mldb.ai/doc/#builtin/ClassifierConf.md.html) nachgelesen werden. Im Abschnitt [Modell](#modell) wird aufgezeigt, wie ein Klassifizierugsmodell mithilfe eines Entscheidungsbaums trainiert werden kann.
+In MLDB werden ML-Algorithmen in Form von Prozeduren angewendet. So kann bespielsweise im Rahmen der Prozedurart `classifier.train` definiert werden, welcher Algorithmus für das Training eines Klassifikators verwendet werden soll. Welche Arten von Algorithmen MLDB insgesamt anbietet kann [hier](https://docs.mldb.ai/doc/#builtin/ClassifierConf.md.html) nachgelesen werden. Im Abschnitt ["Modell"](#modell) wird aufgezeigt, wie ein Klassifizierugsmodell mithilfe eines Entscheidungsbaums trainiert werden kann.
 
 #### Performance
 
@@ -141,7 +141,7 @@ TODO
 
 ### Modell
 
-Wie im Abschnitt [MLDB Merkmale](13_mldb_features.md) beschrieben, werden Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatzschon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen "`iris_train_classifier`" erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:<sup>[11](#11)</sup>
+Wie im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, werden Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatzschon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen "`iris_train_classifier`" erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:<sup>[11](#11)</sup>
 
 1. `features`: Ein Zeilenausdruck zum Identifizieren der Merkmale, mit denen trainiert werden soll.
 2. `label`: Ein Ausdruck zum Identifizieren der Beschriftungen der Zeile. Der Typ muss mit dem des Klassifizierermodus übereinstimmen.
@@ -171,14 +171,16 @@ response = mldb.put("/v1/procedures/iris_test_classifier", {
     "type" : "classifier.test",
     "params" : {
         "testingData" : """
-            select iris_classify({ features: {* EXCLUDING(class)} }) as score, class as label from iris where rowHash() % 2 != 0
+            select iris_classify({ features: {* EXCLUDING(class)} }) as score, class as label
+                from iris where rowHash() % 2 != 0
         """,
         "mode": "categorical",
         "runOnCreation": True
     }
 })
 import pandas as pd
-pd.DataFrame(response.json()["status"]["firstRun"]["status"]).pivot_table(index="actual", columns="predicted", fill_value=0)
+pd.DataFrame(response.json()["status"]["firstRun"]["status"])
+  .pivot_table(index="actual", columns="predicted", fill_value=0)
 ```
 
 ![Konfusionsmatrix als Testergebnis](./statics/11_mldb/examples/classifier_test.png)
@@ -208,7 +210,7 @@ pd.DataFrame(response.json()["output"]["scores"], [0, 1, 2], ["class", "scores"]
 
 #### Batchbetrieb
 
-TODO
+Wie schon im Abschnitt ["MLDB Merkmale"](12_mldb_features.md) beschrieben, werden Prozeduren verwendet, um ML-Modelle im Batch-Modus anzuwenden. Aus diesem Grund ist ein Batchbetrieb implizit möglich.
 
 ### Export
 

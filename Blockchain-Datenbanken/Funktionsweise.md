@@ -134,9 +134,9 @@ Es werden zwei Typen von Forks unterschieden, hard forks und soft forks. Bei ein
 
 Ein __soft fork__ ist eine Erweiterung der existierenden Regeln. Die bisherigen Vorgaben bleiben bestehen und sind weiterhin gültig. Es müssen nicht alle Knoten aktualisiert werden, sondern lediglich jene welche am Konsensmodell teilnehmen. [25]
 
-### 3.2.8 Double Spending Problem
+#### 3.2.8 Double Spending Problem
 
-Der Begriff des Double Spending Problems wurde bereits in dem gleichnamigen Kapitel eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentrale Instanz. Essentiell dafür ist die stetige Aktualisierung der Blockchain. Alle Teilnehmer erhalten beständig die neue Version über das Netzwerk. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den Zeitstempel wird auch deutlich welche die ursprüngliche Transaktion war und alle nachfolgenden Versuche das digitale Geldstück erneut zu transferieren scheitern. [38, 39]
+Der Begriff des Double Spending Problems wurde bereits im gleichnamigen Kapitel bei den Grundlagen eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentralen Instanz. Essentiell dafür ist die __stetige Aktualisierung__ der Blockchain. Alle Teilnehmer erhalten über das Netzwerk beständig die neue Version. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den __Zeitstempel__ wird auch deutlich, welche die ursprüngliche Transaktion war, und alle nachfolgenden Versuche, das digitale Geldstück erneut zu transferieren, scheitern. [14, 38]
 
 ***
 
@@ -187,7 +187,7 @@ Quellenangabe:
 [37] - A. Czernik, 2015
 [38] - Team InnerQuest Online, 2018
 [39] - N. Reiff, 2018
-[40] - Elektronik-Kompendium, o.A.
+
 ```
 
 ***

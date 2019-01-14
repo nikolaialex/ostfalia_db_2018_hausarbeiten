@@ -26,6 +26,34 @@
 
 [602] Brownlee, Jason: A Tour of Machine Learning Algorithms, 2013. URL: [https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) (letzer Abruf 2018-01-12 14:07).
 
+[701] StackExchange: Distinction between AI, ML, Neural Networks, Deep learning and Data mining, 2018. URL: [https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining](https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining) (letzer Abruf 2018-01-11 15:37).
+
+[702] DataFlair Team: Data Science vs Artificial Intelligence vs Machine Learning vs Deep Learning, 2018. URL: [https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/](https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/) (letzer Abruf 2018-01-11 15:48).
+
+[801] LogicBlox: LogicBlox Platform Technology, 2019. URL: [https://developer.logicblox.com/technology/](https://developer.logicblox.com/technology/) (letzer Abruf 2018-01-14).
+
+[802] LogicBlox: MACHINE LEARNING METHODS IN LOGICBLOX, 2014. URL: [https://developer.logicblox.com/wp-content/uploads/2014/02/mlpack_doc.pdf](https://developer.logicblox.com/wp-content/uploads/2014/02/mlpack_doc.pdf) (letzer Abruf 2018-01-14).
+
+[803] Aref, Molham und ten Cate, Balder und Green, Todd J. und Kimelfeld, Benny und Olteanu, Dan und Pasalic, Emir und Veldhuizen, Todd L. und Washburn, Geoffrey: Design and Implementation of the LogicBlox System. URL: [http://www.cs.ox.ac.uk/dan.olteanu/papers/logicblox-sigmod15.pdf](http://www.cs.ox.ac.uk/dan.olteanu/papers/logicblox-sigmod15.pdf) (letzer Abruf 2018-01-14).
+
+[804] RICE: SimSQL Overview. URL: [http://cmj4.web.rice.edu/SimSQL/SimSQL.html](http://cmj4.web.rice.edu/SimSQL/SimSQL.html) (letzer Abruf 2018-01-14).
+
+[805] Cai, Zhuhua und Vagena, Zografoula und Perez, Luis und Arumugam, Subramanian und Haas, Peter J. und Jermaine, Christopher: Simulation of Database-Valued Markov Chains Using SimSQL, 2013. URL: [https://developer.logicblox.com/wp-content/uploads/2013/10/sigmod13-foula.pdf](https://developer.logicblox.com/wp-content/uploads/2013/10/sigmod13-foula.pdf) (letzer Abruf 2018-01-14).
+
+[806] Orenstein, Gary: MemSQL 6 Product Pillars and Machine Learning Approach, 2017. URL: [https://www.memsql.com/blog/memsql-6-product-pillars-and-machine-learning-approach/](https://www.memsql.com/blog/memsql-6-product-pillars-and-machine-learning-approach/) (letzer Abruf 2018-01-14).
+
+[807] SAP: SAP HANA. URL: [https://www.sap.com/germany/products/hana.html](https://www.sap.com/germany/products/hana.html) (letzer Abruf 2018-01-14).
+
+[808] Jeppesen, David: Machine Learning in the SAP HANA Platform, 2018. URL: [https://www.prowesscorp.com/machine-learning-on-sap-hana/](https://www.prowesscorp.com/machine-learning-on-sap-hana/) (letzter Abruf: 2019-01-14).
+
+[809] RapidMiner Studio: Feature List. URL: [https://rapidminer.com/products/studio/feature-list](https://rapidminer.com/products/studio/feature-list) (letzer Abruf 2018-01-14).
+
+[810] RapidMiner Studio: How To. [https://docs.rapidminer.com/latest/studio/how-to/](https://docs.rapidminer.com/latest/studio/how-to/) (letzer Abruf 2018-01-14).
+
+[811] scikit-learn: Home. [https://scikit-learn.org](https://scikit-learn.org) (letzer Abruf 2018-01-14).
+
+[812] MADLib: MADLib. [http://madlib.apache.org](http://madlib.apache.org) (letzer Abruf 2018-01-14).
+
 [901] Jurney, Russell: Agile Data Science 2.0 - Building Full-Stack Data Analytics
 Applications with Spark, 2017. 1. Auflage. ISBN: 978-1-491-96011-0. URL: [http://file.allitebooks.com/20170925/Agile%20Data%20Science%202.0.pdf](http://file.allitebooks.com/20170925/Agile%20Data%20Science%202.0.pdf) (letzter Abruf: 2019-01-14).
 
@@ -93,4 +121,4 @@ Struktur von Datensätzen innerhalb von MLDB. URL: [https://docs.mldb.ai/doc/bui
 
 ---
 
-[< Fazit](15_conclusion.md) | [Abstract >](README.md)
+[< Fazit](15_conclusion.md) | [Autoren >](README.md)

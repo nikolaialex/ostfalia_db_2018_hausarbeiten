@@ -26,11 +26,9 @@
 
 [602] Brownlee, Jason: A Tour of Machine Learning Algorithms, 2013. URL: [https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) (letzer Abruf 2018-01-12 14:07).
 
-[701] Frauenhofer Gesellschaft: Maschinelles Lernen - Kompetenzen, Anwendungen und Forschungsbedarf, 2018. URL: https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf (letzter Abruf: 2019-01-13 14:08 Uhr)
+[701] StackExchange: Distinction between AI, ML, Neural Networks, Deep learning and Data mining, 2018. [https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining](https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining) (letzer Abruf 2018-01-11 15:37).
 
-[702] Stackexchange, 2018, https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining (letzer Abruf 2018-01-11 15:37)
-
-[703] DataFlair Team, 2018 https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/ (letzer Abruf 2018-01-11 15:48)
+[702] DataFlair Team: Data Science vs Artificial Intelligence vs Machine Learning vs Deep Learning, 2018. [https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/](https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/) (letzer Abruf 2018-01-11 15:48).
 
 [901] Jurney, Russell: Agile Data Science 2.0 - Building Full-Stack Data Analytics
 Applications with Spark, 2017. 1. Auflage. ISBN: 978-1-491-96011-0. URL: [http://file.allitebooks.com/20170925/Agile%20Data%20Science%202.0.pdf](http://file.allitebooks.com/20170925/Agile%20Data%20Science%202.0.pdf) (letzter Abruf: 2019-01-14).

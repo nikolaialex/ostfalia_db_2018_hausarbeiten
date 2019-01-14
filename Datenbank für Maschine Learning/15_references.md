@@ -93,4 +93,4 @@ Struktur von Datensätzen innerhalb von MLDB. URL: [https://docs.mldb.ai/doc/bui
 
 ---
 
-[< Fazit](15_conclusion.md) | [Abstract >](README.md)
+[< Fazit](15_conclusion.md) | [Autoren >](README.md)

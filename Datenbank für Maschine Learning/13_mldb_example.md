@@ -155,10 +155,9 @@ mldb.put("/v1/procedures/iris_train_classifier", {
 })
 ```
 
-Nachdem das Modell erfolgreich erstellt wurde, kann mittels der Prozedurart `classifier.test` getestet werden, wie präzise das Klassifizierungsmodell klassifiziert. Hierfür wird die Funktion bzw. das Modell (siehe Zeile 7-9) auf die andere Hälfte (siehe Zeile 12) der Daten des Iris-Datensatzes angewendet. Die Prozedur erzeugt eine Konfusionsmatrix, die nähere Informationen über die Performance des Modells wiedergibt. Jede Zeile der Konfusionsmatrix repräsentiert die Instanzen in einer vorhergesagten Klasse, während jede Spalte die Instanzen in einer tatsächlichen Klasse darstellt (oder umgekehrt). Da die Konfusionsmatrix im JSON-Format vorliegt, wird die Darstellung in eine visuelle Tabelle umgewandelt (siehe Zeile 17). Laut der Konfusionsmatrix wurden vier Iris-Daten der Klasse `Iris-virginica` vom Modell als `Iris-versicolor` klassifiziert. Das entspricht eine Genauigkeit von ca. 95% bei insgesamt 75 getesteten Daten
+Nachdem das Modell erfolgreich erstellt wurde, kann mittels der Prozedurart `classifier.test` getestet werden, wie präzise das Klassifizierungsmodell klassifiziert. Hierfür wird die Funktion bzw. das Modell (siehe Zeile 7-9) auf die andere Hälfte (siehe Zeile 12) der Daten des Iris-Datensatzes angewendet. Die Prozedur erzeugt eine Konfusionsmatrix, die nähere Informationen über die Performance des Modells wiedergibt. Jede Zeile der Konfusionsmatrix repräsentiert die Instanzen in einer vorhergesagten Klasse, während jede Spalte die Instanzen in einer tatsächlichen Klasse darstellt (oder umgekehrt). Da die Konfusionsmatrix im JSON-Format vorliegt, wird die Darstellung in eine visuelle Tabelle umgewandelt (siehe Zeile 17). Laut der Konfusionsmatrix wurden vier Iris-Daten der Klasse `Iris-virginica` vom Modell als `Iris-versicolor` klassifiziert. Das entspricht eine Genauigkeit von ca. 95% bei insgesamt 75 getesteten Daten.
 
 ```python
-import pandas as pd
 response = mldb.put("/v1/procedures/iris_test_classifier", {
     "type" : "classifier.test",
     "params" : {
@@ -169,6 +168,7 @@ response = mldb.put("/v1/procedures/iris_test_classifier", {
         "runOnCreation": True
     }
 })
+import pandas as pd
 pd.DataFrame(response.json()["status"]["firstRun"]["status"]).pivot_table(index="actual", columns="predicted", fill_value=0)
 ```
 
@@ -176,11 +176,26 @@ pd.DataFrame(response.json()["status"]["firstRun"]["status"]).pivot_table(index=
 
 ### Funktionen
 
-TODO
+Wie schon zuvor im Abschnitt ["MLDB Merkmale"](12_mldb_features.md) beschrieben, bietet MLDB die Möglichkeit an ML-Funktionen zu definieren und über SQL-Abfragen bzw. über die REST-API auf Datensätze anzuwenden. Wie dies konkret funktioniert, wird im folgenden Beispiel anhand der soeben erstellten `iris_classify`-Funktion näher erläutert.
 
 #### Funktionsaufruf via Schnittstellen (REST, QL)
 
-TODO
+Die `iris_classify`-Funktion wird über einen REST-API-Endpunkt aufgerufen, um eine noch nie zuvor gesehene Menge von Iris-Messungen zu klassifizieren. Wie man in der unteren Tabelle nachlesen kann, handelt es sich bei den Messungen laut der Klassifizierungsfunktion um eine `Iris-versicolor`.
+
+```python
+response = mldb.get('/v1/functions/iris_classify/application', input={
+    "features":{
+        "petal length": 4.1,
+        "petal width": 3.2,
+        "sepal length": 2.3,
+        "sepal width": 1.4
+    }
+})
+import pandas as pd
+pd.DataFrame(response.json()["output"]["scores"], [0, 1, 2], ["class", "scores"])
+```
+
+![Ergebnis der Klassifizierungsfunktion](./statics/11_mldb/examples/function_classifier.png)
 
 #### Batchbetrieb
 
@@ -188,8 +203,7 @@ TODO
 
 ### Export (REST, QL)
 
-MLDB ermöglicht den Export eines Ergebnisses einer SQL-Abfrage. Als resultierendes Exportformat wird nur CSV angeboten. Der Export wird mittels der Prozedurart `export.csv` zur Verfügung gestellt<sup>[11](#11)</sup>. Das folgende Beispiel beschreibt, wie der Export der im Abschnitt "[Import](#import)" importierten Iris-Daten durchgeführt werden kann. Hierfür werden alle Daten, die die Klasse "Iris-setosa" aufweisen durch eine SQL-Abfrage ausgewählt (siehe Zeile 5) und als CSV-Datei exportiert (siehe Zeile 7). 
-
+MLDB ermöglicht den Export eines Ergebnisses einer SQL-Abfrage. Als resultierendes Exportformat wird nur CSV angeboten. Der Export wird mittels der Prozedurart `export.csv` zur Verfügung gestellt<sup>[11](#11)</sup>. Das folgende Beispiel beschreibt, wie der Export der im Abschnitt "[Import](#import)" importierten Iris-Daten durchgeführt werden kann. Hierfür werden alle Daten, die die Klasse "Iris-setosa" aufweisen durch eine SQL-Abfrage ausgewählt (siehe Zeile 5) und als CSV-Datei exportiert (siehe Zeile 7).
 
 ```python
 mldb.put("/v1/procedures/export_iris_classifier_result", {
@@ -206,7 +220,7 @@ mldb.put("/v1/procedures/export_iris_classifier_result", {
 
 Abschließend kann die exportierte CSV-Datei auf Dateiebene näher inspiziert werden:
 
-```
+```csv
 sepal length,sepal width,petal length,petal width,class
 4.9,3.1,1.5,0.1,Iris-setosa
 5.1,3.7,1.5,0.4,Iris-setosa
@@ -215,7 +229,7 @@ sepal length,sepal width,petal length,petal width,class
 ...
 ```
 
-------
+---
 
 <a name="11"><sup>11</sup></a> _Building and running the MLDB Community Edition Docker image_ (2019). URL: [https://github.com/mldbai/mldb/blob/master/Building.md](https://github.com/mldbai/mldb/blob/master/Building.md) (besucht am 11.01.2019).
 
@@ -253,6 +267,6 @@ sepal length,sepal width,petal length,petal width,class
 
 <a name="11"><sup>11</sup></a> _CSV Export Procedure_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html) (besucht am 12.01.2019).
 
-------
+---
 
 [< MLDB Merkmale](12_mldb_features.md) | [Conclusion >](14_conclusion.md)

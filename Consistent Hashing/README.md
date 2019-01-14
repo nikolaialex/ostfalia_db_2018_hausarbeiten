@@ -9,8 +9,8 @@
 ## Inhaltsverzeichnis  
 
 1. [Inhaltsverzeichnis](README.md)  
-2. [Geschichte](Geschichte.md)  
-3. [Das Verfahren von Hashing](DasVerfahren.md)  
-4. [Anwendungsfelder](Anwendungsfelder.md)  
-5. [Consistent Hashing](ConsistentHashing.md)  
-6. [Quellen](Quellen.md)  
+2. [Geschichte](02_Geschichte.md)  
+3. [Das Verfahren von Hashing](03_DasVerfahren.md)  
+4. [Anwendungsfelder](04_Anwendungsfelder.md)  
+5. [Consistent Hashing](05_ConsistentHashing.md)  
+6. [Quellen](06_Quellen.md)  

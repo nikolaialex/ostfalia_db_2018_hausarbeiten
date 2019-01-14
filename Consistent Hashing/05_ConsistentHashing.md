@@ -114,7 +114,7 @@ Das Verfahren Consistent Hashing wird von verschiedenen Datenbanken eingesetzt, 
 Wie zu sehen, setzen die Schüssel-Wert Datenbanken Voldemort, Redis und Membase nur konsistentes Hashing ein. Genauso wie die dokumentenorientierten Datenbanken CouchDB und Riak. MongoDB nutzt eine intervallbasierte Partitionierung. Die spaltenorientierten Datenbanken Hbase und Hypertable setzten intervallbasierte Partitionierung ein. Cassandra dagegen nutzt das konsistente Hashing. Graphenbasierte Datenbanken sind aufgrund ihrer Struktur schwierig zu partitionieren. Dennoch setzten die Datenbanken BigData und FlockDB das Verfahren des konsistentes Hashing ein. Neo4J, GraphDB und Sesame unterstützen keine Partitionierung. Hier erfolgt die Verteilung der Datenbanken durch Replikation.  Replikation und Konsistenz
   
 ____
-[Zurück](Anwendungsfelder.md) | [Weiter](Quellen.md)  
+[Zurück](04_Anwendungsfelder.md) | [Weiter](06_Quellen.md)  
 
 ____
 <sup>1</sup>Vergleich und Evaluation zwischen modernen und traditionellen Datenbankkonzepten unter den Gesichtspunkten Skalierung, Abfragemöglichkeit und Konsistenz, Nils Petersohn, Diplomica Verlag 2011  

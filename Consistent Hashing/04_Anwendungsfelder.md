@@ -16,4 +16,4 @@ Darum wird der Hashwert nicht als Index benutzt, sondern wird zur Index Berechnu
 > Das Hashverfahren ist ein Algorithmus zum Suchen von Datenobjekten in großen Datenmengen. Es basiert auf der Idee, dass eine mathematische Funktion die Position eines Objektes in einer Tabelle berechnet. Dadurch erübrigt sich das Durchsuchen vieler Datenobjekte, bis das Zielobjekt gefunden wurde.  
 
 ____
-[Zurück](DasVerfahren.md) | [Weiter](ConsistentHashing.md)  
+[Zurück](03_DasVerfahren.md) | [Weiter](05_ConsistentHashing.md)  

@@ -28,7 +28,7 @@ Wie in unserem Beispiel zu sehen, ergeben die Passwörter “Catwoman” und “
 * Schnelligkeit:  
 Die Berechnung des Hashwerts soll so schnell wie möglich erfolgen.  
 ____  
-[Zurück](Geschichte.md) | [Weiter](Anwendungsfelder.md)  
+[Zurück](02_Geschichte.md) | [Weiter](04_Anwendungsfelder.md)  
 
 ____
 `<sup>1</sup>https://de.wikipedia.org/wiki/Hashfunktion`

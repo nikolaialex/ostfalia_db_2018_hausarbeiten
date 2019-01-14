@@ -121,7 +121,7 @@ Das GitHub-Projekt [benchm-ml](https://github.com/szilard/benchm-ml) vom Nutzer 
 
 #### Aufruf via Schnittstellen
 
-Wie im vorigen Abschnitt beschrieben werden ML-Algorithmen in Form von Prozeduren angewendet und folglich ist der Aufruf via Schnittstellen gegeben.
+Wie im vorigen Abschnitt beschrieben werden ML-Algorithmen in Form von Prozeduren angewendet und folglich ist der Aufruf via Schnittstellen gegeben. Eine automatische Ausführung bzw. Definition von Prozeduren nach einer anderen Aktion ist nicht implementiert. Der Anwender könnte hierfür ein Skript schreiben, das nach einer bestimmten Aktion eine definierte Prozedur erzeugt und ausführt.
 
 #### Prozeduren
 
@@ -129,19 +129,40 @@ Im Abschnitt ["MLDB Merkmale"](#12_mldb_features.md) beschrieben, können in MLD
 
 #### Auto-Verallgemeinerung
 
-TODO
+In MLDB ist eine automatische Verallgemeinerung nachdem Importieren eines Datensatzes nicht möglich.
 
 #### Auto-Zusammenfassung
 
-TODO
+In MLDB ist eine automatische Zusammenfassung nicht möglich. Damit die Zusammenfassung eines Datensatzes ausgespielt werden kann, müssen auf externe Bibliotheken zugegriffen werden. Das folgende Beispiel zeigt wie eine Zusammenfassung des importierten Iris-Datensatzes mithilfe der Bibliothek `seaborn` erzeugt werden kann.
+
+```python
+%matplotlib inline
+import seaborn as sns
+sns.pairplot(mldb.query("select * from iris"), hue = "class", size = 2.5)
+```
+
+![Zusammenfassung des Iris-Datensatzes](./statics/10_mldb/examples/plot.png)
 
 #### Auto-Charakterisierung
 
-TODO
+In MLDB ist eine automatische Charakterisierung nachdem Importieren eines Datensatzes nicht möglich. Nichtsdestotrotz kann eine Prozedur des Types `kmeans.train` verwendet werden, um ein k-Means-Cluster zu trainieren. Der Anwender wäre in der Lage ein Python-Skript zu definieren, das nach einem Import das Clustering automatisch ausgeführt wird. Die Prozedur speichert das Ergebnismodell in einem Ausgabedatensatz und speichert die Clusterbezeichnungen für den Eingabedatensatz in einem separaten Ausgabedatensatz.[1312] Das folgende Beispiel zeigt wie ein unüberwachtes (_eng. unsupervised_) k-Means-Modell mithilfe des importierten Iris-Datensatzes trainiert und verwendet werden kann, um jede Zeile in der Eingabe einem Cluster im Ausgabedatensatz zuzuweisen. Wichtig ist, dass der Iris-Datensatz ohne den Klassen geladen wird, da die Klassen theoretisch mit dem Clustering ermittelt werden sollen.
+
+```python
+mldb.put("/v1/procedures/iris_train_kmeans", {
+    "type" : "kmeans.train",
+    "params" : {
+        "trainingData" : "select * EXCLUDING(class) from iris",
+        "outputDataset" : "iris_clusters",
+        "numClusters" : 3,
+        "metric": "euclidean",
+        "runOnCreation": True
+    }
+})
+```
 
 ### Modell
 
-Wie im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, werden Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatzschon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen "`iris_train_classifier`" erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:[1312]
+Wie im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, werden Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatzschon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen "`iris_train_classifier`" erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:[1313]
 
 1. `features`: Ein Zeilenausdruck zum Identifizieren der Merkmale, mit denen trainiert werden soll.
 2. `label`: Ein Ausdruck zum Identifizieren der Beschriftungen der Zeile. Der Typ muss mit dem des Klassifizierermodus übereinstimmen.
@@ -194,7 +215,7 @@ Wie schon zuvor im Abschnitt ["MLDB Merkmale"](12_mldb_features.md) beschrieben,
 Die `iris_classify`-Funktion wird über einen REST-API-Endpunkt aufgerufen, um eine noch nie zuvor gesehene Menge von Iris-Messungen zu klassifizieren. Wie man in der unteren Tabelle nachlesen kann, handelt es sich bei den Messungen laut der Klassifizierungsfunktion um eine `Iris-versicolor`.
 
 ```python
-response = mldb.get('/v1/functions/iris_classify/application', input={
+response = mldb.get("/v1/functions/iris_classify/application", input={
     "features":{
         "petal length": 4.1,
         "petal width": 3.2,
@@ -214,7 +235,7 @@ Wie schon im Abschnitt ["MLDB Merkmale"](12_mldb_features.md) beschrieben, werde
 
 ### Export
 
-MLDB ermöglicht den Export eines Ergebnisses einer SQL-Abfrage. Als resultierendes Exportformat wird nur CSV angeboten. Der Export wird mittels der Prozedurart `export.csv` zur Verfügung gestellt[1313]. Das folgende Beispiel beschreibt, wie der Export der im Abschnitt "[Import](#import)" importierten Iris-Daten durchgeführt werden kann. Hierfür werden alle Daten, die die Klasse "Iris-setosa" aufweisen durch eine SQL-Abfrage ausgewählt (siehe Zeile 5) und als CSV-Datei exportiert (siehe Zeile 7).
+MLDB ermöglicht den Export eines Ergebnisses einer SQL-Abfrage. Als resultierendes Exportformat wird nur CSV angeboten. Der Export wird mittels der Prozedurart `export.csv` zur Verfügung gestellt[1314]. Das folgende Beispiel beschreibt, wie der Export der im Abschnitt "[Import](#import)" importierten Iris-Daten durchgeführt werden kann. Hierfür werden alle Daten, die die Klasse "Iris-setosa" aufweisen durch eine SQL-Abfrage ausgewählt (siehe Zeile 5) und als CSV-Datei exportiert (siehe Zeile 7).
 
 ```python
 mldb.put("/v1/procedures/export_iris_classifier_result", {
@@ -266,11 +287,11 @@ sepal length,sepal width,petal length,petal width,class
 
 [1311] Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification
 
-...
+[1312] K-Means Training Procedure
 
-[1312] Classifier Training Procedure
+[1313] Classifier Training Procedure
 
-[1313] CSV Export Procedure
+[1314] CSV Export Procedure
 
 ---
 

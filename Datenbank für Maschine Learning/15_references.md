@@ -65,9 +65,11 @@ Applications with Spark, 2017. 1. Auflage. ISBN: 978-1-491-96011-0. URL: [http:/
 
 [1311] Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification, 2018. URL: [https://github.com/szilard/benchm-ml](https://github.com/szilard/benchm-ml) (letzter Abruf: 2019-01-14).
 
-[1312] Classifier Training Procedure, 2017. URL:[https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html](https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html) (letzter Abruf: 2019-01-12).
+[1312] K-Means Training Procedure, 2017. URL: [https://docs.mldb.ai/doc/#builtin/procedures/KmeansProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/KmeansProcedure.md.html) (letzter Abruf: 2019-01-14).
 
-[1313] CSV Export Procedure, 2017. URL:[https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html) (letzter Abruf: 2019-01-12).
+[1312] Classifier Training Procedure, 2017. URL: [https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html](https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html) (letzter Abruf: 2019-01-12).
+
+[1313] CSV Export Procedure, 2017. URL: [https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html) (letzter Abruf: 2019-01-12).
 
 [1401] Scaling MLDB, 2017. URL: [https://docs.mldb.ai/doc/#builtin/Scaling.md.html](https://docs.mldb.ai/doc/#builtin/Scaling.md.html) (letzter Abruf: 2019-01-14).
 

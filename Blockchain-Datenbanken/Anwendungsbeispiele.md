@@ -2,7 +2,7 @@
 [<<< Inhaltsverzeichnis](README.md)
 ***
 
-## 4 Anwendungsbeispiele
+## 4 Anwendungsbeispiele   
 
 
 Die Blockchain-Technologie selbst ist ausgereift, aber die Nutzungsmöglichkeiten sind längst nicht voll erschlossen. Praktischen Anwendungen sind dadurch theoretisch keine Grenzen gesetzt. Somit hat sich die Anzahl potentieller Anwendungsfälle der Blockchain-Datenbank in den vergangenen Jahren explosionsartig vermehrt. Dennoch sind die meisten Ideen bislang theoretische Konzepte geblieben. Nur wenige der entwickelten Ideen werden tatsächlich aktiv umgesetzt, einige mehr werden zumindest testweise betrieben. Im folgenden Kapitel wird sowohl auf umgesetzte Konzepte, als auch auf das theoretische Potential eingegangen. Aus der Vielzahl der vorhandenen Konzepte und Ideen werden hier einige wenige zusammengetragen.

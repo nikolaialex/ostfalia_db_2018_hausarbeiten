@@ -21,25 +21,25 @@ Die wichtigste Voraussetzung nach [902] für ML in einer Datenbank ist die Erwei
 #### Anforderungen ML-DB
 
 1. Import
-   1. Aufruf via Schnittstellen (REST, QL)
-   1. Dataset (CSV, Erstellung, Vorlagen)
-   1. Klassische Bearbeitung (Filter, Rules)
-1. ML Algorithmus anwenden
+   1. Aufruf via Schnittstellen
+   2. Dataset
+   3. Klassische Bearbeitung
+2. ML Algorithmus anwenden
    1. Performance
-   1. Aufruf via Schnittstellen (REST, QL)
-   1. Prozeduren
-   1. Auto-Verallgemeinerung
-   1. Auto-Zusammenfassung
-   1. Auto-Charakterisierung
-1. Modell (Ändern, Sichern)
-1. Funktionen
-   1. Aufruf via Schnittstellen (REST, QL)
-   1. Batchbetrieb
-1. Export (REST, QL)
+   2. Aufruf via Schnittstellen
+   3. Prozeduren
+   4. Auto-Verallgemeinerung
+   5. Auto-Zusammenfassung
+   6. Auto-Charakterisierung
+3. Modell
+4. Funktionen
+   1. Aufruf via Schnittstellen
+   2. Batchbetrieb
+5. Export
 
-[901] : Russell Jurney, 2017 - Agile Data Science 2.0
+[901] Jurney, Russell: Agile Data Science 2.0
 
-[902] : https://www.memsql.com/blog/matching-modern-databases-with-ml-and-ai/
+[902] Orenstein, Gary: Matching Modern Databases with ML and AI
 
 ---
 

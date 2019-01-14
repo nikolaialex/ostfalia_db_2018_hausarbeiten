@@ -9,7 +9,7 @@
 
 [501] beschreibt im Artikel "Types of Machine Learning Algorithms You Should Know" eine zusammenfassende Übersicht der verschiedenen ML-Typen. In Summe ergibt sich im Folgenden der gemeinschaftliche Überblick aus den Stimmen [501], [502] und [503] zum Thema ML im aktuellen Fokus.
 
-<!-- [![ML Types](statics/MLTypes2017.png)][601] -->
+[![Übersicht verschiedener ML-Typen](./statics/MLTypes2017.png)](./statics/mltypes2017.png)
 
 #### Überwachtes Lernen (Supervised Learning)
 
@@ -48,11 +48,11 @@ _"Bei einer Klassifikation steht dagegen schon im Vorfeld fest, in welche Gruppe
 
 ---
 
-[501] Types of Machine Learning Algorithms You Should Know
+[501] Fumo, David: Types of Machine Learning Algorithms You Should Know
 
-[502] Maschinelles Lernen - Was es ist und was man darüber wissen sollte
+[502] Li, Hui: Maschinelles Lernen
 
-[503] Maschinelles Lernen - Kompetenzen, Anwendungen und Forschungsbedarf
+[503] Frauenhofer Gesellschaft: Maschinelles Lernen
 
 ---
 

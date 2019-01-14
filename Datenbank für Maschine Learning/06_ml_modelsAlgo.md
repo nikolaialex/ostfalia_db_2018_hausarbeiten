@@ -61,7 +61,7 @@ Der Algorithmus ist der Kern im Kontext ML, wenn es um die Gewinnung der Erkennt
 
 #### Agorithmentypen
 
-Die folgenden Algorithmen werden laut [603] in der Häufigkeit ihrer Verwendung genannt:
+Die folgenden Algorithmen werden laut [503] in der Häufigkeit ihrer Verwendung genannt:
 
 - Logistische Regression
 - Rekurrente Neuronale Netze (RNN)
@@ -74,8 +74,6 @@ Die folgenden Algorithmen werden laut [603] in der Häufigkeit ihrer Verwendung 
 - Random Forests
 - Entscheidungsbäume
 - Sonstige
-
-<!-- [![ML Algos](statics/ml-algos.png)][610] -->
 
 ### Lerntypen und Algorithmen
 
@@ -104,11 +102,11 @@ Die folgenden Algorithmen werden laut [603] in der Häufigkeit ihrer Verwendung 
 
 ---
 
-[601] Thamilalagan, Vishakha, 2017, Blog https://www.quora.com/What-are-different-models-in-machine-learning (letzer Abruf 2018-01-12 14:05)
+[601] Thamilalagan, Vishakha: What are different models in machine learning?
 
-[602] Brownlee, Jason, 2013, Blog https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/ (letzer Abruf 2018-01-12 14:07)
+[602] Brownlee, Jason: A Tour of Machine Learning Algorithms
 
-[603] Maschinelles Lernen - Kompetenzen, Anwendungen und Forschungsbedarf
+[503] Frauenhofer Gesellschaft: Maschinelles Lernen
 
 ---
 

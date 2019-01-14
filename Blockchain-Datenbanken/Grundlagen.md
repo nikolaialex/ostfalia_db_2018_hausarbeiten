@@ -60,18 +60,18 @@ Eine relationale Datenbank im World Wide Web nutzt meistens eine Client-Server N
 
 Quellenangabe:
 
-[01] - Borgersberger et al., 2018, S.9
-[02] - Drescher, 2018, S.34
-[03] - Baylev et al., 2018, S. 4 f.
-[04] - Unbekannt, 2016, S.2
-[05] - Specht, 2018, S.219
-[06] - Hosp, 2018, S. 43 f.
-[07] - Cupic und Rauscher, 2017, S.3 f.
-[08] - Streichert, o. J.
-[09] - Bauerle, o. J.
-[10] - Ploom, 2016, S.160
-[11] - ebd. S.161
-[12] - Dixon, S.223
+[01] - Borgersberger et al., 2018
+[02] - Drescher, 2018
+[03] - Baylev et al., 2018
+[04] - Unbekannt, 2016
+[05] - Specht, 2018
+[06] - Hosp, 2018
+[07] - Cupic und Rauscher, 2017
+[08] - Streichert, o.A.
+[09] - Bauerle, o.A.
+[10] - Ploom, 2016
+[11] - ebd., o.A. 
+[12] - Dixon, o.A. 
 
 Medienverweise:
 

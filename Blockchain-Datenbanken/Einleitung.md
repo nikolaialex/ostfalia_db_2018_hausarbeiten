@@ -27,7 +27,7 @@ Quellenangabe:
 
 [01] - Andreas Meier, 2018
 [02] - Debajani Mohanty, 2018
-[03] - Christian Wenzel,  et al., 2017
+[03] - Christian Wenzel, Klaus-Peter Eckert, Fabian Kirstein, 2017
 [04] - PwC, 2016
 [05] - Bitkom, 2016
 

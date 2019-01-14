@@ -1,5 +1,3 @@
----
-
 ## Literaturverzeichnis
 
 [301] Witten et. al. (2016). Data Mining: Practical machine learning tools and techniques 4th
@@ -11,6 +9,10 @@
 [502] Li, Hui, SAS Blog https://www.sas.com/de_de/insights/analytics/machine-learning.html (letzter Abruf: 2019-01-13 14:05 Uhr)
 
 [503] Frauenhofer Gesellschaft, 2018, Bericht https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf (letzter Abruf: 2019-01-13 14:08 Uhr)
+
+[1101] MLDB is the Machine Learning Database, 2017, https://mldb.ai/ (letzter Abruf: 2019-01-14 05:47 Uhr)
+
+[1102] BIG 2016: The Machine Learning Database, 2016, https://www.youtube.com/watch?v=D2qWqBgsqIU (letzter Abruf: 2019-01-14 05:50 Uhr)
 
 <!-- ## Tabellen -->
 

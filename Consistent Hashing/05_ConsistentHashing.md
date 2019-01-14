@@ -101,7 +101,7 @@ Tabelle 1.7 zu Abb. 2 Server D wird hinzugefügt, Umverteilung der Schlüssel.
 
 ## Verwendung in Firmen  
 
-Das Verfahren Consistent Hashing wird von verschiedenen Datenbanken eingesetzt, wie zB. bei Schlüssel-Wert Datenbanken Voldemort, Redis und Membase. Bei den Spaltenorientierten Datenbanken Cassandra. Die dokumentenorientierten Datenbanken CouchDB und Riak. Auch bei den graphenbasierte Datenbanken, wie BigData und FlockDB wird konsistentes Hashing eingesetzt, obwohl graphenbasierte Datenbanken aufgrund ihrer Struktur schwierig zu partitionieren sind <sup>2</sup>. Und auch Amazons DynamoDB verwendet intern dieses Verfahren <sup>3</sup>, wodurch DynamoDB mehr als 10 Billionen Anfragen pro Tag bearbeiten und Spitzenwerte von mehr als 20 Millionen Anfragen pro Sekunde unterstützen kann. <sup>4</sup>.  
+Das Verfahren Consistent Hashing wird von verschiedenen Datenbanken eingesetzt, wie z.B. bei Schlüssel-Wert Datenbanken Voldemort, Redis und Membase. Bei den Spaltenorientierten Datenbanken Cassandra. Die dokumentenorientierten Datenbanken CouchDB und Riak. Auch bei den graphenbasierte Datenbanken, wie BigData und FlockDB wird konsistentes Hashing eingesetzt, obwohl graphenbasierte Datenbanken aufgrund ihrer Struktur schwierig zu partitionieren sind <sup>2</sup>. Und auch Amazons DynamoDB verwendet intern dieses Verfahren <sup>3</sup>, wodurch DynamoDB mehr als 10 Billionen Anfragen pro Tag bearbeiten und Spitzenwerte von mehr als 20 Millionen Anfragen pro Sekunde unterstützen kann. <sup>4</sup>.  
   
 ____
 [Zurück](04_Anwendungsfelder.md) | [Weiter](06_Quellen.md)  

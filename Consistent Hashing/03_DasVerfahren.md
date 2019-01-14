@@ -7,13 +7,13 @@ Mit dem folgenden Beispiel wollen wir es deutlicher beschreiben.
 ![Hashfunktion](images/hashfunktion.png "Abb. 1 Hashfunktion")  
 Abb. 1 Hashfunktion
 
-Auf dem Bild auf der linken Seite sind vier verschiedene Passwörter angegeben. Diese durchlaufen eine _Hashfunktion_, und werden in diesem Fall dadurch auf eine feste Länge von drei Zeichen von Zahlen reduziert, zB. "Superman" wird als "123" gespeichert. Bei zwei verschiedenen Passwörtern, können wir auch eine Kollision sehen. Dabei bedeutet es, dass nach der Hashfunktion, beide Passwörter die gleiche Zeichenfolge aufweisen.  
+Auf dem Bild auf der linken Seite sind vier verschiedene Passwörter angegeben. Diese durchlaufen eine _Hashfunktion_, und werden in diesem Fall dadurch auf eine feste Länge von drei Zeichen von Zahlen reduziert, z.B. "Superman" wird als "123" gespeichert. Bei zwei verschiedenen Passwörtern, können wir auch eine Kollision sehen. Dabei bedeutet es, dass nach der Hashfunktion, beide Passwörter die gleiche Zeichenfolge aufweisen.  
 
-Die Hashfunktion bzw. Hash-Algorithmus kann beliebig gewählt werden. Dabei wird die Eingabe beliebiger Länge, wie zB. ein Passwort in eine Ausgabe fester Länge, in unserem Beispiel auf drei Zeichen, reduziert. Dadurch entsteht eine einheitliche und kompakte Form.  
+Die Hashfunktion bzw. Hash-Algorithmus kann beliebig gewählt werden. Dabei wird die Eingabe beliebiger Länge, wie z.B. ein Passwort in eine Ausgabe fester Länge, in unserem Beispiel auf drei Zeichen, reduziert. Dadurch entsteht eine einheitliche und kompakte Form.  
 
 ## Hashwert  
 
-Das Ergebnis einer Hashfunktion bzw. Hash-Algorithmus ist der Hashwert. Dabei kann festgelegt werden, auf wieviele Zeichnen das Ergebnis reduziert wird. In den meisten Fällen wird die Eingabe als ein hexadezimal Wert kodiert. In den oberen Beispiel ist es zB “123”, ein anderer Hashwert einer anderen Hashfunktion könnte auch “2A35b823de” sein.  
+Das Ergebnis einer Hashfunktion bzw. Hash-Algorithmus ist der Hashwert. Dabei kann festgelegt werden, auf wieviele Zeichnen das Ergebnis reduziert wird. In den meisten Fällen wird die Eingabe als ein hexadezimal Wert kodiert. In den oberen Beispiel ist es z.B “123”, ein anderer Hashwert einer anderen Hashfunktion könnte auch “2A35b823de” sein.  
 
 ## Eigenschaften  
 

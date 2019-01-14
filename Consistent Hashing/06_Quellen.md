@@ -1,3 +1,4 @@
+# Quellen  
 * [https://www.toptal.com/big-data/consistent-hashing](https://www.toptal.com/big-data/consistent-hashing)  
 * [https://en.wikipedia.org/wiki/Consistent_hashing](https://en.wikipedia.org/wiki/Consistent_hashing)  
 * [https://de.wikipedia.org/wiki/Hashfunktion](https://de.wikipedia.org/wiki/Hashfunktion)  

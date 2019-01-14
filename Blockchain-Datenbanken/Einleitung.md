@@ -25,9 +25,9 @@ In der vorliegenden Arbeit wird daher auf die Blockchain-Technologie eingegangen
 
 Quellenangabe:
 
-[01] - Meier, 2018
-[02] - Mohanty, 2018
-[03] - Wenzel et al., 2017
+[01] - Andreas Meier, 2018
+[02] - Debajani Mohanty, 2018
+[03] - Christian Wenzel,  et al., 2017
 [04] - PwC, 2016
 [05] - Bitkom, 2016
 

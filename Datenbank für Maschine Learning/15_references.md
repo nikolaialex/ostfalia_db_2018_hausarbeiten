@@ -44,6 +44,10 @@
 
 [1311] Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification, 2018. URL: [https://github.com/szilard/benchm-ml](https://github.com/szilard/benchm-ml)
 
+[1312] Classifier Training Procedure, 2017. URL:[https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html](https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html) (letzter Abruf: 2019-01-12)
+
+[1313] CSV Export Procedure, 2017. URL:[https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html)(letzter Abruf: 2019-01-12)
+
 <!-- ## Tabellen -->
 
 ## Bildnachweis

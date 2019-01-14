@@ -141,7 +141,7 @@ TODO
 
 ### Modell
 
-Wie im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, werden Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatzschon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen "`iris_train_classifier`" erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:<sup>[11](#11)</sup>
+Wie im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, werden Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatzschon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen "`iris_train_classifier`" erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:[1312]
 
 1. `features`: Ein Zeilenausdruck zum Identifizieren der Merkmale, mit denen trainiert werden soll.
 2. `label`: Ein Ausdruck zum Identifizieren der Beschriftungen der Zeile. Der Typ muss mit dem des Klassifizierermodus übereinstimmen.
@@ -214,7 +214,7 @@ Wie schon im Abschnitt ["MLDB Merkmale"](12_mldb_features.md) beschrieben, werde
 
 ### Export
 
-MLDB ermöglicht den Export eines Ergebnisses einer SQL-Abfrage. Als resultierendes Exportformat wird nur CSV angeboten. Der Export wird mittels der Prozedurart `export.csv` zur Verfügung gestellt<sup>[11](#11)</sup>. Das folgende Beispiel beschreibt, wie der Export der im Abschnitt "[Import](#import)" importierten Iris-Daten durchgeführt werden kann. Hierfür werden alle Daten, die die Klasse "Iris-setosa" aufweisen durch eine SQL-Abfrage ausgewählt (siehe Zeile 5) und als CSV-Datei exportiert (siehe Zeile 7).
+MLDB ermöglicht den Export eines Ergebnisses einer SQL-Abfrage. Als resultierendes Exportformat wird nur CSV angeboten. Der Export wird mittels der Prozedurart `export.csv` zur Verfügung gestellt[1313]. Das folgende Beispiel beschreibt, wie der Export der im Abschnitt "[Import](#import)" importierten Iris-Daten durchgeführt werden kann. Hierfür werden alle Daten, die die Klasse "Iris-setosa" aufweisen durch eine SQL-Abfrage ausgewählt (siehe Zeile 5) und als CSV-Datei exportiert (siehe Zeile 7).
 
 ```python
 mldb.put("/v1/procedures/export_iris_classifier_result", {
@@ -264,19 +264,13 @@ sepal length,sepal width,petal length,petal width,class
 
 [1310] Loading Data Tutorial
 
-[1312] Mutable Sparse Matrix Dataset
+[1311] Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification
 
 ...
 
-<a name="11"><sup>11</sup></a> _Classifier Training Procedure_ (2019). URL: [https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html](https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html) (besucht am 12.01.2019).
+[1312] Classifier Training Procedure
 
-...
-
-<a name="11"><sup>11</sup></a> _Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification_ (2019). URL: [https://github.com/szilard/benchm-ml](https://github.com/szilard/benchm-ml) (besucht am 12.01.2019).
-
-<a name="11"><sup>11</sup></a> _BIG 2016: The Machine Learning Database_ (2019). URL: [https://www.youtube.com/watch?v=D2qWqBgsqIU&t=1230](https://www.youtube.com/watch?v=D2qWqBgsqIU&t=1230) (besucht am 12.01.2019).
-
-<a name="11"><sup>11</sup></a> _CSV Export Procedure_ (2019). URL: [https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html) (besucht am 12.01.2019).
+[1313] CSV Export Procedure
 
 ---
 

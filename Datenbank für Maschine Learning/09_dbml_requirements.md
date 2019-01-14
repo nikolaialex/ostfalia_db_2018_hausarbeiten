@@ -24,7 +24,7 @@ Die wichtigste Voraussetzung nach [902] für ML in einer Datenbank ist die Erwei
    1. Aufruf via Schnittstellen
    2. Dataset
    3. Klassische Bearbeitung
-2. ML Algorithmus anwenden
+2. ML-Algorithmus anwenden
    1. Performance
    2. Aufruf via Schnittstellen
    3. Prozeduren

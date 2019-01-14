@@ -1,10 +1,10 @@
 ## Anwendung von MLDB
 
-Die lokale Installation und Ausführung von MLDB ist möglich. Nichtsdestotrotz muss hierbei beachtet werden, dass das Bauen mittels der Quelldateien je nach Performance der Maschine dauern kann. Laut eigener Angaben soll eine 32-Kern-Maschine mit 244 GB RAM etwa 5 Minuten für das Bauen brauchen[1301]. Da diese Hardware nicht gegeben ist, wird im Rahmen dieses Abschnittes auf die integrierte Juptyer Notebook-Schnittstelle zurückgegriffen. Das Jupyter Notebook ist eine Open-Source-Webanwendung, mit der Dokumente erstellt und freigeben werden können, die Live-Code, Gleichungen, Visualisierungen und narrativen Text enthalten[1302]. Nützliche Pakete wie Numpy, Pandas oder Matplotlib stehen von vornherein zur Verfügung. Außerdem ist die hauseigene `pymldb`-Bibliothek bereits vorinstalliert, wodurch das Arbeiten mit der REST-API vereinfacht wird.[1303]
+Die lokale Installation und Ausführung von MLDB ist möglich. Nichtsdestotrotz muss hierbei beachtet werden, dass das Bauen mittels der Quelldateien je nach Performance der Maschine dauern kann. Laut den Angaben der Macher von MLDB soll eine 32-Kern-Maschine mit 244 GB RAM etwa 5 Minuten für das Bauen brauchen[1301]. Da diese Hardware nicht gegeben ist, wird im Rahmen dieses Abschnittes auf die integrierte Juptyer Notebook-Schnittstelle zurückgegriffen. Das Jupyter Notebook ist eine Open-Source-Webanwendung, mit der Dokumente erstellt und freigeben werden können, die Live-Code, Gleichungen, Visualisierungen und narrativen Text enthalten[1302]. Nützliche Pakete wie Numpy, Pandas oder Matplotlib stehen von vornherein zur Verfügung. Außerdem ist die hauseigene `pymldb`-Bibliothek bereits vorinstalliert, wodurch das Arbeiten mit der REST-API vereinfacht wird.[1303]
 
 Im folgenden soll geprüft werden, ob MLDB den im Abschnitt ["Anforderungen an ein DBMS für ML"](09_dbml_requirements.md) beschriebenen Anforderungen an eine ML-Datenbank erfüllen. Hierfür werden alle Anforderungen sukzessiv mit Beispielen geprüft. Die Möglichkeit besteht, dass bestimmte Beispiele aufeinander aufbauen. Man wird darauf hingewiesen, dass die gezeigten Beispiele in Zukunft gegebenen falls nicht mehr aktuell sind.
 
-Wie zuvor beschrieben, erfolgen die Interaktionen mit MLDB über eine REST-API. Diese Interaktionen werden durch die `pymldb`-Bibliothek abstrahiert und stehen im  Jupyter Notebook zur Verfügung. Bevor HTTP-Anfragen gesendet werden können, muss zuvor eine Verbindung zur REST-API erzeugt werden. Dies geschieht mittels der Klasse Connection. Aus diesem Grund müssen sämtliche Beispiele mit diesen Anweisungen starten:
+Wie zuvor beschrieben, erfolgen die Interaktionen mit MLDB über eine REST-API. Diese Interaktionen werden durch die `pymldb`-Bibliothek abstrahiert und stehen im  Jupyter Notebook zur Verfügung. Bevor HTTP-Anfragen gesendet werden können, muss zuvor eine Verbindung zur REST-API erzeugt werden. Dies geschieht mittels der Klasse `Connection`. Aus diesem Grund müssen sämtliche Beispiele mit diesen Anweisungen starten:
 
 ```python
 from pymldb import Connection
@@ -25,7 +25,7 @@ MLDB verfügt über fünf Prozeduren, die das Importieren von Datensätzen ermö
 | `import.text`         | Mit dieser Prozedur werden Daten aus Textdateien importiert, wobei jede Zeile in der Datei einer Zeile im Datensatz entspricht. Geeignet für Dateien im CSV-Format.[1307] |
 | `import.word2vec`     | Diese Prozedur ermöglicht das Laden von Wörtern und Ausdrücken aus dem Word2Vec-Tool in die MLDB[1308].                                                                   |
 
-Im folgenen wird nun mithilfe der Prozedur `import.text` der [Iris-Datensatz](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data) aus dem [Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php) der UCI importiert. Der Datensatz steht im CSV-Format zur Verfügung und enthält drei Klassen mit jeweils 50 Instanzen, wobei sich jede Klasse auf einen Irispflanzen-Typ bezieht. Mithilfe von Parametern, die [hier](https://docs.mldb.ai/doc/#builtin/procedures/importtextprocedure.md.html) näher beschrieben werden, kann das Importieren spezifiziert werden. Erwähnenswert ist, dass intern eine `PUT`-Anfrage an den REST-Endpunkt `/v1/procedures/{procedureName}` gesendet wird. Folglich dient die Anfrage ursprünglich nur der Erzeugung der Prozedur. Damit der Datensatz im Anschluss importiert und über eine SQL-Abfrage ausgespielt werden kann, muss der Parameter `runOnCreation` auf `True` gesetzt werden. Dank des Parameters wird die Prozedur direkt nach der Erzeugung ausgeführt. Nach dem der Datensatz erfolgreich importiert wurde, ist die Anzeige der Daten über eine SQL-Abfrage möglich (siehe Zeile 10).
+Im folgenen wird nun mithilfe der Prozedur `import.text` der [Iris-Datensatz](https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data) aus dem [Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php) der UCI importiert. Der Datensatz steht im CSV-Format zur Verfügung und enthält drei Klassen mit jeweils 50 Instanzen, wobei sich jede Klasse auf einen Irispflanzen-Typ bezieht. Mithilfe von Parametern, die [hier](https://docs.mldb.ai/doc/#builtin/procedures/importtextprocedure.md.html) näher beschrieben werden, kann das Importieren spezifiziert werden. Erwähnenswert ist, dass intern eine `PUT`-Anfrage an den REST-Endpunkt `/v1/procedures/{procedureName}` gesendet wird (siehe Zeile 1). Folglich dient die Anfrage ursprünglich nur der Erzeugung der Prozedur. Damit der Datensatz im Anschluss importiert und über eine SQL-Abfrage ausgespielt werden kann, muss der Parameter `runOnCreation` auf `True` gesetzt werden (siehe Zeile 7). Dank des Parameters wird die Prozedur direkt nach der Erzeugung ausgeführt. Nachdem der Datensatz erfolgreich importiert wurde, ist die Anzeige der Daten über eine SQL-Abfrage möglich (siehe Zeile 10).
 
 ```python
 mldb.put("/v1/procedures/import_iris", {
@@ -99,7 +99,7 @@ mldb.query("SELECT * FROM example")
 Alle in der MLDB-Datenbank verfügbaren Datensätze können über SQL-Klauseln abgerufen und bearbeitet werden. Folgende SQL-Klauseln sind in MLDB implementiert:[1309]
 
 * **SELECT**: Gibt die Spalten im Ausgabedatensatz an.
-* **NAMED**: Gibt den Namen der im des Ausgabedatensatz an.
+* **NAMED**: Gibt den Namen der Zeilen im Ausgabedatensatz an.
 * **FROM**: Gibt die Datensätze an, aus denen ausgewählt werden soll.
 * **WHEN**: Gibt an, welche Werte basierend auf ihrem Zeitstempel in das Ausgabedatensatz eingefügt werden sollen.
 * **WHERE**: Gibt an, welche Zeilen in der Eingabe zum Ausgabedatensatz beitragen.
@@ -109,13 +109,13 @@ Alle in der MLDB-Datenbank verfügbaren Datensätze können über SQL-Klauseln a
 * **LIMIT**: Gibt die Anzahl der Ausgabezeilen an.
 * **OFFSET**: Gibt an, wie viele Ausgabezeilen übersprungen werden sollen.
 
-### ML Algorithmus anwenden
+### ML-Algorithmus anwenden
 
-In MLDB werden ML-Algorithmen in Form von Prozeduren angewendet. So kann bespielsweise im Rahmen der Prozedurart `classifier.train` definiert werden, welcher Algorithmus für das Training eines Klassifikators verwendet werden soll. Welche Arten von Algorithmen MLDB insgesamt anbietet kann [hier](https://docs.mldb.ai/doc/#builtin/ClassifierConf.md.html) nachgelesen werden. Im Abschnitt ["Modell"](#modell) wird aufgezeigt, wie ein Klassifizierugsmodell mithilfe eines Entscheidungsbaums trainiert werden kann.
+In MLDB werden ML-Algorithmen in Form von Prozeduren angewendet. So kann bespielsweise im Rahmen der Prozedurart `classifier.train` definiert werden, welcher Algorithmus für das Training eines Klassifikators (_eng. classifier_) verwendet werden soll. Welche Arten von Algorithmen MLDB insgesamt anbietet kann [hier](https://docs.mldb.ai/doc/#builtin/ClassifierConf.md.html) nachgelesen werden. Im Abschnitt ["Modell"](#modell) wird aufgezeigt, wie ein Klassifizierugsmodell mithilfe eines Entscheidungsbaums trainiert werden kann.
 
 #### Performance
 
-Das GitHub-Projekt [benchm-ml](https://github.com/szilard/benchm-ml) vom Nutzer [szilard](https://github.com/szilard) versucht einen minimalen Benchmark für Skalierbarkeit, Geschwindigkeit und Genauigkeit von häufig verwendeten Implementierungen einiger maschineller Lernalgorithmen darzustellen. Unter den getesteten Tools findet man auch MLDB wiede (siehe [hier](https://github.com/szilard/benchm-ml/blob/master/z-other-tools/9a-datacratic.py)). Im Rahmen des Benchmarks wird die benötigte Zeit und resultierende Genauigkeit der Tools bei der Ausführung eines Random Forests mit einem Datensatz von einer Million Zeilen auf einem Knoten vergleichen. Die Tests wurden auf einer Amazon EC2 c3.8xlarge-Instanz (32 Kerne, 60 GB RAM) durchgeführt[1311]. MLDB konnte im Rahmen des Tests eine Genauigkeit von ca. 74 Prozent in 18 Sekunden erreichen. Wie die folgende Abbildung zeigt, schneidet MLDB vergleichen zu anderen getesteten Tools besser ab.[1201]
+Das GitHub-Projekt [benchm-ml](https://github.com/szilard/benchm-ml) vom Nutzer [szilard](https://github.com/szilard) versucht einen minimalen Benchmark für Skalierbarkeit, Geschwindigkeit und Genauigkeit von häufig verwendeten Implementierungen einiger maschineller Lernalgorithmen darzustellen. Unter den getesteten Tools findet man auch MLDB wiede (siehe [hier](https://github.com/szilard/benchm-ml/blob/master/z-other-tools/9a-datacratic.py)). Im Rahmen des Benchmarks wird die benötigte Zeit und resultierende Genauigkeit der Tools bei der Ausführung eines Random Forests mit einem Datensatz von einer Million Zeilen auf einem Knoten vergleichen. Die Tests wurden auf einer Amazon EC2 c3.8xlarge-Instanz (32 Kerne, 60 GB RAM) durchgeführt[1311]. MLDB konnte im Rahmen des Tests eine Genauigkeit von ca. 74 Prozent in 18 Sekunden erreichen. Wie die folgende Abbildung zeigt, schneidet MLDB verglichen zu anderen getesteten Tools besser ab.[1201]
 
 ![Vergleich von unterschiedlichen ML-Tools bei einem Random Forests mit Datensatz von einer Million Zeilen](./statics/10_mldb/examples/performance.png)
 
@@ -125,15 +125,15 @@ Wie im vorigen Abschnitt beschrieben werden ML-Algorithmen in Form von Prozedure
 
 #### Prozeduren
 
-Im Abschnitt ["MLDB Merkmale"](#12_mldb_features.md) beschrieben, können in MLDB unterschiedliche Arten von Prozeduren definiert werden. Für ein konkretes Beispiel einer Prozeduranwendung kann entweder der Abschnitt ["Import"](#import) oder ["Modell"](#modell) genommen werden.
+Wie im Abschnitt ["MLDB Merkmale"](#12_mldb_features.md) beschrieben, können in MLDB unterschiedliche Arten von Prozeduren definiert werden. Für ein konkretes Beispiel einer Prozeduranwendung kann entweder der Abschnitt ["Import"](#import) oder ["Modell"](#modell) dienen.
 
 #### Auto-Verallgemeinerung
 
-In MLDB ist eine automatische Verallgemeinerung nachdem Importieren eines Datensatzes nicht möglich.
+In MLDB ist eine automatische Verallgemeinerung nach dem Importieren eines Datensatzes nicht möglich.
 
 #### Auto-Zusammenfassung
 
-In MLDB ist eine automatische Zusammenfassung nicht möglich. Damit die Zusammenfassung eines Datensatzes ausgespielt werden kann, müssen auf externe Bibliotheken zugegriffen werden. Das folgende Beispiel zeigt wie eine Zusammenfassung des importierten Iris-Datensatzes mithilfe der Bibliothek `seaborn` erzeugt werden kann.
+In MLDB ist eine automatische Zusammenfassung standardmäßig nicht möglich. Damit die Zusammenfassung eines Datensatzes ausgespielt werden kann, müssen auf externe Bibliotheken zugegriffen werden. Das folgende Beispiel zeigt wie eine Zusammenfassung des importierten Iris-Datensatzes mithilfe der Bibliothek `seaborn` erzeugt werden kann.
 
 ```python
 %matplotlib inline
@@ -145,7 +145,7 @@ sns.pairplot(mldb.query("select * from iris"), hue = "class", size = 2.5)
 
 #### Auto-Charakterisierung
 
-In MLDB ist eine automatische Charakterisierung nachdem Importieren eines Datensatzes nicht möglich. Nichtsdestotrotz kann eine Prozedur des Types `kmeans.train` verwendet werden, um ein k-Means-Cluster zu trainieren. Der Anwender wäre in der Lage ein Python-Skript zu definieren, das nach einem Import das Clustering automatisch ausgeführt wird. Die Prozedur speichert das Ergebnismodell in einem Ausgabedatensatz und speichert die Clusterbezeichnungen für den Eingabedatensatz in einem separaten Ausgabedatensatz.[1312] Das folgende Beispiel zeigt wie ein unüberwachtes (_eng. unsupervised_) k-Means-Modell mithilfe des importierten Iris-Datensatzes trainiert und verwendet werden kann, um jede Zeile in der Eingabe einem Cluster im Ausgabedatensatz zuzuweisen. Wichtig ist, dass der Iris-Datensatz ohne den Klassen geladen wird, da die Klassen theoretisch mit dem Clustering ermittelt werden sollen.
+In MLDB ist eine automatische Charakterisierung nach dem Importieren eines Datensatzes nicht möglich. Nichtsdestotrotz kann eine Prozedur des Typs `kmeans.train` verwendet werden, um ein k-Means-Cluster zu trainieren. Der Anwender wäre in der Lage ein Python-Skript zu definieren, das nach einem Import das Clustering automatisch ausführt. Die Prozedur speichert das Ergebnismodell in einem Ausgabedatensatz und speichert die Clusterbezeichnungen für den Eingabedatensatz in einem separaten Ausgabedatensatz.[1312] Das folgende Beispiel zeigt wie ein unüberwachtes (_eng. unsupervised_) k-Means-Modell mithilfe des importierten Iris-Datensatzes trainiert und verwendet werden kann, um jede Zeile in der Eingabe einem Cluster im Ausgabedatensatz zuzuweisen. Wichtig ist, dass der Iris-Datensatz ohne den Klassen geladen wird, da die Klassen theoretisch mit dem Clustering ermittelt werden sollen (siehe Zeile 4).
 
 ```python
 mldb.put("/v1/procedures/iris_train_kmeans", {
@@ -162,10 +162,10 @@ mldb.put("/v1/procedures/iris_train_kmeans", {
 
 ### Modell
 
-Wie im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, werden Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatzschon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen "`iris_train_classifier`" erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:[1313]
+Wie im Abschnitt ["MLDB Merkmale"](13_mldb_features.md) beschrieben, werden ML-Modelle mittels Prozeduren erzeugt bzw. trainiert. Im folgenden Beispiel soll mithilfe einer Prozedur der Art `classifier.train` demonstriert werden, wie ein Klassifizierungsmodel erzeugt werden kann. Als Algorithmus wird ein Entscheidungsbaum (_eng. "decision tree"_) verwendet (siehe Zeile 11) und ein Teil des im Abschnitt ["Import"](#import) importierten Iris-Datensatzes wird genutzt, um diesen zu trainieren. Die Aufgabe des Entscheidungsbaumes besteht darin, neue Iris-Messungen einer der drei Iris-Klassen zuzuweisen. Die Ausgabe dieser Prozedur ist eine Funktion, der den Entscheidungsbaum darstellt, die über REST oder SQL aufgerufen werden kann. In diesem Beispiel wird davon ausgegangen, dass der Iris-Datensatz schon importiert wurde und unter der ID `iris` aufrufbar ist. Mittels einer PUT-Anfrage an den Endpunkt `/v1/procedures/` wird eine neue Prozedur der Art `classifier.train` und dem Namen `iris_train_classifier` erzeugt (siehe Zeile 1). Die notwendigen Trainingsdaten werden als Parameter in Form einer SQL-Abfrage der Prozedur zur verfügung gestellt. Die SQL-Abfrage muss die folgenden zwei Spalten enthalten:[1313]
 
 1. `features`: Ein Zeilenausdruck zum Identifizieren der Merkmale, mit denen trainiert werden soll.
-2. `label`: Ein Ausdruck zum Identifizieren der Beschriftungen der Zeile. Der Typ muss mit dem des Klassifizierermodus übereinstimmen.
+2. `label`: Ein Ausdruck zum Identifizieren der Beschriftungen der Zeile. Der Wert muss mit dem des Klassifizierermodus übereinstimmen (in diesem Fall `class`, siehe Zeile 5).
 
 Insgesamt wird die Hälfte des Iris-Datensatzes als Trainingsdaten verwendet (siehe Zeile 9). Die resultierende Funktion wird nach der erfolgreichen Erzeugung des Modells unter dem Namen `iris_classify` zur Verfügung stehen (siehe Zeile 14).
 
@@ -185,7 +185,7 @@ mldb.put("/v1/procedures/iris_train_classifier", {
 })
 ```
 
-Nachdem das Modell erfolgreich erstellt wurde, kann mittels der Prozedurart `classifier.test` getestet werden, wie präzise das Klassifizierungsmodell klassifiziert. Hierfür wird die Funktion bzw. das Modell (siehe Zeile 7-9) auf die andere Hälfte (siehe Zeile 12) der Daten des Iris-Datensatzes angewendet. Die Prozedur erzeugt eine Konfusionsmatrix, die nähere Informationen über die Performance des Modells wiedergibt. Jede Zeile der Konfusionsmatrix repräsentiert die Instanzen in einer vorhergesagten Klasse, während jede Spalte die Instanzen in einer tatsächlichen Klasse darstellt (oder umgekehrt). Da die Konfusionsmatrix im JSON-Format vorliegt, wird die Darstellung in eine visuelle Tabelle umgewandelt (siehe Zeile 17). Laut der Konfusionsmatrix wurden vier Iris-Daten der Klasse `Iris-virginica` vom Modell als `Iris-versicolor` klassifiziert. Das entspricht eine Genauigkeit von ca. 95% bei insgesamt 75 getesteten Daten.
+Nachdem das Modell erfolgreich erstellt wurde, kann mittels der Prozedurart `classifier.test` getestet werden, wie präzise das Model klassifiziert. Hierfür wird die Funktion bzw. das Modell (siehe Zeile 7-9) auf die andere Hälfte (siehe Zeile 12) der Daten des Iris-Datensatzes angewendet. Die Prozedur erzeugt eine Konfusionsmatrix, die nähere Informationen über die Performance des Modells wiedergibt. Jede Zeile der Konfusionsmatrix repräsentiert die Instanzen in einer vorhergesagten Klasse, während jede Spalte die Instanzen in einer tatsächlichen Klasse darstellt (oder umgekehrt). Da die Konfusionsmatrix im JSON-Format vorliegt, wird die Darstellung in eine visuelle Tabelle umgewandelt (siehe Zeile 17). Laut der Konfusionsmatrix wurden nur vier Iris-Daten der Klasse `Iris-virginica` vom Modell fehlerhaft als `Iris-versicolor` klassifiziert. Das entspricht eine Genauigkeit von ca. 95% bei insgesamt 75 getesteten Daten.
 
 ```python
 response = mldb.put("/v1/procedures/iris_test_classifier", {
@@ -212,7 +212,7 @@ Wie schon zuvor im Abschnitt ["MLDB Merkmale"](12_mldb_features.md) beschrieben,
 
 #### Funktionsaufruf via Schnittstellen
 
-Die `iris_classify`-Funktion wird über einen REST-API-Endpunkt aufgerufen, um eine noch nie zuvor gesehene Menge von Iris-Messungen zu klassifizieren. Wie man in der unteren Tabelle nachlesen kann, handelt es sich bei den Messungen laut der Klassifizierungsfunktion um eine `Iris-versicolor`.
+Die `iris_classify`-Funktion wird über einen REST-API-Endpunkt aufgerufen, um eine noch nie zuvor gesehene Menge von Iris-Messungen zu klassifizieren. Nach dem Aufruf der Funktion kann in der unteren Tabelle nachgelesen werden, dass es sich bei den Messungen laut der Klassifizierungsfunktion um eine `Iris-versicolor` handelt.
 
 ```python
 response = mldb.get("/v1/functions/iris_classify/application", input={

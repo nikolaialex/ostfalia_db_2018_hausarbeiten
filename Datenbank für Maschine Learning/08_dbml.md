@@ -26,7 +26,7 @@ Wie eine SimSQL-Anwendung auf das Bayes'sche maschinelle Lernen angewendet werde
 
 MemSQL ist eine Datenbank, mit intergrierter ML-Funktion, die moderne Anwendungen und Analysesysteme mit einer hoch skalierbaren Architektur für maximale Aufnahme- und Abfrageleistung bei höchster Parallelität unterstützt. Außerdem ist ein Echtzeit Scoring für ML möglich.
 
-Seit der Version 6 enthält MemSQL neue ML-Funktionen wie DOT_PRODUCT. Diese bietet die Möglichkeit Anwendungen umzusetzen, die einen Vergleich von zwei Vektoren erfordern. Dazu zählt beispielsweise die Echtzeit-Bilderkennung. Mit MemSQL kann dies in der verteilten SQL-Datenabnk realisiert werden und ermöglicht außerdem eine hohe Leistung und Skalierbarkeit.[806]
+Seit der Version 6 enthält MemSQL neue ML-Funktionen wie DOT_PRODUCT. Diese bietet die Möglichkeit Anwendungen umzusetzen, die einen Vergleich von zwei Vektoren erfordern. Dazu zählt beispielsweise die Echtzeit-Bilderkennung. Mit MemSQL kann dies in der verteilten SQL-Datenbank realisiert werden und ermöglicht außerdem eine hohe Leistung und Skalierbarkeit.[806]
 
 #### SAP HANA
 
@@ -101,7 +101,7 @@ Modell Auswahl
 - Vergleich, Validierung und Auswahl von Parametern und Modellen
 
 Vorverarbeitung
-- Extraktion und -normalisierung von Merkmalen
+- Extraktion und Normalisierung von Merkmalen
 
 In der Dokumentation von <a href="https://scikit-learn.org">scikit learn</a> wird explizit erwähnt, dass Nutzer Dateien von einer Datenbank, oder einem Netzwerk-Stream liefern können. Jedoch werden Einzelheiten, wie dies zu erreichen ist nicht in der Dokumentation erläutert. Damit handelt es sich bei diesem Werkzeug nicht direkt um eine ML Bibliothek mit Datenbank unterstützung.
 

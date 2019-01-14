@@ -10,13 +10,13 @@ __Adam-Kalfon, Paula; El Moutaouakil, Selsabila (2017):__ Blockchain, a catalyst
 
 __Almeida, Rafael (2016):__ Symmetric And Asymmetric Encryption. Online verfügbar unter: https://hackernoon.com/symmetric-and-asymmetric-encryption-5122f9ec65b1. Letzter Zugriff am: 08.01.2019.
 
-__Andreessen, Marc (o.A.):__ What Is Blockchain Technology?. Online verfügbar unter: https://www.coindesk.com/information/what-is-blockchain-technology. Letzter Zugriff am: 08.01.2019.
+__Andreessen, Marc (o. A.):__ What Is Blockchain Technology?. Online verfügbar unter: https://www.coindesk.com/information/what-is-blockchain-technology. Letzter Zugriff am: 08.01.2019.
 
 __Asolo, Bisade (2018):__ Double-Spending explained. Online verfügbar unter: https://www.mycryptopedia.com/double-spending-explained/. Letzter Zugriff am: 08.01.2019.
 
 __B3i (2018):__ The Blockchain Insurance Industry Initiative. Online verfügbar unter: https://b3i.tech/home.html. Letzter Zugriff am: 08.01.2019.
 
-__Bauerle, Nolan (o.A.):__ Was ist der Unterschied zwischen einem Blockchain und einer Datenbank? In: CoinDesk 2018 - Bitcoinonair.com kaufen Bitcoin, Bitcoin Guides & Bewertungen für Bitcoin Newbies. (n.d.). Online verfügbar unter  https://bitcoinonair.com/what-is-difference-between-blockchain-and-database Letzter Zugriff am 06.01.2019
+__Bauerle, Nolan (o. A.):__ Was ist der Unterschied zwischen einem Blockchain und einer Datenbank? In: CoinDesk 2018 - Bitcoinonair.com kaufen Bitcoin, Bitcoin Guides & Bewertungen für Bitcoin Newbies. (n.d.). Online verfügbar unter  https://bitcoinonair.com/what-is-difference-between-blockchain-and-database Letzter Zugriff am 06.01.2019
 
 __Belyaev, Alexander; Dietrich, Christian; Eisenhardt, Jannick (2018):__ EKA 2018: Die Blockchain als eine Technologie für die Verwirklichung von Visionen der I4.0. In:  15. Fachtagung EKA-Entwurf komplexer Automatisierungssysteme, 02.-03.05.2018, ifak/Otto-von-Guericke-Universität Magdeburg, Magdeburg (2018). Online Verfügbar unter https://www.researchgate.net/publication/326625600_Die_Blockchain_als_eine_Technologie_fur_die_Verwirklichung_von_Visionen_der_I40. Seite 4 ff. Letzter Zugriff am 02.01.2019.
 
@@ -42,9 +42,9 @@ __Drescher, Daniel (2018):__ Blockchain Grundlagen: Eine Einführung in die elem
 
 __Eilers, Carsten (2016):__ Verfahren der Kryptographie, Teil 14: Hashfunktionen - Einführung. Online verfügbar unter: https://www.ceilers-news.de/serendipity/802-Verfahren-der-Kryptographie,-Teil-14-Hashfunktionen-Einfuehrung.html. Letzter Zugriff am: 08.01.2019.
 
-__Elektronik-Kompendium (o.A.):__ Asymmetrische Kryptographie (Verschlüsselung). Online verfügbar unter: https://www.elektronik-kompendium.de/sites/net/1910111.htm. Letzter Zugriff am: 08.01.2019.
+__Elektronik-Kompendium (o. A.):__ Asymmetrische Kryptographie (Verschlüsselung). Online verfügbar unter: https://www.elektronik-kompendium.de/sites/net/1910111.htm. Letzter Zugriff am: 08.01.2019.
 
-__Elektronik-Kompendium (o.A.)a:__ Kryptografische Hash-Funktionen. Online verfügbar unter: https://www.elektronik-kompendium.de/sites/net/1909041.htm. Letzter Zugriff am: 04.01.2019.
+__Elektronik-Kompendium (o. A. a):__ Kryptografische Hash-Funktionen. Online verfügbar unter: https://www.elektronik-kompendium.de/sites/net/1909041.htm. Letzter Zugriff am: 04.01.2019.
 
 __Fischer, Tim (2018):__ What Is A Checksum?. Online verfügbar unter: https://www.lifewire.com/what-does-checksum-mean-2625825. Letzter Zugriff am: 08.01.2019.
 
@@ -98,9 +98,9 @@ __Shanty-Bruyn, A. (2017):__ Blockchain - introduction. online verfügbar unter:
 
 __SSL2BUY (2018):__ Symmetric vs. Asymmetric Encryption – What are differences?. Online verfügbar unter: https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences. Letzter Zugriff am: 08.01.2019.
 
-__Stachnis, Cyrill (o.A.):__ Kryptographische Hashfunktionen. Online verfügbar unter: http://www2.informatik.uni-freiburg.de/~stachnis/pdf/stachniss-habil-talk-hashfunctions.pdf. Seite 10 ff. Letzter Zugriff am: 08.01.2019.
+__Stachnis, Cyrill (o. A.):__ Kryptographische Hashfunktionen. Online verfügbar unter: http://www2.informatik.uni-freiburg.de/~stachnis/pdf/stachniss-habil-talk-hashfunctions.pdf. Seite 10 ff. Letzter Zugriff am: 08.01.2019.
 
-__Streichert, Dennis (o.A.):__ Vorteile und Nachteile der Blockchain-Technologie. Online verfügbar unter https://www.blockchain-infos.de/vorteile-nachteile-blockchain/ Letzter Zugriff am: 08.01.2019.
+__Streichert, Dennis (o. A.):__ Vorteile und Nachteile der Blockchain-Technologie. Online verfügbar unter https://www.blockchain-infos.de/vorteile-nachteile-blockchain/ Letzter Zugriff am: 08.01.2019.
 
 __Sultan, Karim; Ruhi, Umar; Lakhani, Rubina (2018):__ CONCEPTUALIZING BLOCKCHAINS: CHARACTERISTICS & APPLICATIONS. Online verfügbar unter: https://arxiv.org/pdf/1806.03693.pdf , Seite 49 ff. Letzter Zugriff am: 08.01.2019.
 

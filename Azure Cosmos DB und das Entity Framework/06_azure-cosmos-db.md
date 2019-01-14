@@ -59,6 +59,10 @@ Azure Cosmos DB eigent sich zum erstellen von Graphdatenbanken. Graphdaten könn
 Horizontale Skalierung auf Containerebene.
 Global by Design.
 
+## Implementierung
+
+In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB angebunden werden.
+
 ---
 
 [1]: Microsoft Azure Cosmos DB. Abgerufen 12.01.2019 von https://azure.microsoft.com/de-de/services/cosmos-db/

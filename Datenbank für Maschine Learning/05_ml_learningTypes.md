@@ -1,4 +1,4 @@
-## ML Einteilung der ML-Lerntypen
+## Einteilung der ML-Lerntypen
 
 ### Typeinteilung
 

@@ -4,6 +4,18 @@
 
 [302] DBMS Popularität pro Datenbankmodell, 2019. URL: [https://db-engines.com/de/ranking_categories](https://db-engines.com/de/ranking_categories) (letzter Abruf: 2019-01-05).
 
+[401] Nilsson, Nils J.: INTRODUCTION TO MACHINE LEARNING, 2005. URL: [http://robotics.stanford.edu/~nilsson/MLBOOK.pdf](http://robotics.stanford.edu/~nilsson/MLBOOK.pdf) (letzter Abruf: 2019-01-14).
+
+[402] Brink, Henrik und Richards, Joseph W. und Fetherolf, Mark: Real-World Machine Learning, 2017. ISBN: 9781617291920.
+
+[403] Datenbank-Spektrum, Volume 17. Günnemann, Stephan: Machine Learning Meets Databases, 2017. URL: [https://link.springer.com/article/10.1007%2Fs13222-017-0247-8](https://link.springer.com/article/10.1007%2Fs13222-017-0247-8) (letzter Abruf: 2019-01-14).
+
+[404] Alpaydin, Ethem: Introduction To Machine Learning, 2014. 3. Auflage. ISBN: 9780262028189. URL: [https://books.google.de/books?id=NP5bBAAAQBAJ&pg=PA1&hl=de&source=gbs_toc_r&cad=2#v=onepage&q&f=false](https://books.google.de/books?id=NP5bBAAAQBAJ&pg=PA1&hl=de&source=gbs_toc_r&cad=2#v=onepage&q&f=false)
+
+[405] Brownlee, Jason: What is Machine Learning?, 2018. URL: [https://emerj.com/ai-glossary-terms/what-is-machine-learning/](https://emerj.com/ai-glossary-terms/what-is-machine-learning/).
+
+[406] Brownlee, Jason: How Machine Learning Algorithms Work (they learn a mapping of input to output), 2016. URL: [https://machinelearningmastery.com/how-machine-learning-algorithms-work/](https://machinelearningmastery.com/how-machine-learning-algorithms-work/).
+
 [501] Fumo, David: Types of Machine Learning Algorithms You Should Know, 2017. URL: [https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861](https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861) (letzter Abruf: 2019-01-13 14:03 Uhr).
 
 [502] Li, Hui: Maschinelles Lernen - Was es ist und was man darüber wissen sollte, 2019. URL: [https://www.sas.com/de_de/insights/analytics/machine-learning.html](https://www.sas.com/de_de/insights/analytics/machine-learning.html) (letzter Abruf: 2019-01-13 14:05 Uhr).
@@ -59,11 +71,11 @@ Applications with Spark, 2017. 1. Auflage. ISBN: 978-1-491-96011-0. URL: [http:/
 
 [1401] Scaling MLDB, 2017. URL: [https://docs.mldb.ai/doc/#builtin/Scaling.md.html](https://docs.mldb.ai/doc/#builtin/Scaling.md.html) (letzter Abruf: 2019-01-14).
 
-<!-- ## Tabellen -->
-
 ## Bildnachweis
 
 Übersicht verschiedener ML-Typen. URL: [https://qph.fs.quoracdn.net/main-qimg-f00ca1dac4db60a5ab8b85baa8669947](https://qph.fs.quoracdn.net/main-qimg-f00ca1dac4db60a5ab8b85baa8669947) (letzter Abruf: 2019-01-14).
+
+Workflow eines Machine Learning. Brink, Henrik und Richards, Joseph W. und Fetherolf, Mark: Real-World Machine Learning, 2017. ISBN: 9781617291920.
 
 Logo von MLDB. URL: [https://mldb.ai/html/mldbai_eai_logo_200_2.png](https://mldb.ai/html/mldbai_eai_logo_200_2.png) (letzter Abruf: 2019-01-14).
 

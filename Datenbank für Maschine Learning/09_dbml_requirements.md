@@ -37,6 +37,8 @@ Die wichtigste Voraussetzung nach [902] für ML in einer Datenbank ist die Erwei
    2. Batchbetrieb
 5. Export
 
+---
+
 [901] Jurney, Russell: Agile Data Science 2.0
 
 [902] Orenstein, Gary: Matching Modern Databases with ML and AI

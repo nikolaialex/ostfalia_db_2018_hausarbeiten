@@ -1,4 +1,4 @@
-## ML Modelle und Algorithmen
+## ML-Modelle und Algorithmen
 
 ### Modelle und Modelldaten
 

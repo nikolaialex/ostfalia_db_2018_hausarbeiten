@@ -49,7 +49,7 @@ Die folgende Tabelle beschreibt die Zuordnung von SQL-Kommandos zu HTTP-Methoden
 | INSERT           | POST             |
 | SELECT           | GET              |
 
-------
+---
 
 [1201] MLDB Overview
 
@@ -65,6 +65,6 @@ Die folgende Tabelle beschreibt die Zuordnung von SQL-Kommandos zu HTTP-Methoden
 
 [1102] BIG 2016: The Machine Learning Database
 
-------
+---
 
 [< MLDB Einführung](11_mldb_intro.md) | [Anwendung von MLDB >](13_mldb_example.md)

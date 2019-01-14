@@ -4,7 +4,7 @@
 - [Einleitung](03_introduction.md)
 - [Einführung in ML](04_ml.md)
   - [Einteilung der ML-Lerntypen](05_ml_learningTypes.md)
-  - [ML Modelle und Algorithmen](06_ml_modelsAlgo.md)
+  - [ML-Modelle und Algorithmen](06_ml_modelsAlgo.md)
   - [Abgrenzungen in DDS](07_ml_dds.md)
 - [Datenbanken für ML](08_dbml.md)
   - [Anforderungen an Datenbanken für ML](09_dbml_requirements.md)

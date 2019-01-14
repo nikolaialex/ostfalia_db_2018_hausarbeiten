@@ -136,7 +136,7 @@ Ein __soft fork__ ist eine Erweiterung der existierenden Regeln. Die bisherigen 
 
 #### 3.2.8 Double Spending Problem
 
-Der Begriff des Double Spending Problems wurde bereits im gleichnamigen Kapitel bei den Grundlagen eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentralen Instanz. Essentiell dafür ist die __stetige Aktualisierung__ der Blockchain. Alle Teilnehmer erhalten über das Netzwerk beständig die neue Version. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den __Zeitstempel__ wird auch deutlich, welche die ursprüngliche Transaktion war, und alle nachfolgenden Versuche, das digitale Geldstück erneut zu transferieren, scheitern. [14, 36]
+Der Begriff des Double Spending Problems wurde bereits im gleichnamigen Kapitel bei den Grundlagen eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentralen Instanz. Essentiell dafür ist die __stetige Aktualisierung__ der Blockchain. Alle Teilnehmer erhalten über das Netzwerk beständig die neue Version. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den __Zeitstempel__ wird auch deutlich, welche die ursprüngliche Transaktion war, und alle nachfolgenden Versuche, das digitale Geldstück erneut zu transferieren, scheitern. [37, 36]
 
 ***
 
@@ -150,7 +150,7 @@ Quellenangabe:
 
 [01] - Blockgeeks, 2018
 [02] - C. Eilers, 2016
-[03] - C. Stachniss, o.A.
+[03] - C. Stachniss, o. A.
 [04] - D. Drescher, 2017
 [05] - K. Pommerening, M. Sergl, 2007
 [06] - Ryte, 2018
@@ -161,7 +161,7 @@ Quellenangabe:
 [11] - SSL2BUY, 2018
 [12] - M. Rouse, 2016
 [13] - R. Almeida, 2016
-[14] - Elektronik-Kompendium, o.A.
+[14] - Elektronik-Kompendium, o. A.
 [15] - Unbekannt, 2010
 [16] - C. Stobitzer, 2018
 [17] - Dr. R. Wobst, 2003
@@ -169,7 +169,7 @@ Quellenangabe:
 [19] - M. Rouse, 2007
 [20] - W. Ross, 2018
 [21] - M. Gupta, 2018
-[22] - M. Andreessen, o.A.
+[22] - M. Andreessen, o. A.
 [23] - P. Adam-Kalfon, S. El Moutaouakil, 2017
 [24] - K. Sultan et al., 2018
 [25] - L. Severeijns, 2017
@@ -179,11 +179,12 @@ Quellenangabe:
 [29] - K. Schiller, 2018
 [30] - Blockgeeks, 2018a
 [31] - B. Asolo, 2018
-[32] - W. Li et al., o.A.
+[32] - W. Li et al., o. A.
 [33] - Unbekannt, 2015
 [34] - M. Thake, 2018
 [35] - A. Castor, 2017
 [36] - Team InnerQuest Online, 2018
+[37] - Elektronik-Kompendium, o. A. a
 
 ```
 

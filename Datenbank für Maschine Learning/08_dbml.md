@@ -58,8 +58,7 @@ SAP HANA bietet eine Reihe an eingebauten ML-Algorithmen:
 - Empfehlungen
 - Link-Analyse
 
-Des Weiteren wird eine Integration von Modellen, die von gängigen ML-Bibliotheken, oder Frameworks erstellt ermöglicht. Benutzer können Modelle aus einer SQL-basierten Anwedung aufrufen und zudem auch Code, der beispielsweise in Python implementiert wurde. Wenn diese Anwendungen dann auf
-ML-Anwendungen, die auf dem HANA XS Advanced Applikationsserver entwickelt wurden können die Modelle dann nutzen.
+Des Weiteren wird eine Integration von Modellen, die in gängigen ML-Bibliotheken, oder Frameworks erstellt wurden ermöglicht. Benutzer können Modelle aus einer SQL-basierten Anwedung aufrufen und zudem auch Code, der beispielsweise in Python implementiert wurde. Wenn diese Anwendungen dann auf ML-Anwendungen, die auf dem HANA XS Advanced Applikationsserver entwickelt wurden können die Modelle dann nutzen.
 https://www.prowesscorp.com/machine-learning-on-sap-hana/
 
 
@@ -67,7 +66,7 @@ https://www.prowesscorp.com/machine-learning-on-sap-hana/
 
 **RapidMiner**
 
-Bei RapidMiner handelt es sich um eine Softwareumgebung, die es ermöglicht industrielle und wissenschaftliche Anwendungen umzusetzten. Dazu zählen Machine Learning und Data Mining Aufgaben. RapidMiner wurde in Java entwickelt und unterstützt verschiedene Datenbanken. Zu den SQL Datenbanken zählen beispielsweise MySQL, PostgreSQL und Oracle. Von den NoSQL Datenbanken werden unter anderen Cassandra und MongoDB unterstützt. Prinzipiell werden alle Datenbanken unterstützt, für die es JDBC Treiber gibt. Die Bedienung von RapidMiner ist über eine graphische Benutzeroberfläche möglich. Neben Datenbanken können auch verschiedene Cloud Services integriert werden, von denen Daten direkt ausgelesen und gespeichert werden. Das Produkt RapidMiner Studio bietet verschiedenste Funktionen für Machine Learning, dazu zählen unter anderen folgende Funktionen:
+Bei RapidMiner handelt es sich um eine Softwareumgebung, die es ermöglicht industrielle und wissenschaftliche Anwendungen umzusetzten. Dazu zählen ML- und Data Mining-Aufgaben. RapidMiner wurde in Java entwickelt und unterstützt verschiedene Datenbanken. Zu den SQL Datenbanken zählen beispielsweise MySQL, PostgreSQL und Oracle. Von den NoSQL Datenbanken werden unter anderen Cassandra und MongoDB unterstützt. Prinzipiell können alle Datenbanken verwendet werden, für die es JDBC Treiber gibt. Die Bedienung von RapidMiner ist über eine grafische Benutzeroberfläche möglich. Neben Datenbanken können auch verschiedene Cloud Services integriert werden, von denen Daten direkt ausgelesen und gespeichert werden. Das Produkt RapidMiner Studio bietet verschiedenste Funktionen für Machine Learning, dazu zählen die Funktionen:
 
 - Erstellen von Modelllen
   - Berechnung der Ähnlichkeit
@@ -109,6 +108,8 @@ Oracle https://www.oracle.com/database/
   - laut Seite für ML optimiert, aber nicht ohne Lib möglich
 - PostgreSQL
 
+
+<!--
 **CYBERTEC**
   - https://www.cybertec-postgresql.com/de/produkte/pgneural_de/
 - PostgreSQL
@@ -116,7 +117,7 @@ Oracle https://www.oracle.com/database/
 **bigML**
 - MySQL
   - https://blog.bigml.com/2013/10/30/data-preparation-for-machine-learning-using-mysql/
-
+-->
 ---
 
 -Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from https://rapidminer.com/

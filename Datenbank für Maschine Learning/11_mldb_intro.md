@@ -17,10 +17,10 @@ Das folgende Beispiel zeigt den Unterschied zwischen einer traditionellen Datenb
 
 ```sql
 --Traditional
-SELCT browsing_report() FROM web_logs WHERE user_id = "134567";
+SELECT browsing_report() FROM web_logs WHERE user_id = "134567";
 
 --ML
-SELCT content_recommendation() FROM web_logs WHERE user_id = "134567";
+SELECT content_recommendation() FROM web_logs WHERE user_id = "134567";
 ```
 
 Zusätzlich ermöglicht MLDB die SQL-Abfrage über HTTP, sodass die Empfehlungsfunktion Plattformunabhängig aufgerufen werden kann.[1102]

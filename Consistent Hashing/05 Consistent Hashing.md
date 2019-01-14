@@ -101,8 +101,21 @@ Tabelle 1.7 zu Abb. 2 Server D wird hinzugefügt, Umverteilung der Schlüssel.
 
 ## Verwendung in Firmen  
 
-...  
+Das Verfahren Consistent Hashing wird von verschiedenen Datenbanken eingesetzt, wie zB. bei Schlüssel-Wert Datenbanken Voldemort, Redis und Membase. Bei den Spaltenorientierten Datenbanken Cassandra. Die dokumentenorientierten Datenbanken CouchDB und Riak. Auch bei den graphenbasierte Datenbanken, wie BigData und FlockDB wird konsistentes Hashing eingesetzt, obwohl graphenbasierte Datenbanken aufgrund ihrer Struktur schwierig zu partitionieren sind [Skript]. Und auch Amazons DynamoDB verwendet intern dieses Verfahren <sup>3</sup>, wodurch DynamoDB mehr als 10 Billionen Anfragen pro Tag bearbeiten und Spitzenwerte von mehr als 20 Millionen Anfragen pro Sekunde unterstützen kann. <sup>4</sup>. 
+
+
+
+
+
+
+
+
+
+Wie zu sehen, setzen die Schüssel-Wert Datenbanken Voldemort, Redis und Membase nur konsistentes Hashing ein. Genauso wie die dokumentenorientierten Datenbanken CouchDB und Riak. MongoDB nutzt eine intervallbasierte Partitionierung. Die spaltenorientierten Datenbanken Hbase und Hypertable setzten intervallbasierte Partitionierung ein. Cassandra dagegen nutzt das konsistente Hashing. Graphenbasierte Datenbanken sind aufgrund ihrer Struktur schwierig zu partitionieren. Dennoch setzten die Datenbanken BigData und FlockDB das Verfahren des konsistentes Hashing ein. Neo4J, GraphDB und Sesame unterstützen keine Partitionierung. Hier erfolgt die Verteilung der Datenbanken durch Replikation.  Replikation und Konsistenz
+
 
 ____
 <sup>1</sup>Vergleich und Evaluation zwischen modernen und traditionellen Datenbankkonzepten unter den Gesichtspunkten Skalierung, Abfragemöglichkeit und Konsistenz, Nils Petersohn, Diplomica Verlag 2011
 <sup>2</sup>Datenbanktechnologie, Skript, J. S. Lie, 2011
+<sup>3</sup>https://en.wikipedia.org/wiki/Consistent_hashing
+<sup>4</sup>https://aws.amazon.com/de/dynamodb/

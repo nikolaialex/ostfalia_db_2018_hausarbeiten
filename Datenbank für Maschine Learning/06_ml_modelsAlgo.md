@@ -108,7 +108,7 @@ Die folgenden Algorithmen werden laut [603] in der Häufigkeit ihrer Verwendung 
 
 [602] Brownlee, Jason, 2013, Blog https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/ (letzer Abruf 2018-01-12 14:07)
 
-[603] Frauenhofer Gesellschaft, 2018, Bericht https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf (letzter Abruf: 2019-01-13 14:08 Uhr)
+[603] Maschinelles Lernen - Kompetenzen, Anwendungen und Forschungsbedarf
 
 ---
 

@@ -48,11 +48,11 @@ _"Bei einer Klassifikation steht dagegen schon im Vorfeld fest, in welche Gruppe
 
 ---
 
-[501] Fumo, David 2017
+[501] Types of Machine Learning Algorithms You Should Know
 
-[502] Li, Hui
+[502] Maschinelles Lernen - Was es ist und was man darüber wissen sollte
 
-[503] Frauenhofer Gesellschaft, 2018
+[503] Maschinelles Lernen - Kompetenzen, Anwendungen und Forschungsbedarf
 
 ---
 

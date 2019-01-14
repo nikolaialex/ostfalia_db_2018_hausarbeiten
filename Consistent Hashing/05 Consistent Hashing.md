@@ -57,9 +57,9 @@ Tabelle 1.4
 
 Das konsistente Hashverfahren erlaubt es beliebig viele Server in das verteilte Datenbanknetz hinzuzufügen, dabei wird die Verfügbarkeit wenig eingeschränkt. Auch bei den Ausfällen müssen nicht alle Schlüssel neu verteilt werden, lediglich der “Nachbar” Knoten/Server ist für die temporäre Haltung der Daten verantwortlich <sup>1</sup>.
 
-“Eine konsistente Hashfunktion ist eine Hashfunktion, die die Anzahl der Neuzuordnungen minimiert. Bei dem Gebrauch einer inkonsistenten Hashfunktion werden alle Schlüssel neu auf die verfügbaren Behälter verteilt. Konsistente Hashfunktionen haben folgende Eigenschaften: Einwegberechenbarkeit, Kollisionsresistenz, Gleichverteiltheit und effiziente Berechenbarkeit” [Buch].  Durch die Verwendung einer guten Hashfunktion entfällt die sonst notwendige Lastverteilung durch den Administrator <sup>2</sup>.
+“Eine konsistente Hashfunktion ist eine Hashfunktion, die die Anzahl der Neuzuordnungen minimiert. Bei dem Gebrauch einer inkonsistenten Hashfunktion werden alle Schlüssel neu auf die verfügbaren Behälter verteilt. Konsistente Hashfunktionen haben folgende Eigenschaften: Einwegberechenbarkeit, Kollisionsresistenz, Gleichverteiltheit und effiziente Berechenbarkeit” <sup>1</sup>.  Durch die Verwendung einer guten Hashfunktion entfällt die sonst notwendige Lastverteilung durch den Administrator <sup>2</sup>.
 
-Um das Verfahren zu veranschaulichen, ist in der Abb. 1.1 ein schematischer Kreis dargestellt, in der die Schlüssel und Server markiert sind. Jeder dieser Server kriegt eine Hashregion zugeteilt und die Schlüssel werden mittels einer Hashfunktion auf die Server verteilt, siehe Tabelle 1.5.  
+Um das Verfahren zu veranschaulichen, ist in der Abb. 2 ein schematischer Kreis dargestellt, in der die Schlüssel und Server markiert sind. Jeder dieser Server kriegt eine Hashregion zugeteilt und die Schlüssel werden mittels einer Hashfunktion auf die Server verteilt, siehe Tabelle 1.5.  
 
 
 ![schematischer Kreis](images/circle.png "Abb. 2 Schematischer Kreis")  

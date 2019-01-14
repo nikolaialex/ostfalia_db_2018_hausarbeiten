@@ -46,7 +46,7 @@ Des Weiteren wird eine Integration von Modellen, die in gängigen ML-Bibliotheke
 
 #### RapidMiner
 
-RapidMiner formt eine Softwareumgebung, die es ermöglicht industrielle und wissenschaftliche Anwendungen umzusetzen. Dazu zählen ML- und Data Mining-Aufgaben. RapidMiner wurde in Java entwickelt und unterstützt verschiedene Datenbanken. Zu den SQL-Datenbanken zählen beispielsweise MySQL, PostgreSQL und Oracle. Von den NoSQL-Datenbanken werden unter anderen Cassandra und MongoDB unterstützt. Prinzipiell können alle Datenbanken verwendet werden, für die JDBC Treiber existieren. Die Bedienung von RapidMiner ist über eine grafische Benutzeroberfläche möglich. Neben Datenbanken können auch verschiedene Cloud Services integriert werden, von denen Daten direkt ausgelesen und gespeichert werden. Das Produkt RapidMiner Studio bietet verschiedenste Funktionen für ML an. Dazu zählen die Funktionen:
+RapidMiner formt eine Softwareumgebung, die es ermöglicht industrielle und wissenschaftliche Anwendungen umzusetzen. Dazu zählen ML- und Data Mining-Aufgaben. RapidMiner wurde in Java entwickelt und unterstützt verschiedene Datenbanken. Zu den SQL-Datenbanken zählen beispielsweise <a href="https://www.mysql.com">MySQL</a>, <a href="https://www.postgresql.org">PostgreSQL</a> und <a href="https://www.oracle.com/database/">Oracle</a>. Von den NoSQL-Datenbanken werden unter anderen <a href="http://cassandra.apache.org">Cassandra</a> und <a href="https://www.mongodb.com">MongoDB</a> unterstützt.[809] Prinzipiell können alle Datenbanken verwendet werden, für die JDBC Treiber existieren. Die Bedienung von RapidMiner ist über eine grafische Benutzeroberfläche möglich. Neben Datenbanken können auch verschiedene Cloud Services integriert werden, von denen Daten direkt ausgelesen und gespeichert werden. Das Produkt RapidMiner Studio bietet verschiedenste Funktionen für ML an. Dazu zählen die Funktionen: [810]
 
 - Erstellen von Modellen
 
@@ -69,40 +69,64 @@ RapidMiner formt eine Softwareumgebung, die es ermöglicht industrielle und wiss
   - Verteilungsdiagramme
   - Mittelwertabweichungsdiagramme
 
-<!--
-https://rapidminer.com/products/studio/feature-list
-https://docs.rapidminer.com/latest/studio/how-to/
-
-RapidMiner https://docs.rapidminer.com
-Cassandra http://cassandra.apache.org
-MongoDB https://www.mongodb.com
-MySQL https://www.mysql.com
-PostgreSQL https://www.postgresql.org
-Oracle https://www.oracle.com/database/
--->
 
 #### scikit learn
 
-- MongoDB
-- Python Schnittstelle notwenidg
+Bei <a href="https://scikit-learn.org">scikit learn</a> handelt es sich um eine Open Source Bibliothek für maschineless Lernen, entwickelt in Python. Diese stellt eine Reihe an einfachen und effizienten Tools für Data Mining und Datenanlysen bereit.
+
+Klassifizierung
+- Identifizierung, zu welcher Kategorie ein Objekt gehört
+
+Regression
+- Vorhersage eines kontinuierlich bewerteten Attributs, das einem Objekt zugeordnet ist
+
+Clustering
+- Automatische Gruppierung ähnlicher Objekte zu Mengen
+
+Reduzierung der Dimensionalität
+- Reduzierung der Anzahl der zu berücksichtigenden Zufallsvariablen
+
+Modell Auswahl
+- Vergleich, Validierung und Auswahl von Parametern und Modellen
+
+Vorverarbeitung
+- Extraktion und -normalisierung von Merkmalen
+
+In der Dokumentation von <a href="https://scikit-learn.org">scikit learn</a> wird explizit erwähnt, dass Nutzer Dateien von einer Datenbank, oder einem Netzwerk-Stream liefern können. Jedoch werden Einzelheiten, wie dies zu erreichen ist nicht in der Dokumentation erläutert. Damit handelt es sich bei diesem Werkzeug nicht direkt um eine ML Bibliothek mit Datenbank unterstützung.
+
+Um Daten aus gängigen Formaten wie CSV, Excel, JSON oder SQL einlesen zu können wird die Python Bibliothek <a href="http://pandas.pydata.org">pandas</a> verwendet. Mit der pandas I/O API können Datenrahmen als Listen von Tupeln aufgbaut werden. Das SQL-Modul der <a href="http://pandas.pydata.org">pandas</a> I/O API bieter eine umfangreiche Sammlung von Query-Wrappern, mit denen Datenabrufe erleichtert und Abhängigkeiten zu DB spezifischen Schnittstellen reduziert werden. <a href="http://pandas.pydata.org">pandas</a> verarbeitet heterogene Daten reibungslos und bietet Werkzeuge zur Manipulation und Umwandlung in ein numerisches Array, das für Scikit-Learning geeignet ist.
+
+Zusätzlich kann das <a href="https://docs.python.org/2/library/pickle.html">pickle</a> Modul von Python verwendet werden, um die ML-Algorithmen zu serialisieren und das serialisierte Format in einer Datei zu speichern. Zum Speichern der Daten kann eine <a href="https://www.postgresql.org">PostgreSQL</a> oder <a href="https://www.mysql.com">MySQL</a> Datenbank verwendet werden. [811]
 
 #### MADlib
 
-- Greenplum
-  - laut Seite für ML optimiert, aber nicht ohne Lib möglich
-- PostgreSQL
+Bei dem <a href="http://madlib.apache.org">MADLib</a> Projekt handelt es sich um einen Ansatz immer größer werdene Datenmengen analysieren zu können. Dabei ist das Projekt eine Mischung aus der kommerziellen Praxis, der akademischen Forschung und der Open-Source-Entwicklungsgemeinschaft. Der Vorteil von <a href="http://madlib.apache.org">MADLib</a> ist, dass direkt in einer Datenbank gearbeitet werden kann. Daten müssen nicht zwischen verschiedenen Laufzeitumgebungen verschoben werden. Damit stellt <a href="http://madlib.apache.org">MADLib</a> ein Hybrid dar. Als empfohlene Datenbanken nennt <a href="http://madlib.apache.org">MADLib</a> auf der Internetseite PostgreSQL und <a href="https://greenplum.org">Greenplum</a>. <a href="https://greenplum.org">Greenplum</a> ist darüber hinaus eine Datenbank die vorwiegend für analytische parallele Datenplattformen, ML und KI ausgelegt ist. <a href="http://madlib.apache.org">MADLib</a> bietet folgende ML-Funktionen: [812]
 
-<!--
-**CYBERTEC**
-  - https://www.cybertec-postgresql.com/de/produkte/pgneural_de/
-- PostgreSQL
+Klassifizierung
+- Datensätze korrekt mit der richtigen Klasse für einen Datensatz kennzeichnen
 
-**bigML**
-- MySQL
-  - https://blog.bigml.com/2013/10/30/data-preparation-for-machine-learning-using-mysql/
--->
+Regression
+- Erstellung eines Modells, dass den Ausgabewert vorhersagt
+
+Clustering
+- Identifizierung von Datengruppen, so dass Elemente eines Clusters ähnliner zueinander sind
+
+Themenmodellierung (ähnlich Clustering)
+- Identifizierung von Clustern aus Dokumenten, die ähnlich zueinadner sind, aber anhand der Hauptthemen
+
+Assoziationsregel Mining
+- Versuch zu ermitteln, welche Items häufiger vorkommen, als es der Zufall vermuten lässt
+
+Beschreibende Statistik
+- liefert kein Modell und gilt deshalb nicht als Lernmethode
+- Hilfreich um Informationen zum Verständnis der zugrunde liegenden Daten zur Verfügung zu stellen
+
+Validierung
+- Fehler eines Modells verstehen und das Modell auf Genauigkeit an Testdaten bewerten
+- Einsatz der n-fachen Kreuzvalidierung
 
 ---
+
 
 [801] LogicBlox: LogicBlox Platform Technology
 
@@ -120,28 +144,13 @@ Oracle https://www.oracle.com/database/
 
 [808] Jeppesen, David: Machine Learning in the SAP HANA Platform
 
--Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from https://rapidminer.com/
+[809] RapidMiner Studio: Feature List
 
-<!--
+[810] RapidMiner Studio: How To
 
-TensorFlow
-- https://opensourceforu.com/2017/01/best-open-source-machine-learning-frameworks/
+[811] scikit-learn: scikit-learn
 
-Apache Spark MLlib
-- https://opensourceforu.com/2017/01/best-open-source-machine-learning-frameworks/
-
-Flink
-
-SAP HANA
-- https://www.prowesscorp.com/machine-learning-on-sap-hana/
-
-Spark
-- https://data-science-blog.com/blog/2016/08/03/was-ist-eigentlich-apache-spark/
-- https://spark.apache.org/
-- https://spark.apache.org/mllib/
-- Hadoop HDFS
-
--->
+[812] MADLib: MADLib
 
 ---
 

@@ -46,6 +46,14 @@
 
 [808] Jeppesen, David: Machine Learning in the SAP HANA Platform, 2018. URL: [https://www.prowesscorp.com/machine-learning-on-sap-hana/](https://www.prowesscorp.com/machine-learning-on-sap-hana/) (letzter Abruf: 2019-01-14).
 
+[809] RapidMiner Studio: Feature List. URL: [https://rapidminer.com/products/studio/feature-list](https://rapidminer.com/products/studio/feature-list) (letzer Abruf 2018-01-14).
+
+[810] RapidMiner Studio: How To. [https://docs.rapidminer.com/latest/studio/how-to/](https://docs.rapidminer.com/latest/studio/how-to/) (letzer Abruf 2018-01-14).
+
+[811] scikit-learn: Home. [https://scikit-learn.org](https://scikit-learn.org) (letzer Abruf 2018-01-14).
+
+[812] MADLib: MADLib. [http://madlib.apache.org](http://madlib.apache.org) (letzer Abruf 2018-01-14).
+
 [901] Jurney, Russell: Agile Data Science 2.0 - Building Full-Stack Data Analytics
 Applications with Spark, 2017. 1. Auflage. ISBN: 978-1-491-96011-0. URL: [http://file.allitebooks.com/20170925/Agile%20Data%20Science%202.0.pdf](http://file.allitebooks.com/20170925/Agile%20Data%20Science%202.0.pdf) (letzter Abruf: 2019-01-14).
 

@@ -69,9 +69,9 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 ```
 Quellen
 
-[1]: https://www.youtube.com/watch?v=4bfX96C5644
-[2]: https://www.youtube.com/watch?v=oawc4doC76U
-[3]: https://aws.amazon.com/de/nosql/columnar/
+[1]: Wiese, Dr. Lena; unter https://www.youtube.com/watch?v=4bfX96C5644 (abgerufen am 13.01.2019)
+[2]: Thompson, Philip; unter https://www.youtube.com/watch?v=oawc4doC76U (abgerufen am 13.01.2019)
+[3]: Unbekannter Autor; unter https://aws.amazon.com/de/nosql/columnar/ (abgerufen am 13.01.2019)
 ```
 
 ***

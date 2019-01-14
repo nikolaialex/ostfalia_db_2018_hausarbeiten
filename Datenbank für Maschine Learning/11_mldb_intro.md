@@ -16,14 +16,14 @@ MLDB ist eine Open-Source-Datenbank, die von Element AI für ML entwickelt wurde
 Das folgende Beispiel zeigt den Unterschied zwischen einer traditionellen Datenbank und einer Datenbank für ML. Gegeben sind zwei SQL-Abfragen, die auf die Weblog-Daten von einem bestimmten Nutzer zugreifen. Der Unterschied zwischen beiden Abfragen ist der, dass die zweite Abfrage in der Lage ist, basierend auf den Weblog-Daten des Nutzers, eine Empfehlung zu geben, wie das Verhalten des Nutzers zukünfitg aussehen könnte.[1102]
 
 ```sql
-// Traditional
+--Traditional
 SELCT browsing_report() FROM web_logs WHERE user_id = "134567";
 
-// ML
+--ML
 SELCT content_recommendation() FROM web_logs WHERE user_id = "134567";
 ```
 
-Zusätzlich ermöglicht MLDB die SQL-Abfrage über HTTP, sodass der Aufruf der Empfehlungsfunktion Plattformunabhängig ablaufen kann.[1102]
+Zusätzlich ermöglicht MLDB die SQL-Abfrage über HTTP, sodass die Empfehlungsfunktion Plattformunabhängig aufgerufen werden kann.[1102]
 
 ```http
 GET /v1/functions/content_recommendation/application?input={user_id}

@@ -22,6 +22,28 @@
 
 [1204] Intro to Datasets, 2017. URL: [https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html](https://docs.mldb.ai/doc/builtin/datasets/Datasets.md.html) (letzter Abruf: 2019-01-09)
 
+[1301] Building and running the MLDB Community Edition Docker image, 2017. URL: [https://github.com/mldbai/mldb/blob/master/Building.md](https://github.com/mldbai/mldb/blob/master/Building.md) (letzter Abruf: 2019-01-11)
+
+[1302] The Jupyter Notebook, 2019. URL: [https://jupyter.org/](https://jupyter.org/) (letzter Abruf: 2019-01-11)
+
+[1303] Notebooks and pymldb, 2017. URL: [https://docs.mldb.ai/doc/#builtin/Notebooks.md.html](https://docs.mldb.ai/doc/#builtin/Notebooks.md.html) (letzter Abruf: 2019-01-11)
+
+[1304] Git importer procedure, 2017. URL: [https://docs.mldb.ai/doc/#builtin/procedures/GitImporter.md.html](https://docs.mldb.ai/doc/#builtin/procedures/GitImporter.md.html) (letzter Abruf: 2019-01-12)
+
+[1305] JSON Import Procedure, 2017. URL: [https://docs.mldb.ai/doc/#builtin/procedures/JSONImporter.md.html](https://docs.mldb.ai/doc/#builtin/procedures/JSONImporter.md.html) (letzter Abruf: 2019-01-12)
+
+[1306] SentiWordNet Importer Procedure, 2017. URL: [https://docs.mldb.ai/doc/#builtin/procedures/SentiWordNetImporter.md.html](https://docs.mldb.ai/doc/#builtin/procedures/SentiWordNetImporter.md.html) (letzter Abruf: 2019-01-12)
+
+[1307] Importing Text, 2017. URL: [https://docs.mldb.ai/doc/#builtin/procedures/importtextprocedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/importtextprocedure.md.html) (letzter Abruf: 2019-01-12)
+
+[1308] Word2Vec importer procedure, 2017. URL: [https://docs.mldb.ai/doc/#builtin/procedures/Word2VecImporter.md.html](https://docs.mldb.ai/doc/#builtin/procedures/Word2VecImporter.md.html) (letzter Abruf: 2019-01-12)
+
+[1309] SQL implementation in MLDB, 2017. URL: [https://docs.mldb.ai/doc/#builtin/sql/Sql.md.html](https://docs.mldb.ai/doc/#builtin/sql/Sql.md.html) (letzter Abruf: 2019-01-12)
+
+[1310] Loading Data Tutorial, 2017. URL: [https://docs.mldb.ai/ipy/notebooks/\_tutorials/\_latest/Loading%20Data%20Tutorial.html](https://docs.mldb.ai/ipy/notebooks/_tutorials/_latest/Loading%20Data%20Tutorial.html) (letzter Abruf: 2019-01-12)
+
+[1311] Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification, 2018. URL: [https://github.com/szilard/benchm-ml](https://github.com/szilard/benchm-ml)
+
 <!-- ## Tabellen -->
 
 ## Bildnachweis

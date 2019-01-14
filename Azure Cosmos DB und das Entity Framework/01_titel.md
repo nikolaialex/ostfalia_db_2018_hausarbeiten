@@ -1,6 +1,6 @@
 # Azure Cosmos DB und das Entity Framework
 
-Kurze Beschreibung des Inhaltes.
+In dieser Arbeit werden Persistenzlösungen von Microsoft vorgestellt. Der Schwerpunkt liegt auf der Multi-Modell NoSQL-Datenbank Azure Cosmos DB. Außerdem gibt diese Arbeit eine Einführung in das Entity Framework zur Interaktion mit Datenbanken. Nach der Einführung wird in einer Preview gezeigt, noch vor der offiziellen Unterstützung, wie das Entity Framework mit der Azure Cosmos DB interagieren kann.
 
 ## Autoren
 

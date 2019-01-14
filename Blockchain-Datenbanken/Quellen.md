@@ -98,6 +98,8 @@ __Severeijns, Luc (2017):__ What is blockchain? How is it going to affect Busine
 
 __Shanty-Bruyn, A. (2017):__ Blockchain - introduction. online verfügbar unter:  https://beta.vu.nl/nl/Images/werkstuk-bruyn_tcm235-862258.pdf, Seite 14 ff. Letzter Zugriff am: 08.01.2019.
 
+__Specht, Philip (2018):__ Die 50 wichtigsten Themen der Digitalisierung. Künstliche Intelligenz, Blockchain, Bitcoin Virtual Reality und vieles mehr verständlich erklärt. München, GERMANY: Redline Verlag.
+
 __SSL2BUY (2018):__ Symmetric vs. Asymmetric Encryption – What are differences?. Online verfügbar unter: https://www.ssl2buy.com/wiki/symmetric-vs-asymmetric-encryption-what-are-differences. Letzter Zugriff am: 08.01.2019.
 
 __Stachnis, Cyrill (o. A.):__ Kryptographische Hashfunktionen. Online verfügbar unter: http://www2.informatik.uni-freiburg.de/~stachnis/pdf/stachniss-habil-talk-hashfunctions.pdf. Seite 10 ff. Letzter Zugriff am: 08.01.2019.

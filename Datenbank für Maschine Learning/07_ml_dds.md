@@ -30,7 +30,7 @@ Deep Learning (DL) ist eine Art des maschinellen Lernens, mit dem Zusatz, dass d
 
 [503] Frauenhofer Gesellschaft: Maschinelles Lernen
 
-[701] Stackexchange, 2018
+[701] StackExchange: Distinction between AI, ML, Neural Networks, Deep learning and Data mining
 
 [702] DataFlair Team: Data Science vs Artificial Intelligence vs Machine Learning vs Deep Learning
 

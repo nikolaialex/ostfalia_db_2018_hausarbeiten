@@ -42,11 +42,13 @@
 
 [1310] Loading Data Tutorial, 2017. URL: [https://docs.mldb.ai/ipy/notebooks/\_tutorials/\_latest/Loading%20Data%20Tutorial.html](https://docs.mldb.ai/ipy/notebooks/_tutorials/_latest/Loading%20Data%20Tutorial.html) (letzter Abruf: 2019-01-12)
 
-[1311] Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification, 2018. URL: [https://github.com/szilard/benchm-ml](https://github.com/szilard/benchm-ml)
+[1311] Simple/limited/incomplete benchmark for scalability, speed and accuracy of machine learning libraries for classification, 2018. URL: [https://github.com/szilard/benchm-ml](https://github.com/szilard/benchm-ml) (letzter Abruf: 2019-01-14)
 
 [1312] Classifier Training Procedure, 2017. URL:[https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html](https://docs.mldb.ai/doc/builtin/procedures/Classifier.md.html) (letzter Abruf: 2019-01-12)
 
-[1313] CSV Export Procedure, 2017. URL:[https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html)(letzter Abruf: 2019-01-12)
+[1313] CSV Export Procedure, 2017. URL:[https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html](https://docs.mldb.ai/doc/#builtin/procedures/CsvExportProcedure.md.html) (letzter Abruf: 2019-01-12)
+
+[1401] Scaling MLDB, 2017. URL: [https://docs.mldb.ai/doc/#builtin/Scaling.md.html](https://docs.mldb.ai/doc/#builtin/Scaling.md.html) (letzter Abruf: 2019-01-14)
 
 <!-- ## Tabellen -->
 

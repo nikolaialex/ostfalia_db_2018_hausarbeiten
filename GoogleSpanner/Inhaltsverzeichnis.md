@@ -1,4 +1,4 @@
-# Google Cloud Spanner
+# Google Spanner
 
 | Name                | Matrikelnummer| Hochschule       | E-Mail                                  |
 |:--------------------|:--------------|:-----------------|:----------------------------------------|

@@ -30,7 +30,7 @@ Seit der Version 6 enthält MemSQL neue ML-Funktionen wie DOT_PRODUCT. Diese bie
 
 #### SAP HANA
 
-SAP HANA kombiniert eine ACID-kompatible Datenbank mit Anwendungsservices, Hochgeschwindigkeitsanalysen und flexiblen Werkzeugen für die Datenerfassung auf einer einheitlichen In-Memory-Plattform. In der In-Memory-Datenbank von SAP HANA werden in Anwendungen verwendete Daten gespeichert und abgerufen. Die Datenbank dient zudem als modernes Data Warehouse, das Daten aus einer Vielzahl von Quellen mit Live-Transaktionsdaten integriert und so Einblicke ermöglicht, die immer auf dem aktuellsten Stand sind.[807]
+SAP HANA kombiniert eine Datenbank mit Anwendungsservices, Hochgeschwindigkeitsanalysen und flexiblen Werkzeugen für die Datenerfassung auf einer einheitlichen In-Memory-Plattform. In der In-Memory-Datenbank von SAP HANA werden in Anwendungen verwendete Daten gespeichert und abgerufen. Die Datenbank dient zudem als modernes Data Warehouse, das Daten aus einer Vielzahl von Quellen mit Live-Transaktionsdaten integriert und so Einblicke ermöglicht, die immer auf dem aktuellsten Stand sind.[807]
 
 SAP HANA bietet eine Reihe an eingebauten ML-Algorithmen:
 
@@ -40,7 +40,18 @@ SAP HANA bietet eine Reihe an eingebauten ML-Algorithmen:
 - Empfehlungen
 - Link-Analyse
 
-Des Weiteren wird eine Integration von Modellen, die in gängigen ML-Bibliotheken oder Frameworks erstellt wurden, ermöglicht. Benutzer können Modelle aus einer SQL-basierten Anwendung und Programmiercode aufrufen, der beispielsweise in Python implementiert wurde. Wenn diese Anwendungen dann auf ML-Anwendungen, die auf dem HANA XS Advanced Applikationsserver entwickelt wurden, können die Modelle dann nutzen.[808]
+- Inferenzen auf groß angelegte Daten
+  - Algorithmen werden auf partitionierten Tabellen ausgeführt
+  - Lastausgleichsfunktionen für Modelle
+
+- Echtzeit-Inferenz
+  - Caching von ML-Modellen verhindert Aufwand für erneutes Laden eines Modells
+
+- Inferenz mittels Streaming-Analyse
+  - Kombination von ML- und Streaming-Analyseverarbeitungen
+
+Des Weiteren wird eine Integration von Modellen, die in gängigen ML-Bibliotheken oder Frameworks erstellt wurden, ermöglicht. Benutzer müssen Daten aus der SAP HANA-Plattform nicht extrahieren und Berechnungen lokal durchführen, um prädikative Analysen durchzuführen. Lediglich die Schlussfolgerungen aus den ML-Modellen müssen lokal verarbeitet werden.
+Bentuzer müssen keine komplexen prädikativen Modelle liefern. Die Plattform ermöglicht es, dass nur konfiguriert werden muss welche Funktion auf einen Datensatz angewendet werden soll und welche Parameter für die Analyse verwendet werden sollen. [808]
 
 ### ML Bibliotheken mit Datenbank-Unterstüztung
 

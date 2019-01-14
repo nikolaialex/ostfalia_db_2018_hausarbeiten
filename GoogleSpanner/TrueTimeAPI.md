@@ -6,7 +6,7 @@
 
 
 ## 4. TrueTime API
-True Time repräsentiert Zeit als TTintervall, welches ein Intervall ist, das begrenzte zeitliche Ungewissheit erfasst (anders als andere Intervalle, die Clients keine Auskunft über Ungewissheiten geben). Der Endpunkt von einem TTintervall ist vom Typ TTstamp. Die TT.now() Methode gibt ein TTintervall wieder, das garantiert die absolute Zeit zu beinhalten während TT.now() ausgerufen wurde. Die Zeitepoche ist analog zur UNIX-Time mit Schaltsekunde.<sup>32</sup> 
+TrueTime repräsentiert Zeit als TTintervall, welches ein Intervall ist, das begrenzte zeitliche Ungewissheit erfasst (anders als andere Intervalle, die Clients keine Auskunft über Ungewissheiten geben). Der Endpunkt von einem TTintervall ist vom Typ TTstamp. Die TT.now() Methode gibt ein TTintervall wieder, das garantiert die absolute Zeit zu beinhalten während TT.now() ausgerufen wurde. Die Zeitepoche ist analog zur UNIX-Time mit Schaltsekunde.<sup>32</sup> 
 
 Die Fehlergrenze wird als ∈ definiert, die Hälfte der Breite des Intervalls ist, und der durchschnittliche Fehlergrenze als <del>∈</del>. Die Methoden TT.after () und TT.before () sind Convenience-Wrapper um TT.now (). Die absolute Zeit eines Ereignisses e wird durch die Funktionsregister t<sup>abs</sup>(e) bezeichnet. In formellerer Hinsicht garantiert TrueTime, dass für einen Aufruf tt = TT.now (), tt.earliest ≤ tabs (e<sup>now</sup>) ≤ ist tt.latest, wobei e<sup>now</sup> das Aufrufereignis ist.<sup>33</sup>   
 

@@ -34,8 +34,6 @@ __Castor, Amy (2017):__ A (short) Guide to Blockchain Consensus Protocols. Onlin
 
 __Cupic, Zoran; Rauscher Andreas (2017):__ Blockchain basierte Smart Contracts: Grundlagen, Prozessunterstützung und Bewertung. Hochschule Ravensburg-Weingarten. Online verfügbar unter https://www.syntax-solution.de/wp-content/uploads/sites/7/2018/02/Blockhain-bassierte-Smart-Contract-Andreas-Rauscher-Zoran-Cupic.pdf. Seite 3 f. Letzter Zugriff am 02.01.2019.
 
-__Czernik, Agnieszka (2015):__ Verschlüsselung: symmetrisch, asymmetrisch oder hybrid?. Online verfügbar unter: https://www.datenschutzbeauftragter-info.de/verschluesselung-symmetrisch-asymmetrisch-oder-hybrid/. Letzter Zugriff am: 10.01.2019.
-
 __Dixon, Peter (2017):__ Blockchain: Mehr als Bitcoin. In: Innovationen und Innovationsmanagement in der Finanzbranche. Seite 226. Smolinski, Remigiusz; Gerdes, Moritz; Siejka, Martin; Bodek, Mariusz C. (Hg.) (2017). Wiesbaden: Springer Gabler (Edition Bankmagazin).
 
 __Drescher, Daniel (2017):__ Blockchain Grundlagen: Eine Einführung in die elementaren Konzepte in 25 Schritten. S. 89 ff. mitp-verlag. Frechen.

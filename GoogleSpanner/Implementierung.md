@@ -1,6 +1,6 @@
 [<<2. Einleitung](Einleitung.md)
 
-[>>4. True Time API](TrueTimeAPI.md)
+[>>4. TrueTime API](TrueTimeAPI.md)
 
 ***
 

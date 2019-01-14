@@ -237,7 +237,7 @@ Wie schon im Abschnitt ["MLDB Merkmale"](12_mldb_features.md) beschrieben, werde
 
 MLDB ermöglicht den Export eines Ergebnisses einer SQL-Abfrage. Als resultierendes Exportformat wird nur CSV angeboten. Der Export wird mittels der Prozedurart `export.csv` zur Verfügung gestellt[1314]. Das folgende Beispiel beschreibt, wie der Export der im Abschnitt "[Import](#import)" importierten Iris-Daten durchgeführt werden kann. Hierfür werden alle Daten, die die Klasse "Iris-setosa" aufweisen durch eine SQL-Abfrage ausgewählt (siehe Zeile 5) und als CSV-Datei exportiert (siehe Zeile 7).
 
-```python {class="line-numbers"}
+```python class:"lineNo"
 mldb.put("/v1/procedures/export_iris_classifier_result", {
     "type" : "export.csv",
     "params" : {

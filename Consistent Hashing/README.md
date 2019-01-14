@@ -1,6 +1,5 @@
-# Consistent Hashing
+# Gruppe: Consistent Hashing  
 
-## Gruppenmitglieder:  
 | Vorname - Nachname |  Region   | Matrikelnummer |              Email              |
 | :----------------: | :-------: | :------------: | :-----------------------------: |
 |    Viktor Weber    | TH-Lübeck |     247928     | viktor.weber@stud.th-luebeck.de |

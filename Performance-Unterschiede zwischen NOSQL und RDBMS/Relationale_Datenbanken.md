@@ -26,7 +26,17 @@ Die strukturellen Vorgaben einer Tabelle beziehen sich auf alle jeweils enthalte
 
 ## Skalierung
 
-Manche Relationale Datenbanken unterstützen das replizieren ihrer Daten auf andere Server. Dies hat jedoch nur Einfluss auf die Lese-Leistung. Es kann nicht als horizontale Skalierung angesehen werden. Relationale Datenbanken lassen sich lediglich vertikal skalieren. Da sich Hardware nicht endlos skalieren lässt, ist die Skalierung natürlich nur endlich möglich. [1]
+### Allgemeine Erklärung
+
+Im Kontext von Datenbanken werden zwei Arten der (Hardware-)Skalierung unterschieden - die horizontale und vertikale Skalierung. Vertikale Skalierung ("Scale up") beschreibt den Ausbau der Hardware der Maschine, auf der das DBMS läuft. Hierzu zählen die Leistung oder Anzahl an Prozessoren des Hosts, der installierte Arbeits- und der zur Verfügung stehende Festplattenspeicher. Die Kosten für Hardware steigen jedoch stärker als die erworbene Leistung. Außerdem setzt die Existenz der leistungsstärksten, verfügbaren Komponenten eine Obergrenze. [1] Dem gegenüber steht die horizontale Skalierung ("Scale Out"), bei der als Knoten Durchschnittshardware verwendet wird. Das besondere ist hierbei, dass an Stelle eines einzigen Knotens eine Vielzahl von Rechnern als Verbund verwendet wird. Dabei werden die Operationen des DBMS gleichmäßig auf sämtliche Knoten verteilt. Durch optimale Algorithmen lässt sich die Zahl der Knoten quasi beliebig steigern. Die nachfolgende Grafik veranschaulicht beide Skalierungen.
+
+![./](./images/scaling.png)
+
+
+
+### Relationale Datenbanken
+
+Manche Relationale Datenbanken, etwa MySQL, unterstützen das Replizieren ihrer Daten auf andere Server. Dies dient vor allem der Steigerung der Leseleistung durch das Verteilen auf unterschiedliche Knoten. Die Knoten enthalten dabei die gleichen Daten, weshalb sie manchen Transaktionen hinterher sein können. Deshalb kann dies nur bedingt als horizontale Skalierung angesehen werden. Praktisch lassen sich relationale Datenbanken lediglich vertikal skalieren. Da sich Hardware, wie oben beschrieben, nicht endlos skalieren lässt, ist die Skalierung natürlich nur endlich möglich. [2]
 
 
 
@@ -39,7 +49,11 @@ Manche Relationale Datenbanken unterstützen das replizieren ihrer Daten auf and
 ```
 Quellen
 
-[1]: https://www.thomas-krenn.com/de/wiki/MySQL_Replikation
+[1]: Georgiev, Georgie; unter ://www.pc-freak.net/blog/vertical-horizontal-server-services-scaling-vertical-horizontal-hardware-scaling/ (abgerufen am 13.01.2019)
+[2]: Mitasch, Christoph; unter https://www.thomas-krenn.com/de/wiki/MySQL_Replikation (abgerufen am 13.01.2019)
+
+Abbildungen
+[1]: http://www.pc-freak.net/images/horizontal-vs-vertical-scaling-vertical-and-horizontal-scaling-explained-diagram.png
 ```
 
 ***

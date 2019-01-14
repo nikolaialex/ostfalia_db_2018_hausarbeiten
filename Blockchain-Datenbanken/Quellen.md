@@ -1,6 +1,6 @@
 ***
 
-[<< Inhalltsverzeichnis](README.md)
+[<< Inhaltsverzeichnis](README.md)
 
 ***
 

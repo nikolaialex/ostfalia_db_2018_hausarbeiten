@@ -6,4 +6,4 @@ Kurze Beschreibung des Inhaltes.
 
 | Name          | Matrikelnummer | Hochschule   | E-Mail                     |
 |:--------------|:---------------|:-----------  |:---------------------------|
-|Kevin Meyer    | xxxxxxxxx      | HS Emden/Leer| meyerkev@outlook.com       |
+|Kevin Meyer    | xxxxxxxxx      | Hochschule Emden/Leer| meyerkev@outlook.com       |

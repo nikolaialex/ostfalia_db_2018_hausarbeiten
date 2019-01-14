@@ -87,8 +87,8 @@ Im Vergleich zu relationalen Datenbanken ergeben sich folgende, die Performance 
 ```
 Quellen
 
-[1]: https://www.pro-linux.de/artikel/2/1455/3,dokumentenorientierte-datenbanken.html
-[2]: https://database.guide/what-is-a-document-store-database/
+[1]: Schnelle, Jochen; unter https://www.pro-linux.de/artikel/2/1455/3,dokumentenorientierte-datenbanken.html (abgerufen am 13.01.2019)
+[2]: Unbekannter Autor; unter https://database.guide/what-is-a-document-store-database/ (abgerufen am 13.01.2019)
 ```
 
 ***

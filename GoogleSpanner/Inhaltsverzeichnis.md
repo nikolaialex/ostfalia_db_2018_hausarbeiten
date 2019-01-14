@@ -13,4 +13,4 @@
 
 [4. True Time API](TrueTimeAPI.md)
 
-[5. Benchmarks für die Perfomance von Spanner](Benchmarks.md)
+[5. Nutzung von Spanner](Nutzung.md)

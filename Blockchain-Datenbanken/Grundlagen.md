@@ -67,10 +67,10 @@ Quellenangabe:
 [05] - Specht, 2018
 [06] - Hosp, 2018
 [07] - Cupic und Rauscher, 2017
-[08] - Streichert, o.A.
-[09] - Bauerle, o.A.
+[08] - Streichert, o. A.
+[09] - Bauerle, o. A.
 [10] - Ploom, 2016
-[11] - ebd., o.A. 
+[11] - ebd., o. A. 
 [12] - Dixon, 2017 
 
 Medienverweise:

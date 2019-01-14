@@ -187,7 +187,7 @@ Quellenangabe:
 [37] - A. Czernik, 2015
 [38] - Team InnerQuest Online, 2018
 [39] - N. Reiff, 2018
-[40] - Elektronik-Kompendium, o.A.a
+[40] - Elektronik-Kompendium, o.A.
 ```
 
 ***

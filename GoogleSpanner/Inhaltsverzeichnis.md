@@ -14,3 +14,5 @@
 [4. True Time API](TrueTimeAPI.md)
 
 [5. Nutzung von Spanner](Nutzung.md)
+
+[6. Literaturverzeichnis](Literaturverzeichnis.md)

@@ -8,13 +8,13 @@ Im Folgenden wird für jeden Layer jeweils beispielhaft eine Technologie vorgest
 ### 4.1 Batch Layer
 Da der Batch Layer sehr große Datenmengen hält und diese nicht nur von einer einzelnen Maschine verarbeitet werden können, werden Technologien benötigt, welche die Berechnung auf mehrere Maschinen verteilen können. Dabei stellt Apache Hadoop das beliebtesten Tool dar. [4]  
 
-![Alt-Text](/images/hadoop.png) [3] 
+![Alt-Text](/images/hadoop-logo.png) [3] 
 
 Apache Hadoop ist ein Framework zur Speicherung großer Datenmengen in Computerclustern. Seine Aufgabe ist es, Aufgaben und Berechnungen zu planen, diese zu überwachen und erneut auszuführen, wenn Fehler auftreten oder die Aufgaben gar fehlschlagen. Dabei werden die Daten basierend auf dem MapReduce-Algorithmus redundant auf die einzelnen Rechnern verteilt. [7]
 
 Der MapReduce-Algorithmus wird zur Verteilung von Berechnungen auf mehrere Rechner verwendet, sodass diese parallel ausgeführt werden können. Abbildung x zeigt die Phasen des MapReduce-Verfahrens.  
 
-![Alt-Text](/images/MapReduce2.png) [3] 
+![Alt-Text](/images/MapReduce-Ablauf.png) [3] 
    
 
 1. Im ersten Schritt wird die große Datenmenge in viele kleine unabhängige Blöcke aufgeteilt, welche von den Map-Tasks vollständig parallel verarbeitet werden.  
@@ -28,7 +28,7 @@ Im Speed Layer werden die Daten im Systemstepeicher selbst verarbeitet und benö
 
 Apache Storm ist ein Open Source Rechensystem, welches für die Echtzeitverarbeitung großer Datenmengen verwendet wird. Es eignet sich unter Anderem für Echtzeitanalysen und kontinuierliche Berechnungen, weswegen es ein gutes Tool für den Speed Layer darstellt. [8]
 
-![Alt-Text](/images/storm2.png) [3]   
+![Alt-Text](/images/storm-Ablauf.png) [3]   
 
 Wie in Abbildung x zu sehen, ist Apache Storm dafür verantwortlich, aus den eingehenden Daten die Real Time Views zu erstellen. Dabei übernimmt es die Parallelisierung der Abfragen und die Partitionierung und wiederholt bei Fehleraufkommen die notwendigen Schritte. Die Datenbank, in welche die Real Time Views gespeichert werden, kann dabei vom Entwickler selbst bestimmt werden. [8]
 

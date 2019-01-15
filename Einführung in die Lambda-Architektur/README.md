@@ -1,4 +1,4 @@
-# Untersuchung von Apache Beam
+# Einführung in die Lambda-Architektur
 <h4 align="center">von Anastasia Savlukov</h4>
 <p align="center">
 Modul: Datenbanktechnologien<br>

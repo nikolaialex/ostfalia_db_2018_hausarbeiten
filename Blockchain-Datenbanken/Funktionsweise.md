@@ -83,7 +83,7 @@ Es gibt drei unterschiedliche Arten von Blockchains bezüglich ihrer Offenheit u
 Die nächste Kategorie sind __hybride__ Blockchains. Prinzipiell hat jeder Zugriff auf die Blockchain, jedoch nicht zu allen Blöcken. Nutzer haben verschiedene Zugriffsrechte. Die Blockchain ist somit teilweise dezentralisiert. Ein Beispiel ist R3 Corda oder b3i. [23, 28, 29]
 
 Die letzte Kategorie stellen die __privaten__ Blockchain-Netzwerke dar. Hier bestimmt eine zentrale Entität die Rechte für den Zugriff und die Bearbeitung. Die Blockchain ist zentralisiert, aber immer noch kryptographisch gesichert. Die zentralisierte Validierung führt zu einer höheren Effizienz als bei den dezentralisierten Variationen. Aufgrund der mangelnden Dezentralität ist es im allgemeinen strittig ob es sich bei dieser Variante noch um eine Blockchain handelt.
-Diese Art wird vor allem von Unternehmen eingesetzt um den Zugriff auf interne Informationen zu sicher und regulieren. Beispiele für diesen Typ sind die Blockchains Hyperledger und Ripple. [23, 30]
+Diese Art wird vor allem von Unternehmen eingesetzt um den Zugriff auf interne Informationen zu sicher und regulieren. Beispiele für diesen Typ sind die Blockchains Hyperledger und Ripple. [23, 29]
 
 #### 3.2.3 Blöcke
 
@@ -107,21 +107,21 @@ Das sogenannte publishing bezeichnet das Hinzufügen eines neuen Blocks zur Bloc
 
 ##### 3.2.5.1 Proof of Work (PoW)
 
-Beim Proof of Work (PoW) Modell lösen Teilnehmer ein mathematisches Problem, dessen Lösung einen hohen Rechenaufwand erfordert. Der erste Nutzer welcher die Lösung findet darf den nächsten Block publizieren. Die Rätsel sind so konstruiert, dass die Lösung schwer zu finden, aber leicht zu überprüfen ist. Dadurch können alle anderen Nutzer des Blockchain-Netzwerkes die Lösung und damit den dazugehörigen Block schnell verifizieren. [20, 31] Die zu lösende Aufgabe könnte zum Beispiel sein, dass der Hashwert, welcher aus dem Header des zu publizierenden Blocks gewonnen wird unter einem vorgegebenen Wert liegt. Um dies erreichen zu können, kann ein Nutzer kleine Änderungen an dem Header an dafür vorgesehenen Stellen vornehmen. Der Aufbau eines Blocks wurde im Kapitel Blöcke beschrieben. Das dort genannte nonce value kann zum Beispiel je nach Implementierung der Blockchain für diesen Zweck verwendet werden. Dies bedeutet der Nutzer kann dieses Feld nach Belieben verändern um das gewünschte Resultat zu erreichen. [20, 31]
+Beim Proof of Work (PoW) Modell lösen Teilnehmer ein mathematisches Problem, dessen Lösung einen hohen Rechenaufwand erfordert. Der erste Nutzer welcher die Lösung findet darf den nächsten Block publizieren. Die Rätsel sind so konstruiert, dass die Lösung schwer zu finden, aber leicht zu überprüfen ist. Dadurch können alle anderen Nutzer des Blockchain-Netzwerkes die Lösung und damit den dazugehörigen Block schnell verifizieren. [20, 31] Die zu lösende Aufgabe könnte zum Beispiel sein, dass der Hashwert, welcher aus dem Header des zu publizierenden Blocks gewonnen wird unter einem vorgegebenen Wert liegt. Um dies erreichen zu können, kann ein Nutzer kleine Änderungen an dem Header an dafür vorgesehenen Stellen vornehmen. Der Aufbau eines Blocks wurde im Kapitel Blöcke beschrieben. Das dort genannte nonce value kann zum Beispiel je nach Implementierung der Blockchain für diesen Zweck verwendet werden. Dies bedeutet der Nutzer kann dieses Feld nach Belieben verändern um das gewünschte Resultat zu erreichen. [20, 30]
 
 Wie im Kapitel Hashfunktionen beschrieben wurde ist es nicht effizient möglich aus einem Hash den ursprünglichen Wert zu berechnen. Aus diesem Grund kann ein Nutzer nicht einfach aus einem gewünschten Hashwert die Eingangsvariablen errechnen. Stattdessen muss er den Header verändern und anschließend den Hashwert des Headers berechnen. Entspricht der Wert nicht den Vorgaben muss das Verfahren wiederholt werden. Das häufige berechnen des Hashwertes ist mit hohem Rechnaufwand verbunden. [20]
 
 Ein wichtiger Aspekt für das PoW Modell ist, dass eine Hashfunktion aus zwei ähnlichen Inputs sehr unterschiedliche Resultate liefert. Dies führt dazu, dass der Nutzer nur durch Veränderung eines Wertes im Header des Blockes sehr unterschiedliche Hashwerte erhält. Zum anderen kann er aus einem mit bekanntem Input erzeugten Hashwert nicht effizient Rückschlüsse für die Korrektur des Inputs ziehen.  
 
-Durch Änderungen an den Vorgaben für die Lösung des Problems kann die Schwierigkeit und damit die Geschwindigkeit in welcher neue Blocks publiziert werden geregelt werden. Ein Beispiel für die Anwendung eines PoW Modells liefert Bitcoin. Das Verfahren wird hier als Mining bezeichnet und die Nutzer als Miner. [31, 32]
+Durch Änderungen an den Vorgaben für die Lösung des Problems kann die Schwierigkeit und damit die Geschwindigkeit in welcher neue Blocks publiziert werden geregelt werden. Ein Beispiel für die Anwendung eines PoW Modells liefert Bitcoin. Das Verfahren wird hier als Mining bezeichnet und die Nutzer als Miner. [30, 31]
 
-Ein PoW Modell verbraucht aufgrund des hohen Aufwands die Lösung eines Rätsel zu finden sehr viel Energie. Viele Teilnehmer versuchen zudem gleichzeitig das gleiche aufwändige Problem zu lösen, letzendlich kommt es, aber nur zur Erstellung eines neuen Blocks. [33, 34, 35]
+Ein PoW Modell verbraucht aufgrund des hohen Aufwands die Lösung eines Rätsel zu finden sehr viel Energie. Viele Teilnehmer versuchen zudem gleichzeitig das gleiche aufwändige Problem zu lösen, letzendlich kommt es, aber nur zur Erstellung eines neuen Blocks. [32, 33, 34]
 
 ##### 3.2.5.2 Proof of Stake (PoS)
 
-Bei Proof of Stake erfolgt die Auswahl des Nutzers, welcher den nächsten Block publiziert basierend auf seinem Anteil und einem Zufallsverfahren. Nutzer welche einen hohen Anteil besitzen und diesen setzen werden priorisiert, dies ersetzt das Lösen des mathematischen Problems bei PoW. Das Konzept von PoS basiert auf der Annahme, dass ein Nutzer mit einem hohen Anteil an dem Netzwerk an dessen Fortbestand interessiert ist. [26] Eine beispielhafte Umsetzung bei Kryptowährungen wäre, dass Nutzer mit einem Teil ihres Vermögens für den zu erstellenden Block bürgen. Ihre Bürgschaft wird für die Dauer des Auswahlprozesses gesperrt. Je größer die Bürgschaft desto höher ist ihre Chance ausgewählt zu werden. Im Gegensatz zu PoW ist PoS sehr viel energieeffizienter. Es existieren, jedoch Zweifel an der Sicherheit von PoS und den Implementierungen. [26, 33, 34, 35]
+Bei Proof of Stake erfolgt die Auswahl des Nutzers, welcher den nächsten Block publiziert basierend auf seinem Anteil und einem Zufallsverfahren. Nutzer welche einen hohen Anteil besitzen und diesen setzen werden priorisiert, dies ersetzt das Lösen des mathematischen Problems bei PoW. Das Konzept von PoS basiert auf der Annahme, dass ein Nutzer mit einem hohen Anteil an dem Netzwerk an dessen Fortbestand interessiert ist. [26] Eine beispielhafte Umsetzung bei Kryptowährungen wäre, dass Nutzer mit einem Teil ihres Vermögens für den zu erstellenden Block bürgen. Ihre Bürgschaft wird für die Dauer des Auswahlprozesses gesperrt. Je größer die Bürgschaft desto höher ist ihre Chance ausgewählt zu werden. Im Gegensatz zu PoW ist PoS sehr viel energieeffizienter. Es existieren, jedoch Zweifel an der Sicherheit von PoS und den Implementierungen. [26, 32, 33, 34]
 
-Zwei weiter verbreitete Modelle sind Delegate Proof of Stake (DPoS) und Delegate Byzantine Fault Tolerance (dBFT). Das Delegate Proof of Stake ist eine sehr effektive Variante des PoS. Teilnehmer stimmen kontinuierlich darüber ab wer Blöcke publiziert. Jeder Teilnehmer kann sich selber zur Wahl stellen und anschließend eine Anzahl an Blöcken abhängig vom Anteil der erhaltenen Stimmen publizieren. Es existieren weitere Konsensmodelle. Einige Beispiele sind Proof of Activity, Proof of Burn, Ripple und Tendermint. [26, 31, 34, 36]
+Zwei weiter verbreitete Modelle sind Delegate Proof of Stake (DPoS) und Delegate Byzantine Fault Tolerance (dBFT). Das Delegate Proof of Stake ist eine sehr effektive Variante des PoS. Teilnehmer stimmen kontinuierlich darüber ab wer Blöcke publiziert. Jeder Teilnehmer kann sich selber zur Wahl stellen und anschließend eine Anzahl an Blöcken abhängig vom Anteil der erhaltenen Stimmen publizieren. Es existieren weitere Konsensmodelle. Einige Beispiele sind Proof of Activity, Proof of Burn, Ripple und Tendermint. [26, 30, 31, 35]
 
 #### 3.2.6 Konflikte
 
@@ -134,9 +134,9 @@ Es werden zwei Typen von Forks unterschieden, hard forks und soft forks. Bei ein
 
 Ein __soft fork__ ist eine Erweiterung der existierenden Regeln. Die bisherigen Vorgaben bleiben bestehen und sind weiterhin gültig. Es müssen nicht alle Knoten aktualisiert werden, sondern lediglich jene welche am Konsensmodell teilnehmen. [25]
 
-### 3.2.8 Double Spending Problem
+#### 3.2.8 Double Spending Problem
 
-Der Begriff des Double Spending Problems wurde bereits in dem gleichnamigen Kapitel eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentrale Instanz. Essentiell dafür ist die stetige Aktualisierung der Blockchain. Alle Teilnehmer erhalten beständig die neue Version über das Netzwerk. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den Zeitstempel wird auch deutlich welche die ursprüngliche Transaktion war und alle nachfolgenden Versuche das digitale Geldstück erneut zu transferieren scheitern. [38, 39]
+Der Begriff des Double Spending Problems wurde bereits im gleichnamigen Kapitel bei den Grundlagen eingeführt. An dieser Stelle wird die von Satoshi Nakamoto vorgestellte Lösung näher erläutert. Sie löst das Double Spending Problem ohne die Nutzung einer zentralen Instanz. Essentiell dafür ist die __stetige Aktualisierung__ der Blockchain. Alle Teilnehmer erhalten über das Netzwerk beständig die neue Version. Die Blockchain hält Informationen über alle getätigten Transaktionen in den bereits beschriebenen Blöcken. Diese enthalten in der von Satoshi Nakamoto vorgeschlagenen Lösung einen Zeitstempel. Dadurch kann nachverfolgt werden, wer aktuell im Besitz der digitalen Währung ist beziehungsweise ob diese bereits ausgegeben wurde. Durch den __Zeitstempel__ wird auch deutlich, welche die ursprüngliche Transaktion war, und alle nachfolgenden Versuche, das digitale Geldstück erneut zu transferieren, scheitern. [36, 37]
 
 ***
 
@@ -149,45 +149,43 @@ Der Begriff des Double Spending Problems wurde bereits in dem gleichnamigen Kapi
 Quellenangabe:
 
 [01] - Blockgeeks, 2018
-[02] - C. Eilers, 2016
-[03] - C. Stachniss, o.A.
-[04] - D. Drescher, 2017
-[05] - K. Pommerening, M. Sergl, 2007
+[02] - Carsten Eilers, 2016
+[03] - Cyrill Stachniss, o. A.
+[04] - Daniel Drescher, 2017
+[05] - Klaus Pommerening, M. Sergl, 2007
 [06] - Ryte, 2018
-[07] - M. Teschner, 2012  
-[08] - C. Hoffmann, 2018
-[09] - T. Fischer, 2018
-[10] - T. Whitaker, 2018a
+[07] - Matthias Teschner, 2012  
+[08] - Chris Hoffmann, 2018
+[09] - Tim Fischer, 2018
+[10] - Ted Whitaker, 2018
 [11] - SSL2BUY, 2018
-[12] - M. Rouse, 2016
-[13] - R. Almeida, 2016
-[14] - Elektronik-Kompendium, o.A.
+[12] - Margaret Rouse, 2016
+[13] - Rafael Almeida, 2016
+[14] - Elektronik-Kompendium, o. A.
 [15] - Unbekannt, 2010
 [16] - C. Stobitzer, 2018
-[17] - Dr. R. Wobst, 2003
+[17] - Dr. Reinhrdt Wobst, 2003
 [18] - Pyler, 2018
-[19] - M. Rouse, 2007
-[20] - W. Ross, 2018
-[21] - M. Gupta, 2018
-[22] - M. Andreessen, o.A.
-[23] - P. Adam-Kalfon, S. El Moutaouakil, 2017
-[24] - K. Sultan et al., 2018
-[25] - L. Severeijns, 2017
-[26] - Z. Zigin et al., 2017
+[19] - Margaret Rouse, 2007
+[20] - Wibur Ross, 2018
+[21] - Manav Gupta, 2018
+[22] - Marc Andreessen, o. A.
+[23] - Paula Adam-Kalfon, Selsabila El Moutaouakil, 2017
+[24] - Karim Sultan, Umar Ruhi, Rubina Lakhani, 2018
+[25] - Luc Severeijns, 2017
+[26] - Zheng Zibin, Shaoan Xie, Hong-Ning Dai, Xianping Chen, 2017
 [27] - A. Shanti Bruyn, 2017
 [28] - B3i, 2018
-[29] - K. Schiller, 2018
-[30] - K. Schiller, 2018a
-[31] - Blockgeeks, 2018a
-[32] - B. Asolo, 2018
-[33] - W. Li et al., o.A.
-[34] - Unbekannt, 2015
-[35] - M. Thake, 2018
-[36] - A. Castor, 2017
-[37] - A. Czernik, 2015
-[38] - Team InnerQuest Online, 2018
-[39] - N. Reiff, 2018
-[40] - Elektronik-Kompendium, o.A.a
+[29] - Kai Schiller, 2018
+[30] - Blockgeeks, 2018a
+[31] - Bisade Asolo, 2018
+[32] - Wenting Li, S’ebastien Andreina, Jens-Matthias Bohli, Ghassan Karame, o. A.
+[33] - Unbekannt, 2015
+[34] - Max Thake, 2018
+[35] - Amy Castor, 2017
+[36] - Team InnerQuest Online, 2018
+[37] - Elektronik-Kompendium, o. A. a
+
 ```
 
 ***

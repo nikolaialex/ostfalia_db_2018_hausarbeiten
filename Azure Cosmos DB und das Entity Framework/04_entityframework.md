@@ -196,7 +196,7 @@ modelBuilder.Entity<Cat>()
 
 Die gezeigten Definitionen sind redundant und erwirken die gleiche Beziehung der Modelle zueinander.
 
-## Persitierung und Caching
+## Persistierung und Caching
 
 Das Entity Framework definiert einen Context, in dem Entitäten gecacht werden die von der Datenbank abbgerufen oder während der Laufzeit hinzugefügt wurden.
 

@@ -106,7 +106,7 @@ Mit dem Methodenaufruf ```SaveChangesAsync()``` wird der Context persistiert und
 
 In der Datenbank werden Dokumente zur persistierung angelegt. Die Erstellung von geschachtelten Elementen in einem Dokument ist mit dieser Preview-Version von Entity Framework noch nicht möglich.
 
-Das in der Datenbank erzeugten Dokumente für das Box-Objekt gestaltet sich wie folgt: 
+Das in der Datenbank erzeugte Dokumente für das Box-Objekt gestaltet sich wie folgt: 
 
 ```json
 {
@@ -121,7 +121,8 @@ Das in der Datenbank erzeugten Dokumente für das Box-Objekt gestaltet sich wie 
     "_ts": 1547575379
 }
 ```
-Das Cat-Objekt:
+
+Das Cat-Objekt Dokument:
 
 ```json
 {
@@ -138,6 +139,10 @@ Das Cat-Objekt:
     "_ts": 1547575379
 }
 ```
+
+Im letzten Schritt wird die Entität aus der Datenbank abgerufen und zurück in den Context geladen und Daten davon in der Console ausgegeben. Dazu wird die Entität anhand der Farbe in der Datenbank identifiziert. Auch wenn ein nesting der Objekte im Dokument der Datenbank noch nicht durch EF möglich ist, so kann das Entity Framework dennoch die Abhängigkeit auflösen und das verschachtelte Objekt wird mitgeladen.
+
+Viele Funktionen fehlen noch im Entity Framework in Verbindung mit der Azure Comos DB. In der Demonstration wurde gezeigt, dass grundlegend eine Kompatibilität zwischen den beiden Techniken besteht.
 
 >Das Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Um das Projekt auszuführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator erforderlich.
 

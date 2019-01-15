@@ -1,4 +1,4 @@
-# Einführung in die Lambda-Architektur
+# Untersuchung von Apache Beam
 <h4 align="center">von Anastasia Savlukov</h4>
 <p align="center">
 Hochschule Emden/Leer<br>

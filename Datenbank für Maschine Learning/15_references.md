@@ -10,25 +10,25 @@
 
 [403] Datenbank-Spektrum, Volume 17. Günnemann, Stephan: Machine Learning Meets Databases, 2017. URL: [https://link.springer.com/article/10.1007%2Fs13222-017-0247-8](https://link.springer.com/article/10.1007%2Fs13222-017-0247-8) (letzter Abruf: 2019-01-14).
 
-[404] Alpaydin, Ethem: Introduction To Machine Learning, 2014. 3. Auflage. ISBN: 9780262028189. URL: [https://books.google.de/books?id=NP5bBAAAQBAJ&pg=PA1&hl=de&source=gbs_toc_r&cad=2#v=onepage&q&f=false](https://books.google.de/books?id=NP5bBAAAQBAJ&pg=PA1&hl=de&source=gbs_toc_r&cad=2#v=onepage&q&f=false)
+[404] Alpaydin, Ethem: Introduction To Machine Learning, 2014. 3. Auflage. ISBN: 9780262028189. URL: [https://books.google.de/books?id=NP5bBAAAQBAJ&pg=PA1&hl=de&source=gbs_toc_r&cad=2#v=onepage&q&f=false](https://books.google.de/books?id=NP5bBAAAQBAJ&pg=PA1&hl=de&source=gbs_toc_r&cad=2#v=onepage&q&f=false) (letzter Abruf: 2019-01-15)
 
-[405] Brownlee, Jason: What is Machine Learning?, 2018. URL: [https://emerj.com/ai-glossary-terms/what-is-machine-learning/](https://emerj.com/ai-glossary-terms/what-is-machine-learning/).
+[405] Brownlee, Jason: What is Machine Learning?, 2018. URL: [https://emerj.com/ai-glossary-terms/what-is-machine-learning/](https://emerj.com/ai-glossary-terms/what-is-machine-learning/) (letzter Abruf: 2019-01-15)
 
-[406] Brownlee, Jason: How Machine Learning Algorithms Work (they learn a mapping of input to output), 2016. URL: [https://machinelearningmastery.com/how-machine-learning-algorithms-work/](https://machinelearningmastery.com/how-machine-learning-algorithms-work/).
+[406] Brownlee, Jason: How Machine Learning Algorithms Work (they learn a mapping of input to output), 2016. URL: [https://machinelearningmastery.com/how-machine-learning-algorithms-work/](https://machinelearningmastery.com/how-machine-learning-algorithms-work/) (letzter Abruf: 2019-01-15)
 
 [501] Fumo, David: Types of Machine Learning Algorithms You Should Know, 2017. URL: [https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861](https://towardsdatascience.com/types-of-machine-learning-algorithms-you-should-know-953a08248861) (letzter Abruf: 2019-01-13 14:03 Uhr).
 
-[502] Li, Hui: Maschinelles Lernen - Was es ist und was man darüber wissen sollte, 2019. URL: [https://www.sas.com/de_de/insights/analytics/machine-learning.html](https://www.sas.com/de_de/insights/analytics/machine-learning.html) (letzter Abruf: 2019-01-13 14:05 Uhr).
+[502] Li, Hui: Maschinelles Lernen - Was es ist und was man darüber wissen sollte, 2019. URL: [https://www.sas.com/de_de/insights/analytics/machine-learning.html](https://www.sas.com/de_de/insights/analytics/machine-learning.html) (letzter Abruf: 2019-01-13).
 
-[503] Frauenhofer Gesellschaft: Maschinelles Lernen - Kompetenzen, Anwendungen und Forschungsbedarf, 2018. URL: [https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf](https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf) (letzter Abruf: 2019-01-13 14:08 Uhr).
+[503] Frauenhofer Gesellschaft: Maschinelles Lernen - Kompetenzen, Anwendungen und Forschungsbedarf, 2018. URL: [https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf](https://www.bigdata.fraunhofer.de/content/dam/bigdata/de/documents/Publikationen/BMBF_Fraunhofer_ML-Ergebnisbericht_Gesamt.pdf) (letzter Abruf: 2019-01-13).
 
-[601] Thamilalagan, Vishakha: What are different models in machine learning?, 2017. URL: [https://www.quora.com/What-are-different-models-in-machine-learning](https://www.quora.com/What-are-different-models-in-machine-learning) (letzer Abruf 2018-01-12 14:05).
+[601] Thamilalagan, Vishakha: What are different models in machine learning?, 2017. URL: [https://www.quora.com/What-are-different-models-in-machine-learning](https://www.quora.com/What-are-different-models-in-machine-learning) (letzer Abruf 2018-01-12).
 
-[602] Brownlee, Jason: A Tour of Machine Learning Algorithms, 2013. URL: [https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) (letzer Abruf 2018-01-12 14:07).
+[602] Brownlee, Jason: A Tour of Machine Learning Algorithms, 2013. URL: [https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/](https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/) (letzer Abruf 2018-01-12).
 
-[701] StackExchange: Distinction between AI, ML, Neural Networks, Deep learning and Data mining, 2018. URL: [https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining](https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining) (letzer Abruf 2018-01-11 15:37).
+[701] StackExchange: Distinction between AI, ML, Neural Networks, Deep learning and Data mining, 2018. URL: [https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining](https://softwareengineering.stackexchange.com/questions/366996/distinction-between-ai-ml-neural-networks-deep-learning-and-data-mining) (letzer Abruf 2018-01-11).
 
-[702] DataFlair Team: Data Science vs Artificial Intelligence vs Machine Learning vs Deep Learning, 2018. URL: [https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/](https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/) (letzer Abruf 2018-01-11 15:48).
+[702] DataFlair Team: Data Science vs Artificial Intelligence vs Machine Learning vs Deep Learning, 2018. URL: [https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/](https://data-flair.training/blogs/data-science-vs-artificial-intelligence-vs-machine-learning-vs-deep-learning/) (letzer Abruf 2018-01-11).
 
 [801] LogicBlox: LogicBlox Platform Technology, 2019. URL: [https://developer.logicblox.com/technology/](https://developer.logicblox.com/technology/) (letzer Abruf 2018-01-14).
 
@@ -59,9 +59,9 @@ Applications with Spark, 2017. 1. Auflage. ISBN: 978-1-491-96011-0. URL: [http:/
 
 [902] Orenstein, Gary: Matching Modern Databases with ML and AI, 2018. URL: [https://www.memsql.com/blog/matching-modern-databases-with-ml-and-ai/](https://www.memsql.com/blog/matching-modern-databases-with-ml-and-ai/) (letzter Abruf: 2019-01-14).
 
-[1101] MLDB is the Machine Learning Database, 2017. URL: [https://mldb.ai/](https://mldb.ai/) (letzter Abruf: 2019-01-14 05:47 Uhr).
+[1101] MLDB is the Machine Learning Database, 2017. URL: [https://mldb.ai/](https://mldb.ai/) (letzter Abruf: 2019-01-14).
 
-[1102] BIG 2016: The Machine Learning Database, 2016. URL: [https://www.youtube.com/watch?v=D2qWqBgsqIU](https://www.youtube.com/watch?v=D2qWqBgsqIU) (letzter Abruf: 2019-01-14 05:50 Uhr).
+[1102] BIG 2016: The Machine Learning Database, 2016. URL: [https://www.youtube.com/watch?v=D2qWqBgsqIU](https://www.youtube.com/watch?v=D2qWqBgsqIU) (letzter Abruf: 2019-01-14).
 
 [1201] MLDB Overview, 2017. URL: [https://docs.mldb.ai/doc/#builtin/Overview.md.html](https://docs.mldb.ai/doc/#builtin/Overview.md.html) (letzter Abruf: 2019-01-09).
 
@@ -101,6 +101,10 @@ Applications with Spark, 2017. 1. Auflage. ISBN: 978-1-491-96011-0. URL: [http:/
 
 [1401] Scaling MLDB, 2017. URL: [https://docs.mldb.ai/doc/#builtin/Scaling.md.html](https://docs.mldb.ai/doc/#builtin/Scaling.md.html) (letzter Abruf: 2019-01-14).
 
+
+------
+
+
 ## Bildnachweis
 
 Übersicht verschiedener ML-Typen. URL: [https://qph.fs.quoracdn.net/main-qimg-f00ca1dac4db60a5ab8b85baa8669947](https://qph.fs.quoracdn.net/main-qimg-f00ca1dac4db60a5ab8b85baa8669947) (letzter Abruf: 2019-01-14).
@@ -119,6 +123,7 @@ Abhängigkeiten eines Datensatzes in MLDB. URL: [https://docs.mldb.ai/doc/builti
 
 Struktur von Datensätzen innerhalb von MLDB. URL: [https://docs.mldb.ai/doc/builtin/img/SlicedDataset.svg](https://docs.mldb.ai/doc/builtin/img/SlicedDataset.svg) (letzter Abruf: 2019-01-14).
 
----
 
-[< Fazit](15_conclusion.md) | [Autoren >](README.md)
+-------
+
+[< Fazit](14_conclusion.md) | [Autoren >](README.md)

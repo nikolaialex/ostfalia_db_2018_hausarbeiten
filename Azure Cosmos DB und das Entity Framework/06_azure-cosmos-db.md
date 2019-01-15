@@ -74,7 +74,7 @@ In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmo
 
 Dazu wurde ein lauffähiges Projekt erstell  t. Viele Erklärungen und Informationen sind direkt als Kommentar im Code zufinden. Es ist zubeachten das es sich um einen Prototypen handelt, der gezeigte Code sollte nicht in einer Produktivumgebung verwendet werden. Das Beispiel zeigt das Schreiben eines geschachtelten Datensatzes in die Datenbank und das anschließende Abrufen eines Datensatzes mit abhängiger Entität anhand von bekannten Parametern.
 
-[logo](/Azure Cosmos DB und das Entity Framework/images/AusgabeCosmosPreview.PNG) "Ausgabe der Konsole"
+[Abbildung](./images/AusgabeCosmosPreview.PNG) "Ausgabe der Konsole"
 
 >Das fertige Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Die Voraussetzungen zum Ausführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator.
 

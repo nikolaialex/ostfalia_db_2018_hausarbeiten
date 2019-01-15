@@ -27,7 +27,7 @@ Abbildung 7: MapReduce-Ablauf [**[HaBi17]**](7_Literaturverzeichnis.md)
 ### 4.2 Speed Layer
 Im Speed Layer werden die Daten im Systemspeicher selbst verarbeitet und benötigen daher entsprechende Technologien, welche zur Echtzeitverarbeitung von großen Datenmengen geeignet sind. Hierbei hat sich unter Anderem Apache Storm als geeignet erwiesen. [**[SuSh16]**](7_Literaturverzeichnis.md)  
 
-![Storm Logo](./images/storm-logo.png)  
+![Storm Logo](./images/storm-logo.PNG)  
 Abbildung 8: Storm-Logo [**[ApSt15]**](7_Literaturverzeichnis.md)   
 
 Apache Storm ist ein Open Source Rechensystem, welches für die Echtzeitverarbeitung großer Datenmengen verwendet wird. Es eignet sich unter Anderem für Echtzeitanalysen und kontinuierliche Berechnungen, weswegen es ein gutes Tool für den Speed Layer darstellt. [**[ApSt15]**](7_Literaturverzeichnis.md)  

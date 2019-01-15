@@ -45,5 +45,5 @@ Abbildung 10: HBase-Logo [**[ApHB19]**](7_Literaturverzeichnis.md)
 
 HBase ist keine relationale Datenbank, sondern ein verteiltes Speichersystem für strukturierte Daten und ähnelt einer MapReduce-Anwendung.
 
-[☜ vorheriges Kapitel](3_Architektur.md)
-   |   [nächstes Kapitel ☞](5_Vorteile.md)
+[☜ 3. Architektur](3_Architektur.md)
+   |   [5. Vorteile ☞](5_Vorteile.md)

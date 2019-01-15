@@ -11,4 +11,4 @@
 | **[Wart16]**  | Ramon Wartala, Kompakt Cloud-Computing, "Mit dem SMACK-Stack zu einer schnellen Lambda-Architektur", 2016, S. 50 ff.                                                                                                                                                                                                                                                | 
 
 ------------
-[☜ vorheriges Kapitel](6_Fazit.md)
+[☜ 6. Fazit](6_Fazit.md)

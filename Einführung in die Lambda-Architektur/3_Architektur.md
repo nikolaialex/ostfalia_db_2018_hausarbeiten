@@ -25,5 +25,5 @@ Die Aufgabe des Serving Layers ist es, die Batch Views und Real Time Views zu ho
 Wenn die Ergebnisse gespeichert werden, müssen sie regelmäßig aktualisiert werden. Hierzu kann entweder ein Zeitintervall definiert werden, in dem aktualisiert werden soll, oder ein Benachrichtigungsmechanismus verwendet werden, der den Serving Layer benachrichtigt, wenn dieser seine Views aktualisieren soll. [**[SuSh16]**](7_Literaturverzeichnis.md)   
 
 
-[☜ vorheriges Kapitel](2_Grundlagen.md)
-   |   [nächstes Kapitel ☞](4_Technologien.md)
+[☜ 2. Grundlagen](2_Grundlagen.md)
+   |   [4. Technologien ☞](4_Technologien.md)

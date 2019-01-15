@@ -1,5 +1,5 @@
 ## 4. Technologien
-Da die Lambda-Architektur eine Spezifikation für den Systementwurf darstellt und keine Technologien vorschreibt, können Entwickler selbst Entscheiden, welche Tools sie nutzen wollen, und gegebenenfalls auf Technologien zurückgreifen, die sie bereits kennen. Die nachfolgende Abbildung zeigt die möglichen Technologien, die sich zur Umsetzung der Lambda-Architektur eignen, sortiert nach deren Einsatz in den verschiedenen Layern.
+Da die Lambda-Architektur eine Spezifikation für den Systementwurf darstellt und keine Technologien vorschreibt, können Entwickler selbst entscheiden, welche Tools sie nutzen wollen, und gegebenenfalls auf Technologien zurückgreifen, die sie bereits kennen. Die nachfolgende Abbildung zeigt die möglichen Technologien, die sich zur Umsetzung der Lambda-Architektur eignen, sortiert nach deren Einsatz in den verschiedenen Layern.
 
 ![Technologien und Layer](./images/Tools.png)  
 Abbildung 5: Technologien für die einzelnen Layer [**[SuSh16]**](7_Literaturverzeichnis.md)  
@@ -25,7 +25,7 @@ Abbildung 7: MapReduce-Ablauf [**[HaBi17]**](7_Literaturverzeichnis.md)
 3. Sofern alle Zwischenergebnisse vorliegen, wird aus ihnen im dritten Schritt das Endergebnis berechnet und ausgegeben.
 
 ### 4.2 Speed Layer
-Im Speed Layer werden die Daten im Systemspeicher selbst verarbeitet und benötigen daher entsprechende Technologien, welche zur Echtzeitverarbeitung von großen Datenmengen geeignet sind. Hierbei hat sich unter Anderem Apache Storm als geeignet erwiesen. [**[SuSh16]**](7_Literaturverzeichnis.md)  
+Im Speed Layer werden die Daten im Systemspeicher selbst verarbeitet und benötigen daher entsprechende Technologien, welche zur Echtzeitverarbeitung von großen Datenmengen geeignet sind. Hierbei hat sich unter Anderem Apache Storm als geeignet erwiesen.  
 
 ![Storm Logo](./images/storm-logo.PNG)  
 Abbildung 8: Storm-Logo [**[ApSt15]**](7_Literaturverzeichnis.md)   

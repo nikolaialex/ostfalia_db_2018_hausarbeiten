@@ -1,4 +1,4 @@
-# Google Cloud Spanner
+# Google Spanner
 
 | Name                | Matrikelnummer| Hochschule       | E-Mail                                  |
 |:--------------------|:--------------|:-----------------|:----------------------------------------|
@@ -13,4 +13,6 @@
 
 [4. True Time API](TrueTimeAPI.md)
 
-[5. Benchmarks für die Perfomance von Spanner](Benchmarks.md)
+[5. Nutzung von Spanner](Nutzung.md)
+
+[6. Literaturverzeichnis](Literaturverzeichnis.md)

@@ -1,5 +1,5 @@
 ## 3. Architektur
-Auf der technischen Ebene besteht die Lambda-Architektur aus den drei Schichten: Batch Layer, Speed Layer und Serving Layer. Abbildung x zeigt deren Zusammenspiel.  
+Auf der technischen Ebene besteht die Lambda-Architektur aus den drei Schichten: Batch Layer, Speed Layer und Serving Layer. Abbildung 4 zeigt deren Zusammenspiel.  
 
 ![Lambda Architektur](/images/Lambda-Architektur.png)  
 Abbildung 4: Aufbau der Lambda-Architektur [**[Wart16]**](7_Literaturverzeichnis.md)  

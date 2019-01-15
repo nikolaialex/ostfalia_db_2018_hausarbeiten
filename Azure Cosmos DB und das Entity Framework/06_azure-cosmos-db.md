@@ -8,7 +8,7 @@ Betrachtet man den logischen Aufbau der Datenbank, so steht an erster Stelle der
 
 Eine Datenbank ist API-Spezifisch. Bei der Erstellung der Datenbank muss aus verschiedenen vordefinierten APIs eine API gewählt werden. Die Wahl der API hat Auswirkungen auf das in der Datenbank projiziert Datenmodell der Container und Items.[2] [3]
 
-In Abhängigkeit der gewählten API werden die Items als Row, Document, Item oder Node/Edge abgelegt. Dabei liegt immer das später in diesem Kapitel beschriebene ARS Datenmodell zugrunde.
+In Abhängigkeit der gewählten API werden die Items als Columnar, Document, Item oder Node/Edge abgelegt. Dabei liegt immer das später in diesem Kapitel beschriebene ARS Datenmodell zugrunde.
 
 Ein Container enthält die schema-agnostischen Items, das bedeutet, dass ein genaues Schema zuvor nicht definiert werden muss. Sowie den Items liegt auch dem Container ein API-spezifisches Datenmodell zugrunde. Je nach API kann das eine Collection, Table oder ein Graph sein.[4]
 
@@ -26,7 +26,7 @@ Darüber hinaus können die Indexpfade an individuelle Bedürfnisse angepasst we
 
 ### Datenzugriff
 
-Übersetzung der Anfrage in ASR
+Je nach gewählter API muss der zugriff auf die Datenbank nach den Konventionen der gewählten Schnittstelle durchgeführt werden.
 
 ### API-Schnittstellen
 
@@ -42,7 +42,7 @@ So kann die Azure Cosmos DB genutzt werden, ohne das eine Umstellung auf Client-
 
 #### SQL-API
 
-Die SQL-API bietet zur Zeit den meisten Funktionsumfang. So ist das Erstellen von Triggern, benutzerdefinierten Funktionen und Stored Procedures möglich. Dabei bedient sich die SQL-Syntaxt der bereits von Microsoft bekannten Syntaxt. 
+Die SQL-API bietet zur Zeit den meisten Funktionsumfang. So ist das Erstellen von Triggern, benutzerdefinierten Funktionen und Stored Procedures möglich. Dabei bedient sich die SQL-Syntaxt der bereits von Microsoft bekannten Syntaxt.
 
 Bei Wahl dieser API und der von MongoDB-API wird das vorherrschende Datenmodell auf das Dokumenten Datenmodell festgelegt.
 
@@ -52,16 +52,29 @@ Azure Cosmos DB eignet sich zum Erstellen von Graphdatenbanken. Graphdaten könn
 
 #### Cassandra-API
 
-#### Tabelle-API
+Anwendungen die für den Zugriff mit der Cassandra Query Language (CQL) v4 geschrieben wurden können ohne große Änderungen am Code mit der Datenbank kommunizieren. Bei Wahl dieses API-Typen wird das Columnar Datenmodel angewandt.
 
-### Skalierung und Replikation
+#### Table-API
 
-Horizontale Skalierung auf Containerebene.
-Global by Design.
+Azure Table Storage ist ein NoSQL-Schlüsselwertspeicher. Azure Cosmos DB ermöglicht es Anwendungen, die für Azure Table Storage entwicklet wurden, diese Daten nun für erweiterte Anforderungen in Azure Cosmos DB zu speichern.
+
+Die Anbindung ist konform mit der von Azure Table Storage.
+
+### Skalierung und Globaleverteilung
+
+In Azure Cosmos DB findet eine automatische horizontale Skalierung statt. Die grundlegende Einheit dafür bildet der zuvor beschriebene Container. Dieser Container kann über mehrere logische Partiotionen partitioniert werden und wird so skaliert. Dieses Verhalten und das Verteilen der Daten kann über den Partitionsschlüssel gesteuert werden.
+
+Die logischen Partitionen werden einer physischen Partition zugeordnet, die über ein ineternes, nicht steuerbares Verfahren auf die Computerressourcen repliziert werden.
+
+
 
 ## Implementierung
 
 In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB angebunden werden.
+
+
+
+Das fertige Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Die Vorraussetzungen zum Ausführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator.
 
 ---
 

@@ -180,9 +180,6 @@ class Cat
 
 Über die Properties kann die Beziehung der Modelle bereits umfangreich beeinflusst werden. Dies ist über die Properties und DataAnnotations möglich.
 
-
-MODELIERUNGSMÖGLICKTEITEN EINFÜGEN
-
 Eine 1:m-Beziehung wurde zuvor über die Properties der Klasse definiert. Eine Beschreibung der Abhängigkeit kann auch wie folgt mit der Fluent-API konstruiert werden. Beziehungen die über die Fluent-API erstellt wurden, werden stärker gewichtet.
 
 
@@ -197,12 +194,15 @@ modelBuilder.Entity<Cat>()
 
 ```
 
-Die gezeigten Definitionen sind redundant und erwirken die gleiche Beziehung.
+Die gezeigten Definitionen sind redundant und erwirken die gleiche Beziehung der Modelle zueinander.
 
-## Persitierung
+## Persitierung und Caching
 
+Das Entity Framework definiert einen Context, in dem Entitäten gecacht werden die von der Datenbank abbgerufen oder während der Laufzeit hinzugefügt wurden.
+
+Alle an Elementen vorgenommenen Modifikationen werden erst beim Aufruf der Persistenz-Methode in die Datenbank übertragen.
 
 ---
-[1] Lerman, julia; Miller, Rowan; Code First : Programming Entity Framework, O'REILLY 2012;
+[1] Lerman, Julia; Miller, Rowan; Code First : Programming Entity Framework, O'REILLY 2012;
 
 [2] Liles, Devlin; Rayburn, Tim; Entity Framework 4.1 : Expert's Cookbook, Packt Publishing 2012;

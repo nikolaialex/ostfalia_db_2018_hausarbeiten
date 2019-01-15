@@ -74,9 +74,23 @@ In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmo
 
 Dazu wurde ein lauffähiges Projekt erstell  t. Viele Erklärungen und Informationen sind direkt als Kommentar im Code zufinden. Es ist zubeachten das es sich um einen Prototypen handelt, der gezeigte Code sollte nicht in einer Produktivumgebung verwendet werden. Das Beispiel zeigt das Schreiben eines geschachtelten Datensatzes in die Datenbank und das anschließende Abrufen eines Datensatzes mit abhängiger Entität anhand von bekannten Parametern.
 
-[Abbildung](./images/AusgabeCosmosPreview.PNG) "Ausgabe der Konsole"
+![Abbildung](./images/AusgabeCosmosPreview.PNG) "Ausgabe der Konsole"
 
->Das fertige Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Die Voraussetzungen zum Ausführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator.
+In der ersten Phase wird geprüft ob die Datenbank für den Context existiert und bei bedarf auf der Datenbank erstellt.
+
+Für den Zugriff auf die Datenmodelle wurde jeweils eine Service-Klasse für Box und Cat erstellt, die den Datenzugriff abstrahiert.
+
+Nach Initialisierung der Datenbank und des Contextes, wird der Nutzer aufgefordert eine Farbe für die Box, sowie einen Namen für die Katze zuvergeben.
+
+Nun wird ein Box-Objekt erstellt. Dieses Box-Objekt enthält eine Cat-Objekt. Beide Objekte enthalten die zuvor übermittelten Werte.
+
+Anschließend wird das Box-Objekt dem Context übergeben. Entity Framework hat nun begonnen das Objekt zutracken.
+
+Mit dem nächsten Aufruf wird der Context persistiert und die Entitäten in der Datenbank angelegt.
+
+
+
+>Das Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Um das Projekt auszuführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator erforderlich.
 
 ---
 

@@ -1,7 +1,7 @@
 ## 5. Vorteile
 Die Möglichkeit des Zugriffs auf alle vergangenen Werte eines Datensatzes kann in vielen Fällen einen großen Vorteil bieten. So ist es sinnvoll in einem Online-Shop die Zustände des Warenkorbs von Nutzern genauer zu analysieren. Mit der Lambda-Architektur ist nicht nur einsehbar, welche Artikel Kunden kaufen, sondern auch welche sie in ihren Warenkorb legen und wieder herausnehmen. [**[Soul14]**](7_Literaturverzeichnis.md)  
 
-Systeme, die nach dieser Architektur entwickelt werden, sind leicht skalierbar. So müssen keine Änderungen an Architektur oder Code vorgenommen werden, wenn eine Skalierung erforderlich ist. Dabei kann sowohl vertikal, in Form von größerem Speicherplatz oder CPU, als auch horizontal, durch zusätzliche Rechner, skaliert werden, ohne das System anhalten zu müssen.  
+Systeme, die nach dieser Architektur entwickelt werden, sind leicht skalierbar. So müssen keine Änderungen an Architektur oder Code vorgenommen werden, wenn eine Skalierung erforderlich ist. Dabei kann sowohl vertikal, in Form von größerem Speicherplatz oder CPU, als auch horizontal durch zusätzliche Rechner skaliert werden, ohne das System anhalten zu müssen.  
 
 Da Batch Layer und Speed Layer getrennt sind, haben Erweiterungen einer Schicht keine Auswirkungen auf die andere, sodass das System flexibel an sich ändernde Anforderungen angepasst werden kann. Dies hat weiterhin den Vorteil, dass die beiden Layer unabhängig voneinander gewartet werden können. 
 

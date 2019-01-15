@@ -70,11 +70,11 @@ Auf Wunsch kann die Azure Cosmos DB auf mehrere Regionen verteilt werden. Dazu w
 
 ## Implementierung
 
-In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB angebunden werden.
+In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB, mit Verwendung der SQL-API angebunden werden.
 
+Dazu wurde ein lauffähiges Projekt erstellt. Viele Erklärungen und Informationen sind direkt als Kommentar im Code zufinden.
 
-
-Das fertige Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Die Vorraussetzungen zum Ausführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator.
+Das fertige Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Die Voraussetzungen zum Ausführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator.
 
 ---
 

@@ -1,5 +1,5 @@
 ## 4. Technologien
-Da die Lambda-Architektur eine Spezabbildungifikation für den Systementwurf darstellt und keine Technologien vorschreibt, können Entwickler selbst Entscheiden, welche Tools sie nutzen wollen, und gegebenfalls auf Technologien zurückgreifen, die sie bereits kennen. Die nachfolgende Abbildung zeigt die möglichen Technologien, die sich zur Umsetzung der Lambda-Architektur eignen, sortiert nach deren Einsatz in den verschiedenen Layern.
+Da die Lambda-Architektur eine Spezifikation für den Systementwurf darstellt und keine Technologien vorschreibt, können Entwickler selbst Entscheiden, welche Tools sie nutzen wollen, und gegebenenfalls auf Technologien zurückgreifen, die sie bereits kennen. Die nachfolgende Abbildung zeigt die möglichen Technologien, die sich zur Umsetzung der Lambda-Architektur eignen, sortiert nach deren Einsatz in den verschiedenen Layern.
 
 ![Technologien und Layer](/images/Tools.png)  
 Abbildung 5: Technologien für die einzelnen Layer [**[SuSh16]**](7_Literaturverzeichnis.md)  
@@ -7,12 +7,12 @@ Abbildung 5: Technologien für die einzelnen Layer [**[SuSh16]**](7_Literaturver
 Im Folgenden wird für jeden Layer jeweils beispielhaft eine Technologie vorgestellt.
 
 ### 4.1 Batch Layer
-Da der Batch Layer sehr große Datenmengen hält und diese nicht nur von einer einzelnen Maschine verarbeitet werden können, werden Technologien benötigt, welche die Berechnung auf mehrere Maschinen verteilen können. Dabei stellt Apache Hadoop das beliebtesten Tool dar. [**[SuSh16]**](7_Literaturverzeichnis.md)   
+Da der Batch Layer sehr große Datenmengen hält und diese nicht nur von einer einzelnen Maschine verarbeitet werden können, werden Technologien benötigt, welche die Berechnung auf mehrere Maschinen verteilen können. Dabei stellt Apache Hadoop das beliebteste Tool dar. [**[SuSh16]**](7_Literaturverzeichnis.md)   
 
 ![hadoop Logo](/images/hadoop-logo.png)  
 Abbildung 6: hadoop-Logo [**[HaBi17]**](7_Literaturverzeichnis.md)    
 
-Apache Hadoop ist ein Framework zur Speicherung großer Datenmengen in Computerclustern. Seine Aufgabe ist es, Aufgaben und Berechnungen zu planen, diese zu überwachen und erneut auszuführen, wenn Fehler auftreten oder die Aufgaben gar fehlschlagen. Dabei werden die Daten basierend auf dem MapReduce-Algorithmus redundant auf die einzelnen Rechnern verteilt. [**[ApHa18]**](7_Literaturverzeichnis.md)    
+Apache Hadoop ist ein Framework zur Speicherung großer Datenmengen in Computerclustern. Seine Aufgabe ist es, Aufgaben und Berechnungen zu planen, diese zu überwachen und erneut auszuführen, wenn Fehler auftreten oder die Aufgaben gar fehlschlagen. Dabei werden die Daten basierend auf dem MapReduce-Algorithmus redundant auf den einzelnen Rechnern verteilt. [**[ApHa18]**](7_Literaturverzeichnis.md)    
 
 Der MapReduce-Algorithmus wird zur Verteilung von Berechnungen auf mehrere Rechner verwendet, sodass diese parallel ausgeführt werden können. Abbildung 7 zeigt die Phasen des MapReduce-Verfahrens.  
 
@@ -25,7 +25,7 @@ Abbildung 7: MapReduce-Ablauf [**[HaBi17]**](7_Literaturverzeichnis.md)
 3. Sofern alle Zwischenergebnisse vorliegen, wird aus ihnen im dritten Schritt das Endergebnis berechnet und ausgegeben.
 
 ### 4.2 Speed Layer
-Im Speed Layer werden die Daten im Systemstepeicher selbst verarbeitet und benötigen daher entsprechende Technologien, welche zur Echtzeitverarbeitung von großen Datenmengen geeignet sind. Hierbei hat sich unter Anderem Apache Storm als geeignet erwiesen. [**[SuSh16]**](7_Literaturverzeichnis.md)  
+Im Speed Layer werden die Daten im Systemspeicher selbst verarbeitet und benötigen daher entsprechende Technologien, welche zur Echtzeitverarbeitung von großen Datenmengen geeignet sind. Hierbei hat sich unter Anderem Apache Storm als geeignet erwiesen. [**[SuSh16]**](7_Literaturverzeichnis.md)  
 
 ![Storm Logo](/images/storm-logo.png)  
 Abbildung 8: Storm-Logo [**[ApSt15]**](7_Literaturverzeichnis.md)   

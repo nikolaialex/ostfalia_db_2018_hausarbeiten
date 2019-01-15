@@ -56,36 +56,40 @@ Anwendungen die für den Zugriff mit der Cassandra Query Language (CQL) v4 gesch
 
 #### Table-API
 
-Azure Table Storage ist ein NoSQL-Schlüsselwertspeicher. Azure Cosmos DB ermöglicht es Anwendungen, die für Azure Table Storage entwicklet wurden, diese Daten nun für erweiterte Anforderungen in Azure Cosmos DB zu speichern.
+Azure Table Storage ist ein NoSQL-Schlüsselwertspeicher. Azure Cosmos DB ermöglicht es Anwendungen, die für Azure Table Storage entwickelt wurden, Daten für erweiterte Anforderungen in Azure Cosmos DB zu speichern.
 
 Die Anbindung ist konform mit der von Azure Table Storage.
 
 ### Skalierung und Globaleverteilung
 
-In Azure Cosmos DB findet eine automatische horizontale Skalierung statt. Die grundlegende Einheit dafür bildet der zuvor beschriebene Container. Dieser Container kann über mehrere logische Partiotionen partitioniert werden und wird so skaliert. Dieses Verhalten und das Verteilen der Daten kann über den Partitionsschlüssel gesteuert werden.
+In Azure Cosmos DB findet eine automatische horizontale Skalierung statt. Die grundlegende Einheit dafür bildet der zuvor beschriebene Container. Dieser Container kann über mehrere logische Partitionen hinweg partitioniert werden und wird auf diese Weise skaliert. Dieses Verhalten, sowie das Verteilen der Daten kann über den Partitionsschlüssel gesteuert werden.
 
-Die logischen Partitionen werden einer physischen Partition zugeordnet, die über ein ineternes, nicht steuerbares Verfahren auf die Computerressourcen repliziert werden.
+Die logischen Partitionen werden einer physischen Partition zugeordnet. Die physischen Partitionen werden über ein internes, nicht steuerbares Verfahren auf die Computerressourcen verteilt.
 
-Auf Wunsch kann die Azure Cosmos DB auf mehrere Regionen verteilt werden. Dazu werden dem Datenbank-Account Regionen zugewiesen, die sich nach Möglichkeit in der Nähe des Anweders befinden sollten. Azure übernimmt automatisch die Replikation der Daten. Über die Multihoming-APIs kommuniziert die Anwendung mit der nächstgelegenen Instanz, ohne das dafür Änderungen an der Anwendung vorgenommen werden müssen. Im Falle eines Ausfalls der lokalen Datenbankinstanz, greift ein automatisches Failover und leitet die Anfrage an die nächste Region weiter. Die Priorität der Regionen kann festgelegt werden. Das automatische Failover kann aber deaktiviert werden.
+Auf Wunsch kann die Azure Cosmos DB auf mehrere Regionen verteilt werden. Dazu werden dem Datenbank-Account die gewünschten Regionen hinzugefügt, die sich nach Möglichkeit in der Nähe des Endanwenders befinden sollten. Azure übernimmt automatisch die Replikation der Daten. Über die Multihoming-APIs kommuniziert die Anwendung mit der nächstgelegenen Instanz, ohne das dafür Änderungen an der Anwendung selbts vorgenommen werden müssen. Im Falle eines Ausfalls der lokalen Datenbankinstanz greift ein automatisches Failover und leitet die Anfrage an die nächste Region weiter. Die  Regionen, die bei einem Failover angesprochen werden sollen können priorisiert werden.
 
 ## Implementierung
 
-In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB, mit Verwendung der SQL-API angebunden werden.
+In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB, unter Verwendung der SQL-API angebunden werden.
 
-Dazu wurde ein lauffähiges Projekt erstell  t. Viele Erklärungen und Informationen sind direkt als Kommentar im Code zufinden. Es ist zubeachten das es sich um einen Prototypen handelt, der gezeigte Code sollte nicht in einer Produktivumgebung verwendet werden. Das Beispiel zeigt das Schreiben eines geschachtelten Datensatzes in die Datenbank und das anschließende Abrufen eines Datensatzes mit abhängiger Entität anhand von bekannten Parametern.
+Dazu wurde ein ein CLI-Projekt mit .NET-Core 2.2 erstellt. In dem Projekt sind Erklärungen und Informationen direkt als Kommentar zu finden. Es ist zu beachten, dass es sich um einen Prototypen handelt. Der gezeigte Code sollte nicht in einer Produktivumgebung verwendet werden.
 
-![Abbildung](./images/AusgabeCosmosPreview.PNG) "Ausgabe der Konsole"
+Das Projekt demonstriert das Schreiben eines geschachtelten Datensatzes in die Datenbank. Anschließende wird das Abrufen des Datensatzes mit abhängiger Entität anhand von bekannten Parametern demonstriert.
 
-In der ersten Phase wird geprüft ob die Datenbank für den Context existiert und bei bedarf auf der Datenbank erstellt.
+![Abbildung](./images/AusgabeCosmosPreview.PNG) "Ausgabe der Konsole nach der Ausführung"
 
-Für den Zugriff auf die Datenmodelle wurde jeweils eine Service-Klasse für Box und Cat erstellt, die den Datenzugriff abstrahiert.
+Zu Beginn wird geprüft, ob die Datenbank für den Context existiert. Ist dies nicht der Fall, wird das Schema in derr Datenbank erstellt.
+
+Für den Zugriff auf den Context wurde jeweils eine Service-Klasse für Box und Cat erstellt. Dies dient der Abstraktion des Zugriffes auf den Context und ermöglicht uns ein detaillierte Protokollierung oder Einflussnahme vor dem Zugriff.
 
 Nach Initialisierung der Datenbank und des Contextes wird der Nutzer aufgefordert eine Farbe für die Box, sowie einen Namen für die Katze anzugeben.
 
-Nun wird ein Box-Objekt erstellt. Dieses Box-Objekt enthält ein Cat-Objekt. Beide Objekte enthalten die zuvor übermittelten Werte.
-Der Quantenzustand der Katze wird allerdings per Zufall erzeugt.
+Nach erfolgreicher Eingabe wird ein Box-Objekt erstellt. Dieses Box-Objekt enthält ein Cat-Objekt. Beide Objekte enthalten die zuvor übermittelten Werte.
+Der "Quantenzustand" der Katze wird allerdings per Zufall erzeugt.
+
 
 ```c#
+//Beispiel aus dem Projekt
 new Box
 {
     BoxId = 1,
@@ -104,9 +108,9 @@ Anschließend wird das Box-Objekt dem Context übergeben. In diesem Moment fäng
 
 Mit dem Methodenaufruf ```SaveChangesAsync()``` wird der Context persistiert und die Entitäten in der Datenbank angelegt.
 
-In der Datenbank werden Dokumente zur persistierung angelegt. Die Erstellung von geschachtelten Elementen in einem Dokument ist mit dieser Preview-Version von Entity Framework noch nicht möglich.
+In der Datenbank werden Dokumente zur persistierung angelegt. Die Erstellung von geschachtelten Elementen in einem Dokument ist mit dieser Preview-Version des Entity Frameworks noch nicht möglich.
 
-Das in der Datenbank erzeugte Dokumente für das Box-Objekt gestaltet sich wie folgt: 
+Das in der Datenbank erzeugte Dokumente für das Box-Objekt gestaltet sich wie folgt:
 
 ```json
 {
@@ -140,9 +144,10 @@ Das Cat-Objekt Dokument:
 }
 ```
 
-Im letzten Schritt wird die Entität aus der Datenbank abgerufen und zurück in den Context geladen und Daten davon in der Console ausgegeben. Dazu wird die Entität anhand der Farbe in der Datenbank identifiziert. Auch wenn ein nesting der Objekte im Dokument der Datenbank noch nicht durch EF möglich ist, so kann das Entity Framework dennoch die Abhängigkeit auflösen und das verschachtelte Objekt wird mitgeladen.
+Im letzten Schritt wird die Entität aus der Datenbank abgerufen und in den Context geladen. Dazu wird die Entität anhand der Farbe in der Datenbank identifiziert. Auch wenn eine Schachtelung der Objekte im Dokument der Datenbank noch nicht durch EF möglich ist, so kann das Entity Framework dennoch die Abhängigkeit auflösen und das verschachtelte Objekt automatisch einbeziehen.
+Die enthaltenden Daten werden abschließend in der Konsole ausgegeben.
 
-Viele Funktionen fehlen noch im Entity Framework in Verbindung mit der Azure Comos DB. In der Demonstration wurde gezeigt, dass grundlegend eine Kompatibilität zwischen den beiden Techniken besteht.
+In der Demonstration wurde gezeigt, dass grundlegend eine Kompatibilität zwischen den beiden Techniken besteht.
 
 >Das Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Um das Projekt auszuführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator erforderlich.
 

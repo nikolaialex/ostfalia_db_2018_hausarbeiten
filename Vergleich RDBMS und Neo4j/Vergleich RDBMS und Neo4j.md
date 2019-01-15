@@ -24,12 +24,12 @@ Eine Datenbank ist ein wesentlicher Bestandteil einer Anwendung. Die Wahl des ri
 
 Der Einsatz von relationalen Datenbankmanagementsystemen (RDBMS) wie MSSQL, MySQL oder PostgreSQL ist weit verbreitet. Die Daten werden dabei in Tabellen gespeichert, die miteinander über Fremdschlüssel verbunden werden können. Ein Datensatz (Record) entspricht dabei einer Tabellenzeile (Tupel). Die Tabellenspalten stehen dabei für die entsprechenden Merkmale (Attribute).  RDBM-Systeme kommen oft an die Belastbarkeitsgrenzen wenn große Datenmengen über verschiedene Relationen abgefragt werden müssen. Grund dafür ist das aufwendige Zusammenführen von mehreren Tabellen um ein Ergebnis auswerten zu können. Die Komplexität und der Speicherverbrauch steigt mit der Anzahl der verknüften Tabellen.
 
-Neben den relationalen Datenbankmanagementsystemen haben sich alternative Konzepte etabliert, mit deren Hilfe sich Daten in anderen Strukturen verwalten lassen. Ein Beispiel dafür sind graphbasierte Datenbanken mit dem populären Verträter Neo4j. Bei graphbasierenden Datenbank steht die Beziehung der einzelnen Datensätzen im Mittelpunkt. Statt Tabellen arbeiten Graphdatenbanken mit Knoten (Entität) und Kanten (Beziehungen).Komplexe n:m Beziehungen lassen sich mit Graphdatenbanken einfach realisieren. Besonders gut lassen sich Beziehungen der einzelnen Knoten in tiefere Ebenen abfragen. Im Vergleich zu relationalen Systemen sind die solche Abfragen in Graphdatenbanken einfacher und schneller zu realisieren.
+Neben den relationalen Datenbankmanagementsystemen haben sich alternative Konzepte etabliert, mit deren Hilfe sich Daten in anderen Strukturen verwalten lassen. Ein Beispiel dafür sind graphbasierte Datenbanken mit dem populären Verträter Neo4j. Bei graphbasierenden Datenbank steht die Beziehung der einzelnen Datensätzen im Mittelpunkt. Statt Tabellen arbeiten Graphdatenbanken mit Knoten (Entität) und Kanten (Beziehungen).Komplexe n:m Beziehungen lassen sich mit Graphdatenbanken einfach realisieren. Besonders gut lassen sich Beziehungen der einzelnen Knoten in tiefere Ebenen abfragen. Im Vergleich zu relationalen Systemen sind die solche Abfragen in Graphdatenbanken einfacher und schneller zu realisieren.[01]
 
 ## Datenmodellierung
 
 Die starre Struktur einer relationalen Datenbank erfordert eine gründliche Planungs und Konzeptionsphase. Nach der Ermittlung der Informationsstruktur soll das Datenmodel einen Ausschnitt aus der realen Welt wiederspiegeln.
-Es ist im Software-Design üblich, die Entitäten eines geplanten Projekts als Graphen zu modellieren. Üblicherweise wird das Datenmodell dabei ER-Modell zusammengefasst. Entitäten werden vorgeschlagen verknüpft und mit Attributen versehen. Diese Entitäten werden dann in verschiedenen Beziehungen mit anderen Entitäten verbunden. Die Modellierung auf diese Weise ist ein sehr natürlicher Prozess der nicht direkt auf die Struktur einer relationalen Datenbank angewendet werden kann. Damit das RDBMS optimal funktioniert muss eine Transformation des ER-Modells in ein Datenbankschema erfolgen. Dabei werden verschiedene Normalisierungsschritte angewendet um Redundanzen zu verhinden und die Datenbank konsistent zu halten. Erst am Ende werden die tatsächlichen Tabellen definiert und die Spalten mit Datentypen verknüpft um das Model in ein Datenbankschema zu überführen mit dem das RDBMS arbeiten kann.
+Es ist im Software-Design üblich, die Entitäten eines geplanten Projekts als Graphen zu modellieren. Üblicherweise wird das Datenmodell dabei ER-Modell zusammengefasst. Entitäten werden vorgeschlagen verknüpft und mit Attributen versehen. Diese Entitäten werden dann in verschiedenen Beziehungen mit anderen Entitäten verbunden. Die Modellierung auf diese Weise ist ein sehr natürlicher Prozess der nicht direkt auf die Struktur einer relationalen Datenbank angewendet werden kann. Damit das RDBMS optimal funktioniert muss eine Transformation des ER-Modells in ein Datenbankschema erfolgen. Dabei werden verschiedene Normalisierungsschritte angewendet um Redundanzen zu verhinden und die Datenbank konsistent zu halten. Erst am Ende werden die tatsächlichen Tabellen definiert und die Spalten mit Datentypen verknüpft um das Model in ein Datenbankschema zu überführen mit dem das RDBMS arbeiten kann.[05]
 
 Folgende Grafik zeigt ein Datenmodell von Angestellten, die einer Abteilung zugeordnet wurden. Dies ist eine klassische n:m Beziehung, bei der einer Abteilung mehrere Angestellte zugehören und ein Angesteller auch Mitglied mehrerer Abteilungen sein kann. Um dieses Problem in einem RDBMS zu lösen wird eine zusätzliche Tabelle (Lookup Table) benötigt, die eine Abteilung mit einem Angestellten verbindet. Diese Tabelle stellt die Beziehung der beiden Tabellen dar.
 ![relational-model]
@@ -42,7 +42,7 @@ Bei der Verwendung eines RDBMS sind Entwickler gezwungen, Überlegungen zum Soft
 
 Frameworks wurden entwickelt, um zu versuchen, RDBMS natürlicher erscheinen zu lassen. Diese Frameworks werden als ObjectRelational Mapping Systems (ORMs) bezeichnet. Ein Beispiel für ein ORM wäre das Hibernate Framework für Java. ORMs versuchen, das Datenmodell in Objekte und Beziehungen zu abstrahieren, um die Softwareentwicklung natürlicher erscheinen zu lassen. Vorzugsweise sollte das Datenmodell kein treibender Faktor im Softwaredesign sein. Stattdessen sollten Software-Design-Anforderungen die treibende Kraft hinter dem Design des Datenmodells sein. Die Datenbank sollte Flexibilität unterstützen, und genau hier setzt die GDB an.
 
-Die Trennung der Softwareentwickler von ihren RDBMS-Bindungen könnte zu einem viel flexibleren und dynamischeren Ansatz für das Softwaredesign führen. Diese Flexibilität eignet sich gut für die agile Entwicklungsmethodik, bei der sich Anforderungen und Lösungen ständig weiterentwickeln sollen. Ein leistungsstarkes Software-Design-Tool für Java und Neo4j ist Spring Data. Spring Data ermöglicht die POJO-basierte Entwicklung für die Neo4j GDB. Es ordnet kommentierte Entitätsklassen der Neo4j Graphen-Datenbank mit erweiterter Mapping-Funktionalität zu.
+Die Trennung der Softwareentwickler von ihren RDBMS-Bindungen könnte zu einem viel flexibleren und dynamischeren Ansatz für das Softwaredesign führen. Diese Flexibilität eignet sich gut für die agile Entwicklungsmethodik, bei der sich Anforderungen und Lösungen ständig weiterentwickeln sollen. Ein leistungsstarkes Software-Design-Tool für Java und Neo4j ist Spring Data. Spring Data ermöglicht die POJO-basierte Entwicklung für die Neo4j GDB. Es ordnet kommentierte Entitätsklassen der Neo4j Graphen-Datenbank mit erweiterter Mapping-Funktionalität zu.[02]
 
 ## Datenbankabfragen
 
@@ -52,7 +52,7 @@ Das effektive Abrufen von Informationen aus einem Graphen erfordert eine so gena
 
 Die Welt der Graphendatenbanken hat noch keine Standardisierung auf eine Sprache für das Traversieren und Einfügen vorgenommen. Diese mangelnde Standardisierung hat zu sehr unterschiedlichen Implementierungen und Frameworks für die Dateninteraktion geführt. Die verfügbaren Implementierungen reichen von einer Java-API, einer REST-Schnittstelle, einer DSL-Sprache namens Gremlin und einer weiteren namens Cypher. Gremlin führt die Traversen durch ein System namens Piping durch. Jedes Teil der Anfrage ist ein Schritt zum nächsten in einer progressiven Weise. Cypher versucht jedoch, mehr von einem Keyword-System zu verwenden, das versucht, mehr wie SQL zu sein. Dies ist eine Schwäche gegenüber dem ausgereifteren RDBMS SQL. Es gibt einen Mangel an Konsistenz, der erfordert, dass man alle Implementierungen lernt, bevor man versteht, welcher Ansatz für das Problem am besten geeignet ist.
 
-Gremlin und Cypher sind die beiden Hauptsprachen, in denen Neo4J-Graphen durchlaufen werden. Gremlin ist eine domänenspezifische (DSL) Programmiersprache, die sich auf das Durchlaufen und Manipulieren von Graphen konzentriert. Gremlin ist auf der Programmiersprache Groovy implementiert und wurde von den meisten Anbietern von Graphendatenbanken übernommen. Gremlin wird durch die Blueprints Java API unterstützt und kann bei Bedarf direkt mit Blueprints arbeiten. Groovy arbeitet auf der JVM und ist eng mit Java verbunden. Gremlin strebt danach, eine Standardsprache zu sein, die mit allen gängigen Implementierungen von Graphendatenbanken kompatibel ist. Cypher ist eine von SQL inspirierte deklarative Graph-Abfragesprache, die darauf abzielt, die Notwendigkeit zu vermeiden, Traversen im Code zu schreiben. Cypher befindet sich immer noch in intensiver Entwicklung, wobei kürzlich die Unterstützung für die Graphenmanipulation anstelle der reinen Abfragefähigkeit hinzugefügt wurde.
+Gremlin und Cypher sind die beiden Hauptsprachen, in denen Neo4J-Graphen durchlaufen werden. Gremlin ist eine domänenspezifische (DSL) Programmiersprache, die sich auf das Durchlaufen und Manipulieren von Graphen konzentriert. Gremlin ist auf der Programmiersprache Groovy implementiert und wurde von den meisten Anbietern von Graphendatenbanken übernommen. Gremlin wird durch die Blueprints Java API unterstützt und kann bei Bedarf direkt mit Blueprints arbeiten. Groovy arbeitet auf der JVM und ist eng mit Java verbunden. Gremlin strebt danach, eine Standardsprache zu sein, die mit allen gängigen Implementierungen von Graphendatenbanken kompatibel ist. Cypher ist eine von SQL inspirierte deklarative Graph-Abfragesprache, die darauf abzielt, die Notwendigkeit zu vermeiden, Traversen im Code zu schreiben. Cypher befindet sich immer noch in intensiver Entwicklung, wobei kürzlich die Unterstützung für die Graphenmanipulation anstelle der reinen Abfragefähigkeit hinzugefügt wurde.[03]
 
 ## Vergleich ausgewählter Kriterien
 
@@ -111,7 +111,7 @@ Dieses Modell lässt sich mit folgenden Eigenschaften beschreiben:
 
 ### Anwendungsfälle für Neo4j
 
-Neo4j bietet sich immer dann an, wenn die Struktur der Daten unklar oder flexibel sind, das System horizontal skalierbar sein muss und die über und die Datensätze über komplexe Beziehungen zu einander aufweißen.
+Neo4j bietet sich immer dann an, wenn die Struktur der Daten unklar oder flexibel sind, das System horizontal skalierbar sein muss und die über und die Datensätze über komplexe Beziehungen zu einander aufweißen.[06]
 
 Neo4j wirbt vorallem mit folgenden Einsatzgebieten:
 - Soziale Netzwerke
@@ -138,7 +138,7 @@ Durch die aktuelle Verkehrslage und Baumaßnahmen verändert sich ein solches Ne
 Bei der Umsetzung eines globalen Paket-Routing Systems wird daher ein flexibles, skalierbares Datenmodell benötigt, das mit der enormen Menge von Netzwerkknoten eine Routinganfrage schnell bearbeiten kann.
 Solche Systeme müssen Anfragen in der Größenordnung von 2500 Paketen pro Sekunde standhalten. 
 Die hohe Verfügbarkeit des Services ist ebenso wichtig wie die schnelle Ausführung einer Anfrage.
-Neo4j bietet die optimalen Vorraussetzungen für diesen Einsatzbereich. Die extreme Verfügbarkeit wird das Neo4j Clustering ermöglicht.   
+Neo4j bietet die optimalen Vorraussetzungen für diesen Einsatzbereich. Die extreme Verfügbarkeit wird das Neo4j Clustering ermöglicht. [04]
 
 #### Fraud-Detection
 
@@ -171,6 +171,8 @@ Sind diese Graphendatenbanken bereit, RDBMS vollständig zu ersetzen? Dass ist u
 * [05] Neo Technology "Concepts: Relational to Graph", San Mateo, CA 2019, Abgerufen 14.01.2019, Link: https://neo4j.com/developer/graph-db-vs-rdbms/
 
 * [06] Jim Webber, Ian Robinson, "The Top 5 Use Cases of Graph Databases", San Mateo, CA 2017
+
+* [07] Walldén, Özkan, "A graph database management system for a logistics-related service", 2016
 
 [fraud-detection-insurance]: ./Images/fraud-detection-insurance.png "Graph eines Fraud-Detection-Netzwerks bei einer KFZ-Versicherung"
 [relational-model]: ./Images/relational_model.jpg "Relationales Datenbank Modell"

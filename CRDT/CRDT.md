@@ -1,0 +1,3 @@
+# CRDTs
+## **C**onflict-free **R**eplicated **D**ata **T**ypes
+sind Datenstrukturen, die...

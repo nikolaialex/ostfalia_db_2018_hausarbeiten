@@ -11,6 +11,9 @@ namespace CosmosPreview
     {
         private readonly SchroedingerContext _schroedingerCtx;
 
+        /// <summary>
+        /// Generische Entitätensammlung im Context
+        /// </summary>
         public DbSet<TEntity> Repository { get; }
 
         public BaseService(SchroedingerContext schroedingerCtx)
@@ -25,10 +28,16 @@ namespace CosmosPreview
             return Repository.AddAsync(entity);
         }
 
+        /// <summary>
+        /// Überführt alle geänderten Entitäten im Context in die Datenbank
+        /// </summary>
+        /// <returns></returns>
         public async Task<int> SaveChangesAsync()
         {
+            // Messung der Dauer der Übertragung in die Datenbank
             Stopwatch timer = Stopwatch.StartNew();
             
+            // Wir zählen alle übertragenen Entitäten.
             var count = await _schroedingerCtx.SaveChangesAsync();
 
             timer.Stop();

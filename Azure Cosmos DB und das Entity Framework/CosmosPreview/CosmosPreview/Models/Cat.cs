@@ -4,6 +4,9 @@ using System.Text;
 
 namespace CosmosPreview.Models
 {
+    /// <summary>
+    /// Katzen-Entität
+    /// </summary>
     class Cat
     {
         public int CatId { get; set; }
@@ -12,6 +15,10 @@ namespace CosmosPreview.Models
         public bool IsAlive { get; set; }
 
         public int BoxId { get; set; }
+        
+        /// <summary>
+        /// Navigationseigenschaft
+        /// </summary>
         public Box Box { get; set; }
     }
 }

@@ -98,8 +98,8 @@ Zum jetzigen Zeitpunkt ist es noch nicht möglich many-to-many Beziehungen, ohne
 class Box
 {
     public int BoxId { get; set; }
-    
-    public BoxCat BoxCats { get; set; }
+
+    public ICollection<BoxCat> BoxCats { get; set; }
 }
 
 class Cat
@@ -107,7 +107,7 @@ class Cat
     public int CatId { get; }
     public bool IsAlive { get; }
 
-    public BoxCat BoxCats { get; set; }
+    public ICollection<BoxCat> BoxCats { get; set; }
 }
 
 ```
@@ -115,6 +115,9 @@ class Cat
 Die Entitätsklassen wurden soweit angepasst, dass diese nun auf die Joinentität verweisen.
 
 Die Joinentität enthält nun die Fremdschlüssel und Navigation Properties der Entitäten.
+Mit Hilfe der FluentA-API muss anschließend die Beziehung der Box- und Cat-Entitäten über die BoxCat-Entität definiert werden. Darüber mehr am Ende dieses Kapitels unter dem Punkt Fluent-API.
+
+Die Jointabelle stellt sich wie folgt da:
 
 ```c#
 class BoxCat
@@ -128,10 +131,60 @@ class BoxCat
 
 ```
 
+Data Anotations.
 
 ## Database First
 
+Neben dem Erstellen der Datenbank über vorhandene Modelle, ermöglicht Entityt Framework auch das Reverse Engineering von relationalen Datenbanken. Bei diesem Verfahren verfügt der Anweder bereits über eine konstruierte Datenbank. EF ist in der Lage eine Verbindung mit der Datenbank herzustellen und vorhandenen Tabellen in Modell-Klassen zu überführen. Dabei wird für jede Tabelle eine eigne Klasse angelegt. Diese Klasse enthält die Spalten als Properties. Beziehungen durch Foreign-Key-Constraints der Entitäten werden berücksichtig und in das Datenmodell überführt.
+
+```sql
+CREATE DATABASE schroedinger_db;
+
+CREATE TABLE Box (
+    BoxId int,
+    PRIMARY KEY (BoxId)
+);
+
+CREATE TABLE Cat (
+    CatId int,
+    IsAlive int,
+    BoxId int FOREIGN KEY REFERENCES Box(BoxId)
+    PRIMARY KEY (CatId, BoxId)
+);
+
+```
+
+Diese Datenbankstruktur würde in eine 1:n-Beziehung überführt werden.
+
+```c#
+
+class Box
+{
+    public int BoxId { get; set; }
+
+    public Cat Cat { get; set; }
+}
+
+class Cat
+{
+    public int CatId { get; }
+    public bool IsAlive { get; }
+
+    public int BoxId { get; set; }
+    public Box Box { get; set; }
+}
+
+```
+
 ## Fluent-API
 
+Über die Modell kann die Beziehung der Modelle bereits umfangreich beeinflusst werden. Dies ist über die Properties und DataAnotaions möglich.
+
+Die Fluent-API bietet eine weitere Möglichkeit die Beziehungen der Modelle zu definieren.
+
+
+
 ---
-[1] 
+[1] Lerman, julia; Miller, Rowan; Code First : Programming Entity Framework, O'REILLY 2012;
+
+[2] Liles, Devlin; Rayburn, Tim; Entity Framework 4.1 : Expert's Cookbook, Packt Publishing 2012;

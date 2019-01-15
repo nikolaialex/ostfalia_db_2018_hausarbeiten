@@ -178,9 +178,20 @@ class Cat
 
 ## Fluent-API
 
-Über die Modell kann die Beziehung der Modelle bereits umfangreich beeinflusst werden. Dies ist über die Properties und DataAnotaions möglich.
+Über die Properties kann die Beziehung der Modelle bereits umfangreich beeinflusst werden. Dies ist über die Properties und DataAnnotations möglich.
 
-Die Fluent-API bietet eine weitere Möglichkeit die Beziehungen der Modelle zu definieren.
+Eine 1:m-Beziehung wurde zuvor über die Properties der Klasse definiert. Eine Beschreibung der Abhängigkeit kann auch wie folgt mit der Fluent-API konstruiert werden. Beziehungen die über die Fluent-API erstellt wurden, werden stärker gewichtet.
+
+```c#
+ modelBuilder.Entity<Box>()
+    .HasMany( e => e.Cats )
+    .WithOne( e => Box);
+
+modelBuilder.Entity<Cat>()
+    .HasOne( e=> e.Box )
+    .WithMany( e => e.Cats);
+
+```
 
 
 

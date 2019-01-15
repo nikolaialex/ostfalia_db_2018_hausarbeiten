@@ -66,7 +66,7 @@ In Azure Cosmos DB findet eine automatische horizontale Skalierung statt. Die gr
 
 Die logischen Partitionen werden einer physischen Partition zugeordnet, die über ein ineternes, nicht steuerbares Verfahren auf die Computerressourcen repliziert werden.
 
-
+Auf Wunsch kann die Azure Cosmos DB auf mehrere Regionen verteilt werden. Dazu werden dem Datenbank-Account Regionen zugewiesen, die sich nach Möglichkeit in der Nähe des Anweders befinden sollten. Azure übernimmt automatisch die Replikation der Daten. Über die Multihoming-APIs kommuniziert die Anwendung mit der nächstgelegenen Instanz, ohne das dafür Änderungen an der Anwendung vorgenommen werden müssen. Im Falle eines Ausfalls der lokalen Datenbankinstanz, greift ein automatisches Failover und leitet die Anfrage an die nächste Region weiter. Die Priorität der Regionen kann festgelegt werden. Das automatische Failover kann aber deaktiviert werden.
 
 ## Implementierung
 

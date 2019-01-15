@@ -82,13 +82,62 @@ Für den Zugriff auf die Datenmodelle wurde jeweils eine Service-Klasse für Box
 
 Nach Initialisierung der Datenbank und des Contextes wird der Nutzer aufgefordert eine Farbe für die Box, sowie einen Namen für die Katze anzugeben.
 
-Nun wird ein Box-Objekt erstellt. Dieses Box-Objekt enthält eine Cat-Objekt. Beide Objekte enthalten die zuvor übermittelten Werte.
+Nun wird ein Box-Objekt erstellt. Dieses Box-Objekt enthält ein Cat-Objekt. Beide Objekte enthalten die zuvor übermittelten Werte.
+Der Quantenzustand der Katze wird allerdings per Zufall erzeugt.
 
-Anschließend wird das Box-Objekt dem Context übergeben. Entity Framework hat nun begonnen das Objekt zutracken.
+```c#
+new Box
+{
+    BoxId = 1,
+    Color = boxColor,
+    Cat = new Cat
+    {
+        CatId = 1,
+        Name = catName,
+        IsAlive = new Random().Next(100) < 50 ? true : false
+    }
+});
 
-Mit dem nächsten Aufruf wird der Context persistiert und die Entitäten in der Datenbank angelegt.
+```
 
+Anschließend wird das Box-Objekt dem Context übergeben. In diesem Moment fängt das Entity Framework an das Objekt zutracken.
 
+Mit dem Methodenaufruf ```SaveChangesAsync()``` wird der Context persistiert und die Entitäten in der Datenbank angelegt.
+
+In der Datenbank werden Dokumente zur persistierung angelegt. Die Erstellung von geschachtelten Elementen in einem Dokument ist mit dieser Preview-Version von Entity Framework noch nicht möglich.
+
+Das in der Datenbank erzeugten Dokumente für das Box-Objekt gestaltet sich wie folgt: 
+
+```json
+{
+    "BoxId": 1,
+    "Color": "Rot",
+    "Discriminator": "Box",
+    "id": "8680e151-9f20-4420-b429-8ed956264f3c",
+    "_rid": "keJnAMbbNV0BAAAAAAAAAA==",
+    "_self": "dbs/keJnAA==/colls/keJnAMbbNV0=/docs/keJnAMbbNV0BAAAAAAAAAA==/",
+    "_etag": "\"00000000-0000-0000-acfc-8d14ff6701d4\"",
+    "_attachments": "attachments/",
+    "_ts": 1547575379
+}
+```
+Das Cat-Objekt:
+
+```json
+{
+    "CatId": 1,
+    "BoxId": 1,
+    "Discriminator": "Cat",
+    "IsAlive": true,
+    "Name": "Peter",
+    "id": "9eb1ee4d-499c-44a4-9eea-539b5235c0cf",
+    "_rid": "keJnAMbbNV0CAAAAAAAAAA==",
+    "_self": "dbs/keJnAA==/colls/keJnAMbbNV0=/docs/keJnAMbbNV0CAAAAAAAAAA==/",
+    "_etag": "\"00000000-0000-0000-acfc-8d169aba01d4\"",
+    "_attachments": "attachments/",
+    "_ts": 1547575379
+}
+```
 
 >Das Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Um das Projekt auszuführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator erforderlich.
 

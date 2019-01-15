@@ -1,7 +1,7 @@
 ## 3. Architektur
 Auf der technischen Ebene besteht die Lambda-Architektur aus den drei Schichten: Batch Layer, Speed Layer und Serving Layer. Abbildung 4 zeigt deren Zusammenspiel.  
 
-![Lambda Architektur](/images/Lambda-Architektur.png)  
+![Lambda Architektur](./images/Lambda-Architektur.png)  
 Abbildung 4: Aufbau der Lambda-Architektur [**[Wart16]**](7_Literaturverzeichnis.md)  
 
 Die eingehenden Daten werden sowohl zum Batch Layer als auch zum Speed Layer geschickt. Im Batch Layer werden diese Daten an den Master-Dataset angehängt, gespeichert und verarbeitet. Nachdem die Berechnungen durchgeführt wurden, werden aus den Ergebnissen Batch Views erstellt und an den Serving Layer weitergeleitet, wo sie indiziert werden und so mit niedriger Latenz abgefragt werden können.

@@ -33,6 +33,6 @@ Das Akronym steht für Consistency, Availability und Partition-Tolerance.
 
 ***
 
-[1 Einleitung >>](1_Einleitung.md)
+[Einleitung >>](1_Einleitung.md)
 
 ***

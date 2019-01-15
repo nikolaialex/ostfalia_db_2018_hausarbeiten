@@ -96,8 +96,8 @@ Quellenangabe:
 
 Medienverweise:
 
-01 - Übersicht der Top 10 Kryptowährungen (Quelle: https://www.coingecko.com/de, Zugriff am 01.01.2019)
-02 - Einsatztfelder im Bereich des öffentlichen Sektors (Quelle: siehe [03])
+Abbildung 01 - Übersicht der Top 10 Kryptowährungen (Quelle: https://www.coingecko.com/de, Zugriff am 01.01.2019)
+Abbildung 02 - Einsatztfelder im Bereich des öffentlichen Sektors (Quelle: siehe [03])
 
 ```
 

@@ -4,7 +4,7 @@ Da sich die Anforderungen im Big-Data-Bereich stetig verändern, müssen Datenba
 
 Vor allem in Bereichen mit kontinuierlichem Datenstrom, zu finden unter Anderem in den Bereichen Internet of Things, eCommerce und Online Advertising, ist eine derartige Verarbeitung notwendig. Hier werden genaue und umfassende Views von großen Datenmengen in kürzester Zeit benötigt, um den Anforderungen der Endnutzer gerecht zu werden. [**[SuSh16]**](7_Literaturverzeichnis.md)  [**[Wart16]**](7_Literaturverzeichnis.md)  
 
-![Die drei Vs des Big-Data-Problems](/images/three-V.jpg)  
+![Die drei Vs des Big-Data-Problems](Einführung%20in%20die%20Lambda-Architektur/images/three-V.jpg)  
 Abbildung 1: Die drei Vs des Big-Data-Problems [**[BiDa17]**](7_Literaturverzeichnis.md)  
 
 Zur Betrachtung des Big-Data-Problems spielen die drei Vs eine wichtige Rolle.

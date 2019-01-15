@@ -180,7 +180,11 @@ class Cat
 
 Über die Properties kann die Beziehung der Modelle bereits umfangreich beeinflusst werden. Dies ist über die Properties und DataAnnotations möglich.
 
+
+MODELIERUNGSMÖGLICKTEITEN EINFÜGEN
+
 Eine 1:m-Beziehung wurde zuvor über die Properties der Klasse definiert. Eine Beschreibung der Abhängigkeit kann auch wie folgt mit der Fluent-API konstruiert werden. Beziehungen die über die Fluent-API erstellt wurden, werden stärker gewichtet.
+
 
 ```c#
  modelBuilder.Entity<Box>()
@@ -193,6 +197,7 @@ modelBuilder.Entity<Cat>()
 
 ```
 
+Die gezeigten Definitionen sind redundant und erwirken die gleiche Beziehung.
 
 
 ---

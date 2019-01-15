@@ -1,8 +1,14 @@
 ***
+### Onlinestudium Master Medieninformatik - Datenbanktechnologien - WS 2018/19
+***
 
 # Einführung in Blockchain-Datenbanken
 
-## Autoren
+Betreut durch: Nicolai Alex
+
+Abgabedatum: 15.01.2019
+
+### Autoren:
 
 | Name                | Matrikelnummer| Hochschule       | E-Mail                                  |
 |:--------------------|:--------------|:-----------------|:----------------------------------------|

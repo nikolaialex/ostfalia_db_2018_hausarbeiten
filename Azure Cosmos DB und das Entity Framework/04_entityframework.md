@@ -199,6 +199,8 @@ modelBuilder.Entity<Cat>()
 
 Die gezeigten Definitionen sind redundant und erwirken die gleiche Beziehung.
 
+## Persitierung
+
 
 ---
 [1] Lerman, julia; Miller, Rowan; Code First : Programming Entity Framework, O'REILLY 2012;

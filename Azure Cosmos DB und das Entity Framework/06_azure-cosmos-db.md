@@ -80,7 +80,7 @@ In der ersten Phase wird geprüft ob die Datenbank für den Context existiert un
 
 Für den Zugriff auf die Datenmodelle wurde jeweils eine Service-Klasse für Box und Cat erstellt, die den Datenzugriff abstrahiert.
 
-Nach Initialisierung der Datenbank und des Contextes, wird der Nutzer aufgefordert eine Farbe für die Box, sowie einen Namen für die Katze zuvergeben.
+Nach Initialisierung der Datenbank und des Contextes wird der Nutzer aufgefordert eine Farbe für die Box, sowie einen Namen für die Katze anzugeben.
 
 Nun wird ein Box-Objekt erstellt. Dieses Box-Objekt enthält eine Cat-Objekt. Beide Objekte enthalten die zuvor übermittelten Werte.
 

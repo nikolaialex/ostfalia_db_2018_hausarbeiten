@@ -14,5 +14,5 @@ Abbildung 3: Update auf einer Lambda-Architektur [**[HaBi17]**](7_Literaturverze
 Die bereits vorhandenen Einträge werden weder geändert noch gelöscht, sodass nicht nur auf den letzten Stand des Datensatzes zugegriffen werden kann, sondern auch auf alle Werte und Veränderungen seit der Erstellung.
 Bei entstehenden Fehlern kann das Ergebnis so ganz einfach verworfen und mit Hilfe der alten Daten neu berechnet werden, was das System fehlertolerant gestaltet. [**[Soul14]**](7_Literaturverzeichnis.md)  
 
-[☜ vorheriges Kapitel](1_Einleitung.md)
-   |   [nächstes Kapitel ☞](3_Architektur.md)
+[☜ 1. Einleitung](1_Einleitung.md)
+   |   [3. Architektur ☞](3_Architektur.md)

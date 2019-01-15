@@ -20,5 +20,5 @@ Die Bezeichnung stammt vom Lambda-Kalkül aus der funktionalen Programmierung. E
 
 ------------
 
-[☜ vorheriges Kapitel](README.md)
-   |   [nächstes Kapitel ☞](2_Grundlagen.md)
+[☜ README](README.md)
+   |   [2. Grundlagen ☞](2_Grundlagen.md)

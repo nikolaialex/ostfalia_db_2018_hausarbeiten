@@ -3,5 +3,5 @@ Zusammenfassend lässt sich sagen, dass stetig wachsenden Datenmengen und die si
 
 Neben den Vorteilen der Skalierbarkeit und Wartbarkeit, die in diesem Bereich essenziell sind, bringt die Architektur den Vorteil der Unabhängigkeit in Bezug auf die verwendeten Technologien. Somit ist sie eine gute Möglichkeit für den Umgang mit Big Data.
 
-[☜ vorheriges Kapitel](5_Vorteile.md)
-   |   [nächstes Kapitel ☞](7_Literaturverzeichnis.md)
+[☜ 5. Vorteile](5_Vorteile.md)
+   |   [Literaturverzeichnis ☞](7_Literaturverzeichnis.md)

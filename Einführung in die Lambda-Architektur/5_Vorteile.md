@@ -10,5 +10,5 @@ Durch die Speicherung aller Daten können fehlerhafte Daten ohne viel Aufwand du
 
 Für Entwickler bietet die Architektur den Vorteil, dass keine Abhängigkeiten zu bestimmten Tools bestehen. Jedes Unternehmen kann für sich selbst je nach Erfahrungen und Präferenzen entscheiden, welche der vielen Technologien bei der Umsetzung der Architektur verwendet werden können, sodass der Einarbeitungsaufwand minimal ausfällt.
 
-[☜ vorheriges Kapitel](4_Technologien.md)
-   |   [nächstes Kapitel ☞](6_Fazit.md)
+[☜ 4. Technologien](4_Technologien.md)
+   |   [6. Fazit ☞](6_Fazit.md)

@@ -22,5 +22,5 @@
 4. [Fallbeispiel Datenmodellierung](beispiel_4.md)  
 	4.1 [E-Commerce Beispiel](beispiel_4_1.md)  
 	4.2 [Zeitreihen - Wetterstation Beispiel](beispiel_4_2.md)  
-5. [Fazit](fazit.md)
+5. [Fazit](fazit_5.md)
 6. [Literaturverzeichnis](bib.md)

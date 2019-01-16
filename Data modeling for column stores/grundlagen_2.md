@@ -1,4 +1,4 @@
-#Grundlagen spaltenorientierter Datenbanken - NoSQL
+# Grundlagen spaltenorientierter Datenbanken - NoSQL
 
 Für das Verständnis der Thematik spaltenorientierter Datenbanken, ist die Einführung
 wichtiger Begriffe notwendig. Diese Begriffe und Vorgehensweisen werden in
@@ -44,4 +44,3 @@ sind, wird in den nächsten Abschnitten auf diese Thematik näher eingegangen.
 
 
 [TOC]
-

@@ -15,6 +15,6 @@ mit einem Fazit.
 
 ---
 
-[<< Inhaltverzeichnis](title.md) | [2. Grundlagen spaltenorientierter Datenbanken - NoSQL >>](2_NoSql.md)
+[<< Inhaltverzeichnis](title.md) | [2. Grundlagen spaltenorientierter Datenbanken - NoSQL >>](grundlagen_2.md)
 
 ---

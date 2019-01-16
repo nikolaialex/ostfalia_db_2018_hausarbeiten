@@ -1,4 +1,4 @@
-# RDBMS im Vergleich zu spaltenorientierten Datenbanken
+# 3.2 RDBMS im Vergleich zu spaltenorientierten Datenbanken
 
 
 ---

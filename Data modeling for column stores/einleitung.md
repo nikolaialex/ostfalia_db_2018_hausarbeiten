@@ -1,4 +1,4 @@
-# Einleitung
+# 1 Einleitung
 
 Diese Arbeit beschreibt Modellierungstechniken, die bei spaltenorientierten Datenbanken
 eingesetzt werden. Spaltenorientierte Datenbanken gehören zur Gruppe der

@@ -1,4 +1,4 @@
-# Consistend Hashing
+# 2.2 Consistend Hashing
 
 
 ---

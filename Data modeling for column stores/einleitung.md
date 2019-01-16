@@ -13,5 +13,8 @@ und spaltenorientierten Systemen herausgearbeitet. Die Erkenntnisse aus Kapitel
 3 werden in Kapitel 4 zur Beschreibung von Beispielen genutzt. Die Arbeit endet
 mit einem Fazit.
 
-***
-[<< Inhaltverzeichnis](title.md) - [2. Grundlagen spaltenorientierter Datenbanken - NoSQL >>](2_NoSql.md)
+---
+
+[<< Inhaltverzeichnis](title.md) | [2. Grundlagen spaltenorientierter Datenbanken - NoSQL >>](2_NoSql.md)
+
+---

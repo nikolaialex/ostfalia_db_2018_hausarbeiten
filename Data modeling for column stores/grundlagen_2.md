@@ -11,7 +11,7 @@ im Terabyte -und Petabyte-Bereich. NoSQL Datenbanken weisen nach [EFH+11] folgen
 Eigenschaften auf:
 
 *		Das zugrundelegende Datenmodell ist nicht relational.
-*		Die Systeme sind von Anbeginn an auf eine verteilte und horizontale 		Skalierbarkeit ausgerichtet.
+*		Die Systeme sind von Anbeginn an auf eine verteilte und horizontale Skalierbarkeit ausgerichtet.
 *		Das NoSQL System ist Open Source.
 *		Das System ist schemafrei oder hat nur schwächere Schemarestriktionen.
 *		Aufgrund der verteilen Architektur unterstützt das System eine einfache Datenreplikation.
@@ -36,5 +36,12 @@ aus obiger Liste. Da die genannten Eigenschaften für das Verständnis von NoSQL
 Datenbanken, insbesondere für das Thema Column Stores dieser Arbeit, essentiell
 sind, wird in den nächsten Abschnitten auf diese Thematik näher eingegangen.
 
-***
-[<< Einleitung](einleitung.md) - [2.1 CAP-Theorem und BASE-Modell >>](grundlagen_2_1.md)
+---
+
+[<< Einleitung](einleitung.md) | [2.1 CAP-Theorem und BASE-Modell >>](grundlagen_2_1.md)
+
+---
+
+
+[TOC]
+

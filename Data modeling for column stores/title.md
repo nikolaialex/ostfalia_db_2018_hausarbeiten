@@ -8,7 +8,7 @@
 
 | Name              | Matrikelnummer | Hochschule       | E-Mail                         |
 | ----------------- | -------------- | ---------------- | ------------------------------ |
-| Patrick Lieske    | 5021215       | FH Emden/Leer   | patrick.lieske@web.de       |
+| Patrick Lieske    | 502....        | FH Emden/Leer    | patrick.lieske@web.de          |
 
 ### Inhaltsverzeichnis
 1. [Einleitung](einleitung.md)  
@@ -23,3 +23,4 @@
 	4.1 [E-Commerce Beispiel](beispiel_4_1.md)  
 	4.2 [Zeitreihen - Wetterstation Beispiel](beispiel_4_2.md)  
 5. [Fazit](fazit.md)
+6. [Literaturverzeichnis]()

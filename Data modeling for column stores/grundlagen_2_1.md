@@ -1,4 +1,4 @@
-#2.1 CAP-Theorem und BASE-Modell
+# 2.1 CAP-Theorem und BASE-Modell
 
 Vor dem Web 2.0 Zeitalter wurden die Architekturen von Datenbanksystemen nach dem ACID-Prinzip (Atomicity, Consistency, Integrity, Durability) entwickelt. Dies bedeutete, dass die Konsistenz der Daten das zentrale Thema waren. Inkonsistenzen
 durften insbesondere bei parallelen Zugriffen nicht auftreten. Mit den damals zu bewältigen Datenmengen war das kein Problem. Dies änderte sich allerdings mit dem
@@ -36,5 +36,8 @@ auch „irgendwann“ einen konsistenten Status. Es ist aber auch möglich das v
 inkonsistente Daten ausgeliefert werden. In [DHJ+07] wird die Verwendung von „Data Versioning“ bzw. „Version Evolution“ beschrieben, die das Problem inkonsistenter
 Daten abschwächt.
 
+---
 
-[<< 2. Grundlagen spaltenorientierter Datenbanken - NoSQL](grundlagen_2.md) - [2.2 Consistend Hashing >>](grundlagen_2_2.md)
+[<< 2. Grundlagen spaltenorientierter Datenbanken - NoSQL](grundlagen_2.md) | [2.2 Consistend Hashing >>](grundlagen_2_2.md)
+
+---

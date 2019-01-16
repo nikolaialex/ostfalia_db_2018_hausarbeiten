@@ -23,4 +23,4 @@
 	4.1 [E-Commerce Beispiel](beispiel_4_1.md)  
 	4.2 [Zeitreihen - Wetterstation Beispiel](beispiel_4_2.md)  
 5. [Fazit](fazit.md)
-6. [Literaturverzeichnis]()
+6. [Literaturverzeichnis](bib.md)

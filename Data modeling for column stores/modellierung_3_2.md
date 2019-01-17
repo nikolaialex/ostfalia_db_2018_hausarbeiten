@@ -20,13 +20,15 @@ Eine Partition ist ein Datensatz, der mithilfe des Partitionsschlüssels (Row-Ke
 
 Folgende Tabelle fasst die unterschiedlichen Ansätze der Modellierung zusammen. 
 
-|                   | Relationale Datenbank | Spaltenorientierte Datenbank       |
+|                   | Relationale Datenbank | Spaltenorientierte Datenbank |
 | ----------------- | --------------------- | ---------------------------------- |
 | Use Cases         | Ja                    | Ja                                 |
 | ER-Modell         | Ja                    | Ja                                 |
-| Analyse von 
- Abfragen an die Datenbank
-|
+| Analyse von  Abfragen an die Datenbank | Nein | Ja - Abfrage-Getriebene-Modellierung. Die Abfrage von Partitionen muss minimiert werden. |
+| Normalisierung | Ja | De-Normalisierung (Redundanzen als Werkzeug der Modellierung) |
+| Primärschlüssel | Ja | Ja - Wahl des Primärschlüssels (Partitionsschlüssel) ist wichtig für gleichmäßige Verteilung im Ring. |
+| Fremdschlüssel | Ja | Nein |
+| JOIN-Operation | Ja | Nein - Muss auf Anwendungsebene verlagert werden. |
 
 
 ---

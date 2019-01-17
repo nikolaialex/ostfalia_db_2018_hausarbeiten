@@ -17,7 +17,7 @@ Web Scale. Sebastopol : O’Reilly Media, Inc.", 2016. – ISBN 978–1–491–
 
 [OP14] OSMAN, Rasha ; PIAZZOLLA, Pietro: Modelling Replication in NoSQL Datastores. In: NORMAN, Gethin (Hrsg.) ; SANDERS, William H. (Hrsg.): QEST Bd. 8657, Springer, 2014 (Lecture Notes in Computer Science). –ISBN 978–3–319–10695–3, 194-209
 
-[Wik19] Spaltenorientierte Datenbanken. Webseite, 2019. – https://de.wikipedia.org/wiki/Spaltenorientierte
+[Wik19] Spaltenorientierte Datenbanken. Webseite, 2019. – https://de.wikipedia.org/wiki/Spaltenorientierte_Datenbank
 
 ---
 

@@ -6,7 +6,7 @@ Der Modellierungsprozess relationaler Datenbanksysteme startet, ähnlich wie bei
 
 Das fertige ER-Modell ist eine erste Grundlage für das Datenbankschema. Der nächste Schritt ist die sogenannte Normalisierung. Durch Normalisierung wird verhindert das Redundanzen auftreten. Nach der Normalisierung kann mithilfe der DDL (Data Definition Language) das Datenbankschema geschrieben werden.
 
-Dieser Modellierungsprozess wurde stark komprimiert beschrieben. Eine sehr genaue Beschreibung der Abläufe findet der interessierte Leser in [#Elmasri2009]. 
+Dieser Modellierungsprozess wurde stark komprimiert beschrieben. Eine sehr genaue Beschreibung der Abläufe findet der interessierte Leser in [EN09]. 
 
 Entscheidend ist folgende Tatsache. Im ganzen Modellierungsprozess wurde nicht darauf eingegangen, welche Abfragen letztendlich an die Datenbank gestellt werden. Das ist ein gravierender Unterschied zur Modellierung von spaltenorientierten Datenbanken, denn hier wird das Datenmodell anhand der Abfragen an die Datenbank entwickelt.
 

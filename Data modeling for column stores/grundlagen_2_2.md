@@ -1,10 +1,10 @@
 # 2.2 Consistend Hashing
 
-Consistent Hashing wird verwendet, um zu einem Objekt in einem verteilten System möglichst schnell einen Speicherort, bei NoSQL-Datenbanken einen Server, zu finden. Dafür werden Hash- bzw. Streuwertfunktionen verwendet. Nach [#Edlich2011] definiert eine Streuwertfunktion eine Vorschrift, die einen Wert x aus einer großen Quellmenge auf einen Hashwert v = h(x) aus einer deutlich kleineren Wertemenge abbildet. Hashing-Verfahren haben den Vorteil, dass sie in konstanter Zeit O(1) ein Ergebnis liefern. In Abbildung 1 wird das Consistend Hashing Verfahren schematisch dargestellt.
+Consistent Hashing wird verwendet, um zu einem Objekt in einem verteilten System möglichst schnell einen Speicherort, bei NoSQL-Datenbanken einen Server, zu finden. Dafür werden Hash- bzw. Streuwertfunktionen verwendet. Nach [EFH+11] definiert eine Streuwertfunktion eine Vorschrift, die einen Wert x aus einer großen Quellmenge auf einen Hashwert v = h(x) aus einer deutlich kleineren Wertemenge abbildet. Hashing-Verfahren haben den Vorteil, dass sie in konstanter Zeit O(1) ein Ergebnis liefern. In Abbildung 1 wird das Consistend Hashing Verfahren schematisch dargestellt.
 
 ![Alternativer Text](images/consistent_hashing.PNG "Optionaler Titel")
 
-*Abbildung 1: Consistent Hashing, Abbildung aus [#Meier2016]*
+*Abbildung 1: Consistent Hashing, Abbildung aus [MK16]*
 
 Ein weiteres Ziel beim Consistend Hashing ist die Gleichverteilung der zu speichernden Objekte innerhalb des in Abbildung 1 dargestellten Ringes. Der Ring wird als Adressraum von 0 bis 2^{x} Schlüsselwerten zusammengefasst. Danach wird eine Hashfunktion gewählt, die die Netzwerkadressen der Knoten auf Speicheradressen abbildet und im Ring einträgt. Die Schlüssel der zu speichernden Objekte werden mithilfe der Hashfunktion zu Adressen transformiert und auf dem Ring eingetragen.
 
@@ -14,7 +14,7 @@ Wie in Abbildung 2 zu sehen, wird Knoten K2 entfernt und Knoten K4 hinzugefügt.
 
 ![Alternativer Text](images/consistent_hashing_01.PNG "Optionaler Titel")
 
-*Abbildung 2: Consistent Hashing, Abbildung aus [#Meier2016]*
+*Abbildung 2: Consistent Hashing, Abbildung aus [MK16]*
 
 Für viele große Internet Unternehmen sind Verfügbarkeit und schnelle Reaktionszeiten zu priorisieren. Mit dem Consistent Hashing Verfahren haben sie ein Werkzeug zur Hand, um schnell auf Stoßzeiten zu reagieren. Werden viele Anfragen erwartet, so wird die Zahl der Knoten, also der Server im Ring, erhöht. In Zeiten geringer Anfragen kann die Anzahl der Knoten verringert werden. So kann flexibel reagiert und Kosten gespart werden. 
 

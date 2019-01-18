@@ -1,6 +1,6 @@
 # 2 Grundlagen spaltenorientierter Datenbanken - NoSQL
 
-Für das Verständnis der Thematik spaltenorientierter Datenbanken, ist die Einführung wichtiger Begriffe notwendig. Diese Begriffe und Vorgehensweisen werden in diesem Kapitel eingeführt. Spaltenorientierte Datenbanken gehören zur Gruppe der NoSQL Datenbanken. Der Begriff NoSQL ist ein Schlagwort (Buzzword), dass oft mit Not only SQL (nicht nur SQL) übersetzt wird. Populär wurden NoSQL Datenbanken Anfang der 2000er Jahre mit dem Siegeszug des Web 2.0 Zeitalters. Das Ziel der Entwicklung dieser Datenbanken war die Verarbeitung von sehr großen Datenmengen im Terabyte -und Petabyte-Bereich. NoSQL Datenbanken weisen nach [#Edlich2011] folgende Eigenschaften auf:
+Für das Verständnis der Thematik spaltenorientierter Datenbanken, ist die Einführung wichtiger Begriffe notwendig. Diese Begriffe und Vorgehensweisen werden in diesem Kapitel eingeführt. Spaltenorientierte Datenbanken gehören zur Gruppe der NoSQL Datenbanken. Der Begriff NoSQL ist ein Schlagwort (Buzzword), dass oft mit Not only SQL (nicht nur SQL) übersetzt wird. Populär wurden NoSQL Datenbanken Anfang der 2000er Jahre mit dem Siegeszug des Web 2.0 Zeitalters. Das Ziel der Entwicklung dieser Datenbanken war die Verarbeitung von sehr großen Datenmengen im Terabyte -und Petabyte-Bereich. NoSQL Datenbanken weisen nach [EFH+11] folgende Eigenschaften auf:
 
 * Das zugrundelegende Datenmodell ist nicht relational.
 

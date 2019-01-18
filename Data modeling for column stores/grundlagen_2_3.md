@@ -6,9 +6,9 @@ Abbildung 3 zeigt die Replikationsstrategie bei Cassandra, einer populären NoSQ
 
 ![Alternativer Text](images/replikation_01.PNG "Optionaler Titel")
 
-*Abbildung 3: Replikationsstrategie, Abbildung aus [#conf/qest/OsmanP14]*
+*Abbildung 3: Replikationsstrategie, Abbildung aus [OP14]*
 
-In Abbildung 3 wird ferner gezeigt, wie ein Request eines Clients bei Cassandra abläuft. In der Regel werden die Anfragen der Clients über einen Load-Balancer verteilt. Nach [#conf/qest/OsmanP14] werden folgende Schritte ausgeführt.
+In Abbildung 3 wird ferner gezeigt, wie ein Request eines Clients bei Cassandra abläuft. In der Regel werden die Anfragen der Clients über einen Load-Balancer verteilt. Nach [OP14] werden folgende Schritte ausgeführt.
 
 1. Request, mit Schlüssel für Datensatz A, wird von Knoten 5 empfangen. Knoten 5 wird zum Koordinator-Knoten.
 
@@ -16,7 +16,7 @@ In Abbildung 3 wird ferner gezeigt, wie ein Request eines Clients bei Cassandra 
 
 3. Der Koordinatenknoten (Knoten 5) vergleicht die Werte beider Knoten (1 und 3) und liefert den aktuellen aus.
 
-4. Die Aktualisierung der Werte kann mit dem weiter oben genannten Verfahren „Data Versioning“ bzw. „Version Evolution“ erfolgen. Eine Beschreibung dieser Technik findet sich in [#DBLP:conf/sosp/DeCandiaHJKLPSVV07].
+4. Die Aktualisierung der Werte kann mit dem weiter oben genannten Verfahren „Data Versioning“ bzw. „Version Evolution“ erfolgen. Eine Beschreibung dieser Technik findet sich in [DHJ+07].
 
 5. Falls Knoten 1 und 3 unterschiedliche Werte enthielten, ist nach dem Read-Request der Datensatz auf Knoten 1 und 3 in einem konsistenten Zustand. 
 

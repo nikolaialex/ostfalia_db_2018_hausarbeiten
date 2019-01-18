@@ -1,3 +1,4 @@
+
 #Grundlagen spaltenorientierter Datenbanken - NoSQL
 
 Für das Verständnis der Thematik spaltenorientierter Datenbanken, ist die Einführung
@@ -38,3 +39,4 @@ sind, wird in den nächsten Abschnitten auf diese Thematik näher eingegangen.
 
 ***
 [<< Einleitung](einleitung.md) - [2.1 CAP-Theorem und BASE-Modell >>](grundlagen_2_1.md)
+

@@ -1,5 +1,6 @@
 
 
+
 # Data modeling for column stores
 
 #### Hausarbeit

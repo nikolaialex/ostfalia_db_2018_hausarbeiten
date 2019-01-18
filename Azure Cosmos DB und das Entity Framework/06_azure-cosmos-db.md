@@ -8,7 +8,7 @@ Betrachtet man den logischen Aufbau der Datenbank, so steht an erster Stelle der
 
 Eine Datenbank ist API-Spezifisch. Bei der Erstellung der Datenbank muss aus verschiedenen vordefinierten APIs eine API gewählt werden. Die Wahl der API hat Auswirkungen auf das in der Datenbank projiziert Datenmodell der Container und Items.[2] [3]
 
-In Abhängigkeit der gewählten API werden die Items als Row, Document, Item oder Node/Edge abgelegt. Dabei liegt immer das später in diesem Kapitel beschriebene ARS Datenmodell zugrunde.
+In Abhängigkeit der gewählten API werden die Items als Columnar, Document, Item oder Node/Edge abgelegt. Dabei liegt immer das später in diesem Kapitel beschriebene ARS Datenmodell zugrunde.
 
 Ein Container enthält die schema-agnostischen Items, das bedeutet, dass ein genaues Schema zuvor nicht definiert werden muss. Sowie den Items liegt auch dem Container ein API-spezifisches Datenmodell zugrunde. Je nach API kann das eine Collection, Table oder ein Graph sein.[4]
 
@@ -26,7 +26,7 @@ Darüber hinaus können die Indexpfade an individuelle Bedürfnisse angepasst we
 
 ### Datenzugriff
 
-Übersetzung der Anfrage in ASR
+Je nach gewählter API muss der zugriff auf die Datenbank nach den Konventionen der gewählten Schnittstelle durchgeführt werden.
 
 ### API-Schnittstellen
 
@@ -42,7 +42,7 @@ So kann die Azure Cosmos DB genutzt werden, ohne das eine Umstellung auf Client-
 
 #### SQL-API
 
-Die SQL-API bietet zur Zeit den meisten Funktionsumfang. So ist das Erstellen von Triggern, benutzerdefinierten Funktionen und Stored Procedures möglich. Dabei bedient sich die SQL-Syntaxt der bereits von Microsoft bekannten Syntaxt. 
+Die SQL-API bietet zur Zeit den meisten Funktionsumfang. So ist das Erstellen von Triggern, benutzerdefinierten Funktionen und Stored Procedures möglich. Dabei bedient sich die SQL-Syntaxt der bereits von Microsoft bekannten Syntaxt.
 
 Bei Wahl dieser API und der von MongoDB-API wird das vorherrschende Datenmodell auf das Dokumenten Datenmodell festgelegt.
 
@@ -52,16 +52,104 @@ Azure Cosmos DB eignet sich zum Erstellen von Graphdatenbanken. Graphdaten könn
 
 #### Cassandra-API
 
-#### Tabelle-API
+Anwendungen die für den Zugriff mit der Cassandra Query Language (CQL) v4 geschrieben wurden können ohne große Änderungen am Code mit der Datenbank kommunizieren. Bei Wahl dieses API-Typen wird das Columnar Datenmodel angewandt.
 
-### Skalierung und Replikation
+#### Table-API
 
-Horizontale Skalierung auf Containerebene.
-Global by Design.
+Azure Table Storage ist ein NoSQL-Schlüsselwertspeicher. Azure Cosmos DB ermöglicht es Anwendungen, die für Azure Table Storage entwickelt wurden, Daten für erweiterte Anforderungen in Azure Cosmos DB zu speichern.
+
+Die Anbindung ist konform mit der von Azure Table Storage.
+
+### Skalierung und Globaleverteilung
+
+In Azure Cosmos DB findet eine automatische horizontale Skalierung statt. Die grundlegende Einheit dafür bildet der zuvor beschriebene Container. Dieser Container kann über mehrere logische Partitionen hinweg partitioniert werden und wird auf diese Weise skaliert. Dieses Verhalten, sowie das Verteilen der Daten kann über den Partitionsschlüssel gesteuert werden.
+
+Die logischen Partitionen werden einer physischen Partition zugeordnet. Die physischen Partitionen werden über ein internes, nicht steuerbares Verfahren auf die Computerressourcen verteilt.
+
+Auf Wunsch kann die Azure Cosmos DB auf mehrere Regionen verteilt werden. Dazu werden dem Datenbank-Account die gewünschten Regionen hinzugefügt, die sich nach Möglichkeit in der Nähe des Endanwenders befinden sollten. Azure übernimmt automatisch die Replikation der Daten. Über die Multihoming-APIs kommuniziert die Anwendung mit der nächstgelegenen Instanz, ohne das dafür Änderungen an der Anwendung selbts vorgenommen werden müssen. Im Falle eines Ausfalls der lokalen Datenbankinstanz greift ein automatisches Failover und leitet die Anfrage an die nächste Region weiter. Die  Regionen, die bei einem Failover angesprochen werden sollen können priorisiert werden.
 
 ## Implementierung
 
-In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB angebunden werden.
+In einem Beispiel soll nun das vorgestellte Entity Framework an eine Azure Cosmos DB, unter Verwendung der SQL-API angebunden werden.
+
+Dazu wurde ein ein CLI-Projekt mit .NET-Core 2.2 erstellt. In dem Projekt sind Erklärungen und Informationen direkt als Kommentar zu finden. Es ist zu beachten, dass es sich um einen Prototypen handelt. Der gezeigte Code sollte nicht in einer Produktivumgebung verwendet werden.
+
+Das Projekt demonstriert das Schreiben eines geschachtelten Datensatzes in die Datenbank. Anschließende wird das Abrufen des Datensatzes mit abhängiger Entität anhand von bekannten Parametern demonstriert.
+
+![Abbildung](./images/AusgabeCosmosPreview.PNG) "Ausgabe der Konsole nach der Ausführung"
+
+Zu Beginn wird geprüft, ob die Datenbank für den Context existiert. Ist dies nicht der Fall, wird das Schema in derr Datenbank erstellt.
+
+Für den Zugriff auf den Context wurde jeweils eine Service-Klasse für Box und Cat erstellt. Dies dient der Abstraktion des Zugriffes auf den Context und ermöglicht uns ein detaillierte Protokollierung oder Einflussnahme vor dem Zugriff.
+
+Nach Initialisierung der Datenbank und des Contextes wird der Nutzer aufgefordert eine Farbe für die Box, sowie einen Namen für die Katze anzugeben.
+
+Nach erfolgreicher Eingabe wird ein Box-Objekt erstellt. Dieses Box-Objekt enthält ein Cat-Objekt. Beide Objekte enthalten die zuvor übermittelten Werte.
+Der "Quantenzustand" der Katze wird allerdings per Zufall erzeugt.
+
+
+```c#
+//Beispiel aus dem Projekt
+new Box
+{
+    BoxId = 1,
+    Color = boxColor,
+    Cat = new Cat
+    {
+        CatId = 1,
+        Name = catName,
+        IsAlive = new Random().Next(100) < 50 ? true : false
+    }
+});
+
+```
+
+Anschließend wird das Box-Objekt dem Context übergeben. In diesem Moment fängt das Entity Framework an das Objekt zutracken.
+
+Mit dem Methodenaufruf ```SaveChangesAsync()``` wird der Context persistiert und die Entitäten in der Datenbank angelegt.
+
+In der Datenbank werden Dokumente zur persistierung angelegt. Die Erstellung von geschachtelten Elementen in einem Dokument ist mit dieser Preview-Version des Entity Frameworks noch nicht möglich.
+
+Das in der Datenbank erzeugte Dokumente für das Box-Objekt gestaltet sich wie folgt:
+
+```json
+{
+    "BoxId": 1,
+    "Color": "Rot",
+    "Discriminator": "Box",
+    "id": "8680e151-9f20-4420-b429-8ed956264f3c",
+    "_rid": "keJnAMbbNV0BAAAAAAAAAA==",
+    "_self": "dbs/keJnAA==/colls/keJnAMbbNV0=/docs/keJnAMbbNV0BAAAAAAAAAA==/",
+    "_etag": "\"00000000-0000-0000-acfc-8d14ff6701d4\"",
+    "_attachments": "attachments/",
+    "_ts": 1547575379
+}
+```
+
+Das Cat-Objekt Dokument:
+
+```json
+{
+    "CatId": 1,
+    "BoxId": 1,
+    "Discriminator": "Cat",
+    "IsAlive": true,
+    "Name": "Peter",
+    "id": "9eb1ee4d-499c-44a4-9eea-539b5235c0cf",
+    "_rid": "keJnAMbbNV0CAAAAAAAAAA==",
+    "_self": "dbs/keJnAA==/colls/keJnAMbbNV0=/docs/keJnAMbbNV0CAAAAAAAAAA==/",
+    "_etag": "\"00000000-0000-0000-acfc-8d169aba01d4\"",
+    "_attachments": "attachments/",
+    "_ts": 1547575379
+}
+```
+
+Im letzten Schritt wird die Entität aus der Datenbank abgerufen und in den Context geladen. Dazu wird die Entität anhand der Farbe in der Datenbank identifiziert. Auch wenn eine Schachtelung der Objekte im Dokument der Datenbank noch nicht durch EF möglich ist, so kann das Entity Framework dennoch die Abhängigkeit auflösen und das verschachtelte Objekt automatisch einbeziehen.
+Die enthaltenden Daten werden abschließend in der Konsole ausgegeben.
+
+In der Demonstration wurde gezeigt, dass grundlegend eine Kompatibilität zwischen den beiden Techniken besteht.
+
+>Das Projekt ist dieser Arbeit im Ordner CosmosPreview beigefügt. Um das Projekt auszuführen sind Visual Studio 2017, .NET Core 2.2 SDK, sowie der Azure Cosmos DB-Emulator erforderlich.
 
 ---
 

@@ -1,3 +1,4 @@
+
 # 1 Einleitung
 
 Diese Arbeit beschreibt Modellierungstechniken, die bei spaltenorientierten Datenbanken eingesetzt werden. Spaltenorientierte Datenbanken gehören zur Gruppe der NoSQL Datenbanken. Was NoSQL bedeutet und welche Eigenschaften dieser Gruppe von Datenbanken zugeordnet werden, ist Gegenstand des zweiten Kapitels. Hier werden wichtige Begriffe und Eigenschaften, die zum weiteren Verständnis des Themas essentiell sind, eingeführt.
